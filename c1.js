@@ -351,3 +351,48 @@ $(function() {
   },100);
 }
 });
+$(function() {
+  if($('.x-404-page').length<1){
+  $("body").on("click", ".search_popup .x-overlay__close-button", function(){
+    $(".search_popup").css('display', 'none');
+    $(".search_overlay").css('display', 'none');
+    $(".x-search__page-overlay").remove();
+    $("body").removeClass('h-layout-hidden');
+  });
+  $("body").on("click", ".x-pseudo-link", function(){
+    $(this).closest('.x-product-main-terms__item').find('.x-overlay').show();
+  });
+  $("body").on("click", ".x-product-info__content .x-product-conversion .x-product-conversion__col>.x-product-conversion__iconed-text:first-child", function() {
+    $("[data-bazooka='GlobalShowPhones'] .x-overlay").removeClass("x-hidden");
+  });
+  $("body").on("click", ".x-company-info__parts .x-company-info__item .x-iconed-text", function(){
+    $(this).closest(".x-company-info__item").find(".x-overlay").removeClass("x-hidden");
+  });
+  $("body").on("click", ".x-product-info .x-product-info__images .x-product-info__blame-link", function(){
+    $(this).closest(".x-product-info__images").find(".x-overlay").removeClass("x-hidden");
+  });
+  $("body").on("click", ".x-product-sticky .x-product-sticky__col:nth-child(2) .x-product-sticky__item>div>div:nth-child(2)", function(){
+    $("[data-bazooka='GlobalShowPhones'] .x-overlay").removeClass("x-hidden");
+  });
+  $("body").on("click", ".x-product-sticky .x-product-sticky__col:nth-child(1) [data-bazooka='CompanyLocation']", function(){
+    $(this).closest(".x-product-sticky__item").find(".x-overlay").removeClass("x-hidden");
+  });
+  $("body").on("click", ".x-product-sticky .x-product-sticky__col:nth-child(1) [data-bazooka='CompanySchedule']", function(){
+    $(this).closest(".x-product-sticky__item").find(".x-overlay").removeClass("x-hidden");
+  });
+  $("body").on("click", ".x-product-info__variation .x-drop-down__list .x-drop-down__list-item", function(){
+    $(this).closest(".x-product-info__variation").find(".x-overlay").show();
+  });
+  $("body").on("click", ".x-product-info__variation .x-pseudo-link", function(){
+    $(this).closest(".x-product-info__variation").find(".x-overlay").show();
+  });
+  $("body").on("click", ".x-header .js-shopping-cart-button-container", function(){
+    $(".qa-shoping-cart-list").closest(".x-overlay").show();
+  });
+  $("body").on("click", ".x-product-conversion__item [data-qaid='order-payment-button']", function(){
+    $('.x-overlay__dialog_type_padded [data-qaid="success_msg_popup"]').closest(".x-overlay").removeClass("x-hidden");
+  });
+  $("body").prepend('<div class="x-overlay search_overlay" style="z-index: 5000;"><div class="x-overlay__dialog x-cart-overlay search_popup" data-qaid="overlay"> <span class="x-overlay__close-button" data-qaid="close_btn">×</span><div class="x-empty-results"><div class="modal_title">Ищете что-то другое?</div> <p class="sub_title">Мы поможем Вам найти нужный товар</p></div></div>');
+  $("<style type='text/css'>.search_overlay{display:none;overflow:hidden; z-index: 99999999 !important;}.search_popup{display:none;position: absolute;left: 0;right: 0;top: 0;bottom: 0;margin: auto;height: 143px;   max-width:475px;background-color:#f19b20;background-image:linear-gradient(-55deg,#772189 0%,#4853a2 100%);text-align:center;padding-top:21px;padding-bottom:49px}.search_popup .modal_title{color:#fff;font-size:32px;font-weight:400;margin-bottom:22px}.search_popup .x-overlay__close-button{color:#fff;right:7px;top:0px;opacity:0.2;cursor:pointer;z-index: 999;width: 30px;right: 0;}.search_popup .sub_title{color:#fff;font-size:19px;font-weight:400}.search_popup .x-empty-results{padding:0 0 15px}.search_popup .x-search{display:block;padding:0;max-width:370px;margin:0 auto;text-align:left;}.search_popup .x-search_state_active .x-search__inner{width:100%}.search_popup .x-search_state_active .x-search__holder{position:relative;top:0;right:0;left:0}.search_popup .form_here .x-search__autocomplete{top: auto;max-width: 368px;margin: 0 auto;text-align: left;}.search_popup .form_here .x-autocomplete__group{padding: 0;}.search_popup .form_here .x-autocomplete__item:first-child{padding-top: 10px;}, .search_popup .form_here .x-autocomplete__item:last-child{padding-bottom: 10px;}.x-one-click-order__btn[data-qaid='one-click-order-button']{pointer-events:auto}.x-one-click-order__btn.x-one-click-order__btn_state_disabled[data-qaid='one-click-order-button']{pointer-events:none}  .b-besida__btn.b-besida__btn_state_disabled{pointer-events:none}.b-besida__btn{pointer-events:auto}   .search_popup .form_here .x-autocomplete__link{position: relative;z-index: 999;padding: 10px 10px 10px 15px;}.search_overlay .search_popup .form_here .x-autocomplete{max-height: 300px;overflow-y: scroll;}.search_popup .x-autocomplete .autocomplete3 .x-autocomplete__item{padding: 0 !important;}@media screen and (max-height: 720px) {.search_overlay .search_popup .form_here .x-autocomplete{max-height: 200px;}}</style>").appendTo('head');
+}
+});
