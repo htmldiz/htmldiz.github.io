@@ -31,6 +31,10 @@ $(function() {
       tabs = Number(tabs - 1);
       localStorage.setItem('tc4', tabs);
     }
+    if(tabs == -1){
+      tabs = 0;
+      localStorage.setItem('tc4', tabs);
+    }
     return tabs;
   }
   function deteectUnloadcat() {
