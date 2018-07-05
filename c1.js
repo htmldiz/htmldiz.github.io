@@ -206,6 +206,8 @@ $(function() {
       $(".search_popup .x-header__search").remove();
       var html = $(".x-header__search").html();
       $(html).find('#search_form').removeAttr('id');
+      $("body").css("overflow","auto");
+      $("html").css("overflow","auto");
       $(".search_popup .form_here").remove();
       $(".search_popup").append("<div class='form_here'>" + html + "</div>");
       $(".search_popup .x-search__header-overlay").remove();
