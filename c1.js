@@ -145,6 +145,7 @@ $(function() {
         var us3     = localStorage.getItem('usc4');
         visitThisPage = $.fn.visitThisPage();
         if (v3 > window.mvc4 && us3 == 'false' && tabs == 1 && window.candetect == true) {
+        	alert('detect');
           showPopup();
           window.mmd = 0;
         }
