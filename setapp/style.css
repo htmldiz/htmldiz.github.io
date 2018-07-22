@@ -236,7 +236,8 @@ html, body {
 	font-family: "Roboto";
 	color: rgb(183, 184, 193);
 	position: relative;
-	z-index: 2
+	z-index: 2;
+	background: none;
 }
 
 .break-first {
