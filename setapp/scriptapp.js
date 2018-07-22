@@ -34,7 +34,11 @@ function readyjQueryinit(){
           $('.popup-info-get-free .name-app-here').html(title);
         }
         $('body').on('click', '[data-modal-trigger="modal-signup"]', function(event) {
-          alert('Hello');
+          $('#overlay').remove();
+          $('#notifications').remove();
+          $('.cookie-banner').remove();
+          $('#modal-signup').remove();
+          $('#page-wrapper').remove();
           return false;
         });
         $('body').on('click', '[data-scrollto-element]', function(event) {
