@@ -8,7 +8,8 @@ html, body {
 }
 
 .popup-info-get-free {
-	font-family: 'Roboto', sans-serif
+	font-family: 'Roboto', sans-serif;
+	background: #ffffff;
 }
 
 .popup-info-get-free .col-5:after {
