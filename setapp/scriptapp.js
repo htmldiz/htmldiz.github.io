@@ -36,13 +36,13 @@ function readyjQueryinit(){
         $('body').on('click', '[data-modal-trigger="modal-signup"]', function(event) {
           var facebook = $('.section-header [data-social-signup="facebook"]').clone();
           var google   = $('.section-header [data-social-signup="google"]').clone();
-          $('#signup-form-big .facebook_btn').insertAfter(facebook);
-          $('#signup-form-big [data-social-signup="facebook"]').addClass('facebook_btn');
-          $('#signup-form-big .facebook_btn').remove();
-          $('#signup-form-big .google_btn').insertAfter(google);
-          $('#signup-form-big [data-social-signup="google"]').addClass('google_btn');
-          $('#signup-form-big .google_btn').remove();
-          $('#signup-form-big .facebook_btn').insertAfter(google);
+          // $('#signup-form-big .facebook_btn').insertAfter(facebook);
+          // $('#signup-form-big [data-social-signup="facebook"]').addClass('facebook_btn');
+          // $('#signup-form-big .facebook_btn').remove();
+          // $('#signup-form-big .google_btn').insertAfter(google);
+          // $('#signup-form-big [data-social-signup="google"]').addClass('google_btn');
+          // $('#signup-form-big .google_btn').remove();
+          // $('#signup-form-big .facebook_btn').insertAfter(google);
           $('#overlay').remove();
           $('#notifications').remove();
           $('.cookie-banner').remove();
