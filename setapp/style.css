@@ -449,6 +449,10 @@ html, body {
 
 }
 
+.popup-info-get-free .button.-facebook span:before,
+.popup-info-get-free .button.-google span:before{
+	display: none;
+}
 @media (max-width:1400px) {
 	.popup-info-get-free .col-5{
 		flex: 0 0 36%;
