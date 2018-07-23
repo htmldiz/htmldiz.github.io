@@ -482,6 +482,11 @@ html, body {
 	}
 
 }
+@media (max-height:900px) {
+	.contentin {
+		overflow: auto;
+	}
+}
 @media (max-width:1300px) {
 	.contentin {
 		overflow: auto;
