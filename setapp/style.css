@@ -84,17 +84,24 @@ html, body {
 	padding-top: 25px
 }
 
+.contentin  .contentinwrap{
+    width: calc(100% + 20px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+    padding-left: 1vw;
+    padding-top: 83px;
+    padding-bottom: 83px;
+}
 .contentin {
-	-webkit-box-flex: 0;
-	-webkit-flex: 0 0 100%;
-	-ms-flex: 0 0 100%;
-	flex: 0 0 100%;
-	max-width: 500px;
-	padding-top: 83px;
-	padding-bottom: 83px;
-	margin-left: auto;
-	margin-right: auto;
-	padding-left: 50px
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
 }
 
 .contentin .contentin-logo {
@@ -352,7 +359,7 @@ html, body {
 }
 
 .applicationslist-content {
-	overflow: auto;
+	overflow-y: auto;
 	max-height: 100%;
 	margin-right: 40px;
 	margin-top: 70px
@@ -495,6 +502,9 @@ html, body {
 	font-size: 12px;
 	cursor: pointer;
 }
+.field-checkbox {
+	cursor: pointer;
+}
 .field-checkbox{
 	margin: 0;
 	position: relative;
@@ -552,16 +562,8 @@ html, body {
 	}
 
 }
-@media (max-height:900px) {
-	.contentin {
-		overflow: auto;
-	}
-}
 @media (max-width:1320px) {
-	.contentin {
-		overflow: auto;
-		padding-left: 45px;
-	}
+
 	.popup-info-get-free .col-5{
 		flex: 0 0 37%;
 		max-width: 37%;

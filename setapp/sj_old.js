@@ -84,17 +84,17 @@ function readyjQueryinit(){
     			contentType: "application/json"
         	})
         	.done(function(data) {
-        		// data = JSON.parse(data.responseText);
-        		location.href = "https://my.setapp.com/login";
-        		// $.ajax({
-        		// 	url: 'https://my.setapp.com/login',
-        		// 	type: 'POST',
-        		// 	dataType: 'json',
-        		// 	data: '{"email":"'+data.email+'","is_sign_up":"true","refresh_token":"'+data.refresh_token+'","token":"'+data.token+'","user_id":"'+data.user_id+'"}',
-        		// })
-        		// .always(function(data) {
-        		// 	console.log(data);
-        		// });
+        		data = JSON.parse(data.responseText);
+        		$.ajax({
+        			url: 'https://my.setapp.com/login',
+        			type: 'POST',
+        			dataType: 'json',
+        			data: '{"email":"'+data.email+'","is_sign_up":"true","refresh_token":"'+data.refresh_token+'","token":"'+data.token+'","user_id":"'+data.user_id+'"}',
+        		})
+        		.always(function(data) {
+        			console.log(data);
+        			console.log("complete");
+        		});
         		
         	})
         	.fail(function(data) {
