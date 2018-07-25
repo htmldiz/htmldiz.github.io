@@ -42,7 +42,7 @@ function readyjQueryinit(){
 		$('head').append('<link rel="stylesheet" href="'+url+'css/style.css" />');
 		$('body').append('<a href="#" class="'+projecturl+'-step-1">protect your pet from parasites</a>');
 		$('body').append('<div class="'+projecturl+'-step-2 petbucket-animate '+projecturl+'fadeOutLeft"><a href="#" class="'+projecturl+'-link '+projecturl+'dog-link dog"><img src="'+url+'img/dog.png" alt="For dogs" /><span>For dogs</span></a> <span>OR</span><a href="#" class="'+projecturl+'-link '+projecturl+'cat-link cat"><img src="'+url+'img/cat.png" alt="For cats" /><span>For cats</span></a></div>');
-		$('body').append('<div class="'+projecturl+'-step-3 petbucket-animate '+projecturl+'fadeOutLeft"><span class="step-3title">prevent from:</span><a href="#" class="step-select step-select-flea" data-step-select="flea"><span>Flea</span></a><a href="#" class="step-select step-select-tick" data-step-select="tick"><span>tick</span></a><a href="#" class="step-select step-select-heartworm" data-step-select="heartworm"><span>heartworm</span></a><a href="#" class="step-select step-select-iw" data-step-select="iw"><span>investinal<br/>worms</span></a></div>');
+		$('body').append('<div class="'+projecturl+'-step-3 petbucket-animate '+projecturl+'fadeOutLeft"><span class="'+projecturl+'-step-3-title">prevent from:</span><a href="#" class="'+projecturl+'step-select '+projecturl+'step-select-flea" data-'+projecturl+'select="flea"><span>Flea</span></a><a href="#" class="'+projecturl+'step-select '+projecturl+'step-select-tick" data-'+projecturl+'select="tick"><span>tick</span></a><a href="#" class="'+projecturl+'step-select '+projecturl+'step-select-heartworm" data-'+projecturl+'select="heartworm"><span>heartworm</span></a><a href="#" class="'+projecturl+'step-select '+projecturl+'step-select-iw" data-'+projecturl+'select="iw"><span>investinal<br/>worms</span></a></div>');
 		$('body').on('click', '.'+projecturl+'-step-1', function(event) {
 			$(this).addClass(projecturl+'-animate');
 			$(this).addClass(projecturl+'fadeOutLeft');
@@ -51,8 +51,8 @@ function readyjQueryinit(){
 			return false;
 		});
 		var type_it = "";
-		$('body').on('click', '.'+projecturl+'-step-3 [data-step-select]', function(event) {
-			var typehere = $(this).attr('data-step-select');
+		$('body').on('click', '.'+projecturl+'-step-3 [data-'+projecturl+'select]', function(event) {
+			var typehere = $(this).attr('data-'+projecturl+'select');
 			var get_link = type_it+'-'+typehere;
 			console.log(get_link);
 			switch (get_link){

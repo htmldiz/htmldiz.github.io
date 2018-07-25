@@ -138,7 +138,7 @@ body, html {
 	font-weight: 700;
 }
 
-.petbucket-step-3 .step-3title {
+.petbucket-step-3 .petbucket-step-3-title {
 	font-size: 26px;
 	font-family: "Helvetica";
 	color: rgb(255, 255, 255);
@@ -216,7 +216,7 @@ body, html {
 	color: rgb(255, 255, 255);
 }
 
-.petbucket-step-3 .step-select {
+.petbucket-step-3 .petbucketstep-select {
 	display: inline-block;
 	font-size: 18px;
 	font-family: "Helvetica";
@@ -227,7 +227,7 @@ body, html {
 	text-align: center;
 }
 
-.petbucket-step-3 [data-step-select]:before {
+.petbucket-step-3 [data-petbucketselect]:before {
 	width: 73px;
 	height: 73px;
 	display: block;
@@ -240,15 +240,15 @@ body, html {
 	background-size: 100%;
 }
 
-.petbucket-step-3 [data-step-select="tick"]:before {
+.petbucket-step-3 [data-petbucketselect="tick"]:before {
 	background-image: url('../img/tick.png');
 }
 
-.petbucket-step-3 [data-step-select="heartworm"]:before {
+.petbucket-step-3 [data-petbucketselect="heartworm"]:before {
 	background-image: url('../img/heartworm.png');
 }
 
-.petbucket-step-3 [data-step-select="iw"]:before {
+.petbucket-step-3 [data-petbucketselect="iw"]:before {
 	background-image: url('../img/investinal-worms.png');
 }
 
@@ -319,11 +319,11 @@ body, html {
 		padding-right: 20px;
 	}
 
-	.petbucket-step-3 .step-select {
+	.petbucket-step-3 .petbucketstep-select {
 		font-size: 12px;
 	}
 
-	.petbucket-step-3 .step-3title {
+	.petbucket-step-3 .petbucket-step-3-title {
 		font-size: 20px;
 	}
 
@@ -335,7 +335,7 @@ body, html {
 }
 
 @media(max-width:425px) {
-	.petbucket-step-3 [data-step-select]:before {
+	.petbucket-step-3 [data-petbucketselect]:before {
 		width: 43px;
 		height: 43px;
 	}
@@ -367,7 +367,7 @@ body, html {
 		width: auto;
 	}
 
-	.petbucket-step-3 .step-select {
+	.petbucket-step-3 .petbucketstep-select {
 		font-size: 10px;
 	}
 
