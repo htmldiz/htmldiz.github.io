@@ -41,8 +41,8 @@ function readyjQueryinit(){
 		// alert(url);
 		$('head').append('<link rel="stylesheet" href="'+url+'css/style.css" />');
 		$('body').append('<a href="#" class="'+projecturl+'-step-1">protect your pet from parasites</a>');
-		$('body').append('<div class="'+projecturl+'-step-2"><a href="#" class="'+projecturl+'dog-link dog"><img src="'+url+'img/dog.png" alt="For dogs" /></a> <span>OR</span><a href="#" class="'+projecturl+'cat-link cat"><img src="'+url+'img/cat.png" alt="For cats" /></a></div>');
-		$('body').append('<div class="'+projecturl+'-step-3"><span class="step-3title">prevent from:</span><a href="#" class="step-select step-select-flea" data-step-select="flea"><span>Flea</span></a><a href="#" class="step-select step-select-tick" data-step-select="tick"><span>tick</span></a><a href="#" class="step-select step-select-heartworm" data-step-select="heartworm"><span>heartworm</span></a><a href="#" class="step-select step-select-iw" data-step-select="iw"><span>investinal<br/>worms</span></a></div>');
+		$('body').append('<div class="'+projecturl+'-step-2 petbucket-animate '+projecturl+'fadeOutLeft"><a href="#" class="'+projecturl+'-link '+projecturl+'dog-link dog"><img src="'+url+'img/dog.png" alt="For dogs" /><span>For dogs</span></a> <span>OR</span><a href="#" class="'+projecturl+'-link '+projecturl+'cat-link cat"><img src="'+url+'img/cat.png" alt="For cats" /><span>For cats</span></a></div>');
+		$('body').append('<div class="'+projecturl+'-step-3 petbucket-animate '+projecturl+'fadeOutLeft"><span class="step-3title">prevent from:</span><a href="#" class="step-select step-select-flea" data-step-select="flea"><span>Flea</span></a><a href="#" class="step-select step-select-tick" data-step-select="tick"><span>tick</span></a><a href="#" class="step-select step-select-heartworm" data-step-select="heartworm"><span>heartworm</span></a><a href="#" class="step-select step-select-iw" data-step-select="iw"><span>investinal<br/>worms</span></a></div>');
 		$('body').on('click', '.'+projecturl+'-step-1', function(event) {
 			$(this).addClass(projecturl+'-animate');
 			$(this).addClass(projecturl+'fadeOutLeft');
@@ -83,8 +83,8 @@ function readyjQueryinit(){
 			}
 		});
 		$('body').on('click', '.'+projecturl+'dog-link, .'+projecturl+'cat-link', function(event) {
+			// $('.'+projecturl+'-step-2').addClass(projecturl+'fadeOutLeft');
 			$('.'+projecturl+'-step-2').removeClass(projecturl+'fadeInRight');
-			$('.'+projecturl+'-step-2').addClass(projecturl+'fadeOutLeft');
 			$('.'+projecturl+'-step-3').addClass(projecturl+'-animate');
 			$('.'+projecturl+'-step-3').addClass(projecturl+'fadeInRight');
 			if($(this).hasClass('cat')){
