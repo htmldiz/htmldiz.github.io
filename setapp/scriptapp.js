@@ -84,7 +84,10 @@ function readyjQueryinit(){
     			contentType: "application/json"
         	})
         	.done(function(data) {
-        		data = JSON.parse(data.responseText);
+        		console.log(data);
+        		if(data.responseText){
+        			data = JSON.parse(data.responseText);
+        		}
         		var date = new Date(new Date().getTime() + 10*3600 * 1000);
 				document.cookie = "customer_access_token="+data.token+"; path=/;domain=.setapp.com; expires=" + date.toUTCString();
 				document.cookie = "customer_refresh_token="+data.refresh_token+"; path=/;domain=.setapp.com; expires=" + date.toUTCString();
