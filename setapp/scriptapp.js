@@ -84,8 +84,11 @@ function readyjQueryinit(){
     			contentType: "application/json"
         	})
         	.done(function(data) {
-        		// data = JSON.parse(data.responseText);
-        		location.href = "https://my.setapp.com/login";
+        		data = JSON.parse(data.responseText);
+        		var date = new Date(new Date().getTime() + 10*3600 * 1000);
+				document.cookie = "customer_access_token="+data.token+"; path=/;domain=.setapp.com; expires=" + date.toUTCString();
+				document.cookie = "customer_refresh_token="+data.refresh_token+"; path=/;domain=.setapp.com; expires=" + date.toUTCString();
+        		location.href = "https://my.setapp.com/successful-registration";
         		// $.ajax({
         		// 	url: 'https://my.setapp.com/login',
         		// 	type: 'POST',
