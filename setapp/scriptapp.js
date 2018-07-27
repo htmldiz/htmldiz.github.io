@@ -62,7 +62,6 @@ function readyjQueryinit(){
           	if(alt == text){
 				var html = $(el).parent().find('.applicationslist-grid-about').html();
 				$('body').find('.app-current-head').append(html);
-				return;
           	}
           });
           $('#signup-step-windows').remove();
