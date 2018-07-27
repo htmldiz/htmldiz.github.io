@@ -40,8 +40,13 @@ function readyjQueryinit(){
           $('.popup-info-get-free .field-group.-actions [type="submit"]').val('Download '+title+' for FREE');
         }
         $('body').on('click', '#signup-form-big .button.-cta', function(event) {
-        	$('#signup-form-big').css('display','none');
-        	$('#signup-step-windows').attr('style','');
+
+        	if(navigator.platform.toUpperCase().indexOf('MAC')>=0){
+        		$('body').find('#signup-windows-continue').trigger('click');
+        	}else{
+	        	$('#signup-form-big').css('display','none');
+	        	$('#signup-step-windows').attr('style','');
+	        }
         	return false;
         });
         $('body').on('click', '[data-modal-trigger="modal-signup"]', function(event) {
@@ -111,15 +116,6 @@ function readyjQueryinit(){
 				document.cookie = "customer_access_token="+data.token+";domain=.setapp.com; path=/; expires=" + date.toUTCString();
 				document.cookie = "customer_refresh_token="+data.refresh_token+";domain=.setapp.com; path=/; expires=" + date.toUTCString();
         		location.href = "https://my.setapp.com/successful-registration";
-        		// $.ajax({
-        		// 	url: 'https://my.setapp.com/login',
-        		// 	type: 'POST',
-        		// 	dataType: 'json',
-        		// 	data: '{"email":"'+data.email+'","is_sign_up":"true","refresh_token":"'+data.refresh_token+'","token":"'+data.token+'","user_id":"'+data.user_id+'"}',
-        		// })
-        		// .always(function(data) {
-        		// 	console.log(data);
-        		// });
         		
         	})
         	.fail(function(data) {
@@ -143,9 +139,6 @@ function readyjQueryinit(){
         $('body').on('click', '#signup-windows-subscribe', function(event) {
         	var serialize = $('#signup-form-big').serialize();
         	var email = $('[name="email"]','#signup-form-big').val();
-        	if(navigator.platform.toUpperCase().indexOf('MAC')>=0){
-        		$('body').find('#signup-windows-continue').trigger('click');
-        	}else{
         	$.ajax({
         		url: 'https://setapp.com/ajax/win_subscribe',
         		type: "POST",
@@ -170,7 +163,6 @@ function readyjQueryinit(){
         			});
         		}
         	});
-        	}
         	return false;
         });
         $('body').on('click', '[data-scrollto-element]', function(event) {
