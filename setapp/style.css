@@ -202,8 +202,7 @@ html, body {
 }
 
 #signup-form-big .field-checkbox {
-	margin: 13px 0 10px 20px;
-	display: flex;
+	margin: 11px 0 10px 20px;
 	width: 100%;
 	font-size: 13px;
 	font-family: "Roboto";
@@ -213,10 +212,10 @@ html, body {
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
-	  -webkit-box-align: center;
-	  -webkit-align-items: center;
-	      -ms-flex-align: center;
-	          align-items: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
 }
 
 #signup-form-big .field-checkbox input {
@@ -305,7 +304,7 @@ html, body {
 	max-width: 15%;
 	margin-left: .5%;
 	margin-right: .5%;
-	padding: 15px 0 15px 15px;
+	padding: 13px 0 13px 15px;
 	font-size: 15px;
 	font-family: "Roboto";
 	color: rgb(67, 69, 81);
@@ -360,14 +359,14 @@ html, body {
 	-ms-flex: 0 0 33.33333%;
 	flex: 0 0 33.33333%;
 	max-width: 33.33333%;
-	margin-bottom: 48px;
+	margin-bottom: 40px;
 }
 
 .applicationslist-content {
 	overflow-y: auto;
 	max-height: 100%;
 	margin-right: 40px;
-	margin-top: 70px;
+	margin-top: 62px;
 }
 
 .applicationslist-content .applicationslist-grid {
@@ -410,7 +409,7 @@ html, body {
 	font-size: 25px;
 	line-height: 1.5;
 	color: #00024f;
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 }
 
 .popup-info-get-free .contentinwrap .-social {
@@ -467,11 +466,29 @@ html, body {
 	display: flex;
 	align-items: center;
 	color: #0a104d;
+	margin-bottom: 50px;
 }
 .app-current-head{
 	flex: 0 0 50%;
 	max-width: 50%;
+	display: flex;
+	align-items: flex-start;
 }
+.app-current-head img{
+	margin: 0;
+	max-width: 80px;
+}
+.app-current-head .text-app{
+	margin-left: 34px;
+	margin-top: 8px;
+}
+.app-current-head .text-app .title{
+	margin: 0;
+}
+.app-current-head .text-app .text-here-app{
+	font-size: 13px;
+}
+
 .app-current-more{
 	text-transform: uppercase;
 	position: relative;
@@ -482,6 +499,7 @@ html, body {
 	padding-left: 54px;
 	font-family: Roboto;
 	font-weight: 600;
+	line-height: 1.3;
 }
 .app-current-more:before{
 	position: absolute;
@@ -511,10 +529,10 @@ html, body {
 	opacity: 0;
 	position: absolute;
 	cursor: pointer;
-	width: 18px;
-	height: 18px;
-	top: 0;
-	left: -18px;
+	width: 14px;
+	height: 14px;
+	top: 2px;
+	left: -19px;
 	margin: 0;
 }
 .field-group input:checked + .v-checkbox::before, .field-group input:checked + .v-checkbox::after {
@@ -527,8 +545,8 @@ html, body {
 	height: 14px;
 	background-color: #fff;
 	cursor: pointer;
-	left: -18px;
-	top: 0;
+	left: -19px;
+	top: 2px;
 }
 .v-checkbox:before{
 	content:'';
