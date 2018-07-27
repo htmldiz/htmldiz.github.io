@@ -160,6 +160,7 @@ function readyjQueryinit(){
         					});
         				},1000);
         				$('#signup-form-big').attr('style','');
+        				$('#signup-step-windows').css('display','none');
         			});
         		}
         	});
