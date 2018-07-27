@@ -421,8 +421,8 @@ html, body {
 }
 
 .popup-info-get-free .social_ico {
-	max-width: 20px;
-	max-height: 20px;
+	width: 20px;
+	height: 20px;
 	fill: #fff;
 	margin: 0 20px 0 0;
 }
@@ -443,6 +443,9 @@ html, body {
 	text-decoration: none;
 	font-size: 19px;
 	padding: 11px 40px 11px 30px;
+}
+.popup-info-get-free  .google_btn {
+	padding: 11px 50px 11px 30px;
 }
 
 .popup-info-get-free .facebook_btn {
