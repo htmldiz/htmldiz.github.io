@@ -644,6 +644,7 @@ html, body {
 	.popup-info-get-free .applicationslist-sidebar a {
 		flex: 0 0 23%;
 		max-width: 23%
+		padding: 14px 0 15px 15px;
 	}
 	.contentin .contentinwrap{
 		padding: 0;
@@ -659,7 +660,7 @@ html, body {
 		padding-bottom: 33px;
 	}
 	.containe-list{
-		margin: 0px 0 23px 52px;
+		margin: 0px 0 28px 52px;
 	}
 
 	.title.applicationslist-category{
@@ -674,6 +675,9 @@ html, body {
 	}
 	.containe-list ul{
 		font-size: 20px;
+	}
+	#signup-form-big input[name="email"]{
+		margin-top: 13px;
 	}
 
 }
