@@ -643,8 +643,8 @@ html, body {
 	}
 	.popup-info-get-free .applicationslist-sidebar a {
 		flex: 0 0 23%;
-		max-width: 23%
-		padding: 14px 0 15px 15px;
+		max-width: 23%;
+		padding: 13px 0 13px 15px;
 	}
 	.contentin .contentinwrap{
 		padding: 0;
@@ -667,17 +667,28 @@ html, body {
 		margin-bottom: 23px;
 	}
 	.popup-info-get-free .col-5:before{
-		left: 58px;
+		left: 50px;
 	}
 	.popup-info-get-free .col-5:after{
 		top: -5px;
-		left: 58px;
+		left: 50px;
 	}
 	.containe-list ul{
 		font-size: 20px;
 	}
 	#signup-form-big input[name="email"]{
-		margin-top: 13px;
+		margin-top: 7px;
+	}
+	.app-current {
+		margin-bottom: 33px;
+		margin-top: 15px;
+	}
+	.app-current-head .text-app {
+		margin-left: 18px;
+		margin-top: 0px;
+	}
+	.popup-info-get-free .applicationslist{
+		padding-bottom: 0px;
 	}
 
 }
@@ -698,6 +709,9 @@ html, body {
 	}
 	.popup-info-get-free .col-5:after{
 		top: 15%;
+	}
+	.contentin {
+		padding-top: 35px;
 	}
 }
 
