@@ -413,16 +413,16 @@ html, body {
 	margin-bottom: 20px;
 }
 
-.popup-info-get-free .-social {
+.popup-info-get-free .contentinwrap .-social {
 	display: flex;
 	justify-content: space-between;
 	margin: 13px auto;
 	max-width: 100%;
 }
-.contentinwrap .separator{
+.popup-info-get-free .separator{
 	margin: 0;
 }
-.contentinwrap .field-group{
+.popup-info-get-free .field-group{
 	margin: 0;
 }
 
