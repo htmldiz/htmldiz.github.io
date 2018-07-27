@@ -701,8 +701,8 @@ html, body {
 	.popup-info-get-free .col-7 {
 		flex: 0 0 63%;
 		max-width: 63%;
-		padding-left: 110px;
 		padding-top: 17px;
+		padding-left: 98px;
 	}
 	.popup-info-get-free .col-5:before{
 		top: -38%;
@@ -713,6 +713,13 @@ html, body {
 	.contentin {
 		padding-top: 35px;
 	}
+	.contentin .contentin-title{
+		max-width: 85%;
+		margin: auto;
+		font-size: 30px;
+		padding-bottom: 23px;
+	}
+
 }
 
 @media (max-width:1200px) {
