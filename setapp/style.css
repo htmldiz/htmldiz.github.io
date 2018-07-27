@@ -139,7 +139,7 @@ html, body {
 
 .containe-list {
 	/*margin: 27px 0 28px 25px*/
-	margin: 40px 0 40px 105px;
+	margin: 40px 0 38px 105px;
 	max-width: 500px;
 }
 
@@ -189,7 +189,7 @@ html, body {
 
 #signup-form-big input[name="email"], #signup-form-big input[name="password"] {
 	width: 100%;
-	padding: 14px;
+	padding: 13px;
 	font-size: 14px;
 	font-family: "Roboto";
 	color: rgb(85, 85, 85);
@@ -198,7 +198,7 @@ html, body {
 }
 
 #signup-form-big input[name="email"] {
-	margin-top: 11px
+	margin-top: 10px
 }
 
 #signup-form-big .field-checkbox {
@@ -416,12 +416,18 @@ html, body {
 .popup-info-get-free .-social {
 	display: flex;
 	justify-content: space-between;
-	margin: 15px auto;
+	margin: 13px auto;
 	max-width: 100%;
+}
+.contentinwrap .separator{
+	margin: 0;
+}
+.contentinwrap .field-group{
+	margin: 0;
 }
 
 .popup-info-get-free .social_ico {
-	width: 20px;
+	min-width: 20px;
 	height: 20px;
 	fill: #fff;
 	margin: 0 20px 0 0;
@@ -434,7 +440,7 @@ html, body {
 	font-size: 18px;
 	font-weight: 700;
 	text-transform: uppercase;
-	padding: 0;
+	padding: 0!important;
 }
 
 .popup-info-get-free .facebook_btn, .popup-info-get-free  .google_btn {
@@ -459,6 +465,7 @@ html, body {
 
 .app-current{
 	display: flex;
+	align-items: center;
 	color: #0a104d;
 }
 .app-current-head{
