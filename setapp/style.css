@@ -719,6 +719,13 @@ html, body {
 		font-size: 30px;
 		padding-bottom: 23px;
 	}
+	.app-current-head{
+		flex: 0 0 53%;
+		max-width: 53%;
+	}
+	.app-current-more{
+		padding-left: 45px;
+	}
 
 }
 
