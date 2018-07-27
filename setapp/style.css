@@ -434,6 +434,7 @@ html, body {
 	font-size: 18px;
 	font-weight: 700;
 	text-transform: uppercase;
+	padding: 0;
 }
 
 .popup-info-get-free .facebook_btn, .popup-info-get-free  .google_btn {
@@ -455,6 +456,47 @@ html, body {
 .popup-info-get-free .google_btn {
 	background-color: #c35c52;
 }
+
+.app-current{
+	display: flex;
+	color: #0a104d;
+}
+.app-current-head{
+	flex: 0 0 50%;
+	max-width: 50%;
+}
+.app-current-more{
+	text-transform: uppercase;
+	position: relative;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 22px;
+	max-width: 275px;
+	flex: 0 0 50%;
+	padding-left: 54px;
+	font-family: Roboto;
+	font-weight: 600;
+}
+.app-current-more:before{
+	position: absolute;
+	background-color: #0a104d;
+	content: '';
+	display: block;
+	left: -20px;
+	top: calc(50% - 4px);
+	width: 35px;
+	height: 6px;
+}
+.app-current-more:after{
+	position: absolute;
+	background-color: #0a104d;
+	content: '';
+	display: block;
+	left: -6px;
+	top: calc(50% - 18px);
+	width: 6px;
+	height: 36px;
+}
+
 
 
 /*custom checkbox*/
