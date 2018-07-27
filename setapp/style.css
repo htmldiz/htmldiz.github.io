@@ -385,16 +385,16 @@ html, body {
 	-ms-flex-align: center;
 	align-items: center;
 	position: relative;
-	margin-bottom: 57px;
+	margin-bottom: 30px;
 }
 
 .applicationslist-content .applicationslist-grid:after {
 	content: '';
 	position: absolute;
-	bottom: 0;
+	bottom: 5px;
 	left: 0;
 	height: 1px;
-	width: 97%;
+	width: 95%;
 	background-color: #d2d2d2;
 }
 
@@ -410,7 +410,7 @@ html, body {
 	font-size: 25px;
 	line-height: 1.5;
 	color: #00024f;
-	margin-bottom: 30px;
+	margin-bottom: 28px;
 }
 
 .popup-info-get-free .contentinwrap .-social {
@@ -467,7 +467,7 @@ html, body {
 	display: flex;
 	align-items: center;
 	color: #0a104d;
-	margin-bottom: 50px;
+	margin-bottom: 46px;
 }
 .app-current-head{
 	flex: 0 0 50%;
@@ -590,7 +590,8 @@ html, body {
 
 @media (min-height:820px) {
 	.popup-info-get-free .applicationslist {
-		padding-bottom: 90px
+		/*padding-bottom: 90px*/
+		padding-bottom: 50px
 	}
 
 }
