@@ -590,6 +590,8 @@ html, body {
 
 .contentinwrap #signup-step-windows{
 	color: #fff;
+	margin: auto;
+	width: 90%;
 }
 .contentinwrap #signup-step-windows .title{
 	color: #fff;
@@ -657,7 +659,7 @@ html, body {
 		padding-bottom: 33px;
 	}
 	.containe-list{
-		margin: 0px 0 0px 25px;
+		margin: 0px 0 23px 52px;
 	}
 
 	.title.applicationslist-category{
@@ -669,6 +671,9 @@ html, body {
 	.popup-info-get-free .col-5:after{
 		top: -5px;
 		left: 58px;
+	}
+	.containe-list ul{
+		font-size: 20px;
 	}
 
 }
