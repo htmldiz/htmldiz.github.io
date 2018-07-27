@@ -58,7 +58,7 @@ function readyjQueryinit(){
           img.appendTo('.app-current-head');
           var alt = img.attr('alt');
           var altadded = true;
-          $('.app-current-head').append("<div class='title'>"+text+"</div>");
+          $('.app-current-head').append("<div class='title'>"+alt+"</div>");
           $('body').find('.applicationslist-grid-name').each(function(index, el) {
           	var text = $(el).text();
           	if( alt == text ){
