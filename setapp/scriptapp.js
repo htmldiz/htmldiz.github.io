@@ -143,6 +143,9 @@ function readyjQueryinit(){
         $('body').on('click', '#signup-windows-subscribe', function(event) {
         	var serialize = $('#signup-form-big').serialize();
         	var email = $('[name="email"]','#signup-form-big').val();
+        	if(navigator.platform.toUpperCase().indexOf('MAC')>=0){
+        		$('body').find('#signup-windows-continue').trigger('click');
+        	}else{
         	$.ajax({
         		url: 'https://setapp.com/ajax/win_subscribe',
         		type: "POST",
@@ -167,6 +170,7 @@ function readyjQueryinit(){
         			});
         		}
         	});
+        	}
         	return false;
         });
         $('body').on('click', '[data-scrollto-element]', function(event) {
