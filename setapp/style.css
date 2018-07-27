@@ -80,8 +80,9 @@ html, body {
 	-ms-flex: 0 0 65%;
 	flex: 0 0 65%;
 	max-width: 65%;
-	padding-left: 172px;
-	padding-top: 25px
+	/*padding-left: 172px;*/
+	padding-left: 155px;
+	padding-top: 16px;
 }
 
 .contentin  .contentinwrap{
@@ -104,7 +105,8 @@ html, body {
 }
 
 .contentin .contentin-logo {
-	padding-bottom: 83px
+	/*padding-bottom: 83px;*/
+	padding-bottom: 74px;
 }
 
 .contentin .containe-break, .contentin .contentin-title, .contentin .contentin-logo {
@@ -415,6 +417,7 @@ html, body {
 	display: flex;
 	justify-content: space-between;
 	margin: 15px auto;
+	max-width: 100%;
 }
 
 .popup-info-get-free .social_ico {
