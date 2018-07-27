@@ -588,18 +588,18 @@ html, body {
 	position: relative;
 }
 
-.contentinwrap .signup-step-windows{
+.contentinwrap #signup-step-windows{
 	color: #fff;
 }
-.contentinwrap .signup-step-windows .title{
+.contentinwrap #signup-step-windows .title{
 	color: #fff;
 }
-.contentinwrap .signup-step-windows .text{
+.contentinwrap #signup-step-windows .text{
 	font-size: 14px;
 	color: #fff;
 }
 
-.contentinwrap .signup-step-windows .button.-wide {
+.contentinwrap #signup-step-windows .button.-wide {
 	width: 100%;
 	color: #fff;
 	background: #16c659;
@@ -630,13 +630,13 @@ html, body {
 }
 @media (max-width:1400px) {
 	.popup-info-get-free .col-5{
-		flex: 0 0 36%;
-		max-width: 36%;
+		flex: 0 0 38%;
+		max-width: 38%;
 	}
 	.popup-info-get-free .col-7{
-		flex: 0 0 64%;
-		max-width: 64%;
-		padding-left: 150px;
+		flex: 0 0 62%;
+		max-width: 62%;
+		padding-left: 120px;
 		padding-top: 17px;
 	}
 	.popup-info-get-free .applicationslist-sidebar a {
@@ -653,7 +653,8 @@ html, body {
 		padding-bottom: 36px;
 	}
 	.contentin .contentin-title{
-		font-size: 28px;
+		font-size: 27px;
+		padding-bottom: 33px;
 	}
 	.containe-list{
 		margin: 0px 0 0px 25px;
