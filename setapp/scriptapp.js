@@ -58,9 +58,9 @@ function readyjQueryinit(){
           img.appendTo('.app-current-head');
           var alt = img.attr('alt');
           var altadded = true;
+          $('.app-current-head').append("<div class='title'>"+text+"</div>");
           $('body').find('.applicationslist-grid-name').each(function(index, el) {
           	var text = $(el).text();
-          	$('body').find('.app-current-head').append("<div class='title'>"+text+"</div>");
           	if( alt == text ){
 				if(altadded === true){
 					var html = $(el).parent().find('.applicationslist-grid-about .applicationslist-grid-description:eq(0)').html();
