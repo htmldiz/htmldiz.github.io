@@ -588,13 +588,18 @@ html, body {
 	position: relative;
 }
 
-.signup-step-windows{
+.contentinwrap .signup-step-windows{
 	color: #fff;
 }
-.signup-step-windows .title{
+.contentinwrap .signup-step-windows .title{
 	color: #fff;
 }
-.signup-step-windows .button.-wide {
+.contentinwrap .signup-step-windows .text{
+	font-size: 14px;
+	color: #fff;
+}
+
+.contentinwrap .signup-step-windows .button.-wide {
 	width: 100%;
 	color: #fff;
 	background: #16c659;
