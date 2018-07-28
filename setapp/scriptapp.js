@@ -182,12 +182,12 @@ function readyjQueryinit(){
         			$.each(data.errors,function(index, el) {
         				var varid = 'notification-'+Number(Math.floor(Math.random() * (999999999 - 0) + 0));
         				$('body').find('#notifications').append('<div class="notification -error -in" id="'+varid+'"><div class="notification-state"></div><div class="notification-message">'+el.detail+'</div><div class="notification-close"></div><div class="notification-countdown" style="animation-play-state: running; animation-duration: 7000ms;"></div></div>');
-        				var 
+        				var ID = '#'+varid;
         				setTimeout(function(id){
         					$('body').find(id).fadeOut("slow",function(){
 								$(this).remove();
         					});
-        				},1000,'#'+varid);
+        				},1000,ID);
         				$('#signup-form-big').attr('style','');
         				$('#signup-step-windows').css('display','none');
         			});
