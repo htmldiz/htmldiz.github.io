@@ -180,7 +180,6 @@ function readyjQueryinit(){
 				document.cookie = "customer_access_token="+data.token+";domain=.setapp.com; path=/; expires=" + date.toUTCString();
 				document.cookie = "customer_refresh_token="+data.refresh_token+";domain=.setapp.com; path=/; expires=" + date.toUTCString();
         		location.href = "https://my.setapp.com/successful-registration";
-        		
         	})
         	.fail(function(data) {
         		data = JSON.parse(data.responseText);
@@ -194,7 +193,7 @@ function readyjQueryinit(){
         					$('body').find(id).fadeOut("slow",function(){
 								$(this).remove();
         					});
-        				},1000,ID);
+        				},10000,ID);
         				$('#signup-form-big').attr('style','');
         				$('#signup-step-windows').css('display','none');
         			});
