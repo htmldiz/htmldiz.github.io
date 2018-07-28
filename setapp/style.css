@@ -452,7 +452,7 @@ html, body {
     font-size: 11px;
 }
 .popup-info-get-free .field-group.fuild-pass .error_text{
-top: 0px;
+	top: 1px;
 }
 .popup-info-get-free .field-group input{
 	position: relative;

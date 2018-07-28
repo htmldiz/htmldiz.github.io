@@ -39,6 +39,14 @@ function readyjQueryinit(){
           $('.popup-info-get-free .name-app-here').html(title);
           $('.popup-info-get-free .field-group.-actions [type="submit"]').val('Download '+title+' for FREE');
         }
+		$(document).on("focus", "#signup-form-big [name='email']", function( event ) {
+			$(this).parent().find('.error_text').remove();
+			$(this).removeClass("error");
+		});
+		$(document).on("focus", "#signup-form-big [name='password']", function( event ) {
+			$(this).parent().find('.error_text').remove();
+			$(this).removeClass("error");
+		});
 		$(document).on("blur", "#signup-form-big [name='email']", function( event ) {
 			var email_input = this;
 			validateEmail(email_input,true);
@@ -84,7 +92,7 @@ function readyjQueryinit(){
 				if(empty || oldval.length > 0 && validate.length == 0){
 			        $(input).before("<span class='error_text'>Should not be empty</span>");
 			        $(input).addClass("error");
-			        $(input).data('oldval',validate);
+			        $(input).data('oldval', validate);
 			        return false;
 				}
 			}
@@ -163,7 +171,6 @@ function readyjQueryinit(){
     			contentType: "application/json"
         	})
         	.done(function(data) {
-        		console.log(data);
         		if(data.responseText){
         			data = JSON.parse(data.responseText);
         		}else{
