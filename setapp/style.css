@@ -457,6 +457,7 @@ html, body {
 .popup-info-get-free .field-group input{
 	position: relative;
 	z-index: 2;
+	transition: unset;
 }
 .popup-info-get-free .field-group .field.error{
 background: none;
