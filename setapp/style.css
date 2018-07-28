@@ -790,5 +790,31 @@ background: none;
 	.popup-info-get-free .applicationslist-sidebar a {
 		font-size: 11px
 	}
-
+	.app-current-more{
+		font-size: 16px;
+    	max-width: 223px;
+	}
+	.app-current-head{
+      padding-right: 10px;
+	}
+	.app-current-more:before {
+	    position: absolute;
+	    background-color: #0a104d;
+	    content: '';
+	    display: block;
+	    left: -4px;
+	    top: calc(50% - 3px);
+	    width: 24px;
+	    height: 3px;
+	}
+	.app-current-more:after {
+	    position: absolute;
+	    background-color: #0a104d;
+	    content: '';
+	    display: block;
+	    left: 7px;
+	    top: calc(50% - 14px);
+	    width: 3px;
+	    height: 26px;
+	}
 }
