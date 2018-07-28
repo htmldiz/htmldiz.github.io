@@ -422,8 +422,48 @@ html, body {
 .popup-info-get-free .separator{
 	margin: 0;
 }
+.popup-info-get-free .field-group .error_text{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	top: 10px;
+	right: 0;
+	background: #ffffff;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-wrap: nowrap;
+	-ms-flex-wrap: nowrap;
+	flex-wrap: nowrap;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: end;
+	-webkit-justify-content: flex-end;
+	-ms-flex-pack: end;
+	justify-content: flex-end;
+	z-index: 1;
+	padding: 10px;
+	color:#c35c52;
+    text-align: right;
+    font-size: 11px;
+}
+.popup-info-get-free .field-group.fuild-pass .error_text{
+top: 0px;
+}
+.popup-info-get-free .field-group input{
+	position: relative;
+	z-index: 2;
+}
+.popup-info-get-free .field-group .field.error{
+background: none;
+}
 .popup-info-get-free .field-group{
 	margin: 0;
+	position: relative;
 }
 
 .popup-info-get-free .social_ico {
