@@ -49,6 +49,7 @@ function readyjQueryinit(){
 		});
 		function validateEmail(input,empty){
 			$(input).parent().find('.error_text').remove();
+			$(input).removeClass("error");
 			if($(input).val() != '') {
 		        var pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
 			    if(pattern.test($(input).val())){
@@ -68,6 +69,7 @@ function readyjQueryinit(){
 		}
 		function validatePassword(input,empty){
 			$(input).parent().find('.error_text').remove();
+			$(input).removeClass("error");
 			var validate = $(input).val();
 			var oldval   = !$(input).data('oldval') ? '' : $(input).data('oldval');
 			console.log(validate);
@@ -178,13 +180,14 @@ function readyjQueryinit(){
         		if(data.errors){
         			$('body').find('#notifications').html('');
         			$.each(data.errors,function(index, el) {
-        				var varid = Math.random() * (999999999 - 0) + 0;
-        				$('body').find('#notifications').append('<div class="notification -error -in" id="notification-'+varid+'"><div class="notification-state"></div><div class="notification-message">'+el.detail+'</div><div class="notification-close"></div><div class="notification-countdown" style="animation-play-state: running; animation-duration: 7000ms;"></div></div>');
+        				var varid = 'notification-'+Number(Math.floor(Math.random() * (999999999 - 0) + 0));
+        				$('body').find('#notifications').append('<div class="notification -error -in" id="'+varid+'"><div class="notification-state"></div><div class="notification-message">'+el.detail+'</div><div class="notification-close"></div><div class="notification-countdown" style="animation-play-state: running; animation-duration: 7000ms;"></div></div>');
+        				var 
         				setTimeout(function(id){
-        					$('body').find('#'+id).fadeOut("slow",function(){
+        					$('body').find(id).fadeOut("slow",function(){
 								$(this).remove();
         					});
-        				},1000,'notification-'+varid);
+        				},1000,'#'+varid);
         				$('#signup-form-big').attr('style','');
         				$('#signup-step-windows').css('display','none');
         			});
