@@ -226,10 +226,10 @@ body, html {
 	-ms-flex: 0 0 100%;
 	flex: 0 0 100%;
 	max-width: 100%;
-	-webkit-box-pack: justify;
-	-webkit-justify-content: space-between;
-	-ms-flex-pack: justify;
-	justify-content: space-between;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
 }
 .petbucket-step-3 .petbucketstep-select {
 	display: inline-block;
@@ -240,6 +240,9 @@ body, html {
 	text-transform: uppercase;
 	text-decoration: none;
 	text-align: center;
+    flex: 0 0 auto;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .petbucket-step-3 [data-petbucketselect]:before {
@@ -386,4 +389,9 @@ body, html {
 		font-size: 10px;
 	}
 
+}
+
+.petbucket-step-3 localizerinlinegroup {
+    display: flex;
+    flex: 0 0 auto;
 }
