@@ -101,7 +101,7 @@ html, body {
 	flex: 0 0 100%;
 	margin-left: auto;
 	margin-right: auto;
-	overflow: hidden;
+	/*overflow: hidden;*/
 }
 
 .contentin .contentin-logo {
@@ -138,9 +138,10 @@ html, body {
 }
 
 .containe-list {
-	/*margin: 27px 0 28px 25px*/
-	margin: 40px 0 38px 105px;
-	max-width: 500px;
+/*	margin: 40px 0 38px 105px;
+	max-width: 500px;*/
+	max-width: 405px;
+	margin: 40px auto 38px;
 }
 
 .containe-list ul {
@@ -151,7 +152,7 @@ html, body {
 	/*line-height: 1.556;*/
 	line-height: 1.3;
 	margin: 0;
-	padding-left: 40px;
+	padding-left: 20px;
 }
 
 .separator:before {
@@ -271,7 +272,7 @@ html, body {
 }
 
 .popup-info-get-free .applicationslist {
-	padding-bottom: 50px;
+	/*padding-bottom: 50px;*/
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
@@ -367,7 +368,9 @@ html, body {
 	overflow-y: auto;
 	max-height: 100%;
 	margin-right: 40px;
-	margin-top: 62px;
+	/*margin-top: 62px;*/
+	margin-top: 15px;
+	padding-top: 47px;
 }
 
 .applicationslist-content .applicationslist-grid {
@@ -404,6 +407,7 @@ html, body {
 	flex-wrap: nowrap;
 	display: flex;
 	align-items: flex-start;
+	cursor: pointer;
 }
 
 .title.applicationslist-category {
@@ -653,8 +657,7 @@ background: none;
 
 @media (min-height:820px) {
 	.popup-info-get-free .applicationslist {
-		/*padding-bottom: 90px*/
-		padding-bottom: 50px
+		/*padding-bottom: 50px*/
 	}
 
 }
@@ -664,7 +667,11 @@ background: none;
 		flex: 0 0 50%;
 		max-width: 50%
 	}
-
+}
+@media (max-width:1415px) {
+	.applicationslist-content{
+		margin-top: 22px;
+	}
 }
 
 .popup-info-get-free .button.-facebook span:before,
