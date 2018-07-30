@@ -101,7 +101,7 @@ function readyjQueryinit(){
 			});
 		}else{
 			var path = location.origin+location.pathname;
-			if( path == "https://www.petbucket.com/c/4405799/1/for-cats.html"){
+			if( path == "https://www.petbucket.com/c/4405799/1/for-cats.html"){ 
 				$('body').find('.free-shipping-header').remove();
 				$('body').find('.dogs-cats-menu').html('<strong>Parasite prevention from top-brands with lowest-price guarantee</strong>');
 			}
