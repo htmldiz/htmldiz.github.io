@@ -72,6 +72,7 @@ function readyjQueryinit(){
 		});
 		var type_it = "";
 		var path = location.origin+location.pathname;
+		console.log(path);
 		if( path == "https://www.petbucket.com/c/4521472/1/flea.html"){
 			$('body').find('.listing-description .sub-categories-title').html('<strong>Flea prevention from top brands with lowest-price guarantee</strong>');
 		}
