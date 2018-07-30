@@ -101,7 +101,7 @@ html, body {
 	flex: 0 0 100%;
 	margin-left: auto;
 	margin-right: auto;
-	/*overflow: hidden;*/
+	overflow: hidden;
 }
 
 .contentin .contentin-logo {
@@ -517,6 +517,7 @@ background: none;
 	align-items: center;
 	color: #0a104d;
 	margin-bottom: 46px;
+	cursor: pointer;
 }
 .app-current-head{
 	flex: 0 0 50%;
@@ -800,7 +801,8 @@ background: none;
 	}
 
 	.popup-info-get-free .contentin {
-		padding-top: 50px
+		padding-top: 50px;
+		padding-left: 10px;
 	}
 
 	.applicationslist-content .applicationslist-grid-name {
