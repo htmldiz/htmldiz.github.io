@@ -370,6 +370,7 @@ html, body {
 	margin-right: 40px;
 	/*margin-top: 62px;*/
 	margin-top: 15px;
+	padding-top: 47px;
 }
 
 .applicationslist-content .applicationslist-grid {
@@ -666,7 +667,11 @@ background: none;
 		flex: 0 0 50%;
 		max-width: 50%
 	}
-
+}
+@media (max-width:1415px) {
+	.applicationslist-content{
+		margin-top: 22px;
+	}
 }
 
 .popup-info-get-free .button.-facebook span:before,
