@@ -198,7 +198,7 @@ html, body {
 	margin-top: 1px;
 }
 #signup-form-big input[name="email"]:focus, #signup-form-big input[name="password"]:focus {
-	outline: solid 2px #eb7f0c;
+	outline: solid 2px #ed7d31;
 	box-shadow: none;
 }
 
