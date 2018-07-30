@@ -336,6 +336,7 @@ html, body {
 	-webkit-flex-wrap: wrap;
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
+	min-height: 98px;
 }
 
 .applicationslist-content .applicationslist-grid-cell img {
@@ -373,7 +374,6 @@ html, body {
 	max-height: 100%;
 	margin-right: 40px;
 	/*margin-top: 62px;*/
-	margin-top: 15px;
 	padding-top: 47px;
 }
 
@@ -674,7 +674,13 @@ background: none;
 }
 @media (max-width:1415px) {
 	.applicationslist-content{
-		margin-top: 22px;
+		/*margin-top: 22px;*/
+		min-height: 142px;
+	}
+}
+@media (max-width:1660px) {
+	.applicationslist-content{
+		min-height: 120px;
 	}
 }
 
@@ -741,6 +747,9 @@ background: none;
 	}
 	.popup-info-get-free .applicationslist{
 		padding-bottom: 0px;
+	}
+	.applicationslist-content{
+		min-height: 148px;
 	}
 
 }
