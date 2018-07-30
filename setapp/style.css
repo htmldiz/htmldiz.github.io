@@ -781,6 +781,8 @@ background: none;
 		margin: auto;
 		font-size: 30px;
 		padding-bottom: 23px;
+    	margin: 0px auto;
+    	max-width: 405px;
 	}
 	.app-current-head{
 		flex: 0 0 53%;
