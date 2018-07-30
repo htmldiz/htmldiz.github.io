@@ -673,13 +673,13 @@ background: none;
 	}
 }
 @media (max-width:1415px) {
-	.applicationslist-content{
+	.popup-info-get-free .applicationslist-sidebar{
 		/*margin-top: 22px;*/
 		min-height: 142px;
 	}
 }
 @media (max-width:1660px) {
-	.applicationslist-content{
+	.popup-info-get-free .applicationslist-sidebar{
 		min-height: 120px;
 	}
 }
@@ -748,7 +748,7 @@ background: none;
 	.popup-info-get-free .applicationslist{
 		padding-bottom: 0px;
 	}
-	.applicationslist-content{
+	.popup-info-get-free .applicationslist-sidebar{
 		min-height: 148px;
 	}
 
