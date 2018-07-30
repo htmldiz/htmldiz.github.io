@@ -40,7 +40,7 @@ function readyjQueryinit(){
 		}
 		var reg = new RegExp(/www.petbucket.com\/blog\/(.*).html$/i);
 		var href  = location.href;
-		console.log('variant b');
+		console.log('variant c');
 		if(href.search(reg) > -1){
 			$('head').append('<link rel="stylesheet" href="'+url+'css/style.css" />');
 			$('body').append('<a href="#" class="'+projecturl+'-step-1" data-localizer="detect">protect your pet from parasites</a>');
@@ -74,90 +74,9 @@ function readyjQueryinit(){
 				return false;
 			});
 			var type_it = "";
-			$('body').on('click', '.'+projecturl+'-step-3 [data-'+projecturl+'select]', function(event) {
-				var typehere = $(this).attr('data-'+projecturl+'select');
-				var get_link = type_it+'-'+typehere;
-				window.dataLayer = window.dataLayer || [];
-				switch (get_link){
-					case "dog-flea":
-						dataLayer.push({
-						'event': 'gtm-cro-event',
-						'gtm-cro-event-category': 'EXP - Mobile - Sticky Bar',
-						'gtm-cro-event-action': 'click',
-						'gtm-cro-event-label': 'Dogs - Flea'
-						});
-						location.href = "https://www.petbucket.com/c/4521472/1/flea.html";
-					break;
-					case "dog-tick":
-						dataLayer.push({
-						'event': 'gtm-cro-event',
-						'gtm-cro-event-category': 'EXP - Mobile - Sticky Bar',
-						'gtm-cro-event-action': 'click',
-						'gtm-cro-event-label': 'Dogs - Tick'
-						});
-						location.href = "https://www.petbucket.com/c/4521473/1/tick.html";
-					break;
-					case "dog-heartworm":
-						dataLayer.push({
-						'event': 'gtm-cro-event',
-						'gtm-cro-event-category': 'EXP - Mobile - Sticky Bar',
-						'gtm-cro-event-action': 'click',
-						'gtm-cro-event-label': 'Dogs - Heartworm'
-						});
-						location.href = "https://www.petbucket.com/c/4521474/1/heartworm.html";
-					break;
-					case "dog-iw":
-						dataLayer.push({
-						'event': 'gtm-cro-event',
-						'gtm-cro-event-category': 'EXP - Mobile - Sticky Bar',
-						'gtm-cro-event-action': 'click',
-						'gtm-cro-event-label': 'Dogs - Intestinal Worms'
-						});
-						location.href = "https://www.petbucket.com/c/4521475/1/intestinal-worms.html";
-					break;
-					case "cat-flea":
-						dataLayer.push({
-						'event': 'gtm-cro-event',
-						'gtm-cro-event-category': 'EXP - Mobile - Sticky Bar',
-						'gtm-cro-event-action': 'click',
-						'gtm-cro-event-label': 'Cats - Flea'
-						});
-						location.href = "https://www.petbucket.com/c/4405843/1/flea.html";
-					break;
-					case "cat-tick":
-						dataLayer.push({
-						'event': 'gtm-cro-event',
-						'gtm-cro-event-category': 'EXP - Mobile - Sticky Bar',
-						'gtm-cro-event-action': 'click',
-						'gtm-cro-event-label': 'Cats - Tick'
-						});
-						location.href = "https://www.petbucket.com/c/4540721/1/tick.html";
-					break;
-					case "cat-heartworm":
-						dataLayer.push({
-						'event': 'gtm-cro-event',
-						'gtm-cro-event-category': 'EXP - Mobile - Sticky Bar',
-						'gtm-cro-event-action': 'click',
-						'gtm-cro-event-label': 'Cats - Heartworm'
-						});
-						location.href = "https://www.petbucket.com/c/4405844/1/heartworm.html";
-					break;
-					case "cat-iw":
-						dataLayer.push({
-						'event': 'gtm-cro-event',
-						'gtm-cro-event-category': 'EXP - Mobile - Sticky Bar',
-						'gtm-cro-event-action': 'click',
-						'gtm-cro-event-label': 'Cats - Intestinal Worms'
-						});
-						location.href = "https://www.petbucket.com/c/4405832/1/intestinal-worms.html";
-					break;
-				}
-			});
 			$('body').on('click', '.'+projecturl+'dog-link, .'+projecturl+'cat-link', function(event) {
 				// $('.'+projecturl+'-step-2').addClass(projecturl+'fadeOutLeft');
 				$('.'+projecturl+'-step-2').removeClass(projecturl+'fadeInRight');
-				$('.'+projecturl+'-step-3').addClass(projecturl+'-animate');
-				$('.'+projecturl+'-step-3').addClass(projecturl+'fadeInRight');
 				window.dataLayer = window.dataLayer || [];
 				if($(this).hasClass('cat')){
 					type_it = "cat";
@@ -167,12 +86,7 @@ function readyjQueryinit(){
 					'gtm-cro-event-action': 'click',
 					'gtm-cro-event-label': 'Cats'
 					});
-					dataLayer.push({
-					'event': 'gtm-cro-event',
-					'gtm-cro-event-category': 'EXP - Mobile - Sticky Bar',
-					'gtm-cro-event-action': 'load',
-					'gtm-cro-event-label': 'Cats - Categories'
-					});
+					location.href = "https://www.petbucket.com/c/4405799/1/for-cats.html";
 				}else{
 					type_it = "dog";
 					dataLayer.push({
@@ -181,17 +95,20 @@ function readyjQueryinit(){
 					'gtm-cro-event-action': 'click',
 					'gtm-cro-event-label': 'Dogs'
 					});
-					dataLayer.push({
-					'event': 'gtm-cro-event',
-					'gtm-cro-event-category': 'EXP - Mobile - Sticky Bar',
-					'gtm-cro-event-action': 'load',
-					'gtm-cro-event-label': 'Dogs - Categories'
-					});
+					location.href = "https://www.petbucket.com/c/4521471/1/for-dogs.html";
 				}
 				return false;
 			});
 		}else{
 			var path = location.origin+location.pathname;
+			if( path == "https://www.petbucket.com/c/4405799/1/for-cats.html"){
+				$('body').find('.free-shipping-header').remove();
+				$('body').find('.dogs-cats-menu').html('<strong>Parasite prevention from top-brands with lowest-price guarantee</strong>');
+			}
+			if( path == "https://www.petbucket.com/c/4521471/1/for-dogs.html"){
+				$('body').find('.free-shipping-header').remove();
+				$('body').find('.dogs-cats-menu').html('<strong>Parasite prevention from top-brands with lowest-price guarantee</strong>');
+			}
 			if( path == "https://www.petbucket.com/c/4521472/1/flea.html"){
 				$('body').find('.listing-description .sub-categories-title').html('<strong>Flea prevention from top brands with lowest-price guarantee</strong>');
 			}
