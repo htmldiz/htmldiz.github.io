@@ -71,28 +71,29 @@ function readyjQueryinit(){
 			return false;
 		});
 		var type_it = "";
-		if( location.href == "https://www.petbucket.com/c/4521472/1/flea.html"){
+		var path = location.origin+location.pathname;
+		if( path == "https://www.petbucket.com/c/4521472/1/flea.html"){
 			$('body').find('.listing-description .sub-categories-title').html('<strong>Flea prevention from top brands with lowest-price guarantee</strong>');
 		}
-		if( location.href == "https://www.petbucket.com/c/4521473/1/tick.html"){
+		if( path == "https://www.petbucket.com/c/4521473/1/tick.html"){
 			$('body').find('.listing-description .sub-categories-title').html('<strong>Tick prevention from top brands with lowest-price guarantee</strong>');
 		}
-		if( location.href == "https://www.petbucket.com/c/4521474/1/heartworm.html"){
+		if( path == "https://www.petbucket.com/c/4521474/1/heartworm.html"){
 			$('body').find('.listing-description .sub-categories-title').html('<strong>Heartworm prevention from top brands with lowest-price guarantee</strong>');
 		}
-		if( location.href == "https://www.petbucket.com/c/4521475/1/intestinal-worms.html"){
+		if( path == "https://www.petbucket.com/c/4521475/1/intestinal-worms.html"){
 			$('body').find('.listing-description .sub-categories-title').html('<strong>Intestinal worms prevention from top brands with lowest-price guarantee</strong>');
 		}
-		if( location.href == "https://www.petbucket.com/c/4405843/1/flea.html"){
+		if( path == "https://www.petbucket.com/c/4405843/1/flea.html"){
 			$('body').find('.listing-description .sub-categories-title').html('<strong>Flea prevention from top brands with lowest-price guarantee</strong>');
 		}
-		if( location.href == "https://www.petbucket.com/c/4540721/1/tick.html"){
+		if( path == "https://www.petbucket.com/c/4540721/1/tick.html"){
 			$('body').find('.listing-description .sub-categories-title').html('<strong>Tick prevention from top brands with lowest-price guarantee</strong>');
 		}
-		if( location.href == "https://www.petbucket.com/c/4405844/1/heartworm.html"){
+		if( path == "https://www.petbucket.com/c/4405844/1/heartworm.html"){
 			$('body').find('.listing-description .sub-categories-title').html('<strong>Heartworm prevention from top brands with lowest-price guarantee</strong>');
 		}
-		if( location.href == "https://www.petbucket.com/c/4405832/1/intestinal-worms.html"){
+		if( path == "https://www.petbucket.com/c/4405832/1/intestinal-worms.html"){
 			$('body').find('.listing-description .sub-categories-title').html('<strong>Intestinal worms prevention from top brands with lowest-price guarantee</strong>');
 		}
 		$('body').on('click', '.'+projecturl+'-step-3 [data-'+projecturl+'select]', function(event) {
