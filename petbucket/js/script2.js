@@ -76,7 +76,7 @@ function readyjQueryinit(){
 			var type_it = "";
 			$('body').on('click', '.'+projecturl+'dog-link, .'+projecturl+'cat-link', function(event) {
 				// $('.'+projecturl+'-step-2').addClass(projecturl+'fadeOutLeft');
-				$('.'+projecturl+'-step-2').removeClass(projecturl+'fadeInRight');
+				// $('.'+projecturl+'-step-2').removeClass(projecturl+'fadeInRight');
 				window.dataLayer = window.dataLayer || [];
 				if($(this).hasClass('cat')){
 					type_it = "cat";
@@ -103,10 +103,16 @@ function readyjQueryinit(){
 			var path = location.origin+location.pathname;
 			if( path == "https://www.petbucket.com/c/4405799/1/for-cats.html"){ 
 				$('body').find('.free-shipping-header').remove();
+				$('body').find('.dogs-cats-menu').css('margin-top', '103px');
+				$('body').find('.dogs-cats-menu').css('border', 'none');
+				$('body').find('.dogs-cats-menu').css('font-size', '1.3em');
 				$('body').find('.dogs-cats-menu').html('<strong>Parasite prevention from top-brands with lowest-price guarantee</strong>');
 			}
 			if( path == "https://www.petbucket.com/c/4521471/1/for-dogs.html"){
 				$('body').find('.free-shipping-header').remove();
+				$('body').find('.dogs-cats-menu').css('margin-top', '103px');
+				$('body').find('.dogs-cats-menu').css('border', 'none');
+				$('body').find('.dogs-cats-menu').css('font-size', '1.3em');
 				$('body').find('.dogs-cats-menu').html('<strong>Parasite prevention from top-brands with lowest-price guarantee</strong>');
 			}
 			if( path == "https://www.petbucket.com/c/4521472/1/flea.html"){

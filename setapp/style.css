@@ -744,7 +744,7 @@ html, body {
 	}
 
 	.containe-list {
-		margin: 0px 0 28px 52px
+		margin: 0px auto 28px auto;
 	}
 
 	.title.applicationslist-category {
