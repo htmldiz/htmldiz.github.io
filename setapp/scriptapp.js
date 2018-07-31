@@ -25,7 +25,7 @@ if (!window.jQuery) {
 }
 function readyjQueryinit(){
 	jQuery(function($) {
-        $('head').append('<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Cond:400,700" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">');
+        // $('head').append('<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Cond:400,700" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">');
         if(location.href.indexOf('file://') === 0){
         	$('head').append('<link href="style.css" rel="stylesheet">');
         }else{
