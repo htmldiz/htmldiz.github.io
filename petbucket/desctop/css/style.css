@@ -53,7 +53,7 @@ html{
 }
 .pb_popup_content{
 	display: flex;
-	padding: 0 58px 50px 63px;
+	padding: 0 58px 0 63px;
 }
 .pb_popup_title{
 	color: #515151;
@@ -66,6 +66,9 @@ html{
 .pb_photo{
 	flex: 0 0 42%;
 	max-width: 42%;
+}
+.pb_main_img{
+	max-width: 189px;
 }
 .pb_thumbnails{
 	display: flex;
@@ -160,7 +163,7 @@ html{
 	display: flex;
 	text-decoration: none;
 	text-align: center;
-	margin: 34px 0 0;
+	margin: 32px 0 0;
 	padding: 10px 0;
 }
 .pb_btn img{
@@ -173,7 +176,8 @@ html{
 	font-weight: 700;
 }
 .pb_no_btn{
-	padding-right: 25px;
+	flex: 0 0 37.5%;
+	max-width: 37.5%;
 }
 .pb_no_btn a{
 	color: #666666;
@@ -182,6 +186,10 @@ html{
 	background-image: linear-gradient(to top, #c5c5c5 0%, #dadada 97%, #e3e3e3 100%);
 	flex-direction: column;
 }
+.pb_yes_btn{
+    flex: 0 0 58%;
+    max-width: 58%;
+}
 .pb_yes_btn a{
 	color: #fff;
 	box-shadow: 0 -1px 0 #d2d2d2, inset 0 1px 0 rgba(0, 0, 1, 0.4);
@@ -189,6 +197,11 @@ html{
 	background-image: linear-gradient(to top, #2848c7 0%, #4880c8 97%, #68a5e0 100%);
 	justify-content: center;
 	align-items: center;
+}
+.pb_footer{
+	display: flex;
+	justify-content: space-between;
+	padding: 0 58px 50px 63px;
 }
 
 /*bg dark*/
