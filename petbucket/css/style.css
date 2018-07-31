@@ -254,6 +254,10 @@ body, html {
 	margin-left: auto;
 	margin-right: auto;
 }
+.dogs-cats-menu {
+	padding-left: 30px;
+	padding-right: 15px;
+}
 @media(min-width:425px) {
 	.petbucket-step-1 {
 		font-size: 13px;
