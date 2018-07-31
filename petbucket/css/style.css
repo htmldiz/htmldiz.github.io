@@ -112,21 +112,12 @@ body, html {
 }
 
 .petbucket-link {
-	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
-	-webkit-flex-wrap: nowrap;
-	-ms-flex-wrap: nowrap;
 	flex-wrap: nowrap;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	-ms-flex-align: center;
 	align-items: center;
-	-webkit-box-pack: center;
-	-webkit-justify-content: center;
-	-ms-flex-pack: center;
 	justify-content: center;
 	background: #ffffff;
 	font-size: 24px;
@@ -139,14 +130,11 @@ body, html {
 }
 
 .petbucket-step-3 .petbucket-step-3-title {
-	font-size: 26px;
+	font-size: 13px;
 	font-family: "Helvetica";
 	color: rgb(255, 255, 255);
 	font-weight: bold;
 	text-transform: uppercase;
-	-webkit-box-flex: 0;
-	-webkit-flex: 0 0 100%;
-	-ms-flex: 0 0 100%;
 	flex: 0 0 100%;
 	max-width: 100%;
 	margin-bottom: 28px;
@@ -156,21 +144,12 @@ body, html {
 .petbucket-step-1 {
 	z-index: 999999999;
 	text-decoration: none;
-	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
-	-webkit-flex-wrap: nowrap;
-	-ms-flex-wrap: nowrap;
 	flex-wrap: nowrap;
-	-webkit-box-pack: center;
-	-webkit-justify-content: center;
-	-ms-flex-pack: center;
 	justify-content: center;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	-ms-flex-align: center;
 	align-items: center;
 	font-size: 14px;
 	font-family: "Helvetica";
@@ -190,21 +169,12 @@ body, html {
 
 .petbucket-step-3, .petbucket-step-2 {
 	z-index: 999999998;
-	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
-	-webkit-flex-wrap: nowrap;
-	-ms-flex-wrap: nowrap;
 	flex-wrap: nowrap;
-	-webkit-box-pack: center;
-	-webkit-justify-content: center;
-	-ms-flex-pack: center;
 	justify-content: center;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	-ms-flex-align: center;
 	align-items: center;
 	position: fixed;
 	bottom: 0;
@@ -216,24 +186,17 @@ body, html {
 	color: rgb(255, 255, 255);
 }
 .petbucket-steps{
-	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
-	-webkit-box-flex: 0;
-	-webkit-flex: 0 0 100%;
-	-ms-flex: 0 0 100%;
 	flex: 0 0 100%;
 	max-width: 100%;
-	-webkit-box-pack: center;
-	-webkit-justify-content: center;
-	-ms-flex-pack: center;
-	justify-content: center;
+	justify-content: space-between;
 }
 .petbucket-step-3 .petbucketstep-select {
 	display: inline-block;
-	font-size: 18px;
+	font-size: 10px;
 	font-family: "Helvetica";
 	color: rgb(255, 255, 255);
 	font-weight: bold;
@@ -243,18 +206,20 @@ body, html {
     flex: 0 0 auto;
     margin-left: 10px;
     margin-right: 10px;
+    max-width: 65px;
+
 }
 
 .petbucket-step-3 [data-petbucketselect]:before {
-	width: 73px;
-	height: 73px;
+	width: 34px;
+	height: 34px;
 	display: block;
 	content: " ";
 	background-image: url('../img/flea.png');
+	background-repeat: no-repeat;
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 17px;
-	-webkit-background-size: 100%;
 	background-size: 100%;
 }
 
@@ -272,24 +237,17 @@ body, html {
 
 .petbucket-step-3 {
 	z-index: 999999997;
-	-webkit-flex-wrap: wrap;
-	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 	text-align: center;
-	-webkit-box-align: stretch;
-	-webkit-align-items: stretch;
-	-ms-flex-align: stretch;
 	align-items: stretch;
-	-webkit-box-pack: justify;
-	-webkit-justify-content: space-between;
-	-ms-flex-pack: justify;
 	justify-content: space-between;
 	padding-left: 40px;
 	padding-right: 40px;
 }
 
 .petbucket-step-2 span {
-	font-size: 12px
+	font-size: 12px;
+	letter-spacing: 2px;
 }
 
 @media(min-width:425px) {
@@ -336,12 +294,8 @@ body, html {
 		padding-right: 20px;
 	}
 
-	.petbucket-step-3 .petbucketstep-select {
-		font-size: 12px;
-	}
-
 	.petbucket-step-3 .petbucket-step-3-title {
-		font-size: 20px;
+		font-size: 13px;
 	}
 
 	.petbucket-link {
@@ -358,7 +312,7 @@ body, html {
 	}
 
 	.petbucket-step-1 {
-		font-size: 12px;
+		font-size: 13px;
 		padding-left: 15px;
 		padding-right: 15px;
 	}
@@ -371,6 +325,7 @@ body, html {
 	.petbucket-step-2 span {
 		margin-left: 6px;
 		margin-right: 6px;
+		font-size: 11px;
 	}
 
 	.petbucket-link span {
@@ -381,10 +336,6 @@ body, html {
 	.petbucket-step-2 img {
 		max-height: 30px;
 		width: auto;
-	}
-
-	.petbucket-step-3 .petbucketstep-select {
-		font-size: 10px;
 	}
 
 }
