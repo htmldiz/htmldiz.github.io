@@ -99,11 +99,11 @@ function readyjQueryinit(){
 	outhtml += '</div>';
 	$('body').append(outhtml);
   $('body').on('click', '.pb_no_btn a', function(event) {
-	location.href = "https://www.petbucket.com/Basket/AddToBasket";
+	location.href = "https://www.petbucket.com/Basket";
 	return false;
   });
   $('body').on('click', 'span.pb_close_btn', function(event) {
-	location.href = "https://www.petbucket.com/Basket/AddToBasket";
+	location.href = "https://www.petbucket.com/Basket";
 	return false;
   });
   $('body').on('click', '.pb_yes_btn_link_send', function(event) {
@@ -114,7 +114,7 @@ function readyjQueryinit(){
 		data: {rad_Variant_1367960: '57786647',ProductId: '6976310',Quantity: '10'},
 	})
 	.done(function() {
-		location.href = "https://www.petbucket.com/Basket/AddToBasket";
+		location.href = "https://www.petbucket.com/Basket";
 	});
   });
   $('body').on('submit', '[action="/Basket/AddToBasket"]', function(event) {
