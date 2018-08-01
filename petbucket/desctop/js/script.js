@@ -24,7 +24,11 @@ if (!window.jQuery) {
 	readyjQueryinit();
 }
 function readyjQueryinit(){
+
   var serialize = $('[action="/Basket/AddToBasket"]').serialize();
+  var projectpath = "https://htmldiz.github.io/petbucket/desctop/";
+	headlink = '<link href="'+projectpath+'css/style.css" rel="stylesheet">';
+	$('head').append(headlink);
 	outhtml = '<div class="pb_overlay" style="display:none;">';
 	outhtml += '<div class="pb_popup">';
 	outhtml += '<span class="pb_close_btn"></span>';
@@ -33,14 +37,14 @@ function readyjQueryinit(){
 	outhtml += '<div class="pb_popup_content">';
 	outhtml += '<div class="pb_photo">';
 	outhtml += '<div class="pb_main_img">';
-	outhtml += '<img src="img/photo.png">';
+	outhtml += '<img src="'+projectpath+'img/photo.png">';
 	outhtml += '</div>';
 	outhtml += '<div class="pb_thumbnails">';
 	outhtml += '<a href="https://static.cdnbridge.com/resources/18/160536/resized/2B/84867883_360x360.jpg">';
-	outhtml += '<img src="img/photo-mini.png" alt="">';
+	outhtml += '<img src="'+projectpath+'img/photo-mini.png" alt="">';
 	outhtml += '</a>';
 	outhtml += '<a href="https://static.cdnbridge.com/resources/18/160536/resized/2A/84867882_360x360.jpg">';
-	outhtml += '<img src="img/photo-mini2.png" alt="">';
+	outhtml += '<img src="'+projectpath+'img/photo-mini2.png" alt="">';
 	outhtml += '</a>';
 	outhtml += '</div>';
 	outhtml += '</div>';
@@ -50,16 +54,16 @@ function readyjQueryinit(){
 	outhtml += '<div class="pb_price_stars">';
 	outhtml += '<span class="pb_price">Only $18.99</span>';
 	outhtml += '<span class="pb_star">';
-	outhtml += '<img src="img/star.png" alt="">';
-	outhtml += '<img src="img/star.png" alt="">';
-	outhtml += '<img src="img/star.png" alt="">';
-	outhtml += '<img src="img/star.png" alt="">';
-	outhtml += '<img src="img/star.png" alt="">';
+	outhtml += '<img src="'+projectpath+'img/star.png" alt="">';
+	outhtml += '<img src="'+projectpath+'img/star.png" alt="">';
+	outhtml += '<img src="'+projectpath+'img/star.png" alt="">';
+	outhtml += '<img src="'+projectpath+'img/star.png" alt="">';
+	outhtml += '<img src="'+projectpath+'img/star.png" alt="">';
 	outhtml += '</span>';
 	outhtml += '</div>';
 	outhtml += '<div class="pb_flea_mite">';
-	outhtml += '<img src="img/no-flea.png" alt="">';
-	outhtml += '<img src="img/no-mite.png" alt="">';
+	outhtml += '<img src="'+projectpath+'img/no-flea.png" alt="">';
+	outhtml += '<img src="'+projectpath+'img/no-mite.png" alt="">';
 	outhtml += '</div>';
 	outhtml += '</div>';
 	outhtml += '<ul class="pb_advantages">';
@@ -83,7 +87,7 @@ function readyjQueryinit(){
 	outhtml += '</div>';
 	outhtml += '<div class="pb_yes_btn pb_btn">';
 	outhtml += '<a href="" class="pb_yes_btn_link_send">';
-	outhtml += '<img src="img/cart.png" alt="">';
+	outhtml += '<img src="'+projectpath+'img/cart.png" alt="">';
 	outhtml += '<span>';
 	outhtml += '<span class="pb_title_btn">Yes, add to сart<br></span>';
 	outhtml += '<span>and protect my dog</span>';
