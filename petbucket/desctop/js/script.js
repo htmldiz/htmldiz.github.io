@@ -98,7 +98,6 @@ function readyjQueryinit(){
 	location.href = "https://www.petbucket.com/Basket/AddToBasket";
   });
   $('body').on('click', '.pb_yes_btn_link_send', function(event) {
-  $('body').on('click', '.pb_yes_btn_link_send', function(event) {
 	$.ajax({
 		url: 'https://www.petbucket.com/Basket/AddToBasket',
 		type: 'POST',
