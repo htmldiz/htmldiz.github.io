@@ -141,6 +141,7 @@ if($('.BreadCrumbHolder [href="https://www.petbucket.com/c/4521471/1/for-dogs.ht
 			'gtm-cro-event-action': 'click',
 			'gtm-cro-event-label': 'Yes Add to Cart'
 		});
+		return false;
 	  });
 	  $('body').on('submit', '[action="/Basket/AddToBasket"]', function(event) {
 		  	$.ajax({
