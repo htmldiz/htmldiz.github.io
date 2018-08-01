@@ -151,6 +151,13 @@ function readyjQueryinit(){
           $('#modal-signup').remove();
           $('.popup-info-get-free').attr('style','');
           $('#page-wrapper').remove();
+          window.dataLayer = window.dataLayer || [];
+          dataLayer.push({
+          	'event': 'gtm-cro-event',
+          	'gtm-cro-event-category': 'EXP - Popup',
+          	'gtm-cro-event-action': 'load',
+          	'gtm-cro-event-label': 'popup'
+          });
           return false;
         });
         // $('').
@@ -181,7 +188,13 @@ function readyjQueryinit(){
         		var date = new Date(new Date().getTime() + 10*3600 * 1000);
 				document.cookie = "customer_access_token="+data.token+";domain=.setapp.com; path=/; expires=" + date.toUTCString();
 				document.cookie = "customer_refresh_token="+data.refresh_token+";domain=.setapp.com; path=/; expires=" + date.toUTCString();
-        		location.href = "https://my.setapp.com/successful-registration";
+				window.dataLayer = window.dataLayer || [];
+				dataLayer.push({
+					'event': 'setapp',
+					'gtm-cro-event-category': 'Sign Up Page',
+					'gtm-cro-event-action': 'Sign Up Success'
+				});
+				location.href = "https://my.setapp.com/successful-registration";
         	})
         	.fail(function(data) {
         		data = JSON.parse(data.responseText);
@@ -235,8 +248,137 @@ function readyjQueryinit(){
         	});
         	return false;
         });
+        $('body').on('click', '.sign-inlink', function(event) {
+			window.dataLayer = window.dataLayer || [];
+			dataLayer.push({
+			'event': 'gtm-cro-event',
+			'gtm-cro-event-category': 'EXP - Popup',
+			'gtm-cro-event-action': 'click',
+			'gtm-cro-event-label': 'Collections - Sign In'
+			});
+        });
+        $('body').on('click', '[data-social-signup]', function(event) {
+        	if($(this).attr('data-social-signup') == "facebook"){
+        		window.dataLayer = window.dataLayer || [];
+        		dataLayer.push({
+        			'event': 'gtm-cro-event',
+        			'gtm-cro-event-category': 'EXP - Popup',
+        			'gtm-cro-event-action': 'click',
+        			'gtm-cro-event-label': 'Sign up - Sign up with Facebook'
+        		});
+        		dataLayer.push({
+        			'event': 'setapp',
+        			'gtm-cro-event-category': 'Sign Up Page',
+        			'gtm-cro-event-action': 'Continue with Facebook'
+        		});
+        	}
+        	if($(this).attr('data-social-signup') == "google"){
+        		window.dataLayer = window.dataLayer || [];
+        		dataLayer.push({
+        			'event': 'gtm-cro-event',
+        			'gtm-cro-event-category': 'EXP - Popup',
+        			'gtm-cro-event-action': 'click',
+        			'gtm-cro-event-label': 'Sign up - Sign up with Google'
+        		});
+        		dataLayer.push({
+        			'event': 'setapp',
+        			'gtm-cro-event-category': 'Sign Up Page',
+        			'gtm-cro-event-action': 'Continue with Google'
+        		});
+        	}
+        });
         $('body').on('click', '[data-scrollto-element]', function(event) {
             var id = $(this).attr('href');
+            switch(id){
+            	case "#collection-1":
+            		window.dataLayer = window.dataLayer || [];
+					dataLayer.push({
+					'event': 'gtm-cro-event',
+					'gtm-cro-event-category': 'EXP - Popup',
+					'gtm-cro-event-action': 'click',
+					'gtm-cro-event-label': 'Collections - Top Apps'
+					});
+            	case "#collection-2":
+					window.dataLayer = window.dataLayer || [];
+					dataLayer.push({
+					'event': 'gtm-cro-event',
+					'gtm-cro-event-category': 'EXP - Popup',
+					'gtm-cro-event-action': 'click',
+					'gtm-cro-event-label': 'Collections - Maintenance'
+					});
+            	case "#collection-3":
+					window.dataLayer = window.dataLayer || [];
+					dataLayer.push({
+					'event': 'gtm-cro-event',
+					'gtm-cro-event-category': 'EXP - Popup',
+					'gtm-cro-event-action': 'click',
+					'gtm-cro-event-label': 'Collections - Lifestyle'
+					});
+            	case "#collection-4":
+					window.dataLayer = window.dataLayer || [];
+					dataLayer.push({
+					'event': 'gtm-cro-event',
+					'gtm-cro-event-category': 'EXP - Popup',
+					'gtm-cro-event-action': 'click',
+					'gtm-cro-event-label': 'Collections - Finance'
+					});
+            	case "#collection-5":
+            	window.dataLayer = window.dataLayer || [];
+            	dataLayer.push({
+            		'event': 'gtm-cro-event',
+            		'gtm-cro-event-category': 'EXP - Popup',
+            		'gtm-cro-event-action': 'click',
+            		'gtm-cro-event-label': 'Collections - For Developers'
+            	});
+            	case "#collection-6":
+            	window.dataLayer = window.dataLayer || [];
+            	dataLayer.push({
+            		'event': 'gtm-cro-event',
+            		'gtm-cro-event-category': 'EXP - Popup',
+            		'gtm-cro-event-action': 'click',
+            		'gtm-cro-event-label': 'Collections - Productivity'
+            	});
+            	case "#collection-7":
+            	window.dataLayer = window.dataLayer || [];
+            	dataLayer.push({
+            		'event': 'gtm-cro-event',
+            		'gtm-cro-event-category': 'EXP - Popup',
+            		'gtm-cro-event-action': 'click',
+            		'gtm-cro-event-label': 'Collections - Task Management'
+            	});
+            	case "#collection-8":
+            	window.dataLayer = window.dataLayer || [];
+            	dataLayer.push({
+            		'event': 'gtm-cro-event',
+            		'gtm-cro-event-category': 'EXP - Popup',
+            		'gtm-cro-event-action': 'click',
+            		'gtm-cro-event-label': 'Collections - Creativity'
+            	});
+            	case "#collection-9":
+            	window.dataLayer = window.dataLayer || [];
+            	dataLayer.push({
+            		'event': 'gtm-cro-event',
+            		'gtm-cro-event-category': 'EXP - Popup',
+            		'gtm-cro-event-action': 'click',
+            		'gtm-cro-event-label': 'Collections - Mac Hacks'
+            	});
+            	case "#collection-10":
+            	window.dataLayer = window.dataLayer || [];
+            	dataLayer.push({
+            		'event': 'gtm-cro-event',
+            		'gtm-cro-event-category': 'EXP - Popup',
+            		'gtm-cro-event-action': 'click',
+            		'gtm-cro-event-label': 'Collections - Writing'
+            	});
+            	case "#collection-11":
+            	window.dataLayer = window.dataLayer || [];
+            	dataLayer.push({
+            		'event': 'gtm-cro-event',
+            		'gtm-cro-event-category': 'EXP - Popup',
+            		'gtm-cro-event-action': 'click',
+            		'gtm-cro-event-label': 'Collections - Education'
+            	});
+            }
             $('[data-scrollto-element]').removeClass('-active');
             $(this).addClass('-active');
             var $container = $('.applicationslist-content');
