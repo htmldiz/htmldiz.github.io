@@ -409,8 +409,33 @@ function readyjQueryinit(){
                     $('.applicationslist-sidebar a').removeClass('-active');
                     $('[href="#'+idtohref+'"]').addClass('-active');
                     switch(idtohref){
-                    	case "collection-1":
-                    	
+                    	case "collection-2":
+                    	console.log($('[href="#'+idtohref+'"]').text());
+                    	break;
+                    	case "collection-3":
+                    	console.log($('[href="#'+idtohref+'"]').text());
+                    	break;
+                    	case "collection-4":
+                    	console.log($('[href="#'+idtohref+'"]').text());
+                    	break;
+                    	case "collection-5":
+                    	console.log($('[href="#'+idtohref+'"]').text());
+                    	break;
+                    	case "collection-6":
+                    	console.log($('[href="#'+idtohref+'"]').text());
+                    	break;
+                    	case "collection-7":
+                    	console.log($('[href="#'+idtohref+'"]').text());
+                    	break;
+                    	case "collection-8":
+                    	console.log($('[href="#'+idtohref+'"]').text());
+                    	break;
+                    	case "collection-9":
+                    	console.log($('[href="#'+idtohref+'"]').text());
+                    	break;
+                    	case "collection-10":
+                    	console.log($('[href="#'+idtohref+'"]').text());
+                    	break;
                     }
                 }
             }
