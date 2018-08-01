@@ -98,7 +98,10 @@ function readyjQueryinit(){
 	outhtml += '</div>';
 	outhtml += '</div>';
 	$('body').append(outhtml);
-  $('body').on('click', '.pb_no_btn a, span.pb_close_btn', function(event) {
+  $('body').on('click', '.pb_no_btn a', function(event) {
+	location.href = "https://www.petbucket.com/Basket/AddToBasket";
+  });
+  $('body').on('click', 'span.pb_close_btn', function(event) {
 	location.href = "https://www.petbucket.com/Basket/AddToBasket";
   });
   $('body').on('click', '.pb_yes_btn_link_send', function(event) {
