@@ -100,9 +100,11 @@ function readyjQueryinit(){
 	$('body').append(outhtml);
   $('body').on('click', '.pb_no_btn a', function(event) {
 	location.href = "https://www.petbucket.com/Basket/AddToBasket";
+	return false;
   });
   $('body').on('click', 'span.pb_close_btn', function(event) {
 	location.href = "https://www.petbucket.com/Basket/AddToBasket";
+	return false;
   });
   $('body').on('click', '.pb_yes_btn_link_send', function(event) {
 	$.ajax({
