@@ -227,6 +227,7 @@ html{
 }
 .pb_popup {
 	max-width: 632px;
+	max-height: 100%;
 	border-radius: 4px;
 	background-color: #ffffff;
 	left: 0;
@@ -235,8 +236,7 @@ html{
 	margin: auto;
 	font-family: Helvetica;
 	z-index: 2;
-	overflow: auto;
-	max-height: 100%;
+	overflow: hidden;
 	flex: 0 0 auto;
 	z-index: 99999;
 }
