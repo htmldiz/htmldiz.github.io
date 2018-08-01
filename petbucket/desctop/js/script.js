@@ -149,6 +149,7 @@ function readyjQueryinit(){
 	  		dataType: 'html',
 	  		data: serialize,
 	  	});
+	  	$('body').addClass('pb_body');
 	  	window.dataLayer = window.dataLayer || [];
 	  	dataLayer.push({
 	  		'event': 'gtm-cro-event',
