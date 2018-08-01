@@ -95,7 +95,7 @@ html{
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	margin: 30px 0px;
+	margin: 20px 0px;
 }
 .pb_price_stars{
 	display: flex;
@@ -125,7 +125,7 @@ html{
 	color: #5b5b5b;
 	font-size: 15px;
 	font-weight: 700;
-	line-height: 2.5;
+	line-height: 2.2;
 }
 .pb_tick{
 	position: relative;
@@ -163,7 +163,7 @@ html{
 	display: flex;
 	text-decoration: none;
 	text-align: center;
-	margin: 32px 0 0;
+	margin: 0;
 	padding: 10px 0;
 }
 .pb_btn img{
@@ -201,7 +201,8 @@ html{
 .pb_footer{
 	display: flex;
 	justify-content: space-between;
-	padding: 0 58px 50px 63px;
+	padding: 29px 58px 50px 63px;
+
 }
 
 /*bg dark*/
