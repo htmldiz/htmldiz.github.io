@@ -1,3 +1,7 @@
+try {
+    hj('trigger', 'hj-cro-event-blog-sticky-bar');
+} 
+catch(e) {}
 var projecturl = "petbucket";
 function initjQuery(callback) {
 	var script = document.createElement( "script" )
