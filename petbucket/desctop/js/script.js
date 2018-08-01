@@ -99,10 +99,24 @@ function readyjQueryinit(){
 	outhtml += '</div>';
 	$('body').append(outhtml);
   $('body').on('click', '.pb_no_btn a', function(event) {
-	location.href = "https://www.petbucket.com/Basket";
+  	window.dataLayer = window.dataLayer || [];
+  	dataLayer.push({
+  		'event': 'gtm-cro-event',
+  		'gtm-cro-event-category': 'EXP - Desktop - PDP Add to Cart Popup',
+  		'gtm-cro-event-action': 'click',
+  		'gtm-cro-event-label': 'No Thanks'
+  	});
+  	location.href = "https://www.petbucket.com/Basket";
 	return false;
   });
   $('body').on('click', 'span.pb_close_btn', function(event) {
+  	window.dataLayer = window.dataLayer || [];
+  	dataLayer.push({
+  		'event': 'gtm-cro-event',
+  		'gtm-cro-event-category': 'EXP - Desktop - PDP Add to Cart Popup',
+  		'gtm-cro-event-action': 'click',
+  		'gtm-cro-event-label': 'Close'
+  	});
 	location.href = "https://www.petbucket.com/Basket";
 	return false;
   });
@@ -116,6 +130,13 @@ function readyjQueryinit(){
 	.done(function() {
 		location.href = "https://www.petbucket.com/Basket";
 	});
+	window.dataLayer = window.dataLayer || [];
+	dataLayer.push({
+		'event': 'gtm-cro-event',
+		'gtm-cro-event-category': 'EXP - Desktop - PDP Add to Cart Popup',
+		'gtm-cro-event-action': 'click',
+		'gtm-cro-event-label': 'Yes Add to Cart'
+	});
   });
   $('body').on('submit', '[action="/Basket/AddToBasket"]', function(event) {
 	  	$.ajax({
@@ -123,6 +144,13 @@ function readyjQueryinit(){
 	  		type: 'POST',
 	  		dataType: 'html',
 	  		data: serialize,
+	  	});
+	  	window.dataLayer = window.dataLayer || [];
+	  	dataLayer.push({
+	  		'event': 'gtm-cro-event',
+	  		'gtm-cro-event-category': 'EXP - Desktop - PDP Add to Cart Popup',
+	  		'gtm-cro-event-action': 'load',
+	  		'gtm-cro-event-label': 'PDP Popup'
 	  	});
   	$('body').find('.pb_overlay').attr('style','');
   	return false;
