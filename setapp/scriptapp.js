@@ -328,6 +328,7 @@ function readyjQueryinit(){
 					'gtm-cro-event-action': 'click',
 					'gtm-cro-event-label': 'Collections - Top Apps'
 					});
+					break;
             	case "#collection-2":
 					window.dataLayer = window.dataLayer || [];
 					dataLayer.push({
@@ -336,6 +337,7 @@ function readyjQueryinit(){
 					'gtm-cro-event-action': 'click',
 					'gtm-cro-event-label': 'Collections - Maintenance'
 					});
+					break;
             	case "#collection-3":
 					window.dataLayer = window.dataLayer || [];
 					dataLayer.push({
@@ -344,6 +346,7 @@ function readyjQueryinit(){
 					'gtm-cro-event-action': 'click',
 					'gtm-cro-event-label': 'Collections - Lifestyle'
 					});
+					break;
             	case "#collection-4":
 					window.dataLayer = window.dataLayer || [];
 					dataLayer.push({
@@ -352,6 +355,7 @@ function readyjQueryinit(){
 					'gtm-cro-event-action': 'click',
 					'gtm-cro-event-label': 'Collections - Finance'
 					});
+					break;
             	case "#collection-5":
             	window.dataLayer = window.dataLayer || [];
             	dataLayer.push({
@@ -360,6 +364,7 @@ function readyjQueryinit(){
             		'gtm-cro-event-action': 'click',
             		'gtm-cro-event-label': 'Collections - For Developers'
             	});
+            	break;
             	case "#collection-6":
             	window.dataLayer = window.dataLayer || [];
             	dataLayer.push({
@@ -368,6 +373,7 @@ function readyjQueryinit(){
             		'gtm-cro-event-action': 'click',
             		'gtm-cro-event-label': 'Collections - Productivity'
             	});
+            	break;
             	case "#collection-7":
             	window.dataLayer = window.dataLayer || [];
             	dataLayer.push({
@@ -376,6 +382,7 @@ function readyjQueryinit(){
             		'gtm-cro-event-action': 'click',
             		'gtm-cro-event-label': 'Collections - Task Management'
             	});
+            	break;
             	case "#collection-8":
             	window.dataLayer = window.dataLayer || [];
             	dataLayer.push({
@@ -384,6 +391,7 @@ function readyjQueryinit(){
             		'gtm-cro-event-action': 'click',
             		'gtm-cro-event-label': 'Collections - Creativity'
             	});
+            	break;
             	case "#collection-9":
             	window.dataLayer = window.dataLayer || [];
             	dataLayer.push({
@@ -392,6 +400,7 @@ function readyjQueryinit(){
             		'gtm-cro-event-action': 'click',
             		'gtm-cro-event-label': 'Collections - Mac Hacks'
             	});
+            	break;
             	case "#collection-10":
             	window.dataLayer = window.dataLayer || [];
             	dataLayer.push({
@@ -400,6 +409,7 @@ function readyjQueryinit(){
             		'gtm-cro-event-action': 'click',
             		'gtm-cro-event-label': 'Collections - Writing'
             	});
+            	break;
             	case "#collection-11":
             	window.dataLayer = window.dataLayer || [];
             	dataLayer.push({
@@ -408,6 +418,7 @@ function readyjQueryinit(){
             		'gtm-cro-event-action': 'click',
             		'gtm-cro-event-label': 'Collections - Education'
             	});
+            	break;
             }
             $('[data-scrollto-element]').removeClass('-active');
             $(this).addClass('-active');
