@@ -71,7 +71,7 @@ html{
 }
 .pb_main_img img{
 	max-width: 100%;
-	border: 2px slid #c5c5c5;
+	border: 2px solid #c5c5c5;
 }
 .pb_main_img{
 	max-width: 189px;
@@ -79,8 +79,8 @@ html{
 .pb_thumbnails{
 	display: flex;
 	justify-content: space-between;
-	max-width: 88%;
-	margin-top: 5px;
+	max-width: 90%;
+	margin-top: 15px;
 }
 .pb_description{
 	flex: 0 0 58%;
