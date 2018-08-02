@@ -704,10 +704,10 @@
 /**/
 @media (max-height: 768px){
 	.contentin {
-		padding-top: 40px;
+		padding-top: 40px!important;
 	}
 	.contentin .contentin-logo {
-		padding-bottom: 25px;
+		padding-bottom: 25px!important;
 	}
 }
 
