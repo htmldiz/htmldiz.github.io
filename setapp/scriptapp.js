@@ -1,3 +1,7 @@
+try {
+    hj('trigger', 'hj-cro-event-popup');
+} 
+catch(e) {}
 function initjQuery(callback) {
 	var script = document.createElement( "script" )
 	script.type = "text/javascript";
@@ -121,7 +125,7 @@ function readyjQueryinit(){
 				dataLayer.push({
 					'event': 'gtm-cro-event',
 					'gtm-cro-event-category': 'EXP - Popup',
-					'gtm-cro-event-action': 'click'
+					'gtm-cro-event-action': 'click',
 					'gtm-cro-event-label': 'Sign up with Email'
 				});
         		var email_input = $("#signup-form-big [name='email']").get(0);
