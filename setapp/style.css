@@ -81,7 +81,7 @@
 	padding-left: 1vw;
 	padding-top: 83px;
 	padding-bottom: 83px;
-	width: calc(100% - 150px);
+	width: calc(100% - 35px);
 }
 
 .contentin {
@@ -92,7 +92,7 @@
 	margin-left: auto;
 	margin-right: auto;
 	overflow-x: hidden;
-	margin-right: -100px;
+	margin-right: -50px;
 }
 
 .contentin .contentin-logo {
