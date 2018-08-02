@@ -41,7 +41,7 @@ if($('.BreadCrumbHolder [href="https://www.petbucket.com/c/4521471/1/for-dogs.ht
 		outhtml += '<div class="pb_popup_content">';
 		outhtml += '<div class="pb_photo">';
 		outhtml += '<div class="pb_main_img">';
-		outhtml += '<img src="'+projectpath+'img/photo.png">';
+		outhtml += '<img src="'+projectpath+'img/photo.jpg">';
 		outhtml += '</div>';
 		outhtml += '<div class="pb_thumbnails">';
 		outhtml += '<a href="https://static.cdnbridge.com/resources/18/160536/resized/2B/84867883_360x360.jpg">';

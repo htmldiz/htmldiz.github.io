@@ -71,6 +71,7 @@ html{
 }
 .pb_main_img img{
 	max-width: 100%;
+	border: 2px slid #c5c5c5;
 }
 .pb_main_img{
 	max-width: 189px;
