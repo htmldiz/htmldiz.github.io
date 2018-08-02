@@ -39,11 +39,26 @@ function readyjQueryinit(){
           $('.popup-info-get-free .name-app-here').html(title);
           $('.popup-info-get-free .field-group.-actions [type="submit"]').val('Download '+title+' for FREE');
         }
-		$(document).on("focus", "#signup-form-big [name='email']", function( event ) {
+        $(document).on("focus", "#signup-form-big [name='email']", function( event ) {
+        	window.dataLayer = window.dataLayer || [];
+        	dataLayer.push({
+        		'event': 'gtm-cro-event',
+        		'gtm-cro-event-category': 'EXP - Popup',
+        		'gtm-cro-event-action': 'click',
+        		'gtm-cro-event-label': 'Sign up - Enter Email'
+        	});
 			$(this).parent().find('.error_text').remove();
 			$(this).removeClass("error");
 		});
-		$(document).on("focus", "#signup-form-big [name='password']", function( event ) {
+        $(document).on("focus", "#signup-form-big [name='password']", function( event ) {
+        	window.dataLayer = window.dataLayer || [];
+        	dataLayer.push({
+        		'event': 'gtm-cro-event',
+        		'gtm-cro-event-category': 'EXP - Popup',
+        		'gtm-cro-event-action': 'click',
+        		'gtm-cro-event-label': 'Sign up - Enter Password'
+        	});
+
 			$(this).parent().find('.error_text').remove();
 			$(this).removeClass("error");
 		});
@@ -101,7 +116,14 @@ function readyjQueryinit(){
 			}
 			return true;
 		}
-        $('body').on('click', '#signup-form-big .button.-cta', function(event) {
+		$('body').on('click', '#signup-form-big .button.-cta', function(event) {
+				window.dataLayer = window.dataLayer || [];
+				dataLayer.push({
+					'event': 'gtm-cro-event',
+					'gtm-cro-event-category': 'EXP - Popup',
+					'gtm-cro-event-action': 'click'
+					'gtm-cro-event-label': 'Sign up with Email'
+				});
         		var email_input = $("#signup-form-big [name='email']").get(0);
         		var pass_input = $("#signup-form-big [name='password']").get(0);
         		$("#signup-form-big .error_text").remove();
@@ -189,6 +211,13 @@ function readyjQueryinit(){
         		var date = new Date(new Date().getTime() + 10*3600 * 1000);
 				document.cookie = "customer_access_token="+data.token+";domain=.setapp.com; path=/; expires=" + date.toUTCString();
 				document.cookie = "customer_refresh_token="+data.refresh_token+";domain=.setapp.com; path=/; expires=" + date.toUTCString();
+				window.dataLayer = window.dataLayer || [];
+				dataLayer.push({
+					'event': 'gtm-cro-event',
+					'gtm-cro-event-category': 'EXP - Popup',
+					'gtm-cro-event-action': 'sign up',
+					'gtm-cro-event-label': 'Sign up with Email'
+				});
 				window.dataLayer = window.dataLayer || [];
 				dataLayer.push({
 					'event': 'setapp',
@@ -408,35 +437,98 @@ function readyjQueryinit(){
                     var idtohref = $(activeElement).attr('id');
                     $('.applicationslist-sidebar a').removeClass('-active');
                     $('[href="#'+idtohref+'"]').addClass('-active');
-                    switch(idtohref){
-                    	case "collection-2":
-                    	console.log($('[href="#'+idtohref+'"]').text());
-                    	break;
-                    	case "collection-3":
-                    	console.log($('[href="#'+idtohref+'"]').text());
-                    	break;
-                    	case "collection-4":
-                    	console.log($('[href="#'+idtohref+'"]').text());
-                    	break;
-                    	case "collection-5":
-                    	console.log($('[href="#'+idtohref+'"]').text());
-                    	break;
-                    	case "collection-6":
-                    	console.log($('[href="#'+idtohref+'"]').text());
-                    	break;
-                    	case "collection-7":
-                    	console.log($('[href="#'+idtohref+'"]').text());
-                    	break;
-                    	case "collection-8":
-                    	console.log($('[href="#'+idtohref+'"]').text());
-                    	break;
-                    	case "collection-9":
-                    	console.log($('[href="#'+idtohref+'"]').text());
-                    	break;
-                    	case "collection-10":
-                    	console.log($('[href="#'+idtohref+'"]').text());
-                    	break;
-                    }
+	                    switch(idtohref){
+	                    	case "collection-2":
+	                    	window.dataLayer = window.dataLayer || [];
+	                    	dataLayer.push({
+	                    		'event': 'gtm-cro-event',
+	                    		'gtm-cro-event-category': 'EXP - Popup',
+	                    		'gtm-cro-event-action': 'scroll',
+	                    		'gtm-cro-event-label': 'Top Apps'
+	                    	});
+	                    	break;
+	                    	case "collection-3":
+	                    	window.dataLayer = window.dataLayer || [];
+	                    	dataLayer.push({
+	                    		'event': 'gtm-cro-event',
+	                    		'gtm-cro-event-category': 'EXP - Popup',
+	                    		'gtm-cro-event-action': 'scroll',
+	                    		'gtm-cro-event-label': 'Maintenance'
+	                    	});
+	                    	break;
+	                    	case "collection-4":
+	                    	window.dataLayer = window.dataLayer || [];
+	                    	dataLayer.push({
+	                    		'event': 'gtm-cro-event',
+	                    		'gtm-cro-event-category': 'EXP - Popup',
+	                    		'gtm-cro-event-action': 'scroll',
+	                    		'gtm-cro-event-label': 'Lifestyle'
+	                    	});
+	                    	break;
+	                    	case "collection-5":
+	                    	window.dataLayer = window.dataLayer || [];
+	                    	dataLayer.push({
+	                    		'event': 'gtm-cro-event',
+	                    		'gtm-cro-event-category': 'EXP - Popup',
+	                    		'gtm-cro-event-action': 'scroll',
+	                    		'gtm-cro-event-label': 'Finance'
+	                    	});
+	                    	break;
+	                    	case "collection-6":
+	                    	window.dataLayer = window.dataLayer || [];
+	                    	dataLayer.push({
+	                    		'event': 'gtm-cro-event',
+	                    		'gtm-cro-event-category': 'EXP - Popup',
+	                    		'gtm-cro-event-action': 'scroll',
+	                    		'gtm-cro-event-label': 'For Developers'
+	                    	});
+	                    	break;
+	                    	case "collection-7":
+	                    	window.dataLayer = window.dataLayer || [];
+	                    	dataLayer.push({
+	                    		'event': 'gtm-cro-event',
+	                    		'gtm-cro-event-category': 'EXP - Popup',
+	                    		'gtm-cro-event-action': 'scroll',
+	                    		'gtm-cro-event-label': 'Productivity'
+	                    	});
+	                    	break;
+	                    	case "collection-8":
+	                    	window.dataLayer = window.dataLayer || [];
+	                    	dataLayer.push({
+	                    		'event': 'gtm-cro-event',
+	                    		'gtm-cro-event-category': 'EXP - Popup',
+	                    		'gtm-cro-event-action': 'scroll',
+	                    		'gtm-cro-event-label': 'Task Management'
+	                    	});
+	                    	break;
+	                    	case "collection-9":
+	                    	window.dataLayer = window.dataLayer || [];
+	                    	dataLayer.push({
+	                    		'event': 'gtm-cro-event',
+	                    		'gtm-cro-event-category': 'EXP - Popup',
+	                    		'gtm-cro-event-action': 'scroll',
+	                    		'gtm-cro-event-label': 'Creativity'
+	                    	});
+	                    	break;
+	                    	case "collection-10":
+	                    	window.dataLayer = window.dataLayer || [];
+	                    	dataLayer.push({
+	                    		'event': 'gtm-cro-event',
+	                    		'gtm-cro-event-category': 'EXP - Popup',
+	                    		'gtm-cro-event-action': 'scroll',
+	                    		'gtm-cro-event-label': 'Mac Hacks'
+	                    	});
+	                    	break;
+	                    	case "collection-11":
+	                    	window.dataLayer = window.dataLayer || [];
+	                    	dataLayer.push({
+	                    		'event': 'gtm-cro-event',
+	                    		'gtm-cro-event-category': 'EXP - Popup',
+	                    		'gtm-cro-event-action': 'scroll',
+	                    		'gtm-cro-event-label': 'Writing'
+	                    	});
+	                    	break;
+	                    }
                 }
             }
         });
