@@ -53,7 +53,6 @@ if($('.BreadCrumbHolder [href="https://www.petbucket.com/c/4521471/1/for-dogs.ht
 		outhtml += '</div>';
 		outhtml += '</div>';
 		outhtml += '<div class="pb_description">';
-		outhtml += '<p class="pb_txt">Keep the collar around your dog’s neck, and feel secure in the knowledge that for the next 5 months ticks and fleas can’t resist the powerful insecticides covering your dog’s coat.</p>';
 		outhtml += '<div class="pb_price_section">';
 		outhtml += '<div class="pb_price_stars">';
 		outhtml += '<span class="pb_price">Only $18.99</span>';
@@ -81,6 +80,7 @@ if($('.BreadCrumbHolder [href="https://www.petbucket.com/c/4521471/1/for-dogs.ht
 		outhtml += '<span class="pb_tick"></span>Safe for puppies older than 3 months';
 		outhtml += '</li>';
 		outhtml += '</ul>';
+		outhtml += '<p class="pb_txt">Keep the collar around your dog’s neck, and feel secure in the knowledge that for the next 5 months ticks and fleas can’t resist the powerful insecticides covering your dog’s coat.</p>';
 		outhtml += '</div>';
 		outhtml += '</div>';
 		outhtml += '<div class="pb_footer">';
