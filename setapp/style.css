@@ -794,6 +794,9 @@
 		width: 3px;
 		height: 26px;
 	}
+	.contentin{
+		margin-right: -25px;
+	}
 }
 
 @media (max-height: 768px){
