@@ -702,7 +702,14 @@
 	position: relative;
 }
 /**/
-
+@media (max-height: 768px){
+	.contentin {
+		padding-top: 40px;
+	}
+	.contentin .contentin-logo {
+		padding-bottom: 25px;
+	}
+}
 
 
 @media (min-height:820px) {
@@ -714,33 +721,33 @@
 @media (max-width:1450px) {
 	.applicationslist-content .applicationslist-grid-cell {
 		flex: 0 0 50%;
-		max-width: 50%
+		max-width: 50%;
 	}
 
 }
 
 @media (max-width:1415px) {
 	.popup-info-get-free .applicationslist-sidebar {
-		min-height: 142px
+		min-height: 142px;
 	}
 
 }
 
 @media (max-width:1660px) {
 	.popup-info-get-free .applicationslist-sidebar {
-		min-height: 120px
+		min-height: 120px;
 	}
 
 }
 
 .popup-info-get-free .button.-facebook span:before, .popup-info-get-free .button.-google span:before {
-	display: none
+	display: none;
 }
 
 @media (max-width:1450px) {
 	.popup-info-get-free .col-5 {
 		flex: 0 0 38%;
-		max-width: 38%
+		max-width: 38%;
 	}
 
 	.popup-info-get-free .col-7 {
@@ -762,11 +769,11 @@
 	}
 
 	.contentin {
-		padding-top: 40px;
+		padding-top: 64px;
 	}
 
 	.contentin .contentin-logo {
-		padding-bottom: 25px;
+		padding-bottom: 66px;
 	}
 
 	.contentin .contentin-title {
@@ -870,7 +877,7 @@
 	}
 
 	.popup-info-get-free .contentin .contentin-logo {
-		padding-bottom: 25px;
+		padding-bottom: 50px;
 	}
 
 	.popup-info-get-free .contentin {
