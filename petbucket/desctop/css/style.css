@@ -102,7 +102,7 @@ html{
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	margin: 20px 0px;
+	margin: 0px 0px 20px;
 }
 .pb_price_stars{
 	display: flex;
@@ -121,7 +121,7 @@ html{
 .pb_advantages{
 	list-style: none;
 	padding: 0;
-	margin: 0;
+	margin: 0 0 25px;
 }
 .pb_star{
 	display: flex;
