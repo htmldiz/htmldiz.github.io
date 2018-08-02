@@ -76,8 +76,6 @@
 
 .contentin  .contentinwrap {
 	width: calc(100% + 20px);
-	overflow-y: auto;
-	overflow-x: hidden;
 	height: 100%;
 	padding-left: 1vw;
 	padding-top: 83px;
@@ -91,7 +89,7 @@
 	flex: 0 0 100%;
 	margin-left: auto;
 	margin-right: auto;
-	overflow: hidden
+	overflow-x: hidden;
 }
 
 .contentin .contentin-logo {
@@ -119,9 +117,9 @@
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
-	-webkit-flex-wrap: wrap;
-	-ms-flex-wrap: wrap;
-	flex-wrap: wrap;
+	-webkit-flex-wrap: nowrap;
+	-ms-flex-wrap: nowrap;
+	flex-wrap: nowrap;
 	left: 0;
 	right: 0;
 	top: 0;
@@ -359,9 +357,9 @@
 
 .applicationslist-content {
 	overflow-y: auto;
-	max-height: 100%;
 	margin-right: 40px;
-	padding-top: 47px
+	padding-top: 47px;
+	max-height: calc(100vh - 120px);
 }
 
 .applicationslist-content .applicationslist-grid {
@@ -665,6 +663,43 @@
 	margin-bottom: 5px
 }
 
+
+
+/*New style*/
+.popup-info-get-free .col-5:before{
+	content: '';
+	display: block;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: #0f1445;
+	transform: rotate(9deg);
+	left: auto;
+	right: -60px;
+	top: -24%;
+	z-index: 0;
+	transform-origin: center;
+}
+.popup-info-get-free .col-5:after{
+	content: '';
+	display: block;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: #0f1445;
+	transform: rotate(-9deg);
+	left: auto;
+	right: -12px;
+	/*top: 5%;*/
+	top: 4%;
+	z-index: 0;
+	transform-origin: center;
+}
+.contentin{
+	z-index: 9;
+	position: relative;
+}
+
 @media (min-height:820px) {
 	.popup-info-get-free .applicationslist {
 	}
@@ -674,33 +709,33 @@
 @media (max-width:1450px) {
 	.applicationslist-content .applicationslist-grid-cell {
 		flex: 0 0 50%;
-		max-width: 50%
+		max-width: 50%;
 	}
 
 }
 
 @media (max-width:1415px) {
 	.popup-info-get-free .applicationslist-sidebar {
-		min-height: 142px
+		min-height: 142px;
 	}
 
 }
 
 @media (max-width:1660px) {
 	.popup-info-get-free .applicationslist-sidebar {
-		min-height: 120px
+		min-height: 120px;
 	}
 
 }
 
 .popup-info-get-free .button.-facebook span:before, .popup-info-get-free .button.-google span:before {
-	display: none
+	display: none;
 }
 
-@media (max-width:1400px) {
+@media (max-width:1450px) {
 	.popup-info-get-free .col-5 {
 		flex: 0 0 38%;
-		max-width: 38%
+		max-width: 38%;
 	}
 
 	.popup-info-get-free .col-7 {
@@ -718,20 +753,20 @@
 
 	.contentin .contentinwrap {
 		padding: 0;
-		padding-right: 20px
+		padding-right: 20px;
 	}
 
 	.contentin {
-		padding-top: 44px
+		padding-top: 64px;
 	}
 
 	.contentin .contentin-logo {
-		padding-bottom: 36px
+		padding-bottom: 66px;
 	}
 
 	.contentin .contentin-title {
 		font-size: 27px;
-		padding-bottom: 33px
+		padding-bottom: 33px;
 	}
 
 	.containe-list {
@@ -739,42 +774,42 @@
 	}
 
 	.title.applicationslist-category {
-		margin-bottom: 23px
+		margin-bottom: 23px;
 	}
 
 	.popup-info-get-free .col-5:before {
-		left: 50px
+		left: 50px;
 	}
 
 	.popup-info-get-free .col-5:after {
 		top: -5px;
-		left: 50px
+		left: 50px;
 	}
 
 	.containe-list ul {
-		font-size: 20px
+		font-size: 20px;
 	}
 
 	#signup-form-big input[name="email"] {
-		margin-top: 7px
+		margin-top: 7px;
 	}
 
 	.app-current {
 		margin-bottom: 33px;
-		margin-top: 15px
+		margin-top: 15px;
 	}
 
 	.app-current-head .text-app {
 		margin-left: 18px;
-		margin-top: 0px
+		margin-top: 0px;
 	}
 
 	.popup-info-get-free .applicationslist {
-		padding-bottom: 0px
+		padding-bottom: 0px;
 	}
 
 	.popup-info-get-free .applicationslist-sidebar {
-		min-height: 148px
+		min-height: 148px;
 	}
 
 }
@@ -782,26 +817,26 @@
 @media (max-width:1320px) {
 	.popup-info-get-free .col-5 {
 		flex: 0 0 37%;
-		max-width: 37%
+		max-width: 37%;
 	}
 
 	.popup-info-get-free .col-7 {
 		flex: 0 0 63%;
 		max-width: 63%;
 		padding-top: 17px;
-		padding-left: 98px
+		padding-left: 98px;
 	}
 
 	.popup-info-get-free .col-5:before {
-		top: -38%
+		top: -38%;
 	}
 
 	.popup-info-get-free .col-5:after {
-		top: 15%
+		top: 15%;
 	}
 
 	.contentin {
-		padding-top: 35px
+		padding-top: 35px;
 	}
 
 	.contentin .contentin-title {
@@ -810,49 +845,49 @@
 		font-size: 30px;
 		padding-bottom: 23px;
 		margin: 0px auto;
-		max-width: 405px
+		max-width: 405px;
 	}
 
 	.app-current-head {
 		flex: 0 0 53%;
-		max-width: 53%
+		max-width: 53%;
 	}
 
 	.app-current-more {
-		padding-left: 45px
+		padding-left: 45px;
 	}
 
 }
 
 @media (max-width:1200px) {
 	.popup-info-get-free .contentin .contentin-title {
-		font-size: 24px
+		font-size: 24px;
 	}
 
 	.popup-info-get-free .contentin .contentin-logo {
-		padding-bottom: 50px
+		padding-bottom: 50px;
 	}
 
 	.popup-info-get-free .contentin {
 		padding-top: 50px;
-		padding-left: 10px
+		padding-left: 10px;
 	}
 
 	.applicationslist-content .applicationslist-grid-name {
-		font-size: 16px
+		font-size: 16px;
 	}
 
 	.popup-info-get-free .applicationslist-sidebar a {
-		font-size: 11px
+		font-size: 11px;
 	}
 
 	.app-current-more {
 		font-size: 16px;
-		max-width: 223px
+		max-width: 223px;
 	}
 
 	.app-current-head {
-		padding-right: 10px
+		padding-right: 10px;
 	}
 
 	.app-current-more:before {
@@ -863,7 +898,7 @@
 		left: -4px;
 		top: calc(50% - 3px);
 		width: 24px;
-		height: 3px
+		height: 3px;
 	}
 
 	.app-current-more:after {
@@ -874,7 +909,15 @@
 		left: 7px;
 		top: calc(50% - 14px);
 		width: 3px;
-		height: 26px
+		height: 26px;
 	}
+}
 
+@media (max-height: 768px){
+	.contentin {
+		padding-top: 40px!important;
+	}
+	.contentin .contentin-logo {
+		padding-bottom: 25px!important;
+	}
 }
