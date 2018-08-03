@@ -27,8 +27,19 @@ if (!window.jQuery) {
 }else{
 	readyjQueryinit();
 }
+function getCookiejQueryinit(name) {
+	var matches = document.cookie.match(new RegExp(
+		"(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+	));
+	return matches ? decodeURIComponent(matches[1]) : undefined;
+}
+function setCookiejQueryinit(name,value) {
+	var date = new Date(new Date().getTime() + 30 *60 * 1000);
+	document.cookie = name+"="+value+"; path=/; expires=" + date.toUTCString();
+}
 function readyjQueryinit(){
-if($('.BreadCrumbHolder [href="https://www.petbucket.com/c/4521471/1/for-dogs.html"]').length>0){
+var variation_popup = getCookiejQueryinit('variation_popup');
+if($('.BreadCrumbHolder [href="https://www.petbucket.com/c/4521471/1/for-dogs.html"]').length>0 && !variation_popup){
 	  var serialize = $('[action="/Basket/AddToBasket"]').serialize();
 	  var projectpath = "https://htmldiz.github.io/petbucket/desctop/";
 		headlink = '<link href="'+projectpath+'css/style.css" rel="stylesheet">';
@@ -108,6 +119,7 @@ if($('.BreadCrumbHolder [href="https://www.petbucket.com/c/4521471/1/for-dogs.ht
 	  	return false;
 	  });
 	  $('body').on('click', '.pb_no_btn a', function(event) {
+	  	setCookiejQueryinit('variation_popup',true);
 	  	window.dataLayer = window.dataLayer || [];
 	  	dataLayer.push({
 	  		'event': 'gtm-cro-event',
@@ -119,6 +131,7 @@ if($('.BreadCrumbHolder [href="https://www.petbucket.com/c/4521471/1/for-dogs.ht
 		return false;
 	  });
 	  $('body').on('click', 'span.pb_close_btn', function(event) {
+	  	setCookiejQueryinit('variation_popup',true);
 	  	window.dataLayer = window.dataLayer || [];
 	  	dataLayer.push({
 	  		'event': 'gtm-cro-event',
@@ -130,6 +143,7 @@ if($('.BreadCrumbHolder [href="https://www.petbucket.com/c/4521471/1/for-dogs.ht
 		return false;
 	  });
 	  $('body').on('click', '.pb_yes_btn_link_send', function(event) {
+	  	setCookiejQueryinit('variation_popup',true);
 		$.ajax({
 			url: 'https://www.petbucket.com/Basket/AddToBasket',
 			type: 'POST',
@@ -149,6 +163,7 @@ if($('.BreadCrumbHolder [href="https://www.petbucket.com/c/4521471/1/for-dogs.ht
 		return false;
 	  });
 	  $('body').on('submit', '[action="/Basket/AddToBasket"]', function(event) {
+	  		setCookiejQueryinit('variation_popup',true);
 		  	$.ajax({
 		  		url: 'https://www.petbucket.com/Basket/AddToBasket',
 		  		type: 'POST',
