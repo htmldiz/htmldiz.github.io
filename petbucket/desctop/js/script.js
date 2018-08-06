@@ -148,7 +148,7 @@ if($('.BreadCrumbHolder [href="https://www.petbucket.com/c/4521471/1/for-dogs.ht
 			url: 'https://www.petbucket.com/Basket/AddToBasket',
 			type: 'POST',
 			dataType: 'html',
-			data: {rad_Variant_1367960: '57786647',ProductId: '6976310',Quantity: '1'},
+			data: {rad_Variant_1367960: '57786370',ProductId: '6976310',Quantity: '1'},
 		})
 		.done(function() {
 			location.href = "https://www.petbucket.com/Basket";
