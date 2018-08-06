@@ -164,6 +164,7 @@ if($('.BreadCrumbHolder [href="https://www.petbucket.com/c/4521471/1/for-dogs.ht
 	  });
 	  $('body').on('submit', '[action="/Basket/AddToBasket"]', function(event) {
 	  		setCookiejQueryinit('variation_popup',true);
+	  		var serialize = $('[action="/Basket/AddToBasket"]').serialize();
 		  	$.ajax({
 		  		url: 'https://www.petbucket.com/Basket/AddToBasket',
 		  		type: 'POST',
