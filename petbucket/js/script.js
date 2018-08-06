@@ -43,7 +43,7 @@ function readyjQueryinit(){
 			url = "https://htmldiz.github.io/"+projecturl+"/";
 		}
 		var reg = new RegExp(/www.petbucket.com\/blog\/(.*).html$/i);
-		var href  = location.href;
+		var href  = location.origin+location.pathname;
 		console.log('variant b');
 		if(href.search(reg) > -1){
 			$('head').append('<link rel="stylesheet" href="'+url+'css/style.css" />');
