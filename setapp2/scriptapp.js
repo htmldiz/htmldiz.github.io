@@ -68,11 +68,17 @@ function readyjQueryinit(){
 			$(this).removeClass("error");
 		});
 		$(document).on("blur", "#signup-form-big [name='email']", function( event ) {
+			$(this).removeClass("not_empty");
+		});
+		$(document).on("blur", "#signup-form-big [name='email']", function( event ) {
 			var email_input = this;
 			validateEmail(email_input,true);
 		});
 		$(document).on("click", ".applicationslist-grid-application, .app-current", function( event ) {
 			$('#signup-form-big [name="email"]').focus();
+		});
+		$(document).on("blur", "#signup-form-big [name='password']", function( event ) {
+			$(this).removeClass("not_empty");
 		});
 		$(document).on("blur", "#signup-form-big [name='password']", function( event ) {
 			var pass_input = this;
@@ -115,7 +121,6 @@ function readyjQueryinit(){
 			var validate = $(input).val();
 			var oldval   = !$(input).data('oldval') ? '' : $(input).data('oldval');
 			$(input).removeClass("not_empty");
-			console.log(validate);
 			if(validate != '') {
 				if(validate.length < 8) {
 					$(input).before("<span class='error_text not_empty'>Incorrectly entered data. Minimum 8 characters</span>");
