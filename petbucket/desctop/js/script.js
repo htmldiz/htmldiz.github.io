@@ -57,10 +57,10 @@ if($('.BreadCrumbHolder [href="https://www.petbucket.com/c/4521471/1/for-dogs.ht
 		outhtml += '</a>';
 		outhtml += '</div>';
 		outhtml += '<div class="pb_thumbnails">';
-		outhtml += '<a href="https://static.cdnbridge.com/resources/18/160536/resized/2B/84867883_360x360.jpg" data-thumb-link="true">';
+		outhtml += '<a href="https://static.cdnbridge.com/resources/18/160536/picture/2B/84867883.jpg" data-thumb-link="true">';
 		outhtml += '<img src="'+projectpath+'img/photo-mini.png" alt="">';
 		outhtml += '</a>';
-		outhtml += '<a href="https://static.cdnbridge.com/resources/18/160536/resized/2A/84867882_360x360.jpg" data-thumb-link="true">';
+		outhtml += '<a href="https://static.cdnbridge.com/resources/18/160536/picture/2B/84867883.jpg" data-thumb-link="true">';
 		outhtml += '<img src="'+projectpath+'img/photo-mini2.png" alt="">';
 		outhtml += '</a>';
 		outhtml += '</div>';
