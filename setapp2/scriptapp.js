@@ -81,11 +81,20 @@ function readyjQueryinit(){
 		function validateEmail(input,empty){
 			$(input).parent().find('.error_text').remove();
 			$(input).removeClass("error");
+			var val = $(input).val();
 			$(input).removeClass("not_empty");
+			var incorrects = false;
 			if($(input).val() != '') {
 		        var pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
+		        re_punct = /(-|\\|\/|%|\^|<|>|,|\?|\&|\*|,|\+|#|\(|\)|\}|\{|\[|\]|\$)/;
+				if(val.search(re_punct) != -1){
+					incorrects = true;
+				}
 			    if(pattern.test($(input).val())){
 			    } else {
+			    	incorrects = true;
+			    }
+			    if(incorrects === true){
 			        $(input).before("<span class='error_text not_empty'>Incorrectly entered data. For example email@example.com</span>");
 			        $(input).addClass("not_empty");
 			        $(input).addClass("error");
