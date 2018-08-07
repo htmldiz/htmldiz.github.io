@@ -57,6 +57,7 @@ function readyjQueryinit(){
 			'gtm-cro-event-action': 'load',
 			'gtm-cro-event-label': 'Protect your pet from parasites'
 			});
+			$('.'+projecturl+'-step-1').focus()
 			$('body').on('click', '.'+projecturl+'-step-1', function(event) {
 				$(this).addClass(projecturl+'-animate');
 				$(this).addClass(projecturl+'fadeOutLeft');
