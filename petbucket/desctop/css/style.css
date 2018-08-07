@@ -245,6 +245,9 @@ html{
 	flex: 0 0 auto;
 	z-index: 99999;
 }
+a[data-thumb-link]{
+	cursor: url('https://www.petbucket.com/js/magiczoomplus/graphics/zoomin.cur'),pointer;
+}
 .thumb-imagebig-wrap .thumb-imagebig img{
 	max-height: 100%;
 	max-width: 100%;
