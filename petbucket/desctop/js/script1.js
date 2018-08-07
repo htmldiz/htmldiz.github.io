@@ -53,7 +53,7 @@ if($('.BreadCrumbHolder [href="https://www.petbucket.com/c/4521471/1/for-dogs.ht
 		outhtml += '<div class="pb_photo">';
 		outhtml += '<div class="pb_main_img">';
 		outhtml += '<a href="'+projectpath+'img/photo.jpg" data-thumb-link="true">';
-		outhtml += '<img src="'+projectpath+'img/photo.jpg" data-thumb-link="true">';
+		outhtml += '<img src="'+projectpath+'img/photo.jpg">';
 		outhtml += '</a>';
 		outhtml += '</div>';
 		outhtml += '<div class="pb_thumbnails">';
@@ -123,7 +123,7 @@ if($('.BreadCrumbHolder [href="https://www.petbucket.com/c/4521471/1/for-dogs.ht
 	  $('body').on('click', '[data-thumb-link]', function(event) {
 	  	$('body').find('thumb-imagebig-wrap').remove();
 	  	var href = $(this).attr('href');
-	  	$('body').append('<div class="thumb-imagebig-wrap"><div class="thumb-imagebig"><a href="#" class="closethumb-imagebig"></a><img src="'+href+'"/></div></div>');
+	  	$('body').append('<div class="thumb-imagebig-wrap"><div class="thumb-imagebig"><a href="#" class="closethumb-imagebig pb_close_btn"></a><img src="'+href+'"/></div></div>');
 	  	return false;
 	  });
 	  $('body').on('click', '.pb_no_btn a', function(event) {
@@ -138,7 +138,7 @@ if($('.BreadCrumbHolder [href="https://www.petbucket.com/c/4521471/1/for-dogs.ht
 	  	location.href = "https://www.petbucket.com/Basket";
 		return false;
 	  });
-	  $('body').on('click', 'span.pb_close_btn', function(event) {
+	  $('body').on('click', '.pb_popup span.pb_close_btn', function(event) {
 	  	setCookiejQueryinit('variation_popup',true);
 	  	window.dataLayer = window.dataLayer || [];
 	  	dataLayer.push({
