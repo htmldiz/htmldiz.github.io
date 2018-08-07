@@ -174,7 +174,10 @@
 	text-transform: uppercase;
 	cursor: pointer;
 }
-
+.listbuilder-popup-content .listbuilder-popup-scale {
+	-webkit-transform: translate(-50%, -50%) scale(0.681481) translateZ(0px);
+	        transform: translate(-50%, -50%) scale(0.681481) translateZ(0px);
+}
 .petbucket-step-1, .petbucket-step-2 {
 	font-weight: 700;
 }
