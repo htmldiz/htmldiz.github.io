@@ -168,6 +168,7 @@
 	bottom: 0;
 	left: 0;
 	right: 0;
+	top: auto;
 	padding: 27px 10px;
 	background: #8dad35;
 	text-transform: uppercase;
