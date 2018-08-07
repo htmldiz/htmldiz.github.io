@@ -85,11 +85,11 @@ function readyjQueryinit(){
 			$(input).removeClass("not_empty");
 			var incorrects = false;
 			if($(input).val() != '') {
-		        var pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
-		        re_punct = /(-|\\|\/|%|\^|<|>|,|\?|\&|\*|,|\+|#|\(|\)|\}|\{|\[|\]|\$)/;
-				if(val.search(re_punct) != -1){
-					incorrects = true;
-				}
+		        var pattern = /^([a-z0-9_\.\+-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
+				// re_punct = /(-|\\|\/|%|\^|<|>|,|\?|\&|\*|,|\+|#|\(|\)|\}|\{|\[|\]|\$)/;
+				// if(val.search(re_punct) != -1){
+				// 	incorrects = true;
+				// }
 			    if(pattern.test($(input).val())){
 			    } else {
 			    	incorrects = true;
