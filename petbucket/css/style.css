@@ -191,7 +191,7 @@
     bottom: 0;
     left: 0;
     display: block;
-    content: "";
+    content: " ";
 }
 .scrollbox-popup-content,
 .listbuilder-popup-content {
@@ -204,7 +204,7 @@
     right: 0;
     left: 0;
 }
-.listbuilder-popup-content .scrollbox-popup-scale,
+.scrollbox-popup-content .scrollbox-popup-scale,
 .listbuilder-popup-content .listbuilder-popup-scale {
 	position: absolute !important;
 	top: 50% !important;
