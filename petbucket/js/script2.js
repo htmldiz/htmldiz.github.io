@@ -121,7 +121,7 @@ function readyjQueryinit(){
 				$('body').find('.dogs-cats-menu').css('font-size', '1.3em');
 				$('body').find('.dogs-cats-menu').css('padding-left', '30px');
 				$('body').find('.dogs-cats-menu').css('padding-right', '15px');
-				$('body').find('.dogs-cats-menu').html('<strong>Parasite prevention from top brands with lowest-price guarantee</strong>');
+				$('body').find('.dogs-cats-menu').html('<strong>Parasite prevention from top brands with lowest price guarantee</strong>');
 			}
 			if( path == "https://www.petbucket.com/c/4521472/1/flea.html"){
 				$('body').find('.wCenter .products-title').html('<strong>Flea prevention from top brands with lowest price guarantee</strong>');
