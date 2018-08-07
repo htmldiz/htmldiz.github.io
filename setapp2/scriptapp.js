@@ -81,11 +81,13 @@ function readyjQueryinit(){
 		function validateEmail(input,empty){
 			$(input).parent().find('.error_text').remove();
 			$(input).removeClass("error");
+			$(input).removeClass("not_empty");
 			if($(input).val() != '') {
 		        var pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
 			    if(pattern.test($(input).val())){
 			    } else {
-			        $(input).before("<span class='error_text'>Incorrectly entered data. For example email@example.com</span>");
+			        $(input).before("<span class='error_text not_empty'>Incorrectly entered data. For example email@example.com</span>");
+			        $(input).addClass("not_empty");
 			        $(input).addClass("error");
 			        return false;
 			    }
@@ -103,10 +105,12 @@ function readyjQueryinit(){
 			$(input).removeClass("error");
 			var validate = $(input).val();
 			var oldval   = !$(input).data('oldval') ? '' : $(input).data('oldval');
+			$(input).removeClass("not_empty");
 			console.log(validate);
 			if(validate != '') {
 				if(validate.length < 8) {
-					$(input).before("<span class='error_text'>Incorrectly entered data. Minimum 8 characters</span>");
+					$(input).before("<span class='error_text not_empty'>Incorrectly entered data. Minimum 8 characters</span>");
+			        $(input).addClass("not_empty");
 					$(input).addClass("error");
 					return false;
 				}
@@ -204,7 +208,7 @@ function readyjQueryinit(){
         		url: action,
         		type: 'POST',
         		dataType: 'json',
-        		data: '{"name":"'+name+'","email":"'+email+'","password":"'+password+'","marketing_subscribed":true,"tier_id":1,"campaign":"","registration_flow":{"type":"appLanding","params":{"appId":"'+window._appId+'"}}}',
+        		data: '{"name":"","email":"'+email+'","password":"'+password+'","marketing_subscribed":true,"tier_id":1,"campaign":"","registration_flow":{"type":"appLanding","params":{"appId":"'+window._appId+'"}}}',
     			contentType: "application/json"
         	})
         	.done(function(data) {
