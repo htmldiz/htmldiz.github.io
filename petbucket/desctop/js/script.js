@@ -52,11 +52,13 @@ if($('.BreadCrumbHolder [href="https://www.petbucket.com/c/4521471/1/for-dogs.ht
 		outhtml += '<div class="pb_popup_content">';
 		outhtml += '<div class="pb_photo">';
 		outhtml += '<div class="pb_main_img">';
+		outhtml += '<a href="https://static.cdnbridge.com/resources/18/160536/resized/2B/84867883_360x360.jpg">';
 		outhtml += '<img src="'+projectpath+'img/photo.jpg">';
+		outhtml += '</a>';
 		outhtml += '</div>';
 		outhtml += '<div class="pb_thumbnails">';
-		outhtml += '<a href="'+projectpath+'img/photo.jpg">';
-		outhtml += '<img src="'+projectpath+'img/photo.jpg" alt="">';
+		outhtml += '<a href="https://static.cdnbridge.com/resources/18/160536/resized/2B/84867883_360x360.jpg">';
+		outhtml += '<img src="'+projectpath+'img/photo-mini.png" alt="">';
 		outhtml += '</a>';
 		outhtml += '<a href="https://static.cdnbridge.com/resources/18/160536/resized/2A/84867882_360x360.jpg">';
 		outhtml += '<img src="'+projectpath+'img/photo-mini2.png" alt="">';
