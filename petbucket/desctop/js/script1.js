@@ -52,13 +52,15 @@ if($('.BreadCrumbHolder [href="https://www.petbucket.com/c/4521471/1/for-dogs.ht
 		outhtml += '<div class="pb_popup_content">';
 		outhtml += '<div class="pb_photo">';
 		outhtml += '<div class="pb_main_img">';
-		outhtml += '<img src="'+projectpath+'img/photo.jpg">';
+		outhtml += '<a href="'+projectpath+'img/photo.jpg" data-thumb-link="true">';
+		outhtml += '<img src="'+projectpath+'img/photo.jpg" data-thumb-link="true">';
+		outhtml += '</a>';
 		outhtml += '</div>';
 		outhtml += '<div class="pb_thumbnails">';
-		outhtml += '<a href="https://static.cdnbridge.com/resources/18/160536/resized/2B/84867883_360x360.jpg">';
+		outhtml += '<a href="https://static.cdnbridge.com/resources/18/160536/resized/2B/84867883_360x360.jpg" data-thumb-link="true">';
 		outhtml += '<img src="'+projectpath+'img/photo-mini.png" alt="">';
 		outhtml += '</a>';
-		outhtml += '<a href="https://static.cdnbridge.com/resources/18/160536/resized/2A/84867882_360x360.jpg">';
+		outhtml += '<a href="https://static.cdnbridge.com/resources/18/160536/resized/2A/84867882_360x360.jpg" data-thumb-link="true">';
 		outhtml += '<img src="'+projectpath+'img/photo-mini2.png" alt="">';
 		outhtml += '</a>';
 		outhtml += '</div>';
@@ -113,9 +115,15 @@ if($('.BreadCrumbHolder [href="https://www.petbucket.com/c/4521471/1/for-dogs.ht
 		outhtml += '</div>';
 		outhtml += '</div>';
 		$('body').append(outhtml);
-	  $('body').on('click', '.pb_thumbnails a', function(event) {
+	  $('body').on('click', '.closethumb-imagebig', function(event) {
+	  	$('body').find('.thumb-imagebig-wrap').fadeOut('fast', function() {
+	  		$(this).remove();
+	  	});
+	  });
+	  $('body').on('click', '[data-thumb-link]', function(event) {
+	  	$('body').find('thumb-imagebig-wrap').remove();
 	  	var href = $(this).attr('href');
-	  	$('body').find('.pb_main_img img').attr('src',href);
+	  	$('body').append('<div class="thumb-imagebig-wrap"><div class="thumb-imagebig"><a href="#" class="closethumb-imagebig"></a><img src="'+href+'"/></div></div>');
 	  	return false;
 	  });
 	  $('body').on('click', '.pb_no_btn a', function(event) {
