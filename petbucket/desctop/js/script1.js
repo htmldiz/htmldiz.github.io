@@ -117,7 +117,7 @@ if($('.BreadCrumbHolder [href="https://www.petbucket.com/c/4521471/1/for-dogs.ht
 		$('body').append(outhtml);
 	  $('body').on('click', '.closethumb-imagebig', function(event) {
 	  	$('body').find('.thumb-imagebig-wrap').fadeOut('fast', function() {
-	  		$(this).remove();
+	  		$(this).remove(); 
 	  	});
 	  });
 	  $('body').on('click', '[data-thumb-link]', function(event) {
