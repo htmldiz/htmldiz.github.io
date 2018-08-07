@@ -174,9 +174,39 @@
 	text-transform: uppercase;
 	cursor: pointer;
 }
+.listbuilder-popup {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.listbuilder-popup-overlay {
+    position: fixed;
+    background: rgba(0,0,0,0.4);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.listbuilder-popup-content {
+	padding: 0;
+    margin: 0 auto;
+    max-width: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+.listbuilder-popup-content > div,
 .listbuilder-popup-content .listbuilder-popup-scale {
-	-webkit-transform: translate(-50%, -50%) scale(0.681481) translateZ(0px);
-	        transform: translate(-50%, -50%) scale(0.681481) translateZ(0px);
+	position: absolute !important;
+	top: 50% !important;
+	left: 50% !important;
+	transform: translate(-50%, -50%) scale(0.581481) translateZ(0px) !important;
+	zoom: 1 !important;
+	overflow: visible !important;
 }
 .petbucket-step-1, .petbucket-step-2 {
 	font-weight: 700;
