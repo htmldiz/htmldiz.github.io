@@ -67,7 +67,7 @@ function readyjQueryinit(){
 			$(this).parent().find('.error_text').remove();
 			$(this).removeClass("error");
 		});
-		$(document).on("blur", "#signup-form-big [name='email']", function( event ) {
+		$(document).on("focus", "#signup-form-big [name='email']", function( event ) {
 			$(this).removeClass("not_empty");
 		});
 		$(document).on("blur", "#signup-form-big [name='email']", function( event ) {
@@ -77,7 +77,7 @@ function readyjQueryinit(){
 		$(document).on("click", ".applicationslist-grid-application, .app-current", function( event ) {
 			$('#signup-form-big [name="email"]').focus();
 		});
-		$(document).on("blur", "#signup-form-big [name='password']", function( event ) {
+		$(document).on("focus", "#signup-form-big [name='password']", function( event ) {
 			$(this).removeClass("not_empty");
 		});
 		$(document).on("blur", "#signup-form-big [name='password']", function( event ) {
