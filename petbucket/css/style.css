@@ -174,7 +174,7 @@
 	text-transform: uppercase;
 	cursor: pointer;
 }
-.scrollbox-popup,
+/* .scrollbox-popup,
 .listbuilder-popup {
     position: fixed;
     top: 0;
@@ -212,7 +212,7 @@
 	transform: translate(-50%, -50%) scale(0.581481) translateZ(0px) !important;
 	zoom: 1 !important;
 	overflow: visible !important;
-}
+} */
 .petbucket-step-1, .petbucket-step-2 {
 	font-weight: 700;
 }
