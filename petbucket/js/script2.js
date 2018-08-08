@@ -1,7 +1,8 @@
-try {
-    hj('trigger', 'hj-cro-event-blog-sticky-bar');
-} 
-catch(e) {}
+window.dataLayer = window.dataLayer || [];
+dataLayer.push({
+	'event': 'hj-cro-event',
+	'gtm-cro-event-category': 'EXP - Mobile - Sticky Bar'
+});
 var projecturl = "petbucket";
 function initjQuery(callback) {
 	var script = document.createElement( "script" )
@@ -33,6 +34,16 @@ if (!window.jQuery) {
 }else{
 	readyjQueryinit();
 }
+function getCookiejQueryinit(name) {
+	var matches = document.cookie.match(new RegExp(
+		"(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+	));
+	return matches ? decodeURIComponent(matches[1]) : undefined;
+}
+function setCookiejQueryinit(name,value) {
+	var date = new Date(new Date().getTime() + 30 *60 * 1000);
+	document.cookie = name+"="+value+"; path=/; expires=" + date.toUTCString();
+}
 function readyjQueryinit(){
 	jQuery(function($) {
 		var href = location.href;
@@ -46,6 +57,7 @@ function readyjQueryinit(){
 		var href  = location.origin+location.pathname;
 		console.log('variant c');
 		if(href.search(reg) > -1){
+			setCookiejQueryinit('change_title',true);
 			$('head').append('<link rel="stylesheet" href="'+url+'css/style.css" />');
 			$('body').append('<a href="#" class="'+projecturl+'-step-1" data-localizer="detect">protect your pet from parasites</a>');
 			$('body').append('<div class="'+projecturl+'-step-2 petbucket-animate '+projecturl+'fadeOutLeft"><a href="#" class="'+projecturl+'-link '+projecturl+'dog-link dog"><img src="'+url+'img/dog.png" alt="For dogs" /><span data-localizer="detect">For dogs</span></a> <span>OR</span><a href="#" class="'+projecturl+'-link '+projecturl+'cat-link cat"><img src="'+url+'img/cat.png" alt="For cats" /><span data-localizer="detect">For cats</span></a></div>');
@@ -105,7 +117,8 @@ function readyjQueryinit(){
 			});
 		}else{
 			var path = location.origin+location.pathname;
-			if( path == "https://www.petbucket.com/c/4405799/1/for-cats.html"){ 
+			var change_title = getCookiejQueryinit('change_title');
+			if( path == "https://www.petbucket.com/c/4405799/1/for-cats.html" && change_title){
 				$('body').find('.free-shipping-header').remove();
 				$('body').find('.dogs-cats-menu').css('margin-top', '103px');
 				$('body').find('.dogs-cats-menu').css('border', 'none');
@@ -114,7 +127,7 @@ function readyjQueryinit(){
 				$('body').find('.dogs-cats-menu').css('padding-right', '15px');
 				$('body').find('.dogs-cats-menu').html('<strong>Parasite prevention from top brands with lowest price guarantee</strong>');
 			}
-			if( path == "https://www.petbucket.com/c/4521471/1/for-dogs.html"){
+			if( path == "https://www.petbucket.com/c/4521471/1/for-dogs.html" && change_title){
 				$('body').find('.free-shipping-header').remove();
 				$('body').find('.dogs-cats-menu').css('margin-top', '103px');
 				$('body').find('.dogs-cats-menu').css('border', 'none');
@@ -123,28 +136,28 @@ function readyjQueryinit(){
 				$('body').find('.dogs-cats-menu').css('padding-right', '15px');
 				$('body').find('.dogs-cats-menu').html('<strong>Parasite prevention from top brands with lowest price guarantee</strong>');
 			}
-			if( path == "https://www.petbucket.com/c/4521472/1/flea.html"){
+			if( path == "https://www.petbucket.com/c/4521472/1/flea.html" && change_title){
 				$('body').find('.wCenter .products-title').html('<strong>Flea prevention from top brands with lowest price guarantee</strong>');
 			}
-			if( path == "https://www.petbucket.com/c/4521473/1/tick.html"){
+			if( path == "https://www.petbucket.com/c/4521473/1/tick.html" && change_title){
 				$('body').find('.wCenter .products-title').html('<strong>Tick prevention from top brands with lowest price guarantee</strong>');
 			}
-			if( path == "https://www.petbucket.com/c/4521474/1/heartworm.html"){
+			if( path == "https://www.petbucket.com/c/4521474/1/heartworm.html" && change_title){
 				$('body').find('.wCenter .products-title').html('<strong>Heartworm prevention from top brands with lowest price guarantee</strong>');
 			}
-			if( path == "https://www.petbucket.com/c/4521475/1/intestinal-worms.html"){
+			if( path == "https://www.petbucket.com/c/4521475/1/intestinal-worms.html" && change_title){
 				$('body').find('.wCenter .products-title').html('<strong>Intestinal worms prevention from top brands with lowest price guarantee</strong>');
 			}
-			if( path == "https://www.petbucket.com/c/4405843/1/flea.html"){
+			if( path == "https://www.petbucket.com/c/4405843/1/flea.html" && change_title){
 				$('body').find('.wCenter .products-title').html('<strong>Flea prevention from top brands with lowest price guarantee</strong>');
 			}
-			if( path == "https://www.petbucket.com/c/4540721/1/tick.html"){
+			if( path == "https://www.petbucket.com/c/4540721/1/tick.html" && change_title){
 				$('body').find('.wCenter .products-title').html('<strong>Tick prevention from top brands with lowest price guarantee</strong>');
 			}
-			if( path == "https://www.petbucket.com/c/4405844/1/heartworm.html"){
+			if( path == "https://www.petbucket.com/c/4405844/1/heartworm.html" && change_title){
 				$('body').find('.wCenter .products-title').html('<strong>Heartworm prevention from top brands with lowest price guarantee</strong>');
 			}
-			if( path == "https://www.petbucket.com/c/4405832/1/intestinal-worms.html"){
+			if( path == "https://www.petbucket.com/c/4405832/1/intestinal-worms.html" && change_title){
 				$('body').find('.wCenter .products-title').html('<strong>Intestinal worms prevention from top brands with lowest price guarantee</strong>');
 			}
 		}

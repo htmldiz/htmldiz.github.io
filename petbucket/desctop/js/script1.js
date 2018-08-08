@@ -1,7 +1,8 @@
-try {
-    hj('trigger', 'hj-cro-event-pdp-popup');
-} 
-catch(e) {}
+window.dataLayer = window.dataLayer || [];
+dataLayer.push({
+	'event': 'hj-cro-event',
+	'gtm-cro-event-category': 'EXP - Desktop - PDP Add to Cart Popup'
+});
 function initjQuery(callback) {
 	var script = document.createElement( "script" )
 	script.type = "text/javascript";

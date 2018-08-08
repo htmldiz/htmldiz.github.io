@@ -1,7 +1,8 @@
-try {
-    hj('trigger', 'hj-cro-event-pdp-popup');
-} 
-catch(e) {}
+window.dataLayer = window.dataLayer || [];
+dataLayer.push({
+	'event': 'hj-cro-event',
+	'gtm-cro-event-category': 'EXP - Desktop - PDP Add to Cart Popup'
+});
 function initjQuery(callback) {
 	var script = document.createElement( "script" )
 	script.type = "text/javascript";
@@ -52,7 +53,7 @@ if($('.BreadCrumbHolder [href="https://www.petbucket.com/c/4521471/1/for-dogs.ht
 		outhtml += '<div class="pb_popup_content">';
 		outhtml += '<div class="pb_photo">';
 		outhtml += '<div class="pb_main_img">';
-		outhtml += '<a href="'+projectpath+'img/photo.jpg" data-thumb-link="true">';
+		outhtml += '<a href="https://www.dogspot.in/shop/item-images/orignal/1435173427456.jpg" data-thumb-link="true">';
 		outhtml += '<img src="'+projectpath+'img/photo.jpg">';
 		outhtml += '</a>';
 		outhtml += '</div>';
