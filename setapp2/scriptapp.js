@@ -186,10 +186,10 @@ function readyjQueryinit(){
           }
           $('body').find('.applicationslist-grid-name').each(function(index, el) {
           	var text = $(el).text();
-          	if( alt == text  && text !== undefined && text !== "undefined"){
-				if(altadded === true){
+          	if( alt == text  && text != undefined && text != "undefined"){
+				if(altadded == true){
 					var html = $(el).parent().find('.applicationslist-grid-about .applicationslist-grid-description:eq(0)').html();
-					if(html !== undefined && html !== "undefined"){
+					if(html != undefined && html != "undefined"){
 						$('body').find('.app-current-head .text-here-app').append(html);
 					}
 					altadded = false;
