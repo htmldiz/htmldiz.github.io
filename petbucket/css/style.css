@@ -1,4 +1,6 @@
-
+body {
+	margin-bottom: 50px;
+}
 
 .petbucket-animate {
 	-webkit-animation-duration: .5s;
