@@ -160,7 +160,7 @@ function readyjQueryinit(){
         				$('#signup-step-windows').attr('style','');
         			}
         		}else{
-        			$('#signup-form-big [name="email"]').focus();
+        			$('#signup-form-big [name="email"]').focus(); 
         		}
         	return false;
         });
