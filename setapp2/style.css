@@ -167,7 +167,8 @@
     border: solid 2px transparent;
 }
 #signup-form-big input[name="email"]:focus, #signup-form-big input[name="password"]:focus {
-    border: solid 2px #ed7d31;
+    border: solid 2px #ff0000;
+    outline: none;
 }
 #signup-form-big input[name="email"] {
 	margin-top: 10px

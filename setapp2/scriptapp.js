@@ -159,6 +159,12 @@ function readyjQueryinit(){
         				$('#signup-form-big').css('display','none');
         				$('#signup-step-windows').attr('style','');
         			}
+        		}else{
+        			if(!validateEmai){
+        				$('#signup-form-big [name="email"]').focus();
+        			}else{
+        				$('#signup-form-big [name="password"]').focus();
+        			}
         		}
         	return false;
         });
