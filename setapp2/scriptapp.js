@@ -74,7 +74,7 @@ function readyjQueryinit(){
 			var email_input = this;
 			validateEmail(email_input,true);
 		});
-		$(document).on("click", ".applicationslist-grid-application, .app-current", function( event ) {
+		$(document).on("click", ".contentin-logo img, .applicationslist-grid-application, .app-current", function( event ) {
 			$('#signup-form-big [name="email"]').focus();
 		});
 		$(document).on("focus", "#signup-form-big [name='password']", function( event ) {
