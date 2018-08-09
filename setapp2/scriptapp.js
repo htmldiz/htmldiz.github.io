@@ -181,13 +181,17 @@ function readyjQueryinit(){
           var alt = img.attr('alt');
           var altadded = true;
           $('.app-current-head').append('<div class="text-app"></div>');
-          $('body').find('.app-current-head .text-app').append("<div class='title'>"+alt+"</div><div class='text-here-app'></div>");
+          if(alt !== undefined && alt !== "undefined" ){
+          	$('body').find('.app-current-head .text-app').append("<div class='title'>"+alt+"</div><div class='text-here-app'></div>");
+          }
           $('body').find('.applicationslist-grid-name').each(function(index, el) {
           	var text = $(el).text();
-          	if( alt == text ){
+          	if( alt == text  && text !== undefined text !== "undefined"){
 				if(altadded === true){
 					var html = $(el).parent().find('.applicationslist-grid-about .applicationslist-grid-description:eq(0)').html();
-					$('body').find('.app-current-head .text-here-app').append(html);
+					if(html !== undefined && html !== "undefined"){
+						$('body').find('.app-current-head .text-here-app').append(html);
+					}
 					altadded = false;
 				}
           	}
