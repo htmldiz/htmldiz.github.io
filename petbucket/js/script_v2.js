@@ -206,33 +206,6 @@ function readyjQueryinit(){
 				}
 				return false;
 			});
-		}else{
-			var path = location.origin+location.pathname;
-			var change_title = getCookiejQueryinit('change_title');
-			if( path == "https://www.petbucket.com/c/4521472/1/flea.html" && change_title){
-				$('body').find('.wCenter .products-title').html('<strong>Flea prevention from top brands with lowest price guarantee</strong>');
-			}
-			if( path == "https://www.petbucket.com/c/4521473/1/tick.html" && change_title){
-				$('body').find('.wCenter .products-title').html('<strong>Tick prevention from top brands with lowest price guarantee</strong>');
-			}
-			if( path == "https://www.petbucket.com/c/4521474/1/heartworm.html" && change_title){
-				$('body').find('.wCenter .products-title').html('<strong>Heartworm prevention from top brands with lowest price guarantee</strong>');
-			}
-			if( path == "https://www.petbucket.com/c/4521475/1/intestinal-worms.html" && change_title){
-				$('body').find('.wCenter .products-title').html('<strong>Intestinal worms prevention from top brands with lowest price guarantee</strong>');
-			}
-			if( path == "https://www.petbucket.com/c/4405843/1/flea.html" && change_title){
-				$('body').find('.wCenter .products-title').html('<strong>Flea prevention from top brands with lowest price guarantee</strong>');
-			}
-			if( path == "https://www.petbucket.com/c/4540721/1/tick.html" && change_title){
-				$('body').find('.wCenter .products-title').html('<strong>Tick prevention from top brands with lowest price guarantee</strong>');
-			}
-			if( path == "https://www.petbucket.com/c/4405844/1/heartworm.html" && change_title){
-				$('body').find('.wCenter .products-title').html('<strong>Heartworm prevention from top brands with lowest price guarantee</strong>');
-			}
-			if( path == "https://www.petbucket.com/c/4405832/1/intestinal-worms.html" && change_title){
-				$('body').find('.wCenter .products-title').html('<strong>Intestinal worms prevention from top brands with lowest price guarantee</strong>');
-			}
 		}
 	});
 }
