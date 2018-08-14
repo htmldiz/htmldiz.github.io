@@ -173,7 +173,7 @@ body {
 	top: auto;
 	padding: 27px 10px;
 	background: #ff0000;
-	text-transform: uppercase;
+	text-transform: capitalize;
 	cursor: pointer;
 }
 /* .scrollbox-popup,
