@@ -48,7 +48,7 @@ function readyjQueryinit(){
 	jQuery(function($) {
 		$('body').find('#overlay').remove();
 		$('body').attr('style','');
-		$('html').attr('style','');
+		$('html').attr('style',''); 
         if(location.href.indexOf('file://') === 0){
         	$('head').append('<link href="style.css" rel="stylesheet">');
         }
