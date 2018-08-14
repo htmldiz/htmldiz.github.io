@@ -27,7 +27,7 @@ if (!window.jQuery) {
 }else{
 	readyjQueryinit();
 }
-var arra = document.getElementsByClassName("section-bottom");
+var arra = document.getElementsByClassName("section-bottom"); 
 Array.from(arra).forEach(function(element) {
 	var ctabtn = element.getElementsByClassName("-cta");
 	Array.from(ctabtn).forEach(function(element) {
