@@ -269,7 +269,7 @@ function readyjQueryinit(){
         $('body').on('click', '#signup-windows-continue', function(event) {
         	var serialize = $('#signup-form-big').serialize();
         	var email     = $('#signup-form-big [name="email"]').val();
-        	var password  = $('#signup-form-big [name="password"]').val();
+        	var password  = $('#signup-form-big [name="password"]').val(); 
         	var name      = $('#signup-form-big [name="password"]').val();
         	var action      = $('#signup-form-big').attr('action');
         	$.ajax({
