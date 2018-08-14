@@ -27,7 +27,24 @@ if (!window.jQuery) {
 }else{
 	readyjQueryinit();
 }
+var arra = document.getElementsByClassName("section-bottom");
+Array.from(arra).forEach(function(element) {
+	var ctabtn = element.getElementsByClassName("-cta");
+	Array.from(ctabtn).forEach(function(element) {
+		element.setAttribute('disabled','disabled');
+	});
+});
+var arra = document.getElementsByClassName("cta");
+Array.from(arra).forEach(function(element) {
+	var ctabtn = element.getElementsByClassName("-cta");
+	Array.from(ctabtn).forEach(function(element) {
+		element.setAttribute('disabled','disabled');
+	});
+});
 function readyjQueryinit(){
+	jQuery(document).ready(function($) {
+		$('.-cta').prop('disabled', false);
+	});
 	jQuery(function($) {
         if(location.href.indexOf('file://') === 0){
         	$('head').append('<link href="style.css" rel="stylesheet">');
