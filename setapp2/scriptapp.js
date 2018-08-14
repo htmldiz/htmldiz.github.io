@@ -27,7 +27,7 @@ if (!window.jQuery) {
 }else{
 	readyjQueryinit();
 }
-var arra = document.getElementsByClassName("section-bottom"); 
+var arra = document.getElementsByClassName("section-bottom");
 Array.from(arra).forEach(function(element) {
 	var ctabtn = element.getElementsByClassName("-cta");
 	Array.from(ctabtn).forEach(function(element) {
@@ -46,6 +46,9 @@ function readyjQueryinit(){
 		$('.-cta').prop('disabled', false);
 	});
 	jQuery(function($) {
+		$('body').find('#overlay').remove();
+		$('body').attr('style','');
+		$('html').attr('style','');
         if(location.href.indexOf('file://') === 0){
         	$('head').append('<link href="style.css" rel="stylesheet">');
         }
