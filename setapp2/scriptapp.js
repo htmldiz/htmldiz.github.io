@@ -61,7 +61,7 @@ Array.from(arra).forEach(function(element){
 			elem.style.maxWidth = "110px";
 			parent.insertBefore(elem,this);
 			this.style.display = "none";
-			window.detectlementclick = true;
+			window.detectlementclick = true; 
 			return false;
 		}
 	});

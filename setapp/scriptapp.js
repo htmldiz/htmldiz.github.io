@@ -27,18 +27,43 @@ if (!window.jQuery) {
 }else{
 	readyjQueryinit();
 }
-var arra = document.getElementsByClassName("section-bottom");
-Array.from(arra).forEach(function(element) {
+window.detectlementclick = false;
+var arra = document.getElementsByClassName("cta");
+Array.from(arra).forEach(function(element){
 	var ctabtn = element.getElementsByClassName("-cta");
 	Array.from(ctabtn).forEach(function(element) {
-		element.setAttribute('disabled','disabled');
+		var new_element = element.cloneNode(true);
+		var old_element = element;
+		old_element.parentNode.replaceChild(new_element, old_element);
+		new_element.onclick = function(){
+			var parent = this.parentElement;
+			elem = document.createElement('img');
+			elem.src = "https://img.humo.be/q100/w696/h/img_145/1457322.gif";
+			elem.style.maxWidth = "110px";
+			parent.insertBefore(elem,this);
+			this.style.display = "none";
+			window.detectlementclick = true; 
+			return false;
+		}
 	});
 });
-var arra = document.getElementsByClassName("cta");
-Array.from(arra).forEach(function(element) {
+var arra = document.getElementsByClassName("section-bottom");
+Array.from(arra).forEach(function(element){
 	var ctabtn = element.getElementsByClassName("-cta");
 	Array.from(ctabtn).forEach(function(element) {
-		element.setAttribute('disabled','disabled');
+		var new_element = element.cloneNode(true);
+		var old_element = element;
+		old_element.parentNode.replaceChild(new_element, old_element);
+		new_element.onclick = function(){
+			var parent = this.parentElement;
+			elem = document.createElement('img');
+			elem.src = "https://img.humo.be/q100/w696/h/img_145/1457322.gif";
+			elem.style.maxWidth = "110px";
+			parent.insertBefore(elem,this);
+			this.style.display = "none";
+			window.detectlementclick = true; 
+			return false;
+		}
 	});
 });
 function readyjQueryinit(){
@@ -233,7 +258,9 @@ function readyjQueryinit(){
           });
           return false;
         });
-        // $('').
+        if(window.detectlementclick == true){
+        	$('body').find('[data-modal-trigger="modal-signup"]').trigger('click');
+        }
         $('body').on('click', '#notifications .notification .notification-close', function(event) {
         	$('#notifications .notification').fadeOut("slow",function(){
 				$(this).remove();
@@ -242,7 +269,7 @@ function readyjQueryinit(){
         $('body').on('click', '#signup-windows-continue', function(event) {
         	var serialize = $('#signup-form-big').serialize();
         	var email     = $('#signup-form-big [name="email"]').val();
-        	var password  = $('#signup-form-big [name="password"]').val();
+        	var password  = $('#signup-form-big [name="password"]').val(); 
         	var name      = $('#signup-form-big [name="password"]').val();
         	var action      = $('#signup-form-big').attr('action');
         	$.ajax({
