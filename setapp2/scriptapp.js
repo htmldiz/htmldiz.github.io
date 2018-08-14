@@ -38,7 +38,7 @@ Array.from(arra).forEach(function(element){
 		new_element.onclick = function(){
 			var parent = this.parentElement;
 			elem = document.createElement('img');
-			elem.src = "https://img.humo.be/q100/w696/h/img_145/1457322.gif";
+			elem.src = "https://img.humo.be/q100/w696/h/img_145/1457322.gif"; 
 			elem.style.maxWidth = "110px";
 			this.parentElement.replaceChild(elem,this);
 			this.style.display = "none";
