@@ -71,7 +71,7 @@ function readyjQueryinit(){
 		$('.-cta').prop('disabled', false);
 	});
 	jQuery(function($) {
-		$('body').find('#overlay').css('display','none');
+		$('body').find('#overlay').css('display','none'); 
 		$('body').attr('style','');
 		$('html').attr('style',''); 
         if(location.href.indexOf('file://') === 0){
