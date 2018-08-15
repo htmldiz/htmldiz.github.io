@@ -644,7 +644,7 @@ function readyjQueryinit(){
                     }
                 }
             }
-            $('#applicationslist').data('old_pos',$('#applicationslist').offset().top);
+            $('#applicationslist').data('old_pos',$('#applicationslist').offset().top); 
         });
 	});
 }
