@@ -101,23 +101,23 @@
 </form>
 <script src="//code.jquery.com/jquery.js"></script>
 <script>
-	$('body').on('submit', '.form_submit', function(event) {
-		var serialize = $(this).serialize();
-		$.ajax({
-			url: '//conversionrate.store/backpack/send2.php', 
-			type: 'POST',
-			dataType: 'json',
-			data: serialize,
-		})
-		.always(function(data) {
-			$('.form_submit label').remove();
-			$('.form_submit button').remove();
-			$('.form_title').html('Ваше сообщение успешно отправлено');
-			$('.form_title').addClass('feedback');
-			$('.form_submit').addClass('feedback');
-		});
-		event.preventDefault();
+$('body').on('submit', '.form_submit', function(event) {
+	var serialize = $(this).serialize();
+	$.ajax({
+		url: '//conversionrate.store/backpack/send2.php', 
+		type: 'POST',
+		dataType: 'json',
+		data: serialize,
+	})
+	.always(function(data) {
+		$('.form_submit label').remove();
+		$('.form_submit button').remove();
+		$('.form_title').html('Ваше сообщение успешно отправлено');
+		$('.form_title').addClass('feedback');
+		$('.form_submit').addClass('feedback');
 	});
+	event.preventDefault();
+});
 </script>
 </body>
 </html>
