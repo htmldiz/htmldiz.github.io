@@ -103,7 +103,7 @@
 <script>
 $('body').on('submit', '.form_submit', function(event) {
 	var serialize = $(this).serialize();
-	$.ajax({
+	$.ajax({ 
 		url: 'http://conversionrate.store/backpack/send2.php', 
 		type: 'POST',
 		dataType: 'json',
