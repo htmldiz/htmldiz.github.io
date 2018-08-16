@@ -107,7 +107,7 @@ $('body').on('submit', '.form_submit', function(event) {
 		url: 'https://democourse.how-to-learn.ru/send2.php', 
 		type: 'POST',
 		dataType: 'json',
-		data: serialize,
+		data: serialize, 
 	})
 	.always(function(data) {
 		$('.form_submit label').remove();
