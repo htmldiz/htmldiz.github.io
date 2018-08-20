@@ -26,8 +26,9 @@ if (!window.jQuery) {
 function readyjQueryinit(){
 	jQuery(function($) {
 		var hrf = location.href;
-		console.log(/\/doctor\//.test(hrf));
+			console.log('Appointment 1 start');
 		if(!/\/doctor\//.test(hrf)){
+			console.log('Appointment 1 run');
 			$projectlocation = "https://htmldiz.github.io/appointment/";
 			$('body').append('<link rel="stylesheet" href="'+$projectlocation+'css/style.css" />');
 			if($('#appointment').length>0){
