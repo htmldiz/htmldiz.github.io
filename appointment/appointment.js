@@ -28,7 +28,7 @@ function readyjQueryinit(){
 		var hrf = location.href;
 		console.log(/\/doctor\//.test(hrf));
 		if(!/\/doctor\//.test(hrf)){
-			$projectlocation = "https://democourse.how-to-learn.ru/certificate/";
+			$projectlocation = "https://htmldiz.github.io/appointment/";
 			$('body').append('<link rel="stylesheet" href="'+$projectlocation+'css/style.css" />');
 			if($('#appointment').length>0){
 				$('#appointment form').prepend('<h3>Our friendly nurse will contact you to help choosing a clinic and a doctor for your specific needs</h3>');
