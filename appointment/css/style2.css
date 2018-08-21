@@ -11,6 +11,9 @@ section.main-content>.container>.row{
 .monash-o-btn{
 	/*display: none!important;*/
 }
+#sidebar{
+	margin-bottom: 20px!important;
+}
 .page-id-243 #form-bottom .complex-field-form .name_last,
 .page-id-243 #form-bottom .complex-field-form .name_first{
 	margin-right: 0!important;
