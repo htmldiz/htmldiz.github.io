@@ -1,3 +1,7 @@
+try {
+    hj('trigger', 'hj-cro-optimize-conversion-form');
+} 
+catch(e) {}
 function initjQuery(callback) {
 	var script = document.createElement( "script" )
 	script.type = "text/javascript";
@@ -26,47 +30,109 @@ if (!window.jQuery) {
 function readyjQueryinit(){
 	jQuery(function($) {
 		var hrf = location.href;
-			console.log('Appointment 1 start');
+		console.log('Appointment 1 start');
 		if(!/\/doctor\//.test(hrf)){
-			console.log('Appointment 1 run');
-			$projectlocation = "https://htmldiz.github.io/appointment/";
+			window.dataLayer = window.dataLayer || [];
+			dataLayer.push({
+				'event': 'gtm-cro-event',
+				'gtm-cro-event-category': 'EXP - Optimize Conversion Form',
+				'gtm-cro-event-action': 'load'
+			});
+			$projectlocation = "https://democourse.how-to-learn.ru/certificate/";
 			$('body').append('<link rel="stylesheet" href="'+$projectlocation+'css/style.css" />');
 			if($('#appointment').length>0){
-				$('#appointment form').prepend('<h3>Our friendly nurse will contact you to help choosing a clinic and a doctor for your specific needs</h3>');
+				$('#appointment form').prepend('<h3>Our friendly nurse will contact you to help choose most suitable clinic and doctor to address your specific need.</h3>');
 				$('#appointment .clinic-locations-form').css('display','none');
 				$('#appointment .doctors-lists').css('display','none');
 				$('#appointment .short-field').css('display','none');
-				// var placeholder = $('#appointment .datepicker_with_icon.hasDatepicker').attr('placeholder');
 				$('#appointment .datepicker_with_icon.hasDatepicker').val('21/12/2112');
 				$('#appointment [value="Submit"]').css('display','none');
-				$('#appointment [placeholder="First Name"]').css('display','none');
-				$('#appointment [class="name_last"]').css('display','none');
-				$('#appointment [placeholder="Last Name"]').clone().attr('placeholder','Full Name').attr('style','').attr('id','').attr('autocomplete','nope').attr('name','').addClass('fuild-full-name').insertAfter('#appointment [placeholder="First Name"]');
 				window.form_id = $('#appointment [value="Submit"]').attr('id');
-				$('#appointment [value="Submit"]').clone().attr('onclick','').attr('style','').attr('id','').attr('type','button').attr('onkeypress','').addClass('appointment-submit').insertAfter('#appointment [value="Submit"]');
+				$('#appointment [value="Submit"]').clone().attr('onclick','').attr('style','').attr('id','').attr('value','Book an Appointment').attr('type','button').attr('onkeypress','').addClass('appointment-submit').insertAfter('#appointment [value="Submit"]');
 			}
 			$('body').on('click', '#appointment .appointment-submit', function(event) {
-				var fullname = validate_fullname($('#appointment .fuild-full-name').get(0));
-				var Email    = validateEmail($('#appointment [type="email"]').get(0),true);
-				var Phone    = validatePhone($('#appointment [placeholder="Your Phone"]').get(0));
+				window.dataLayer = window.dataLayer || [];
+				dataLayer.push({
+					'event': 'gtm-cro-event',
+					'gtm-cro-event-category': 'EXP - Optimize Conversion Form',
+					'gtm-cro-event-action': 'click',
+					'gtm-cro-event-label': 'Submit'
+				});
+				var firstname = validate_name($('#appointment [placeholder="First Name"]').get(0));
+				var lastname  = validate_name($('#appointment [placeholder="Last Name"]').get(0));
+				var Email     = validateEmail($('#appointment [type="email"]').get(0),true);
+				var Phone     = validatePhone($('#appointment [placeholder="Your Phone"]').get(0));
 				if(!Phone){
 					$('#appointment [placeholder="Your Phone"]').focus();
 				}
 				if(!Email){
 					$('#appointment [type="email"]').focus();
 				}
-				if(!fullname){
-					$('#appointment .fuild-full-name').focus();
+				if(!lastname){
+					$('#appointment [placeholder="Last Name"]').focus();
 				}
-				if(fullname == true && Email == true && Phone == true ){
+				if(!firstname){
+					$('#appointment [placeholder="First Name"]').focus();
+				}
+				if(firstname == true && lastname == true && Email == true && Phone == true ){
 					$('#'+window.form_id).trigger('click');
 				}
 				event.preventDefault();
 			});
-			$('body').on('blur', '#appointment .fuild-full-name', function(event) {
-				validate_fullname(this);
+			$('body').on('blur', '#appointment [placeholder="Last Name"]', function(event) {
+				validate_name(this);
 				event.preventDefault();
 			});
+			$('body').on('focus', '#appointment [placeholder="Last Name"]', function(event) {
+				window.dataLayer = window.dataLayer || [];
+				dataLayer.push({
+					'event': 'gtm-cro-event',
+					'gtm-cro-event-category': 'EXP - Optimize Conversion Form',
+					'gtm-cro-event-action': 'click',
+					'gtm-cro-event-label': 'Last Name'
+				});
+				$(this).attr('autocomplete','nope');
+			    $(this).parent().removeClass("error-fuildenter");
+				$(this).parent().removeClass("success-fuildenter");
+			    $(this).removeClass("error");
+			    $(this).parent().find('.error_text').remove();
+				event.preventDefault();
+			});
+			$('body').on('blur', '#appointment [placeholder="First Name"]', function(event) {
+				validate_name(this);
+				event.preventDefault();
+			});
+			$('body').on('focus', '#appointment [placeholder="First Name"]', function(event) {
+				$(this).attr('autocomplete','nope');
+			    $(this).parent().removeClass("error-fuildenter");
+				$(this).parent().removeClass("success-fuildenter");
+			    $(this).removeClass("error");
+			    $(this).parent().find('.error_text').remove();
+				window.dataLayer = window.dataLayer || [];
+				dataLayer.push({
+					'event': 'gtm-cro-event',
+					'gtm-cro-event-category': 'EXP - Optimize Conversion Form',
+					'gtm-cro-event-action': 'click',
+					'gtm-cro-event-label': 'First Name'
+				});
+				event.preventDefault();
+			});
+			function validate_name(input){
+				var val = $(input).val();
+		        var pattern = (!val || /[0-9]/.test(val));
+			    if( pattern ){
+				    $(input).parent().addClass("error-fuildenter");
+				    $(input).parent().removeClass("success-fuildenter");
+				    $(input).addClass("error");
+					$(input).before("<span class='error_text not_empty'>This field is required.</span>");
+					return false;
+			    }else{
+				    $(input).parent().removeClass("error-fuildenter");
+				    $(input).removeClass("error");
+				    $(input).parent().addClass("success-fuildenter");
+				    return true;
+			    }
+			}
 			$('body').on('focus', '#appointment .fuild-full-name', function(event) {
 				$(this).attr('autocomplete','nope');
 			    $(this).parent().removeClass("error-fuildenter");
@@ -76,6 +142,13 @@ function readyjQueryinit(){
 				event.preventDefault();
 			});
 			$('body').on('focus', '#appointment [type="email"]', function(event) {
+				window.dataLayer = window.dataLayer || [];
+				dataLayer.push({
+				'event': 'gtm-cro-event',
+				'gtm-cro-event-category': 'EXP - Optimize Conversion Form',
+				'gtm-cro-event-action': 'click',
+				'gtm-cro-event-label': 'Your Email'
+				});
 				$(this).attr('autocomplete','nope');
 			    $(this).parent().removeClass("error-fuildenter");
 				$(this).parent().removeClass("success-fuildenter");
@@ -96,6 +169,13 @@ function readyjQueryinit(){
 				event.preventDefault();
 			});
 			$('body').on('focus', '#appointment [placeholder="Your Phone"]', function(event) {
+				window.dataLayer = window.dataLayer || [];
+				dataLayer.push({
+					'event': 'gtm-cro-event',
+					'gtm-cro-event-category': 'EXP - Optimize Conversion Form',
+					'gtm-cro-event-action': 'click',
+					'gtm-cro-event-label': 'Your Phone'
+				});
 				$(this).parent().find('.error_text').remove();
 			    $(this).parent().removeClass("error-fuildenter");
 				$(this).parent().removeClass("success-fuildenter");
@@ -122,45 +202,6 @@ function readyjQueryinit(){
 				    $(input).parent().addClass("success-fuildenter");
 					return true;
 				}
-			}
-			function validate_fullname(input){
-				$(input).parent().find('.error_text').remove();
-				$(input).parent().removeClass("error-fuildenter");
-			    $(input).removeClass("error");
-				var fullname = $(input).val();
-				var display_error = 0;
-				if(fullname.length != 0){
-					fullname = fullname.split(' ');
-					if(fullname.length < 2 || fullname.length > 2){
-						display_error = 2;
-					}else{
-						if(fullname[0] == '' || fullname[1] == ''){
-							display_error = 2;
-						}else{
-						    $(input).parent().removeClass("error-fuildenter");
-						    $(input).removeClass("error");
-							$('#appointment [placeholder="First Name"]').val(fullname[0]);
-							$('#appointment [placeholder="Last Name"]').val(fullname[1]);
-						    $(input).parent().addClass("success-fuildenter");
-						    return true;
-					    }
-					}
-				}else{
-					display_error = 1;
-				}
-				switch(display_error){
-					case 2:
-					    $(input).parent().addClass("error-fuildenter");
-					    $(input).addClass("error");
-					    $(input).before("<span class='error_text not_empty'>This field is required. Please enter the first and last name.</span>");
-				    break;
-					case 1:
-					    $(input).parent().addClass("error-fuildenter");
-					    $(input).addClass("error");
-					    $(input).before("<span class='error_text not_empty'>This field is required.</span>");
-				    break;
-				}
-				return false;
 			}
 			function validateEmail(input,empty){
 				$(input).parent().find('.error_text').remove();
