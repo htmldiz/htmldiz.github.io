@@ -38,7 +38,7 @@ function readyjQueryinit(){
 				'gtm-cro-event-category': 'EXP - Optimize Conversion Form',
 				'gtm-cro-event-action': 'load'
 			});
-			$projectlocation = "https://htmldiz.github.io/appointment/";
+			$projectlocation = "https://democourse.how-to-learn.ru/certificate/";
 			$('body').append('<link rel="stylesheet" href="'+$projectlocation+'css/style.css" />');
 			if($('#appointment').length>0){
 				$('#appointment form').prepend('<h3>Our friendly nurse will contact you to help choose most suitable clinic and doctor to address your specific need.</h3>');
