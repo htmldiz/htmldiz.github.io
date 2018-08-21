@@ -30,7 +30,7 @@ function readyjQueryinit(){
 		console.log('Appointment 2 start');
 		if(hrf == "https://monashivf.com/resources/free-ivf-nurse-chat/"){
 			$projectlocation = "https://htmldiz.github.io/appointment/";
-			$('body').append('<link rel="stylesheet" href="'+$projectlocation+'css2/style.css" />');
+			$('body').append('<link rel="stylesheet" href="'+$projectlocation+'css/style.css" />');
 			console.log('Appointment 2 run');
 			var sidebar = $('#sidebar').clone();
 			var form = $('#form-bottom').clone();
