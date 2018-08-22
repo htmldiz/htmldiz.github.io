@@ -41,7 +41,7 @@ input:-webkit-autofill:active {
 	background-repeat: no-repeat !important;
 	padding-right: 10px;
 	background-size: 21px auto !important;
-	background-position: 98% 9px !important;
+	background-position: 98% center !important;
 	border: solid 1px #28da62 !important;
 }
 #form-bottom #appointment .ginput_container_text.error-fuildenter .error_text,
@@ -56,7 +56,7 @@ input:-webkit-autofill:active {
 	background-repeat: no-repeat;
     padding-right: 10px;
     background-size: 21px auto;
-    background-position: 98% 9px;
+    background-position: 98% center;
     border:solid 1px #28da62 !important;
 }
 @media(max-width:1024px){
