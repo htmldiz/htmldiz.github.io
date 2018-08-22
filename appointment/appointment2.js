@@ -66,7 +66,7 @@ function readyjQueryinit(){
 				dataLayer.push({
 				'event': 'gtm-cro-event',
 				'gtm-cro-event-category': 'EXP - Sticky Form',
-				'gtm-cro-event-action': 'click'
+				'gtm-cro-event-action': 'click',
 				'gtm-cro-event-label': 'Your Phone'
 				});
 			});
