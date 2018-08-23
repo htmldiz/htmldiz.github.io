@@ -63,17 +63,14 @@ function readyjQueryinit(){
 					var lastname  = validate_name($('#appointment [placeholder="Last Name"]').get(0));
 					var Email     = validateEmail($('#appointment [type="email"]').get(0),true);
 					var Phone     = validatePhone($('#appointment [placeholder="Your Phone"]').get(0));
-					if(!Phone){
-						$('#appointment [placeholder="Your Phone"]').focus();
-					}
-					if(!Email){
-						$('#appointment [type="email"]').focus();
-					}
-					if(!lastname){
-						$('#appointment [placeholder="Last Name"]').focus();
-					}
 					if(!firstname){
 						$('#appointment [placeholder="First Name"]').focus();
+					}else if(!lastname){
+						$('#appointment [placeholder="Last Name"]').focus();
+					}else if(!Email){
+						$('#appointment [type="email"]').focus();
+					}else if(!Phone){
+						$('#appointment [placeholder="Your Phone"]').focus();
 					}
 					if(firstname == true && lastname == true && Email == true && Phone == true ){
 						$('#'+window.form_id).trigger('click');
@@ -267,17 +264,14 @@ function readyjQueryinit(){
 					var lastname  = validate_name($('#enquiry [placeholder="Last Name"]').get(0));
 					var Email     = validateEmail($('#enquiry [type="email"]').get(0),true);
 					var Phone     = validatePhone($('#enquiry [placeholder="Your Phone"]').get(0));
-					if(!Phone){
-						$('#enquiry [placeholder="Your Phone"]').focus();
-					}
-					if(!Email){
-						$('#enquiry [type="email"]').focus();
-					}
-					if(!lastname){
-						$('#enquiry [placeholder="Last Name"]').focus();
-					}
 					if(!firstname){
-						$('#enquiry [placeholder="First Name"]').focus();
+						$('#appointment [placeholder="First Name"]').focus();
+					}else if(!lastname){
+						$('#appointment [placeholder="Last Name"]').focus();
+					}else if(!Email){
+						$('#appointment [type="email"]').focus();
+					}else if(!Phone){
+						$('#appointment [placeholder="Your Phone"]').focus();
 					}
 					if(firstname == true && lastname == true && Email == true && Phone == true ){
 						$('#'+window.form_id).trigger('click');
