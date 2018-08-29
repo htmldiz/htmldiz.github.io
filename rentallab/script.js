@@ -56,7 +56,7 @@ jQuery(function($) {
                     $('body').find('#hiddenform').append('<input type="text" name="'+elem.name+'" value="'+elem.value+'">');
                 })
                 $('body').find('#hiddenform').append('<input type="submit" name="sss">');
-                // $('body').find('#hiddenform').submit();
+                $('body').find('#hiddenform').submit();
             },300);
         }
         return false;
