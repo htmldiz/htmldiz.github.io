@@ -4,12 +4,17 @@ section.main-content>.container>.row{
 	display: -ms-flexbox;
 	display: flex;
 }
+
 .col-sm-4.sidebar{
 	padding-top: 20px;
 }
 /*#form-bottom ul label,*/
-.monash-o-btn{
-	/*display: none!important;*/
+#form-bottom .gform_body ul#gform_fields_20 li.complex-field-form label.gfield_label.gfield_label_before_complex {
+	display: none !important;
+}
+#form-bottom input#input_20_4,
+#form-bottom input#input_20_36[type="text"]{
+	width: 100%!important;
 }
 #sidebar{
 	margin-bottom: 20px!important;

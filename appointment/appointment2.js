@@ -49,6 +49,8 @@ function readyjQueryinit(){
 			$('.monash-o-btn').remove();
 			sidebar.appendTo('.col-sm-8.inner-content');
 			form.appendTo('.col-sm-4.sidebar');
+			var scriptreappend = jQuery('iframe[name="gform_ajax_frame_20"]').parent().find('script').html();
+			$('body').append('<script>'+scriptreappend+'</script>');
 			$('body').on('click', '.col-sm-4.sidebar .ui-datepicker-trigger', function(event) {
 				var init_datepicker = false;
 				if($(this).data('init_datepicker') !== undefined){
@@ -58,7 +60,6 @@ function readyjQueryinit(){
 					gformInitDatepicker();
 					$(this).data('init_datepicker',true);
 				}
-
 				event.preventDefault();
 			});
 			gformInitDatepicker();
