@@ -29,7 +29,8 @@ if (!window.jQuery) {
 }
 function readyjQueryinit(){
 	jQuery(document).ready(function($) {
-			var scriptreappend = jQuery('iframe[name="gform_ajax_frame_20"]').parent().find('script').html();
+			var scriptreappend = jQuery('body').find('iframe[name="gform_ajax_frame_20"]').parent().find('script').html();
+			console.log(scriptreappend);
 			$('body').append('<script>'+scriptreappend+'</script>');
 	});
 	jQuery(function($) {
