@@ -52,7 +52,7 @@ function readyjQueryinit(){
 			$('body').find('#form-bottom .gfield_label.gfield_label_before_complex').remove();
 			$('body').find('#form-bottom .field_description_below:not(.recieved-occ-mail) .gfield_label').remove();
 				var clone_btn = $('body').find('#form-bottom [value="Submit"]').clone();
-				clone_btn.find('[value="Submit"]').attr('value','FREE NURSE CHAT');
+				clone_btn.attr('value','FREE NURSE CHAT');
 				clone_btn.insertAfter('#form-bottom [value="Submit"]');
 			// $('body').find('#form-bottom [value="Submit"]').attr('value','FREE NURSE CHAT');
 			$('body').on('focus','#form-bottom [placeholder="First Name"]',function(){
