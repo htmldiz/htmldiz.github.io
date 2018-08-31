@@ -46,7 +46,7 @@ jQuery(function($) {
             $('.fancybox-skin #popup').addClass('loading');
             $(this).closest('.fancybox-wrap.fancybox-desktop').addClass('loading_wrapp');
             $('.fancybox-skin #popup.loading').append('<h2 class="l_title">Redirecting to <span>yourrent2own.com</span></h2>');
-            $('.fancybox-skin #popup.loading').append('<div class="trial_box"><h3 class="t_title">What will you get in 1$ trial?</h3><ul><li>All property details</li> <li>Owners direct contact information</li> <li>Access to over 1 Million other bargain listings, some as low as $10,000</li></ul></div>');
+            $('.fancybox-skin #popup.loading').append('<div class="trial_box"><h3 class="t_title">What will you get in $1 trial?</h3><ul><li>All property details</li> <li>Owners direct contact information</li> <li>Access to over 1 Million other bargain listings, some as low as $10,000</li></ul></div>');
             setTimeout(function(){
                 console.log("true3")
                 var obj = $("#popup-register-form").serializeArray();
