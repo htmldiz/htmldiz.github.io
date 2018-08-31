@@ -32,6 +32,7 @@ function readyjQueryinit(){
 			var scriptreappend = jQuery('body').find('iframe[name="gform_ajax_frame_20"]').parent().find('script').html();
 			console.log(scriptreappend);
 			$('body').append('<script>'+scriptreappend+'</script>');
+			gformInitDatepicker();
 	});
 	jQuery(function($) {
 		var hrf = location.href;
