@@ -49,12 +49,27 @@ function readyjQueryinit(){
 			$('.monash-o-btn').remove();
 			sidebar.appendTo('.col-sm-8.inner-content');
 			form.appendTo('.col-sm-4.sidebar');
+			$('body').on('click', '.col-sm-4.sidebar .ui-datepicker-trigger', function(event) {
+				var init_datepicker = false;
+				if($(this).data('init_datepicker') !== undefined){
+					init_datepicker = $(this).data('init_datepicker');
+				}
+				if(init_datepicker === false){
+					gformInitDatepicker();
+					$(this).data('init_datepicker',true);
+				}
+
+				event.preventDefault();
+			});
+			gformInitDatepicker();
 			$('body').find('#form-bottom .gfield_label.gfield_label_before_complex').remove();
 			$('body').find('#form-bottom .field_description_below:not(.recieved-occ-mail) .gfield_label').remove();
 				var clone_btn = $('body').find('#form-bottom [value="Submit"]').clone();
 				clone_btn.attr('value','FREE NURSE CHAT');
+				clone_btn.attr('onkeypress','');
+				clone_btn.attr('onclick','');
 				clone_btn.insertAfter('#form-bottom [value="Submit"]');
-			// $('body').find('#form-bottom [value="Submit"]').attr('value','FREE NURSE CHAT');
+			$('body').find('#form-bottom [value="Submit"]').css('display','none');
 			$('body').on('focus','#form-bottom [placeholder="First Name"]',function(){
 				window.dataLayer = window.dataLayer || [];
 				dataLayer.push({
@@ -99,6 +114,7 @@ function readyjQueryinit(){
 					'gtm-cro-event-action': 'click',
 					'gtm-cro-event-label': 'Submit'
 				});
+				$('body').find('#form-bottom [value="Submit"]').trigger('click');
 			});
 		}
 	});
