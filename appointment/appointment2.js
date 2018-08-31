@@ -88,15 +88,15 @@ function readyjQueryinit(){
 					'gtm-cro-event-label': 'Last Name'
 				});
 			});
-			$('body').on('click','#form-bottom [value="FREE NURSE CHAT"]',function(){
-			window.dataLayer = window.dataLayer || [];
-			dataLayer.push({
-				'event': 'gtm-cro-event',
-				'gtm-cro-event-category': 'EXP - Sticky Form',
-				'gtm-cro-event-action': 'click',
-				'gtm-cro-event-label': 'Submit'
-			});
-			});
+			// $('body').on('click','#form-bottom [value="FREE NURSE CHAT"]',function(){
+			// 	window.dataLayer = window.dataLayer || [];
+			// 	dataLayer.push({
+			// 		'event': 'gtm-cro-event',
+			// 		'gtm-cro-event-category': 'EXP - Sticky Form',
+			// 		'gtm-cro-event-action': 'click',
+			// 		'gtm-cro-event-label': 'Submit'
+			// 	});
+			// });
 		}
 	});
 }
