@@ -51,7 +51,10 @@ function readyjQueryinit(){
 			form.appendTo('.col-sm-4.sidebar');
 			$('body').find('#form-bottom .gfield_label.gfield_label_before_complex').remove();
 			$('body').find('#form-bottom .field_description_below:not(.recieved-occ-mail) .gfield_label').remove();
-			$('body').find('#form-bottom [value="Submit"]').attr('value','FREE NURSE CHAT');
+				var clone_btn = $('body').find('#form-bottom [value="Submit"]').clone();
+				clone_btn.find('[value="Submit"]').attr('value','FREE NURSE CHAT');
+				clone_btn.insertAfter('#form-bottom [value="Submit"]');
+			// $('body').find('#form-bottom [value="Submit"]').attr('value','FREE NURSE CHAT');
 			$('body').on('focus','#form-bottom [placeholder="First Name"]',function(){
 				window.dataLayer = window.dataLayer || [];
 				dataLayer.push({
@@ -88,15 +91,15 @@ function readyjQueryinit(){
 					'gtm-cro-event-label': 'Last Name'
 				});
 			});
-			// $('body').on('click','#form-bottom [value="FREE NURSE CHAT"]',function(){
-			// 	window.dataLayer = window.dataLayer || [];
-			// 	dataLayer.push({
-			// 		'event': 'gtm-cro-event',
-			// 		'gtm-cro-event-category': 'EXP - Sticky Form',
-			// 		'gtm-cro-event-action': 'click',
-			// 		'gtm-cro-event-label': 'Submit'
-			// 	});
-			// });
+			$('body').on('click','#form-bottom [value="FREE NURSE CHAT"]',function(){
+				window.dataLayer = window.dataLayer || [];
+				dataLayer.push({
+					'event': 'gtm-cro-event',
+					'gtm-cro-event-category': 'EXP - Sticky Form',
+					'gtm-cro-event-action': 'click',
+					'gtm-cro-event-label': 'Submit'
+				});
+			});
 		}
 	});
 }
