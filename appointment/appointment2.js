@@ -28,6 +28,10 @@ if (!window.jQuery) {
 	readyjQueryinit();
 }
 function readyjQueryinit(){
+	jQuery(document).ready(function($) {
+			var scriptreappend = jQuery('iframe[name="gform_ajax_frame_20"]').parent().find('script').html();
+			$('body').append('<script>'+scriptreappend+'</script>');
+	});
 	jQuery(function($) {
 		var hrf = location.href;
 		console.log('Appointment 2 start');
@@ -49,20 +53,17 @@ function readyjQueryinit(){
 			$('.monash-o-btn').remove();
 			sidebar.appendTo('.col-sm-8.inner-content');
 			form.appendTo('.col-sm-4.sidebar');
-			var scriptreappend = jQuery('iframe[name="gform_ajax_frame_20"]').parent().find('script').html();
-			$('body').append('<script>'+scriptreappend+'</script>');
+			
 			$('body').on('click', '.col-sm-4.sidebar .ui-datepicker-trigger', function(event) {
 				var init_datepicker = false;
 				if($(this).data('init_datepicker') !== undefined){
 					init_datepicker = $(this).data('init_datepicker');
 				}
 				if(init_datepicker === false){
-					gformInitDatepicker();
 					$(this).data('init_datepicker',true);
 				}
 				event.preventDefault();
 			});
-			gformInitDatepicker();
 			$('body').find('#form-bottom .gfield_label.gfield_label_before_complex').remove();
 			$('body').find('#form-bottom .field_description_below:not(.recieved-occ-mail) .gfield_label').remove();
 				var clone_btn = $('body').find('#form-bottom [value="Submit"]').clone();
