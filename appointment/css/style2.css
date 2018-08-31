@@ -9,8 +9,32 @@ section.main-content>.container>.row{
 	padding-top: 20px;
 }
 /*#form-bottom ul label,*/
+#form-bottom label[for="input_20_4"]{
+	display: none!important;
+}
 #form-bottom .gform_body ul#gform_fields_20 li.complex-field-form label.gfield_label.gfield_label_before_complex {
 	display: none !important;
+}
+#form-bottom .gfield_description.validation_message{
+ul#gform_fields_20 li.complex-field-form .gfield_description.validation_message{
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 100%;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  max-width: 100%;
+  width: 100% !important;
+  margin-left: 0!important;
+}
+ul#gform_fields_20 #field_20_4,
+ul#gform_fields_20 li.complex-field-form{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	    -webkit-flex-wrap: wrap;
+	        -ms-flex-wrap: wrap;
+	            flex-wrap: wrap;
 }
 #form-bottom input#input_20_4,
 #form-bottom input#input_20_36[type="text"]{
