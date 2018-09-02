@@ -42,7 +42,7 @@ function readyjQueryinit(){
 				});
 				$('body').append('<link rel="stylesheet" href="'+$projectlocation+'css/style.css" />');
 				if($('#appointment').length>0){
-					$('#appointment form').prepend('<h3>Our friendly nurse will contact you to help choose most suitable clinic and doctor to address your specific need.</h3>');
+					$('#appointment form').prepend('<h3>Our friendly nurse will help you choose most suitable clinic and doctor for your specific need</h3>');
 					$('#appointment .clinic-locations-form').css('display','none');
 					$('#appointment .doctors-lists').css('display','none');
 					$('#appointment .short-field').css('display','none');
