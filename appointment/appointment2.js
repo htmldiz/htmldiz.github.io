@@ -28,12 +28,6 @@ if (!window.jQuery) {
 	readyjQueryinit();
 }
 function readyjQueryinit(){
-	jQuery(document).ready(function($) {
-			var scriptreappend = jQuery('body').find('iframe[name="gform_ajax_frame_20"]').parent().find('script').html();
-			console.log(scriptreappend);
-			$('body').append('<script>'+scriptreappend+'</script>');
-			gformInitDatepicker_int();
-	});
 	jQuery(function($) {
 		var hrf = location.href;
 		console.log('Appointment 2 start');
@@ -55,7 +49,8 @@ function readyjQueryinit(){
 			$('.monash-o-btn').remove();
 			sidebar.appendTo('.col-sm-8.inner-content');
 			form.appendTo('.col-sm-4.sidebar');
-			
+			$('body').find('.col-sm-4.sidebar .datepicker').addClass('datepicker-here');
+			$('body').find('.col-sm-4.sidebar .datepicker').removeClass('datepicker');
 			$('body').on('click', '.col-sm-4.sidebar .ui-datepicker-trigger', function(event) {
 				var init_datepicker = false;
 				if($(this).data('init_datepicker') !== undefined){
@@ -64,10 +59,8 @@ function readyjQueryinit(){
 				if(init_datepicker === false){
 					$(this).data('init_datepicker',true);
 				}
-				gformInitDatepicker_int();
 				event.preventDefault();
 			});
-			gformInitDatepicker_int();
 			$('body').find('#form-bottom .gfield_label.gfield_label_before_complex').remove();
 			$('body').find('#form-bottom .field_description_below:not(.recieved-occ-mail) .gfield_label').remove();
 				var clone_btn = $('body').find('#form-bottom [value="Submit"]').clone();
@@ -76,6 +69,9 @@ function readyjQueryinit(){
 				clone_btn.attr('onclick','');
 				clone_btn.insertAfter('#form-bottom [value="Submit"]');
 			$('body').find('#form-bottom [value="Submit"]').css('display','none');
+			$('body').on('click','.ui-datepicker-trigger', function(){
+				$(this).parent().find('input').focus();
+			});
 			$('body').on('focus','#form-bottom [placeholder="First Name"]',function(){
 				window.dataLayer = window.dataLayer || [];
 				dataLayer.push({
@@ -122,7 +118,40 @@ function readyjQueryinit(){
 				});
 				$('body').find('#form-bottom [value="Submit"]').trigger('click');
 			});
+			setInterval(function(){
+				if($('body').find('#form-bottom [value="FREE NURSE CHAT"]').length === 0){
+					var clone_btn = $('body').find('#form-bottom [value="Submit"]').clone();
+					clone_btn.attr('value','FREE NURSE CHAT');
+					clone_btn.attr('onkeypress','');
+					clone_btn.attr('onclick','');
+					clone_btn.insertAfter('#form-bottom [value="Submit"]');
+					$('body').find('#form-bottom [value="Submit"]').css('display','none');
+				}
+			},300);
 		}
 	});
+	jQuery(document).ready(function($) {
+			var scriptreappend = jQuery('body').find('iframe[name="gform_ajax_frame_20"]').parent().find('script').html();
+			$('body').append('<script>setTimeout(function() {'+scriptreappend+'},300);</script>');
+			gformInitDatepicker_int();
+	});
 }
-function gformInitDatepicker_int(){jQuery('body').find(".datepicker").each(function(){var a=jQuery(this),b=this.id,c={yearRange:"-100:+20",showOn:"focus",dateFormat:"mm/dd/yy",changeMonth:!0,changeYear:!0,suppressDatePicker:!1,onClose:function(){a.focus();var b=this;this.suppressDatePicker=!0,setTimeout(function(){b.suppressDatePicker=!1},200)},beforeShow:function(a,b){return!this.suppressDatePicker}};a.hasClass("dmy")?c.dateFormat="dd/mm/yy":a.hasClass("dmy_dash")?c.dateFormat="dd-mm-yy":a.hasClass("dmy_dot")?c.dateFormat="dd.mm.yy":a.hasClass("ymd_slash")?c.dateFormat="yy/mm/dd":a.hasClass("ymd_dash")?c.dateFormat="yy-mm-dd":a.hasClass("ymd_dot")&&(c.dateFormat="yy.mm.dd"),a.hasClass("datepicker_with_icon")&&(c.showOn="both",c.buttonImage=jQuery("#gforms_calendar_icon_"+b).val(),c.buttonImageOnly=!0),b=b.split("_"),c=gform.applyFilters("gform_datepicker_options_pre_init",c,b[1],b[2]),a.datepicker(c)})}
+function gformInitDatepicker_int() {
+	jQuery('body').find("#form-bottom .datepicker-here").each(function() {
+		jQuery(this).val(jQuery(this).attr('placeholder'));
+		jQuery(this).removeClass( "hasDatepicker" );
+		var a = jQuery(this);
+		var r = Math.floor(Math.random() * (10000 - 1) ) + 1;
+			a.attr('id','input_'+r);
+			b = a.attr('id'),
+			c = {
+				yearRange: "-100:+20",
+				showOn: "focus",
+				dateFormat: "dd/mm/yy",
+			};
+
+		// a.hasClass("dmy") ? c.dateFormat = "dd/mm/yy" : a.hasClass("dmy_dash") ? c.dateFormat = "dd-mm-yy" : a.hasClass("dmy_dot") ? c.dateFormat = "dd.mm.yy" : a.hasClass("ymd_slash") ? c.dateFormat = "yy/mm/dd" : a.hasClass("ymd_dash") ? c.dateFormat = "yy-mm-dd" : a.hasClass("ymd_dot") && (c.dateFormat = "yy.mm.dd"), a.hasClass("datepicker_with_icon") && (c.showOn = "both", c.buttonImage = jQuery("#gforms_calendar_icon_" + b).val(), c.buttonImageOnly = !0), b = b.split("_"), c = gform.applyFilters("gform_datepicker_options_pre_init", c, b[1], b[2]);
+		c.dateFormat = "dd/mm/yy";
+		a.datepicker(c);
+	})
+}
