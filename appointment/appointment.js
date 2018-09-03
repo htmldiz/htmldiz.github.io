@@ -29,11 +29,12 @@ if (!window.jQuery) {
 }
 function readyjQueryinit(){
 	jQuery(function($) {
+		// var hrf = location.pathname;
 		var hrf = location.href;
 		console.log('Appointment 1 start');
 		$projectlocation = "https://htmldiz.github.io/appointment/";
 		if(!/\/doctor\//.test(hrf)){
-			if(hrf != 'https://monashivf.com/contact/'){
+			if(location.pathname != '/contact/'){
 				window.dataLayer = window.dataLayer || [];
 				dataLayer.push({
 					'event': 'gtm-cro-event',
