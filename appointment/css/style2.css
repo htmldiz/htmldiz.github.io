@@ -114,6 +114,10 @@ ul#gform_fields_20 #field_20_4, ul#gform_fields_20 li.complex-field-form {
 
 #form-bottom {
 	margin-top: auto;
+	position: -webkit-sticky;
+	position: -moz-sticky;
+	position: -ms-sticky;
+	position: -o-sticky;
 	position: sticky;
 	top: 119px;
 }

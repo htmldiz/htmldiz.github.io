@@ -67,6 +67,7 @@ function readyjQueryinit(){
 				clone_btn.attr('value','FREE NURSE CHAT');
 				clone_btn.attr('onkeypress','');
 				clone_btn.attr('onclick','');
+				clone_btn.attr('id','');
 				clone_btn.insertAfter('#form-bottom [value="Submit"]');
 			$('body').find('#form-bottom [value="Submit"]').css('display','none');
 			$('body').on('click','.ui-datepicker-trigger', function(){
