@@ -244,7 +244,7 @@ function readyjQueryinit(){
 					'gtm-cro-event-action': 'load'
 				});
 				if($('#enquiry').length>0){
-					$('#enquiry form').prepend('<h3>Our friendly nurse will contact you to help choose most suitable clinic and doctor to address your specific need.</h3>');
+					$('#enquiry form').prepend('<h3>Our friendly nurse will help you choose most suitable clinic and doctor for your specific need</h3>');
 					$('#enquiry .clinic-locations-form').css('display','none');
 					$('#enquiry .doctors-lists').css('display','none');
 					$('#enquiry .short-field').css('display','none');
