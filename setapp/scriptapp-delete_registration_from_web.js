@@ -33,6 +33,7 @@ function readyjQueryinit(){
 		$('body').find('#overlay').css('display','none'); 
         $('body').append('<div class="auto-download-section auto-download-section-chrome"><div class="balloon balloon-bottom balloon-bottom-left balloon-inverse balloon-no-border balloon-bottom-enter-done"><div class="balloon-close-icon"><button class="close popup__close-icon" type="button" aria-label="Close"><span>×</span></button></div><div class="auto-download-content"><img src="https://my.setapp.com/static/media/icon-default.73adbab6.svg" class="auto-download-icon auto-download-icon-chrome" alt=""><p><span>Your download is right here.<br>Go ahead and launch it.</span></p></div></div></div>');
         var app_id = window._appId;
+	        $('.auto-download-section').css('display','none');
 	        var btn = $('#bar [data-modal-trigger]').clone();
 	        btn.removeAttr('data-modal-trigger');
 	        btn.removeAttr('data-bar-trigger');
@@ -61,9 +62,13 @@ function readyjQueryinit(){
 	        btn.addClass('clickdownloadtrigger');
 	        btn.off('click');
         });
+        $('body').on('click','.close.popup__close-icon',function(){
+        	$('.auto-download-section').css('display','none');
+        });
         $('body').on('click','.clickdownloadtrigger',function(){
         	window._appId = '98';
-        	location.href = "https://store.setapp.com/app"+window.appslist[window._appId]+".zip";
+        	location.href = "https://store.setapp.com/app"+window.appslist[window._appId]+".zip?downloadSource={in-app-reg-experiment}";
+        	$('.auto-download-section').attr('style','');
         	return false;
         });
         $('.separator,.cta.-social').css('display','none');
