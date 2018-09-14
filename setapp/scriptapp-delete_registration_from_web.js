@@ -65,7 +65,7 @@ function readyjQueryinit(){
         $('body').on('click','.close.popup__close-icon',function(){
         	$('.auto-download-section').css('display','none');
         });
-        $('body').on('click','.clickdownloadtrigger',function(){
+        $('body').on('click','.clickdownloadtrigger',function(){ 
         	location.href = "https://store.setapp.com/app"+window.appslist[window._appId]+".zip?downloadSource={in-app-reg-experiment}";
         	$('.auto-download-section').attr('style','');
         	return false;
