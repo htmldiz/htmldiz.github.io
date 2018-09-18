@@ -66,7 +66,7 @@ function readyjQueryinit(){
         	$('.auto-download-section').css('display','none');
         });
         $('body').on('click','.clickdownloadtrigger',function(){ 
-        	location.href = "https://store.setapp.com/app"+window.appslist[window._appId]+".zip?downloadSource={in-app-reg-experiment}";
+        	location.href = "https://store.setapp.com/app"+window.appslist[window._appId]+".zip?unregistered_user=1downloadSource={in-app-reg-experiment}?downloadSource={in-app-reg-experiment}";
         	$('.auto-download-section').attr('style','');
         	return false;
         });
