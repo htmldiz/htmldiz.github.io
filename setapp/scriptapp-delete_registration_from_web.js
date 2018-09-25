@@ -65,14 +65,48 @@ function readyjQueryinit(){
         $('body').on('click','.close.popup__close-icon',function(){
         	$('.auto-download-section').css('display','none');
         });
-        $('body').on('click','.clickdownloadtrigger',function(){ 
-        	location.href = "https://store.setapp.com/app"+window.appslist[window._appId]+".zip?unregistered_user=1downloadSource={in-app-reg-experiment}?downloadSource={in-app-reg-experiment}";
+        $('body').on('click','.clickdownloadtrigger',function(){
+        	var _gaexp = getCookie('_gaexp');
+			if(_gaexp !== undefined){
+				var clientID = ga.getAll()[0].get('clientId');
+				var expID    = getExperimentId(_gaexp);
+				var expvarID = getVariationId(_gaexp);
+				console.log(clientID);
+				console.log(expID);
+				console.log(expvarID);
+				location.href = "https://store.setapp.com/app"+window.appslist[window._appId]+".zip?unregistered_user=1&expID="+expID+"&expvarID="+expvarID+"&clientID="+clientID+"&downloadSource={in-app-reg-experiment}";
+			}else{
+        		// location.href = "https://store.setapp.com/app"+window.appslist[window._appId]+".zip?unregistered_user=1downloadSource={in-app-reg-experiment}?downloadSource={in-app-reg-experiment}";
+        	}
         	$('.auto-download-section').attr('style','');
         	return false;
         });
         $('.separator,.cta.-social').css('display','none');
         $('.cta .hint.hint_bold').css('display','none');
         $('body').append('<style>.auto-download-section.auto-download-section-chrome{bottom:20px;left:20px;width:238px;position:fixed;z-index:9999999999999}.balloon.balloon-bottom.balloon-bottom-left.balloon-inverse.balloon-no-border.balloon-bottom-enter-done{background-color:#fff;color:#333;box-shadow:0 5px 20px 0 hsla(210,3%,85%,.8);padding:20px;position:relative;border:2px solid #fff;font-family:Roboto,Helvetica Neue,Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857}.balloon.balloon-bottom.balloon-bottom-left.balloon-inverse.balloon-no-border.balloon-bottom-enter-done:before{content:"";position:absolute;display:block;width:15px;height:15px;background-color:#002572;-webkit-transform:rotate(45deg);transform:rotate(45deg);background-color:#fff;border:2px solid #fff;bottom:-9px}button.close.popup__close-icon span{color:#939399;font-weight:300;font-size:19px;line-height:1;text-shadow:0 1px 0 #fff;opacity:.4}button.close.popup__close-icon{padding:0;cursor:pointer;background:transparent;border:0;-webkit-appearance:none}.balloon .balloon-close-icon{position:absolute;right:15px;top:10px}.auto-download-content{margin:5px 0 -7px;text-align:center}img.auto-download-icon.auto-download-icon-chrome{height:67px}</style>');
-        
+        function getExperimentId(_gaexp) {
+			var cookie = _gaexp;
+			if (cookie == undefined) {
+				return false;
+			} else {
+				var fields = cookie.split('.');
+				return fields[2];
+			}
+		}
+		function getVariationId(_gaexp) {
+			var cookie = _gaexp;
+			if (cookie == undefined) {
+				return false;
+			} else {
+				var fields = cookie.split('.');
+				return fields[4];
+			}
+		}
+		function getCookie(name) {
+		  var matches = document.cookie.match(new RegExp(
+		    "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+		  ));
+		  return matches ? decodeURIComponent(matches[1]) : undefined;
+		}
 	});
 }
