@@ -74,7 +74,7 @@ function readyjQueryinit(){
 				console.log(clientID);
 				console.log(expID);
 				console.log(expvarID);
-				location.href = "https://store.setapp.com/app"+window.appslist[window._appId]+".zip?unregistered_user=1&xid="+expID+"&xvar="+expvarID+"&cid="+clientID+"&downloadSource={in-app-reg-experiment}";
+				location.href = "https://store.setapp.com/app"+window.appslist[window._appId]+".zip?unregistered_user=1&xid="+expID+"&xvar="+expvarID+"&cid="+clientID+"&downloadSource=app-reg-experiment";
 			}else{
         		// location.href = "https://store.setapp.com/app"+window.appslist[window._appId]+".zip?unregistered_user=1downloadSource={in-app-reg-experiment}?downloadSource={in-app-reg-experiment}";
         	}
