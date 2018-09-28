@@ -60,7 +60,7 @@ function readyjQueryinit(){
 						$(this).data('init_datepicker',true);
 					}
 					event.preventDefault();
-				});
+				}); 
 				$('body').find('#form-bottom .gfield_label.gfield_label_before_complex').remove();
 				$('body').find('#form-bottom .field_description_below:not(.recieved-occ-mail) .gfield_label').remove();
 					var clone_btn = $('body').find('#form-bottom [value="Submit"]').clone();
