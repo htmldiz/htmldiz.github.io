@@ -28,8 +28,8 @@ function readyjQueryinit(){
 		var hrf = location.href;
 		console.log('Appointment 2 start');
 		if(hrf == "https://monashivf.com/fertility-treatments/fertility-treatments/ivf-process/"){
-			// $projectlocation = "https://htmldiz.github.io/appointment/";
-			$projectlocation = "https://democourse.how-to-learn.ru/amocrmtest/setapp/appointment/";
+			$projectlocation = "https://htmldiz.github.io/appointment/";
+			// $projectlocation = "https://democourse.how-to-learn.ru/amocrmtest/setapp/appointment/";
 			$('body').append('<link rel="stylesheet" href="'+$projectlocation+'css/style3.css" />');
 			console.log('Appointment 2 run');
 			var sidebar = $('#sidebar').clone();
