@@ -48,12 +48,12 @@ function readyjQueryinit(){
 				// console.log("success");
 				var clone = $(html).find('#form-bottom').clone();
 				$('.col-sm-4.sidebar').html('<h3>Get free consultation on IVF Process</h3>');
-				clone.attr('id','form-bottom2')
-				clone.find('[id]').each(function(index, el) {
-					var id = $(el).attr('id');
-					$(el).attr('class',id);
-					$(el).removeAttr('id');
-				}); 
+				clone.attr('id','form-bottom2');
+				// clone.find('[id]').each(function(index, el) {
+				// 	var id = $(el).attr('id');
+				// 	$(el).attr('class',id);
+				// 	$(el).removeAttr('id');
+				// });
 				clone.appendTo('.col-sm-4.sidebar');
 				$('body').find('.col-sm-4.sidebar .datepicker').addClass('datepicker-here');
 				$('body').find('.col-sm-4.sidebar .datepicker').removeClass('datepicker');
