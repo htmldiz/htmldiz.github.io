@@ -27,7 +27,7 @@ function readyjQueryinit(){
 	jQuery(function($) {
 		var hrf = location.href;
 		console.log('Appointment 2 start');
-		if(hrf == "https://monashivf.com/resources/free-ivf-nurse-chat/"){
+		if(hrf == "https://monashivf.com/fertility-treatments/fertility-treatments/ivf-process/"){
 			$projectlocation = "https://htmldiz.github.io/appointment/";
 			$('body').append('<link rel="stylesheet" href="'+$projectlocation+'css/style2.css" />');
 			console.log('Appointment 2 run');
