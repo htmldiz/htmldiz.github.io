@@ -53,7 +53,7 @@ function readyjQueryinit(){
 				// 	var id = $(el).attr('id');
 				// 	$(el).attr('class',id);
 				// 	$(el).removeAttr('id');
-				// });
+				// }); 
 				clone.appendTo('.col-sm-4.sidebar');
 				$('body').find('.col-sm-4.sidebar .datepicker').addClass('datepicker-here');
 				$('body').find('.col-sm-4.sidebar .datepicker').removeClass('datepicker');
