@@ -23,11 +23,11 @@ if (!window.jQuery) {
 }else{
 	readyjQueryinit();
 } 
-function readyjQueryinit(){ 
+function readyjQueryinit(){
 	jQuery(function($) {
 		var hrf = location.href;
 		console.log('Appointment 2 start');
-		if(hrf == "https://monashivf.com/fertility-treatments/fertility-treatments/ivf-process/"){
+		if(hrf == "https://monashivf.com/resources/free-ivf-nurse-chat/"){
 			$projectlocation = "https://htmldiz.github.io/appointment/";
 			$('body').append('<link rel="stylesheet" href="'+$projectlocation+'css/style2.css" />');
 			console.log('Appointment 2 run');
@@ -37,29 +37,45 @@ function readyjQueryinit(){
 			$('#sidebar').remove();
 			$('.col-sm-8.inner-content>h3').remove();
 			$('.monash-o-btn').remove();
-			sidebar.appendTo('.col-sm-8.inner-content');
-			form.appendTo('.col-sm-4.sidebar');
-			$('body').find('.col-sm-4.sidebar .datepicker').addClass('datepicker-here');
-			$('body').find('.col-sm-4.sidebar .datepicker').removeClass('datepicker');
-			$('body').on('click', '.col-sm-4.sidebar .ui-datepicker-trigger', function(event) {
-				var init_datepicker = false;
-				if($(this).data('init_datepicker') !== undefined){
-					init_datepicker = $(this).data('init_datepicker');
-				}
-				if(init_datepicker === false){
-					$(this).data('init_datepicker',true);
-				}
-				event.preventDefault();
+			// sidebar.appendTo('.col-sm-8.inner-content');
+			// form.appendTo('.col-sm-4.sidebar');
+			$.ajax({
+				url: 'https://monashivf.com/resources/free-ivf-nurse-chat/',
+				type: 'POST',
+				dataType: 'html',
+			})
+			.done(function(html) {
+				// console.log("success");
+				var clone = $(html).find('#form-bottom').clone();
+				$('.col-sm-4.sidebar').html('<h3>Get free consultation on IVF Process</h3>');
+				clone.appendTo('.col-sm-4.sidebar');
+				$('body').find('.col-sm-4.sidebar .datepicker').addClass('datepicker-here');
+				$('body').find('.col-sm-4.sidebar .datepicker').removeClass('datepicker');
+				$('body').on('click', '.col-sm-4.sidebar .ui-datepicker-trigger', function(event) {
+					var init_datepicker = false;
+					if($(this).data('init_datepicker') !== undefined){
+						init_datepicker = $(this).data('init_datepicker');
+					}
+					if(init_datepicker === false){
+						$(this).data('init_datepicker',true);
+					}
+					event.preventDefault();
+				});
+				$('body').find('#form-bottom .gfield_label.gfield_label_before_complex').remove();
+				$('body').find('#form-bottom .field_description_below:not(.recieved-occ-mail) .gfield_label').remove();
+					var clone_btn = $('body').find('#form-bottom [value="Submit"]').clone();
+					clone_btn.attr('value','FREE NURSE CHAT');
+					clone_btn.attr('onkeypress','');
+					clone_btn.attr('onclick','');
+					clone_btn.attr('id','');
+					clone_btn.insertAfter('#form-bottom [value="Submit"]');
+				$('body').find('#form-bottom [value="Submit"]').css('display','none');
+				var scriptreappend = jQuery('body').find('iframe[name="gform_ajax_frame_20"]').parent().find('script').html();
+				$('body').append('<script>setTimeout(function() {'+scriptreappend+'},300);</script>');
+				gformInitDatepicker_int();
 			});
-			$('body').find('#form-bottom .gfield_label.gfield_label_before_complex').remove();
-			$('body').find('#form-bottom .field_description_below:not(.recieved-occ-mail) .gfield_label').remove();
-				var clone_btn = $('body').find('#form-bottom [value="Submit"]').clone();
-				clone_btn.attr('value','FREE NURSE CHAT');
-				clone_btn.attr('onkeypress','');
-				clone_btn.attr('onclick','');
-				clone_btn.attr('id','');
-				clone_btn.insertAfter('#form-bottom [value="Submit"]');
-			$('body').find('#form-bottom [value="Submit"]').css('display','none');
+
+
 			$('body').on('click','.ui-datepicker-trigger', function(){
 				$(this).parent().find('input').focus();
 			});
@@ -122,9 +138,9 @@ function readyjQueryinit(){
 		}
 	});
 	jQuery(document).ready(function($) {
-			var scriptreappend = jQuery('body').find('iframe[name="gform_ajax_frame_20"]').parent().find('script').html();
-			$('body').append('<script>setTimeout(function() {'+scriptreappend+'},300);</script>');
-			gformInitDatepicker_int();
+			// var scriptreappend = jQuery('body').find('iframe[name="gform_ajax_frame_20"]').parent().find('script').html();
+			// $('body').append('<script>setTimeout(function() {'+scriptreappend+'},300);</script>');
+			// gformInitDatepicker_int();
 	});
 }
 function gformInitDatepicker_int() {
@@ -140,8 +156,6 @@ function gformInitDatepicker_int() {
 				showOn: "focus",
 				dateFormat: "dd/mm/yy",
 			};
-
-		// a.hasClass("dmy") ? c.dateFormat = "dd/mm/yy" : a.hasClass("dmy_dash") ? c.dateFormat = "dd-mm-yy" : a.hasClass("dmy_dot") ? c.dateFormat = "dd.mm.yy" : a.hasClass("ymd_slash") ? c.dateFormat = "yy/mm/dd" : a.hasClass("ymd_dash") ? c.dateFormat = "yy-mm-dd" : a.hasClass("ymd_dot") && (c.dateFormat = "yy.mm.dd"), a.hasClass("datepicker_with_icon") && (c.showOn = "both", c.buttonImage = jQuery("#gforms_calendar_icon_" + b).val(), c.buttonImageOnly = !0), b = b.split("_"), c = gform.applyFilters("gform_datepicker_options_pre_init", c, b[1], b[2]);
 		c.dateFormat = "dd/mm/yy";
 		a.datepicker(c);
 	})
