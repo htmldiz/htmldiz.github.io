@@ -23,7 +23,7 @@ if (!window.jQuery) {
 }else{
 	readyjQueryinit();
 } 
-function readyjQueryinit(){
+function readyjQueryinit(){ 
 	jQuery(function($) {
 		var hrf = location.href;
 		console.log('Appointment 2 start');
