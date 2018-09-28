@@ -32,6 +32,11 @@ ul#gform_fields_20 li.complex-field-form div.ginput_container.ginput_container_n
 #form-bottom2 #field_20_35 .ginput_container.ginput_container_select{
 	margin-left: 0!important;
 }
+#form-bottom2 #input_20_38_6_container input,
+#form-bottom2 #input_20_38_3_container input{
+    padding: 10px !important;
+    background: #ebebeb;
+}
 #form-bottom2 #field_20_36 .ginput_container.ginput_container_text,
 #form-bottom2 .gfield_description.validation_message, #form-bottom2 ul#gform_fields_20 #field_20_4>.ginput_container.ginput_container_email, ul#gform_fields_20 li.complex-field-form .gfield_description.validation_message {
 	-webkit-box-flex: 0;
