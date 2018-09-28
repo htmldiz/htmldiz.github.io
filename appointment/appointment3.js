@@ -22,7 +22,7 @@ if (!window.jQuery) {
 	});
 }else{
 	readyjQueryinit();
-}
+} 
 function readyjQueryinit(){
 	jQuery(function($) {
 		var hrf = location.href;
