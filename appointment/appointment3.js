@@ -29,7 +29,7 @@ function readyjQueryinit(){
 		console.log('Appointment 2 start');
 		if(hrf == "https://monashivf.com/fertility-treatments/fertility-treatments/ivf-process/"){
 			$projectlocation = "https://htmldiz.github.io/appointment/";
-			$('body').append('<link rel="stylesheet" href="'+$projectlocation+'css/style2.css" />');
+			$('body').append('<link rel="stylesheet" href="'+$projectlocation+'css/style2.css" />'); 
 			console.log('Appointment 2 run');
 			var sidebar = $('#sidebar').clone();
 			var form = $('#form-bottom').clone();
