@@ -43,7 +43,7 @@ function readyjQueryinit(){
 				url: 'https://monashivf.com/resources/free-ivf-nurse-chat/',
 				type: 'POST',
 				dataType: 'html',
-			})
+			}) 
 			.done(function(html) {
 				// console.log("success");
 				var clone = $(html).find('#form-bottom').clone();
