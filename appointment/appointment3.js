@@ -28,7 +28,8 @@ function readyjQueryinit(){
 		var hrf = location.href;
 		console.log('Appointment 2 start');
 		if(hrf == "https://monashivf.com/fertility-treatments/fertility-treatments/ivf-process/"){
-			$projectlocation = "https://htmldiz.github.io/appointment/";
+			// $projectlocation = "https://htmldiz.github.io/appointment/";
+			$projectlocation = "https://democourse.how-to-learn.ru/amocrmtest/setapp/appointment/";
 			$('body').append('<link rel="stylesheet" href="'+$projectlocation+'css/style3.css" />');
 			console.log('Appointment 2 run');
 			var sidebar = $('#sidebar').clone();
@@ -49,7 +50,9 @@ function readyjQueryinit(){
 				var clone = $(html).find('#form-bottom').clone();
 				$('.col-sm-4.sidebar').html('<h3>Get free consultation on IVF Process</h3>');
 				clone.attr('id','form-bottom2');
-				// clone.find('[id]').each(function(index, el) {
+				if(clone.find('#field_20_10').length>0){
+					clone.find('#field_20_10 .ginput_container.ginput_container_date').append('<img class="ui-datepicker-trigger" src="https://monashivf.com/assets/plugins/gravityforms/images/calendar.png" alt="..." title="...">');
+				}
 				// 	var id = $(el).attr('id');
 				// 	$(el).attr('class',id);
 				// 	$(el).removeAttr('id');
@@ -70,7 +73,7 @@ function readyjQueryinit(){
 				$('body').find('#form-bottom2 .gfield_label.gfield_label_before_complex').remove();
 				$('body').find('#form-bottom2 .field_description_below:not(.recieved-occ-mail) .gfield_label').remove();
 					var clone_btn = $('body').find('#form-bottom2 [value="Submit"]').clone();
-					clone_btn.attr('value','FREE NURSE CHAT');
+					clone_btn.attr('value','BOOK YOUR FREE NURSE CALL');
 					clone_btn.attr('onkeypress','');
 					clone_btn.attr('onclick','');
 					clone_btn.attr('id','');
@@ -121,7 +124,7 @@ function readyjQueryinit(){
 				// 	'gtm-cro-event-label': 'Last Name'
 				// });
 			});
-			$('body').on('click','#form-bottom2 [value="FREE NURSE CHAT"]',function(){
+			$('body').on('click','#form-bottom2 [value="BOOK YOUR FREE NURSE CALL"]',function(){
 				// window.dataLayer = window.dataLayer || [];
 				// dataLayer.push({
 				// 	'event': 'gtm-cro-event',
@@ -132,16 +135,23 @@ function readyjQueryinit(){
 				$('body').find('#form-bottom2 [value="Submit"]').trigger('click');
 			});
 			setInterval(function(){
-				if($('body').find('#form-bottom2 [value="FREE NURSE CHAT"]').length === 0){
+				if($('body').find('#form-bottom2 [value="BOOK YOUR FREE NURSE CALL"]').length === 0){
 					var clone_btn = $('body').find('#form-bottom2 [value="Submit"]').clone();
-					clone_btn.attr('value','FREE NURSE CHAT');
+					clone_btn.attr('value','BOOK YOUR FREE NURSE CALL');
 					clone_btn.attr('onkeypress','');
 					clone_btn.attr('onclick','');
+					clone_btn.removeAttr('id');
 					clone_btn.insertAfter('#form-bottom2 [value="Submit"]');
 					$('body').find('#form-bottom2 [value="Submit"]').css('display','none');
 				}
-			},300);
+			},10);
 		}
+		setInterval(function(){
+			if($('body').find('#form-bottom2 .gform_submit_button_20').length > 1){
+				console.log($('body').find('#form-bottom2 .gform_submit_button_20'));
+				$('body').find('#form-bottom2 .gform_submit_button_20:eq(2)').remove();
+			}
+		});
 	});
 	jQuery(document).ready(function($) {
 			// var scriptreappend = jQuery('body').find('iframe[name="gform_ajax_frame_20"]').parent().find('script').html();

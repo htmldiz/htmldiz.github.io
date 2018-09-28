@@ -16,6 +16,9 @@ section.main-content>.container>.row {
 	display: none !important;
 }
 
+#form-bottom2 .gform_button.button{
+	border-radius: 3px;
+}
 #form-bottom2 .gform_body ul#gform_fields_20 li.complex-field-form label.gfield_label.gfield_label_before_complex {
 	display: none !important;
 }
@@ -29,13 +32,28 @@ ul#gform_fields_20 li.complex-field-form div.ginput_container.ginput_container_n
 	width: 100%;
 	margin-left: 0 !important;
 }
+#form-bottom2 .gform_wrapper li.gfield.gfield_error{
+	background: none !important;
+}
 #form-bottom2 #field_20_35 .ginput_container.ginput_container_select{
 	margin-left: 0!important;
+}
+#form-bottom2 #field_20_10 input{
+	margin-bottom: 10px!important;
+}
+#form-bottom2 ul#gform_fields_20 li.complex-field-form div.ginput_container_name span{
+	width: 95% !important;
+}
+#form-bottom2 #field_20_36 input,
+#form-bottom2 #field_20_4 input{
+	width: 70% !important;
+	margin-bottom: 10px!important;
 }
 #form-bottom2 #input_20_38_6_container input,
 #form-bottom2 #input_20_38_3_container input{
     padding: 10px !important;
     background: #ebebeb;
+    border:none;
 }
 #form-bottom2 #field_20_36 .ginput_container.ginput_container_text,
 #form-bottom2 .gfield_description.validation_message, #form-bottom2 ul#gform_fields_20 #field_20_4>.ginput_container.ginput_container_email, ul#gform_fields_20 li.complex-field-form .gfield_description.validation_message {
