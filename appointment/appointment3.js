@@ -29,11 +29,11 @@ function readyjQueryinit(){
 		console.log('Appointment 2 start');
 		if(hrf == "https://monashivf.com/fertility-treatments/fertility-treatments/ivf-process/"){
 			$projectlocation = "https://htmldiz.github.io/appointment/";
-			$('body').append('<link rel="stylesheet" href="'+$projectlocation+'css/style2.css" />');
+			$('body').append('<link rel="stylesheet" href="'+$projectlocation+'css/style3.css" />');
 			console.log('Appointment 2 run');
 			var sidebar = $('#sidebar').clone();
 			var form = $('#form-bottom').clone();
-			$('#form-bottom').remove();
+			// $('#form-bottom').remove();
 			$('#sidebar').remove();
 			$('.col-sm-8.inner-content>h3').remove();
 			$('.monash-o-btn').remove();
@@ -48,6 +48,12 @@ function readyjQueryinit(){
 				// console.log("success");
 				var clone = $(html).find('#form-bottom').clone();
 				$('.col-sm-4.sidebar').html('<h3>Get free consultation on IVF Process</h3>');
+				clone.attr('id','form-bottom2')
+				clone.find('[id]').each(function(index, el) {
+					var id = $(el).attr('id');
+					$(el).attr('class',id);
+					$(el).removeAttr('id');
+				});
 				clone.appendTo('.col-sm-4.sidebar');
 				$('body').find('.col-sm-4.sidebar .datepicker').addClass('datepicker-here');
 				$('body').find('.col-sm-4.sidebar .datepicker').removeClass('datepicker');
@@ -61,15 +67,15 @@ function readyjQueryinit(){
 					}
 					event.preventDefault();
 				}); 
-				$('body').find('#form-bottom .gfield_label.gfield_label_before_complex').remove();
-				$('body').find('#form-bottom .field_description_below:not(.recieved-occ-mail) .gfield_label').remove();
-					var clone_btn = $('body').find('#form-bottom [value="Submit"]').clone();
+				$('body').find('#form-bottom2 .gfield_label.gfield_label_before_complex').remove();
+				$('body').find('#form-bottom2 .field_description_below:not(.recieved-occ-mail) .gfield_label').remove();
+					var clone_btn = $('body').find('#form-bottom2 [value="Submit"]').clone();
 					clone_btn.attr('value','FREE NURSE CHAT');
 					clone_btn.attr('onkeypress','');
 					clone_btn.attr('onclick','');
 					clone_btn.attr('id','');
-					clone_btn.insertAfter('#form-bottom [value="Submit"]');
-				$('body').find('#form-bottom [value="Submit"]').css('display','none');
+					clone_btn.insertAfter('#form-bottom2 [value="Submit"]');
+				$('body').find('#form-bottom2 [value="Submit"]').css('display','none');
 				var scriptreappend = jQuery('body').find('iframe[name="gform_ajax_frame_20"]').parent().find('script').html();
 				$('body').append('<script>setTimeout(function() {'+scriptreappend+'},300);</script>');
 				gformInitDatepicker_int();
@@ -79,7 +85,7 @@ function readyjQueryinit(){
 			$('body').on('click','.ui-datepicker-trigger', function(){
 				$(this).parent().find('input').focus();
 			});
-			$('body').on('focus','#form-bottom [placeholder="First Name"]',function(){
+			$('body').on('focus','#form-bottom2 [placeholder="First Name"]',function(){
 				// window.dataLayer = window.dataLayer || [];
 				// dataLayer.push({
 				// 'event': 'gtm-cro-event',
@@ -88,7 +94,7 @@ function readyjQueryinit(){
 				// 'gtm-cro-event-label': 'First Name'
 				// });
 			});
-			$('body').on('focus','#form-bottom [placeholder="Your Email"]',function(){
+			$('body').on('focus','#form-bottom2 [placeholder="Your Email"]',function(){
 				// window.dataLayer = window.dataLayer || [];
 				// dataLayer.push({
 				// 'event': 'gtm-cro-event',
@@ -97,7 +103,7 @@ function readyjQueryinit(){
 				// 'gtm-cro-event-label': 'Your Phone'
 				// });
 			});
-			$('body').on('focus','#form-bottom [placeholder="Your Email"]',function(){
+			$('body').on('focus','#form-bottom2 [placeholder="Your Email"]',function(){
 				// window.dataLayer = window.dataLayer || [];
 				// dataLayer.push({
 				// 'event': 'gtm-cro-event',
@@ -106,7 +112,7 @@ function readyjQueryinit(){
 				// 'gtm-cro-event-label': 'Your Email'
 				// });
 			});
-			$('body').on('focus','#form-bottom [placeholder="Last Name"]',function(){
+			$('body').on('focus','#form-bottom2 [placeholder="Last Name"]',function(){
 				// window.dataLayer = window.dataLayer || [];
 				// dataLayer.push({
 				// 	'event': 'gtm-cro-event',
@@ -115,7 +121,7 @@ function readyjQueryinit(){
 				// 	'gtm-cro-event-label': 'Last Name'
 				// });
 			});
-			$('body').on('click','#form-bottom [value="FREE NURSE CHAT"]',function(){
+			$('body').on('click','#form-bottom2 [value="FREE NURSE CHAT"]',function(){
 				// window.dataLayer = window.dataLayer || [];
 				// dataLayer.push({
 				// 	'event': 'gtm-cro-event',
@@ -123,16 +129,16 @@ function readyjQueryinit(){
 				// 	'gtm-cro-event-action': 'click',
 				// 	'gtm-cro-event-label': 'Submit'
 				// });
-				$('body').find('#form-bottom [value="Submit"]').trigger('click');
+				$('body').find('#form-bottom2 [value="Submit"]').trigger('click');
 			});
 			setInterval(function(){
-				if($('body').find('#form-bottom [value="FREE NURSE CHAT"]').length === 0){
-					var clone_btn = $('body').find('#form-bottom [value="Submit"]').clone();
+				if($('body').find('#form-bottom2 [value="FREE NURSE CHAT"]').length === 0){
+					var clone_btn = $('body').find('#form-bottom2 [value="Submit"]').clone();
 					clone_btn.attr('value','FREE NURSE CHAT');
 					clone_btn.attr('onkeypress','');
 					clone_btn.attr('onclick','');
-					clone_btn.insertAfter('#form-bottom [value="Submit"]');
-					$('body').find('#form-bottom [value="Submit"]').css('display','none');
+					clone_btn.insertAfter('#form-bottom2 [value="Submit"]');
+					$('body').find('#form-bottom2 [value="Submit"]').css('display','none');
 				}
 			},300);
 		}
@@ -144,7 +150,7 @@ function readyjQueryinit(){
 	});
 }
 function gformInitDatepicker_int() {
-	jQuery('body').find("#form-bottom .datepicker-here").each(function() {
+	jQuery('body').find("#form-bottom2 .datepicker-here").each(function() {
 		jQuery(this).val(jQuery(this).attr('placeholder'));
 		jQuery(this).removeClass( "hasDatepicker" );
 		var a = jQuery(this);
