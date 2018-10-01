@@ -48,7 +48,7 @@ function readyjQueryinit(){
 			.done(function(html) {
 				// console.log("success");
 				var clone = $(html).find('#form-bottom').clone();
-				$('.col-sm-4.sidebar').html('<h3>Get free consultation on IVF Process</h3>');
+				$('.col-sm-4.sidebar').html('');
 				clone.attr('id','form-bottom2');
 				if(clone.find('#field_20_10').length>0){
 					clone.find('#field_20_10 .ginput_container.ginput_container_date').append('<img class="ui-datepicker-trigger" src="https://monashivf.com/assets/plugins/gravityforms/images/calendar.png" alt="..." title="...">');
@@ -70,6 +70,8 @@ function readyjQueryinit(){
 					}
 					event.preventDefault();
 				}); 
+				$('body').find('#form-bottom2').css('padding-bottom','600px');
+				$('body').find('#form-bottom2').prepend('<h3 style="padding-top:10px;">Get free consultation on IVF process</h3>');
 				$('body').find('#form-bottom2 .gfield_label.gfield_label_before_complex').remove();
 				$('body').find('#form-bottom2 .field_description_below:not(.recieved-occ-mail) .gfield_label').remove();
 					var clone_btn = $('body').find('#form-bottom2 [value="Submit"]').clone();
