@@ -71,7 +71,7 @@ function readyjQueryinit(){
 					event.preventDefault();
 				}); 
 				$('body').find('#form-bottom2').css('padding-bottom','600px');
-				$('body').find('#form-bottom2').prepend('<h3 style="padding-top:10px;">Get free consultation on IVF process</h3>');
+				$('body').find('#form-bottom2').prepend('<h3 style="padding-top:10px;">Get a free consultation on the IVF process</h3>');
 				$('body').find('#form-bottom2 .gfield_label.gfield_label_before_complex').remove();
 				$('body').find('#form-bottom2 .field_description_below:not(.recieved-occ-mail) .gfield_label').remove();
 					var clone_btn = $('body').find('#form-bottom2 [value="Submit"]').clone();
