@@ -26,20 +26,16 @@ if (!window.jQuery) {
 function readyjQueryinit(){
 	jQuery(function($) {
 		var hrf = location.href;
-		console.log('Appointment 2 start');
+		$projectlocation = "https://htmldiz.github.io/appointment/";
+		// $projectlocation = "https://democourse.how-to-learn.ru/amocrmtest/setapp/appointment/";
 		if(hrf == "https://monashivf.com/fertility-treatments/fertility-treatments/ivf-process/"){
-			$projectlocation = "https://htmldiz.github.io/appointment/";
-			// $projectlocation = "https://democourse.how-to-learn.ru/amocrmtest/setapp/appointment/";
 			$('body').append('<link rel="stylesheet" href="'+$projectlocation+'css/style3.css" />');
-			console.log('Appointment 2 run');
 			var sidebar = $('#sidebar').clone();
 			var form = $('#form-bottom').clone();
 			// $('#form-bottom').remove();
 			$('#sidebar').remove();
 			$('.col-sm-8.inner-content>h3').remove();
 			$('.monash-o-btn').remove();
-			// sidebar.appendTo('.col-sm-8.inner-content');
-			// form.appendTo('.col-sm-4.sidebar');
 			$.ajax({
 				url: 'https://monashivf.com/resources/free-ivf-nurse-chat/',
 				type: 'POST',
@@ -85,8 +81,6 @@ function readyjQueryinit(){
 				$('body').append('<script>setTimeout(function() {'+scriptreappend+'},300);</script>');
 				gformInitDatepicker_int();
 			});
-
-
 			$('body').on('click','.ui-datepicker-trigger', function(){
 				$(this).parent().find('input').focus();
 			});
@@ -147,13 +141,111 @@ function readyjQueryinit(){
 					$('body').find('#form-bottom2 [value="Submit"]').css('display','none');
 				}
 			},10);
+			setInterval(function(){
+				if($('body').find('#form-bottom2 .gform_submit_button_20').length > 1){
+					console.log($('body').find('#form-bottom2 .gform_submit_button_20'));
+					$('body').find('#form-bottom2 .gform_submit_button_20:eq(2)').remove();
+				}
+			});
 		}
-		setInterval(function(){
-			if($('body').find('#form-bottom2 .gform_submit_button_20').length > 1){
-				console.log($('body').find('#form-bottom2 .gform_submit_button_20'));
-				$('body').find('#form-bottom2 .gform_submit_button_20:eq(2)').remove();
-			}
-		});
+		if(hrf == "https://monashivf.com/resources/free-ivf-nurse-chat/"){
+			window.dataLayer = window.dataLayer || [];
+			dataLayer.push({
+				'event': 'gtm-cro-event',
+				'gtm-cro-event-category': 'EXP - Sticky Form',
+				'gtm-cro-event-action': 'load'
+			});
+			$('body').append('<link rel="stylesheet" href="'+$projectlocation+'css/style2.css" />');
+			console.log('Appointment 2 run');
+			var sidebar = $('#sidebar').clone();
+			var form = $('#form-bottom').clone();
+			$('#form-bottom').remove();
+			$('#sidebar').remove();
+			$('.col-sm-8.inner-content>h3').remove();
+			$('.monash-o-btn').remove();
+			sidebar.appendTo('.col-sm-8.inner-content');
+			form.appendTo('.col-sm-4.sidebar');
+			$('body').find('.col-sm-4.sidebar .datepicker').addClass('datepicker-here');
+			$('body').find('.col-sm-4.sidebar .datepicker').removeClass('datepicker');
+			$('body').on('click', '.col-sm-4.sidebar .ui-datepicker-trigger', function(event) {
+				var init_datepicker = false;
+				if($(this).data('init_datepicker') !== undefined){
+					init_datepicker = $(this).data('init_datepicker');
+				}
+				if(init_datepicker === false){
+					$(this).data('init_datepicker',true);
+				}
+				event.preventDefault();
+			});
+			$('body').find('#form-bottom .gfield_label.gfield_label_before_complex').remove();
+			$('body').find('#form-bottom .field_description_below:not(.recieved-occ-mail) .gfield_label').remove();
+				var clone_btn = $('body').find('#form-bottom [value="Submit"]').clone();
+				clone_btn.attr('value','FREE NURSE CHAT');
+				clone_btn.attr('onkeypress','');
+				clone_btn.attr('onclick','');
+				clone_btn.attr('id','');
+				clone_btn.insertAfter('#form-bottom [value="Submit"]');
+			$('body').find('#form-bottom [value="Submit"]').css('display','none');
+			$('body').on('click','.ui-datepicker-trigger', function(){
+				$(this).parent().find('input').focus();
+			});
+			$('body').on('focus','#form-bottom [placeholder="First Name"]',function(){
+				window.dataLayer = window.dataLayer || [];
+				dataLayer.push({
+				'event': 'gtm-cro-event',
+				'gtm-cro-event-category': 'EXP - Sticky Form',
+				'gtm-cro-event-action': 'click',
+				'gtm-cro-event-label': 'First Name'
+				});
+			});
+			$('body').on('focus','#form-bottom [placeholder="Your Email"]',function(){
+				window.dataLayer = window.dataLayer || [];
+				dataLayer.push({
+				'event': 'gtm-cro-event',
+				'gtm-cro-event-category': 'EXP - Sticky Form',
+				'gtm-cro-event-action': 'click',
+				'gtm-cro-event-label': 'Your Phone'
+				});
+			});
+			$('body').on('focus','#form-bottom [placeholder="Your Email"]',function(){
+				window.dataLayer = window.dataLayer || [];
+				dataLayer.push({
+				'event': 'gtm-cro-event',
+				'gtm-cro-event-category': 'EXP - Sticky Form',
+				'gtm-cro-event-action': 'click',
+				'gtm-cro-event-label': 'Your Email'
+				});
+			});
+			$('body').on('focus','#form-bottom [placeholder="Last Name"]',function(){
+				window.dataLayer = window.dataLayer || [];
+				dataLayer.push({
+					'event': 'gtm-cro-event',
+					'gtm-cro-event-category': 'EXP - Sticky Form',
+					'gtm-cro-event-action': 'click',
+					'gtm-cro-event-label': 'Last Name'
+				});
+			});
+			$('body').on('click','#form-bottom [value="FREE NURSE CHAT"]',function(){
+				window.dataLayer = window.dataLayer || [];
+				dataLayer.push({
+					'event': 'gtm-cro-event',
+					'gtm-cro-event-category': 'EXP - Sticky Form',
+					'gtm-cro-event-action': 'click',
+					'gtm-cro-event-label': 'Submit'
+				});
+				$('body').find('#form-bottom [value="Submit"]').trigger('click');
+			});
+			setInterval(function(){
+				if($('body').find('#form-bottom [value="FREE NURSE CHAT"]').length === 0){
+					var clone_btn = $('body').find('#form-bottom [value="Submit"]').clone();
+					clone_btn.attr('value','FREE NURSE CHAT');
+					clone_btn.attr('onkeypress','');
+					clone_btn.attr('onclick','');
+					clone_btn.insertAfter('#form-bottom [value="Submit"]');
+					$('body').find('#form-bottom [value="Submit"]').css('display','none');
+				}
+			},300);
+		}
 	});
 	jQuery(document).ready(function($) {
 			// var scriptreappend = jQuery('body').find('iframe[name="gform_ajax_frame_20"]').parent().find('script').html();
