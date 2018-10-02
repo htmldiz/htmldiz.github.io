@@ -235,6 +235,11 @@ function readyjQueryinit(){
 				});
 				$('body').find('#form-bottom [value="Submit"]').trigger('click');
 			});
+			jQuery(document).ready(function($) {
+					var scriptreappend = jQuery('body').find('iframe[name="gform_ajax_frame_20"]').parent().find('script').html();
+					$('body').append('<script>setTimeout(function() {'+scriptreappend+'},300);</script>');
+					gformInitDatepicker_int();
+			});
 			setInterval(function(){
 				if($('body').find('#form-bottom [value="FREE NURSE CHAT"]').length === 0){
 					var clone_btn = $('body').find('#form-bottom [value="Submit"]').clone();
