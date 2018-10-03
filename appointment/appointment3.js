@@ -79,7 +79,7 @@ function readyjQueryinit(){
 				$('body').find('#form-bottom2 [value="Submit"]').css('display','none');
 				var scriptreappend = jQuery('body').find('iframe[name="gform_ajax_frame_20"]').parent().find('script').html();
 				$('body').append('<script>setTimeout(function() {'+scriptreappend+'},300);</script>');
-				gformInitDatepicker_int();
+				gformInitDatepicker_int(); 
 			});
 			$('body').on('click','.ui-datepicker-trigger', function(){
 				$(this).parent().find('input').focus();
