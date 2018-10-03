@@ -241,15 +241,22 @@ function readyjQueryinit(){
 					gformInitDatepicker_int1();
 			});
 			setInterval(function(){
-				if($('body').find('#form-bottom [value="FREE NURSE CHAT"]').length === 0){
+				if($('body').find('#form-bottom [value="BOOK YOUR FREE NURSE CALL"]').length === 0){
 					var clone_btn = $('body').find('#form-bottom [value="Submit"]').clone();
-					clone_btn.attr('value','FREE NURSE CHAT');
+					clone_btn.attr('value','BOOK YOUR FREE NURSE CALL');
 					clone_btn.attr('onkeypress','');
 					clone_btn.attr('onclick','');
+					clone_btn.removeAttr('id');
 					clone_btn.insertAfter('#form-bottom [value="Submit"]');
 					$('body').find('#form-bottom [value="Submit"]').css('display','none');
 				}
-			},300);
+			},10);
+			setInterval(function(){
+				if($('body').find('#form-bottom .gform_submit_button_20').length > 1){
+					console.log($('body').find('#form-bottom .gform_submit_button_20'));
+					$('body').find('#form-bottom .gform_submit_button_20:eq(2)').remove();
+				}
+			});
 		}
 	});
 	jQuery(document).ready(function($) {
