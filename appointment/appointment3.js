@@ -260,9 +260,6 @@ function readyjQueryinit(){
 		}
 	});
 	jQuery(document).ready(function($) {
-			// var scriptreappend = jQuery('body').find('iframe[name="gform_ajax_frame_20"]').parent().find('script').html();
-			// $('body').append('<script>setTimeout(function() {'+scriptreappend+'},300);</script>');
-			// gformInitDatepicker_int();
 	});
 }
 function gformInitDatepicker_int() {
