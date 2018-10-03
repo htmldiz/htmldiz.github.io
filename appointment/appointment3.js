@@ -243,7 +243,7 @@ function readyjQueryinit(){
 			setInterval(function(){
 				if($('body').find('#form-bottom [value="FREE NURSE CHAT"]').length === 0){
 					var clone_btn = $('body').find('#form-bottom [value="Submit"]').clone();
-					clone_btn.attr('value','FREE NURSE CHAT');
+					clone_btn.attr('value','FREE NURSE CHAT'); 
 					clone_btn.attr('onkeypress','');
 					clone_btn.attr('onclick','');
 					clone_btn.removeAttr('id');
