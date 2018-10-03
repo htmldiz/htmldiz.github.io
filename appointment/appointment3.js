@@ -238,7 +238,7 @@ function readyjQueryinit(){
 			jQuery(document).ready(function($) {
 					var scriptreappend = jQuery('body').find('iframe[name="gform_ajax_frame_20"]').parent().find('script').html();
 					$('body').append('<script>setTimeout(function() {'+scriptreappend+'},300);</script>');
-					gformInitDatepicker_int();
+					gformInitDatepicker_int1();
 			});
 			setInterval(function(){
 				if($('body').find('#form-bottom [value="FREE NURSE CHAT"]').length === 0){
@@ -260,6 +260,23 @@ function readyjQueryinit(){
 }
 function gformInitDatepicker_int() {
 	jQuery('body').find("#form-bottom2 .datepicker-here").each(function() {
+		jQuery(this).val(jQuery(this).attr('placeholder'));
+		jQuery(this).removeClass( "hasDatepicker" );
+		var a = jQuery(this);
+		var r = Math.floor(Math.random() * (10000 - 1) ) + 1;
+			a.attr('id','input_'+r);
+			b = a.attr('id'),
+			c = {
+				yearRange: "-100:+20",
+				showOn: "focus",
+				dateFormat: "dd/mm/yy",
+			};
+		c.dateFormat = "dd/mm/yy";
+		a.datepicker(c);
+	})
+}
+function gformInitDatepicker_int1() {
+	jQuery('body').find("#form-bottom .datepicker-here").each(function() {
 		jQuery(this).val(jQuery(this).attr('placeholder'));
 		jQuery(this).removeClass( "hasDatepicker" );
 		var a = jQuery(this);
