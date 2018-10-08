@@ -22,7 +22,8 @@ if (!window.jQuery) {
 	});
 }else{
 	readyjQueryinit();
-} 
+}
+document.getElementsByClassName(".col-sm-4.sidebar").style.opacity="0";
 function readyjQueryinit(){
 	jQuery(function($) {
 		var hrf = location.href;
@@ -44,7 +45,7 @@ function readyjQueryinit(){
 				dataType: 'html',
 			}) 
 			.done(function(html) {
-			$('.col-sm-4.sidebar').css('opacity','1');
+				$('.col-sm-4.sidebar').css('opacity','1');
 				var clone = $(html).find('#form-bottom').clone();
 				clone.attr('id','form-bottom2');
 				if(clone.find('#field_20_10').length>0){
