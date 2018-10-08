@@ -36,6 +36,7 @@ function readyjQueryinit(){
 			$('#sidebar').remove();
 			$('.col-sm-8.inner-content>h3').remove();
 			$('.monash-o-btn').remove();
+			$('.col-sm-4.sidebar').html('');
 			$.ajax({
 				url: 'https://monashivf.com/resources/free-ivf-nurse-chat/',
 				type: 'POST',
@@ -44,7 +45,6 @@ function readyjQueryinit(){
 			.done(function(html) {
 				// console.log("success");
 				var clone = $(html).find('#form-bottom').clone();
-				$('.col-sm-4.sidebar').html('');
 				clone.attr('id','form-bottom2');
 				if(clone.find('#field_20_10').length>0){
 					clone.find('#field_20_10 .ginput_container.ginput_container_date').append('<img class="ui-datepicker-trigger" src="https://monashivf.com/assets/plugins/gravityforms/images/calendar.png" alt="..." title="...">');
