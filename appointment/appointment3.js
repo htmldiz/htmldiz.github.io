@@ -29,6 +29,7 @@ function readyjQueryinit(){
 		$projectlocation = "https://htmldiz.github.io/appointment/";
 		// $projectlocation = "https://democourse.how-to-learn.ru/amocrmtest/setapp/appointment/";
 		if(hrf == "https://monashivf.com/fertility-treatments/fertility-treatments/ivf-process/"){
+			$('.col-sm-4.sidebar').html('');
 			$('body').append('<link rel="stylesheet" href="'+$projectlocation+'css/style3.css" />');
 			var sidebar = $('#sidebar').clone();
 			var form = $('#form-bottom').clone();
@@ -36,7 +37,6 @@ function readyjQueryinit(){
 			$('#sidebar').remove();
 			$('.col-sm-8.inner-content>h3').remove();
 			$('.monash-o-btn').remove();
-			$('.col-sm-4.sidebar').html('');
 			$.ajax({
 				url: 'https://monashivf.com/resources/free-ivf-nurse-chat/',
 				type: 'POST',
