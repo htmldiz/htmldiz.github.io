@@ -23,7 +23,9 @@ if (!window.jQuery) {
 }else{
 	readyjQueryinit();
 }
-document.getElementsByClassName("col-sm-4 sidebar")[0].style.opacity="0";
+if(hrf == "https://monashivf.com/fertility-treatments/fertility-treatments/ivf-process/"){
+	document.getElementsByClassName("col-sm-4 sidebar")[0].style.opacity="0";
+}
 function readyjQueryinit(){
 	jQuery(function($) {
 		var hrf = location.href;
