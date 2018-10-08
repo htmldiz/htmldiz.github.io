@@ -29,6 +29,7 @@ function readyjQueryinit(){
 		$projectlocation = "https://htmldiz.github.io/appointment/";
 		// $projectlocation = "https://democourse.how-to-learn.ru/amocrmtest/setapp/appointment/";
 		if(hrf == "https://monashivf.com/fertility-treatments/fertility-treatments/ivf-process/"){
+			$('.col-sm-4.sidebar').css('opacity','0');
 			$('.col-sm-4.sidebar').html('');
 			$('body').append('<link rel="stylesheet" href="'+$projectlocation+'css/style3.css" />');
 			var sidebar = $('#sidebar').clone();
@@ -43,7 +44,7 @@ function readyjQueryinit(){
 				dataType: 'html',
 			}) 
 			.done(function(html) {
-				// console.log("success");
+			$('.col-sm-4.sidebar').css('opacity','1');
 				var clone = $(html).find('#form-bottom').clone();
 				clone.attr('id','form-bottom2');
 				if(clone.find('#field_20_10').length>0){
