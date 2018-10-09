@@ -71,10 +71,13 @@ function readyjQueryinit(){
 				var clientID = ga.getAll()[0].get('clientId');
 				var expID    = getExperimentId(_gaexp);
 				var expvarID = getVariationId(_gaexp);
-				console.log(clientID);
-				console.log(expID);
-				console.log(expvarID);
-				location.href = "https://store.setapp.com/app"+window.appslist[window._appId]+".zip?unregistered_user=1&xid="+expID+"&xvar="+expvarID+"&cid="+clientID+"&downloadSource=app-reg-experiment";
+				window.dataLayer = window.dataLayer || [];
+				dataLayer.push({
+					'event': 'gtm-cro-event',
+					'gtm-cro-event-category': 'Installer',
+					'gtm-cro-event-action': 'Download Start'
+				});
+				location.href = "https://store.setapp.com/app"+window.appslist[window._appId]+".zip?unregistered_user=1&xid="+expID+"&xvar="+expvarID+"&cid="+clientID+"&downloadSource=app-reg-experiment&eventCategory=Installer&eventAction=DownloadStart";
 			}else{
         		// location.href = "https://store.setapp.com/app"+window.appslist[window._appId]+".zip?unregistered_user=1downloadSource={in-app-reg-experiment}?downloadSource={in-app-reg-experiment}";
         	}
