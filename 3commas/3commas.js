@@ -38,7 +38,7 @@ function readyjQueryinit(){
 			.css('padding','15px');
 			$('#regBtn').html('Try For Free');
 			$('.simple_form.new_user').find('[value="Register"]')
-			.html('Get first profit in 7 days FREE TRIAL')
+			.val('Get first profit in 7 days FREE TRIAL')
 			.css('white-space','normal');
 			$('.subscribe-card__bottom').each(function(index, el) {
 				var text = $('.text',el).html();
