@@ -31,7 +31,8 @@ function readyjQueryinit(){
 			.html('Get the first profit in 7 days FREE TRIAL')
 			.css('max-width','310px')
 			.css('white-space','normal')
-			.css('padding','15px');
+			.css('padding','5px 15px')
+			.css('font-size','14px');
 			$('.getFreeTrialBtn').html('Get the first profit in 7 days FREE TRIAL')
 			.css('max-width','310px')
 			.css('white-space','normal')
