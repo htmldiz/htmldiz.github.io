@@ -28,17 +28,17 @@ function readyjQueryinit(){
 		var hrf = location.href;
 		if(hrf == "https://3commas.io/?locale=en"){
 			$('.createAccBtn')
-			.html('Get first profit in 7 days FREE TRIAL')
+			.html('Get the first profit in 7 days FREE TRIAL')
 			.css('max-width','310px')
 			.css('white-space','normal')
 			.css('padding','15px');
-			$('.getFreeTrialBtn').html('Get first profit in 7 days FREE TRIAL')
+			$('.getFreeTrialBtn').html('Get the first profit in 7 days FREE TRIAL')
 			.css('max-width','310px')
 			.css('white-space','normal')
 			.css('padding','15px');
 			$('#regBtn').html('Try For Free');
 			$('.simple_form.new_user').find('[value="Register"]')
-			.val('Get first profit in 7 days FREE TRIAL')
+			.val('Get the first profit in 7 days FREE TRIAL')
 			.css('white-space','normal');
 			$('.subscribe-card__bottom').each(function(index, el) {
 				var text = $('.text',el).html();
@@ -48,7 +48,7 @@ function readyjQueryinit(){
 				}
 			});
 			$('.subscribe-card__bottom .subscribeNowBtn')
-			.html('Get first profit in 7 days FREE TRIAL')
+			.html('7 days free trial')
 			.css('font-size','20px')
 			.css('white-space','normal')
 			.css('padding','6px')
