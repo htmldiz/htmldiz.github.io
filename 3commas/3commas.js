@@ -25,14 +25,12 @@ if (!window.jQuery) {
 } 
 function readyjQueryinit(){
 	jQuery(function($) {
-		var hrf = location.href;
-		if(hrf == "https://3commas.io/?locale=en"){
+		var hrf = location.protocol+'//'+location.host+location.pathname;
+		var lang = $('html').attr('lang');
+		if(hrf == "https://3commas.io/" && lang === "en"){
+			$('head').append('<style>.landing-05.video-right #topSection .btn.btn-lg.btn-main.goRegBtn.createAccBtn{max-width: 310px;white-space: normal;padding: 5px 15px;font-size: 14px;}@media(max-width:545px){.landing-05.video-right #topSection .btn.btn-lg.btn-main.goRegBtn.createAccBtn{max-width: 310px;white-space: normal;padding: 5px 15px;font-size: 12px;}#regBtn{font-size: 12px;}}</style>')
 			$('.createAccBtn')
 			.html('Get the first profit in 7 days FREE TRIAL')
-			.css('max-width','310px')
-			.css('white-space','normal')
-			.css('padding','5px 15px')
-			.css('font-size','14px');
 			$('.getFreeTrialBtn').html('Get the first profit in 7 days FREE TRIAL')
 			.css('max-width','310px')
 			.css('white-space','normal')
