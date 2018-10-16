@@ -443,7 +443,7 @@ function validateEmail(email) {
 function validatePhone(p) {
   var phoneRe = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/;
   return phoneRe.test(p);
-}
+} 
 function validatefn(p,addClasses=true) {
 	var val = p.val();
 	var placeholder = p.attr('placeholder').length > 0 ? p.attr('placeholder') : ' ';
