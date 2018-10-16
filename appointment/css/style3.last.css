@@ -16,7 +16,13 @@
 #form-bottom2 ul label.gfield_label {
 	margin-top: 5px
 }
-
+#form-bottom2 #field_20_10{
+	position: relative;
+}
+#form-bottom2 .gform_wrapper img.ui-datepicker-trigger{
+	position: absolute;
+	top: 3px;
+}
 #form-bottom2 input[type="text"], #form-bottom2 input[type="email"], #form-bottom2 input[type="tel"], #form-bottom2 textarea {
 	width: 100% !important;
 	background: #fff;
