@@ -38,7 +38,10 @@
 	border: solid 1px #ff3232 !important;
 	padding: 10px 15px
 }
-
+#form-bottom2 input[type="text"].lv_valid#input_1179{
+#form-bottom2 input[type="text"].lv_invalid#input_1179{
+    background-size: 18px;
+}
 #form-bottom2 .gform_wrapper .validation_message {
 	color: #D64203 !important
 }
