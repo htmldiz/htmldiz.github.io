@@ -42,7 +42,7 @@ ul#gform_fields_20 li.complex-field-form div.ginput_container.ginput_container_n
 	margin-bottom: 10px!important;
 }
 #form-bottom2 ul#gform_fields_20 li.complex-field-form div.ginput_container_name span{
-	width: 95% !important;
+	width:100% !important;
 }
 #form-bottom2 #field_20_36 input,
 #form-bottom2 #field_20_4 input{
@@ -66,6 +66,16 @@ ul#gform_fields_20 li.complex-field-form div.ginput_container.ginput_container_n
 #form-bottom2 div.gform_wrapper.content-donors .gform_button{
     padding: 10px 44px;
 }
+li#field_20_10 .ginput_container.ginput_container_date {
+    position: relative;
+}
+body li#field_20_10 .gform_wrapper img.ui-datepicker-trigger{
+    position: absolute;
+    top: 14px;
+}
+#input_20_35 {
+    padding: 10px 15px !important;
+}
 ul#gform_fields_20 #field_20_4, ul#gform_fields_20 li.complex-field-form {
 	display: -webkit-flex;
 	display: -moz-flex;
@@ -76,7 +86,7 @@ ul#gform_fields_20 #field_20_4, ul#gform_fields_20 li.complex-field-form {
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 }
-
+ul#gform_fields_20 #field_20_4, ul#gform_fields_20 li.complex-field-form,
 #form-bottom2 input#input_20_4, #form-bottom2 input#input_20_36[type="text"] {
 	width: 100% !important;
 }
