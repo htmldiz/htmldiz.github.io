@@ -63,7 +63,9 @@ ul#gform_fields_20 li.complex-field-form div.ginput_container.ginput_container_n
 	width: 100% !important;
 	margin-left: 0 !important;
 }
-
+#form-bottom2 div.gform_wrapper.content-donors .gform_button{
+    padding: 10px 44px;
+}
 ul#gform_fields_20 #field_20_4, ul#gform_fields_20 li.complex-field-form {
 	display: -webkit-flex;
 	display: -moz-flex;
