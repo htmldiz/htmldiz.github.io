@@ -37,12 +37,18 @@ ul#gform_fields_20 li.complex-field-form div.ginput_container.ginput_container_n
 }
 #form-bottom2 #field_20_35 .ginput_container.ginput_container_select{
 	margin-left: 0!important;
+	width: 100%!important;
 }
 #form-bottom2 #field_20_10 input{
 	margin-bottom: 10px!important;
 }
+#input_20_38_3{
+	    margin-bottom: 10px !important;
+}
+#field_20_38,
 #form-bottom2 ul#gform_fields_20 li.complex-field-form div.ginput_container_name span{
-	width:100% !important; 
+	width:100% !important;
+	padding-right: 0!important;
 }
 #form-bottom2 #field_20_36 input,
 #form-bottom2 #field_20_4 input{
@@ -66,10 +72,10 @@ ul#gform_fields_20 li.complex-field-form div.ginput_container.ginput_container_n
 #form-bottom2 div.gform_wrapper.content-donors .gform_button{
     padding: 10px 44px;
 }
-li#field_20_10 .ginput_container.ginput_container_date {
+#field_20_10 .ginput_container.ginput_container_date {
     position: relative;
 }
-body li#field_20_10 .gform_wrapper img.ui-datepicker-trigger{
+#field_20_10 img.ui-datepicker-trigger{
     position: absolute;
     top: 14px;
 }
