@@ -264,6 +264,7 @@ function readyjQueryinit(){
 				var clone = $(html).find('#form-bottom').clone();
 				clone.attr('id','form-bottom2');
 				clone.find('[enctype="multipart/form-data"]').removeAttr('target').removeAttr('id');
+				clone.find('.datepicker_with_icon').after('<img class="ui-datepicker-trigger" src="https://monashivf.com/assets/plugins/gravityforms/images/calendar.png" alt="..." title="...">');
 				clone.appendTo('.col-sm-4.sidebar');
 				$('body').find('.col-sm-4.sidebar .datepicker').addClass('datepicker-here');
 				$('body').find('.col-sm-4.sidebar .datepicker').removeClass('datepicker');
@@ -420,6 +421,7 @@ function readyjQueryinit(){
 						}else{
 							dataitem.find('iframe').remove();
 							dataitem.find('[type="text/javascript"]').remove();
+							dataitem.find('.datepicker_with_icon').after('<img class="ui-datepicker-trigger" src="https://monashivf.com/assets/plugins/gravityforms/images/calendar.png" alt="..." title="...">');
 							dataitem.find('[enctype="multipart/form-data"]').removeAttr('id').removeAttr('target').removeAttr('onsubmit');
 							dataitem.find('.gfield_error input').addClass('lv_invalid');
 							dataitem.find('.gform_button.button').removeAttr('onclick').removeAttr('onkeypress').removeAttr('onkeypress').after('<img src="https://monashivf.com/assets/plugins/gravityforms/images/spinner.gif" class="loader-form" />');
