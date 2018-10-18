@@ -28,16 +28,16 @@ function readyjQueryinit(){
 		var hrf = location.protocol+'//'+location.host+location.pathname;
 		var lang = $('html').attr('lang');
 		if(hrf == "https://3commas.io/" && lang == "en"){
-			$('head').append('<style>.landing-05.video-right #topSection .btn.btn-lg.btn-main.goRegBtn.createAccBtn{max-width: 310px;white-space: normal;padding: 5px 15px;font-size: 14px;}@media(max-width:545px){.landing-05.video-right #topSection .btn.btn-lg.btn-main.goRegBtn.createAccBtn{max-width: 310px;white-space: normal;padding: 5px 15px;font-size: 12px;}#regBtn{font-size: 12px;}}</style>')
+			$('head').append('<style>.landing-05.video-right #topSection .btn.btn-lg.btn-main.goRegBtn.createAccBtn{max-width: 310px;white-space: normal;padding: 5px 15px;font-size: 14px;}@media(max-width:545px){.landing-05.video-right #topSection .btn.btn-lg.btn-main.goRegBtn.createAccBtn{max-width: 310px;white-space: normal;padding: 5px 15px;font-size: 12px;}#regBtn{font-size: 12px;}}.landing-05.video-right #topSection .btn.btn-lg.btn-main.goRegBtn.createAccBtn {font-size: 18px;line-height: 1.4;padding: 8px 10px 5px;margin-top: 30px;}.landing-05 #topSection {min-height: 630px;}</style>')
 			$('.createAccBtn')
-			.html('Get the first profit in 7 days FREE TRIAL')
-			$('.getFreeTrialBtn').html('Get the first profit in 7 days FREE TRIAL')
+			.html('Get first profit in 7 days FREE TRIAL')
+			$('.getFreeTrialBtn').html('Get first profit in 7 days FREE TRIAL')
 			.css('max-width','310px')
 			.css('white-space','normal')
 			.css('padding','15px');
 			$('#regBtn').html('Try For Free');
 			$('.simple_form.new_user').find('[value="Register"]')
-			.val('Get the first profit in 7 days FREE TRIAL')
+			.val('Get first profit in 7 days FREE TRIAL')
 			.css('white-space','normal');
 			$('.subscribe-card__bottom').each(function(index, el) {
 				var text = $('.text',el).html();
@@ -51,7 +51,7 @@ function readyjQueryinit(){
 				}
 			});
 			$('.subscribe-card__bottom .subscribeNowBtn')
-			.html('7 days free trial')
+			.html('Try For FREE')
 			.css('font-size','20px')
 			.css('white-space','normal')
 			.css('padding','6px')
