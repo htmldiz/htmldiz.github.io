@@ -1,5 +1,5 @@
 try {
-    hj('trigger', 'hj-cro-event-popup');
+    hj('trigger', 'hj-3commas');
 } 
 catch(e) {}
 function initjQuery(callback) {
