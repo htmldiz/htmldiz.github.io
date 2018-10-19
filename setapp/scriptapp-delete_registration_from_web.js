@@ -77,7 +77,7 @@ function readyjQueryinit(){
 					'gtm-cro-event-category': 'Installer',
 					'gtm-cro-event-action': 'Download Start'
 				});
-				location.href = "https://store.setapp.com/app"+window.appslist[window._appId]+".zip?unregistered_user=1&xid="+expID+"&xvar="+expvarID+"&cid="+clientID+"&downloadSource=app-reg-experiment&eventCategory=Installer&eventAction=Download%20Start";
+				location.href = "https://store.setapp.com/app"+window.appslist[window._appId]+".zip?unregistered_user=1&xid="+expID+"&xvar="+expvarID+"&cid="+clientID+"&downloadSource=app-reg-experiment&eventCategory=Installer&eventAction=Download%20Start&installSetapp=com.setapp.InstallSetapp";
 			}else{
         		// location.href = "https://store.setapp.com/app"+window.appslist[window._appId]+".zip?unregistered_user=1downloadSource={in-app-reg-experiment}?downloadSource={in-app-reg-experiment}";
         	}
