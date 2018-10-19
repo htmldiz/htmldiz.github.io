@@ -1,3 +1,7 @@
+try {
+    hj('trigger', 'hj-cro-event-popup');
+} 
+catch(e) {}
 function initjQuery(callback) {
 	var script = document.createElement( "script" )
 	script.type = "text/javascript";
