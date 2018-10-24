@@ -120,7 +120,7 @@ function readyjQueryinit(){
         $('body').on('click','.close.popup__close-icon',function(){
         	$('.auto-download-section').css('display','none');
         });
-        $('body').on('click','.clickdownloadtrigger',function(){
+        $('body').on('click','.clickdownloadtrigger , .bar .button.-small.-cta',function(){
         	var _gaexp = getCookie('_gaexp');
 			if(_gaexp !== undefined){
 				var clientID = ga.getAll()[0].get('clientId');
