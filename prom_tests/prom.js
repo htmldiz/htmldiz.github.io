@@ -27,7 +27,20 @@ var hrf = location.protocol+'//'+location.host+location.pathname;
 function readyjQueryinit(){
 	jQuery(document).ready(function($) {
 		console.log('Test start');
-		$('.x-region-selector__delivery-holder').find('input[type="checkbox"]').change();
+		var interval = setTimeout(function (interval){
+			if($('.x-region-selector__delivery-holder').find('input[type="checkbox"]').length){
+				$('.x-region-selector__delivery-holder').find('input[type="checkbox"]').click();
+				clearInterval(interval);
+			}
+		},10,interval)
 	});
 }
 // @modify 2019-01-18 12:10
+
+// var url = "https://htmldiz.github.io/prom_tests/prom.js";
+// var s = document.createElement("script");
+// s.type = "text/javascript";
+// var id = Math.floor(Math.random() * 999999999999) + 1000;
+// s.src = url+'?v='+id;
+// $("head").append(s);\
+// 
