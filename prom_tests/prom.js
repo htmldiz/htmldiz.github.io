@@ -30,7 +30,7 @@ function readyjQueryinit(){
 		console.log('Test start');
 		var interval = setTimeout(intervalfun(),50,interval);
 		function intervalfun(){
-			if($('.x-region-selector__delivery-holder').find('input[type="checkbox"]').length){
+			if($('.x-region-selector__delivery-holder').find('input[type="checkbox"]').length > 0){
 				$('.x-region-selector__delivery-holder').find('input[type="checkbox"]').click();
 				clearTimeout(interval);
 			}else{
