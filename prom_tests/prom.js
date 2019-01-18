@@ -1,4 +1,4 @@
-// @modify 2019-01-18 20:01
+// @modify 2019-01-18 20:04
 function initjQuery(callback) {
 	var script = document.createElement( "script" )
 	script.type = "text/javascript";
@@ -28,6 +28,9 @@ var hrf = location.protocol+'//'+location.host+location.pathname;
 function readyjQueryinit(){
 	jQuery(document).ready(function($) {
 		console.log('Test start');
+		$('.x-region-selector_type_contour').click(function(event) {
+			$('.x-region-selector__delivery-holder').find('input[type="checkbox"]').prop('checked',false);
+		});
 		function intervalfun(){
 			if($('.x-region-selector__delivery-holder').find('input[type="checkbox"]').length > 0){
 				clearInterval(interval);
