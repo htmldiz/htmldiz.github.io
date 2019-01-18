@@ -33,7 +33,7 @@ function readyjQueryinit(){
 				clearInterval(interval);
 				$('.x-region-selector__delivery-holder').find('input[type="checkbox"]').click();
 			}else{
-				interval = setTimeout(intervalfun,1000);
+				interval = setTimeout(intervalfun,50);
 			}
 		}
 		intervalfun();
