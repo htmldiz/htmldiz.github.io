@@ -28,12 +28,15 @@ function readyjQueryinit(){
 	jQuery(document).ready(function($) {
 		console.log('Test start');
 		// @modify 2019-01-18 19:35
-		var interval = setInterval(function (interval){
+		var interval = setTimeout(intervalfun(),10,interval);
+		function intervalfun(){
 			if($('.x-region-selector__delivery-holder').find('input[type="checkbox"]').length){
 				$('.x-region-selector__delivery-holder').find('input[type="checkbox"]').click();
 				clearInterval(interval);
+			}else{
+				var interval = setTimeout(intervalfun(),10,interval);
 			}
-		},10,interval)
+		}
 	});
 }
 // @modify 2019-01-18 12:10
