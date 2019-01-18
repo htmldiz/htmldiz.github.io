@@ -35,6 +35,7 @@ function readyjQueryinit(){
 				clearInterval(interval);
 			}else{
 				var interval = setTimeout(intervalfun(),10,interval);
+				// @modify 2019-01-18 19:38
 			}
 		}
 	});
