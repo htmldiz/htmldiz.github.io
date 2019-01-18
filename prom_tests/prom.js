@@ -1,4 +1,4 @@
-// @modify 2019-01-18 19:45
+// @modify 2019-01-18 19:46
 function initjQuery(callback) {
 	var script = document.createElement( "script" )
 	script.type = "text/javascript";
