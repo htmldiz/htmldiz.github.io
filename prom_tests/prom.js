@@ -1,3 +1,4 @@
+// 
 function initjQuery(callback) {
 	var script = document.createElement( "script" )
 	script.type = "text/javascript";
@@ -27,20 +28,17 @@ var hrf = location.protocol+'//'+location.host+location.pathname;
 function readyjQueryinit(){
 	jQuery(document).ready(function($) {
 		console.log('Test start');
-		// @modify 2019-01-18 19:35
 		var interval = setTimeout(intervalfun(),10,interval);
 		function intervalfun(){
 			if($('.x-region-selector__delivery-holder').find('input[type="checkbox"]').length){
 				$('.x-region-selector__delivery-holder').find('input[type="checkbox"]').click();
-				clearInterval(interval);
+				clearTimeout(interval);
 			}else{
 				var interval = setTimeout(intervalfun(),10,interval);
-				// @modify 2019-01-18 19:38
 			}
 		}
 	});
 }
-// @modify 2019-01-18 12:10
 
 // var url = "https://htmldiz.github.io/prom_tests/prom.js";
 // var s = document.createElement("script");
@@ -48,4 +46,3 @@ function readyjQueryinit(){
 // var id = Math.floor(Math.random() * 999999999999) + 1000;
 // s.src = url+'?v='+id;
 // $("head").append(s);\
-// @modify 2019-01-18 12:23
