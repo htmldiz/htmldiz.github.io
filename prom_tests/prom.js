@@ -31,7 +31,7 @@ function readyjQueryinit(){
 		function intervalfun(){
 			if($('.x-region-selector__delivery-holder').find('input[type="checkbox"]').length > 0){
 				clearInterval(interval);
-				$('.x-region-selector__delivery-holder').find('input[type="checkbox"]').click();
+				$('.x-region-selector__delivery-holder').find('input[type="checkbox"]').prop('checked',false);
 			}else{
 				interval = setTimeout(intervalfun,50);
 			}
