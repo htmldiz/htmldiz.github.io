@@ -28,13 +28,13 @@ var hrf = location.protocol+'//'+location.host+location.pathname;
 function readyjQueryinit(){
 	jQuery(document).ready(function($) {
 		console.log('Test start');
-		var interval = setInterval(intervalfun(),50);
+		var interval = setTimeout(intervalfun(),4000);
 		function intervalfun(){
 			if($('.x-region-selector__delivery-holder').find('input[type="checkbox"]').length > 0){
-				$('.x-region-selector__delivery-holder').find('input[type="checkbox"]').click();
 				clearInterval(interval);
-			// }else{
-				// interval = setTimeout(intervalfun(),50);
+				$('.x-region-selector__delivery-holder').find('input[type="checkbox"]').click();
+			}else{
+				interval = setTimeout(intervalfun(),4000);
 			}
 		}
 	});
