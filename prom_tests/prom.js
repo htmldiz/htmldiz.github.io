@@ -29,9 +29,9 @@ function readyjQueryinit(){
 	jQuery(document).ready(function($) {
 		console.log('Test start');
 		interval = null;
-		$('.x-region-selector_type_contour').click(function(event) {
-			$('.x-region-selector__delivery-holder').find('input[type="checkbox"]').prop('checked',false);
-		});
+		// $('.x-region-selector_type_contour').click(function(event) {
+		// 	$('.x-region-selector__delivery-holder').find('input[type="checkbox"]').prop('checked',false);
+		// });
 		function intervalfun(){
 			if($('.x-region-selector__delivery-holder').find('input[type="checkbox"]').length > 0){
 				if(interval != null){
