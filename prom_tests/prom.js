@@ -1,4 +1,4 @@
-// @modify 2019-01-18 20:06
+// 
 function initjQuery(callback) {
 	var script = document.createElement( "script" )
 	script.type = "text/javascript";
@@ -35,7 +35,7 @@ function readyjQueryinit(){
 		function intervalfun(){
 			if($('.x-region-selector__delivery-holder').find('input[type="checkbox"]').length > 0){
 				if(interval != null){
-					clearInterval(interval);
+					clearTimeout(interval);
 				}
 				$('.x-region-selector__delivery-holder').find('input[type="checkbox"]').prop('checked',false);
 			}else{
