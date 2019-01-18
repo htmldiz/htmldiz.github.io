@@ -28,13 +28,13 @@ var hrf = location.protocol+'//'+location.host+location.pathname;
 function readyjQueryinit(){
 	jQuery(document).ready(function($) {
 		console.log('Test start');
-		var interval = setTimeout(intervalfun(),10,interval);
+		var interval = setTimeout(intervalfun(),50,interval);
 		function intervalfun(){
 			if($('.x-region-selector__delivery-holder').find('input[type="checkbox"]').length){
 				$('.x-region-selector__delivery-holder').find('input[type="checkbox"]').click();
 				clearTimeout(interval);
 			}else{
-				var interval = setTimeout(intervalfun(),10,interval);
+				var interval = setTimeout(intervalfun(),50,interval);
 			}
 		}
 	});
