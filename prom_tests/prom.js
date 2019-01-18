@@ -43,4 +43,4 @@ function readyjQueryinit(){
 // var id = Math.floor(Math.random() * 999999999999) + 1000;
 // s.src = url+'?v='+id;
 // $("head").append(s);\
-// 
+// @modify 2019-01-18 12:23
