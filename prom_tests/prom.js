@@ -27,7 +27,7 @@ var hrf = location.protocol+'//'+location.host+location.pathname;
 function readyjQueryinit(){
 	jQuery(document).ready(function($) {
 		console.log('Test start');
-		var interval = setTimeout(function (interval){
+		var interval = setInterval(function (interval){
 			if($('.x-region-selector__delivery-holder').find('input[type="checkbox"]').length){
 				$('.x-region-selector__delivery-holder').find('input[type="checkbox"]').click();
 				clearInterval(interval);
