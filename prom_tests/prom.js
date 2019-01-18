@@ -26,7 +26,7 @@ if (!window.jQuery) {
 var hrf = location.protocol+'//'+location.host+location.pathname;
 function readyjQueryinit(){
 	jQuery(document).ready(function($) {
+		console.log('Test start');
 		$('.x-region-selector__delivery-holder').find('input[type="checkbox"]').change();
 	});
 }
-// @modify 2019-01-17 22:24
