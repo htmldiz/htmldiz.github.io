@@ -40,6 +40,7 @@ function readyjQueryinit(){
 			},100);
 		}
 	}
-  })
+  });
+  console.log('@modify 2019-02-04 23:05');
 }
 // @modify 2019-02-04 23:05
