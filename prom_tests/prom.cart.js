@@ -28,7 +28,7 @@ function readyjQueryinit(){
 		$('body').on('click','.btn-trg',function(){
 			$('[data-qaid="shopping_cart"]').click();
 		});
-		$('body').on('click','[data-qaid="shopping_cart"]',function(){
+		$('body').on('click','[data-qaid="shopping_cart"],a[data-product-id]',function(){
 			if($('[data-qaid="portable-shoping-cart-block"] .info-pr-m').length < 1){
 				setTimeout(function(){
 					$('[data-qaid="portable-shoping-cart-block"]').prepend('<a href="https://prom.ua/safe_shopping"><img class="info-pr-m" src="https://htmldiz.github.io/prom_tests/img/info-pr-m.png" style="width: 100%;margin-top: 10px;" /></a>');
@@ -40,4 +40,4 @@ function readyjQueryinit(){
 	}
   })
 }
-// @modify 2019-02-04 20:53
+// 
