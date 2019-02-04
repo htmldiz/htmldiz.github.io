@@ -25,7 +25,18 @@ if (!window.jQuery) {
 } 
 function readyjQueryinit(){
   $(window).ready(function(){
-		$('[data-qaid="shopping_cart"]').click();
-		$('[data-qaid="portable-shoping-cart-block"]').prepend('<a href=""><img src="https://htmldiz.github.io/prom_tests/img/info-pr-m.png" alt="" /></a>');
+		$('body').on('click','.btn-trg',function(){
+			$('[data-qaid="shopping_cart"]').click();
+		});
+		$('body').on('click','[data-qaid="shopping_cart"]',function(){
+			if($('[data-qaid="portable-shoping-cart-block"] .info-pr-m').length < 1){
+				setTimeout(function(){
+					$('[data-qaid="portable-shoping-cart-block"]').prepend('<a href="https://prom.ua/safe_shopping"><img class="info-pr-m" src="https://htmldiz.github.io/prom_tests/img/info-pr-m.png" style="width: 100%;margin-top: 10px;" /></a>');
+				},100);
+			}
+		});
+  	if(sessionStorage.__io_landing_uri_undefined == '/safe_shopping'){
+  		$('.b-safe-shop').append('<button data-qaid="portable-place-order-button" class="b-cart__button btn-trg">Оформить заказ</button>');
+	}
   })
 } 
