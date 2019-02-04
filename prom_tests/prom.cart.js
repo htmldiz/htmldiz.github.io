@@ -36,8 +36,8 @@ function readyjQueryinit(){
 			}
 		});
   	if(sessionStorage.__io_landing_uri_undefined == '/safe_shopping'){
-  		$('.b-safe-shop').append('<button data-qaid="portable-place-order-button" class="b-cart__button btn-trg">Оформить заказ</button>');
+  		$('.b-safe-shop').append('<button data-qaid="portable-place-order-button" class="b-cart__button btn-trg" style="position: fixed;bottom: 0;">Оформить заказ</button>');
 	}
   })
 }
-// @modify 2019-02-04 20:43
+// 
