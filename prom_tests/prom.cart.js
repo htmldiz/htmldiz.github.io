@@ -46,6 +46,6 @@ function readyjQueryinit(){
   		$('.b-safe-shop').append('<button data-qaid="portable-place-order-button" class="b-cart__button btn-trg" style="position: fixed;bottom: 0;">Оформить заказ</button>');
 	}
   });
-  console.log('@modify 2019-02-04 23:05');
+  console.log('@modify 2019-02-04 23:08');
 }
 // @modify 2019-02-04 23:05
