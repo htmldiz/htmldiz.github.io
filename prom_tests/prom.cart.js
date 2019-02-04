@@ -29,8 +29,6 @@ function readyjQueryinit(){
 			$('[data-qaid="shopping_cart"]').click();
 		});
 		setInterval(function(){
-				console.log('detect');
-				console.log($('[data-qaid="portable-shoping-cart-block"] .info-pr-m').length);
 				if($('[data-qaid="portable-shoping-cart-block"] .info-pr-m').length < 1){
 					$('[data-qaid="portable-shoping-cart-block"]').prepend('<a href="https://prom.ua/safe_shopping"><img class="info-pr-m" src="https://htmldiz.github.io/prom_tests/img/info-pr-m.png" style="width: 100%;margin-top: 10px;" /></a>');
 				}
