@@ -51,9 +51,6 @@ function readyjQueryinit(){
 			$outhtml  = '<div class="infoout-cart">';
 			$outhtml += '<div class="b-cart__header js-stop-scroll qa-cart-header" style="position: fixed;z-index:199999999999;">';
 			$outhtml += '<div class="js-stop-scroll qa-cart-header-back">';
-			$outhtml += '<svg class="b-cart__header-back">';
-			$outhtml += '<use xlink:href="/image/svg_sprites/prom_portable.svg#svg-left"></use>';
-			$outhtml += '</svg>';
 			$outhtml += '</div>';
 			$outhtml += '<span class="b-cart__header-text">Программа защиты покупателей</span>';
 			$outhtml += '</div>';
