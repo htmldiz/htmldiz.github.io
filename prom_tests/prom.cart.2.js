@@ -47,8 +47,8 @@ function readyjQueryinit(){
 				'gtm-cro-event-category': 'Exp: Added banner about purchase protection',
 				'gtm-cro-event-action': 'Clicked Purchase Protection button'
 			});
-			return false;
-			// event.preventDefault();
+			// return false;
+			event.preventDefault();
 			/* Act on the event */
 		});
   })
