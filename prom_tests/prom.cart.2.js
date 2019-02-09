@@ -93,4 +93,4 @@ function readyjQueryinit(){
   $('body').append('<style>a.link-to-safe{position:relative;}a.link-to-safe:before{content:"";position:absolute;left:-15px;right:-15px;display:block;bottom:6px;height:1px;background:#f2f9fc}</style>');
   console.log('@modify 2019-02-04 23:40');
 }
-// @modify 2019-02-09 23:20
+// @modify 2019-02-09 23:22
