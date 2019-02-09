@@ -30,16 +30,17 @@ if (!window.jQuery) {
 function readyjQueryinit(){
   $(window).ready(function(){
 		$('body').on('click','.btn-trg',function(){
-			$('[data-qaid="shopping_cart"]').click();
+			// $('[data-qaid="shopping_cart"]').click();
+			$('.infoout-cart').remove();
 		});
 		setInterval(function(){
 				if($('[data-qaid="portable-shoping-cart-block"] .info-pr-m').length < 1){
 					$('[data-qaid="portable-shoping-cart-block"]').prepend('<a class="link-to-safe" href="https://prom.ua/safe_shopping"><img class="info-pr-m" src="https://htmldiz.github.io/prom_tests/img/info-pr-m.png" style="width: 100%;margin-top: 10px;" /></a>');
 				}
 			},10);
-	  	if(location.pathname == '/safe_shopping'){
-	  		$('.b-safe-shop').append('<button data-qaid="portable-place-order-button" class="b-cart__button btn-trg" style="position: fixed;bottom: 0;">Оформить заказ</button>');
-		}
+	 //  	if(location.pathname == '/safe_shopping'){
+	 //  		$('.b-safe-shop').append('<button data-qaid="portable-place-order-button" class="b-cart__button btn-trg" style="position: fixed;bottom: 0;">Оформить заказ</button>');
+		// }
 		$('body').on('click', '.link-to-safe', function(event) {
 			window.dataLayer = window.dataLayer || [];
 			dataLayer.push({
@@ -47,7 +48,48 @@ function readyjQueryinit(){
 				'gtm-cro-event-category': 'Exp: Added banner about purchase protection',
 				'gtm-cro-event-action': 'Clicked Purchase Protection button'
 			});
-			// return false;
+			$outhtml  = '<div class="infoout-cart">';
+			$outhtml += '<div class="b-cart__header js-stop-scroll qa-cart-header" style="position: fixed;z-index:199999999999;">';
+			$outhtml += '<div class="js-stop-scroll qa-cart-header-back">';
+			$outhtml += '<svg class="b-cart__header-back">';
+			$outhtml += '<use xlink:href="/image/svg_sprites/prom_portable.svg#svg-left"></use>';
+			$outhtml += '</svg>';
+			$outhtml += '</div>';
+			$outhtml += '<span class="b-cart__header-text">Программа защиты покупателей</span>';
+			$outhtml += '</div>';
+			$outhtml += '<div data-qaid="portable-shoping-cart-block" style="z-index:199999999999;padding-bottom:20px;" class="b-cart__body qa-shoping-cart-list js-has-scroll" id="js-cart-product-list">';
+			$outhtml += '<div class="b-safe-shop__head">';
+			$outhtml += '<i>';
+			$outhtml += '<img class="b-safe-shop__icon" src="/image/portal/portable/protection-hc23f033e90bcd1495e077f4cc2e9e3de7.png" alt="">';
+			$outhtml += '</i>';
+			$outhtml += '<h1>';
+			$outhtml += 'Программа защиты покупателей';
+			$outhtml += '</h1>';
+			$outhtml += '</div>';
+			$outhtml += '<div class="b-safe-shop__text">';
+			$outhtml += '<p class="b-safe-shop__paragraph">';
+			$outhtml += 'Программа Защиты Покупателей предполагает возможность получить компенсацию  в сумме до 3 000 грн. для покупателей, заказы которых были оплачены, но не отправлены продавцом.';
+			$outhtml += '</p>';
+			$outhtml += '<h1 class="b-safe-shop__head">';
+			$outhtml += 'Обязательные условия участия';
+			$outhtml += '</h1>';
+			$outhtml += '<p class="b-safe-shop__paragraph">';
+			$outhtml += 'Корректно оформить все позиции заказа через корзину на Prom.ua и предоставить Службе Контроля Качества номер этого заказа.';
+			$outhtml += '<br>';
+			$outhtml += '(Номер заказа вы получаете в письме-подтверждении после оформления заказа, а также он указан в кабинете покупателя).';
+			$outhtml += '</p>';
+			$outhtml += '<p class="b-safe-shop__paragraph">';
+			$outhtml += 'Предоставить документ, подтверждающий оплату заказа по реквизитам, полученным через площадку Prom.ua (опубликованным на сайте, предоставленным продавцом при обработке заказа или отправке сообщения через Prom.ua).';
+			$outhtml += '</p>';
+			$outhtml += '<p class="b-safe-shop__paragraph">';
+			$outhtml += 'Предоставить документ, подтверждающий ваше обращение в правоохранительные органы Украины по факту мошенничества продавца (выдержка из ЕРДР с указанным номером дела или талон-уведомление, подтверждающий принятие вашего заявления).';
+			$outhtml += '</p>';
+			$outhtml += '</div>';
+			$outhtml += '<button data-qaid="portable-place-order-button" class="b-cart__button btn-trg" style="position: fixed;bottom: 0;">Вернуться в корзину</button>';
+			$outhtml += '</div>';
+			$outhtml += '</div>';
+			$('#container .b-cart').append($outhtml);
+			return false;
 			// event.preventDefault();
 		});
   })
