@@ -48,7 +48,7 @@ function readyjQueryinit(){
 				'gtm-cro-event-action': 'Clicked Purchase Protection button'
 			});
 			// return false;
-			event.preventDefault();
+			// event.preventDefault();
 		});
   })
   $('body').append('<style>a.link-to-safe{position:relative;}a.link-to-safe:before{content:"";position:absolute;left:-15px;right:-15px;display:block;bottom:6px;height:1px;background:#f2f9fc}</style>');
