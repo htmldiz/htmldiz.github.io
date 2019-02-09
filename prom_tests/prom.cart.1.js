@@ -1,7 +1,7 @@
 try {
     hj('trigger', 'exp-purchase-protection');
 } 
-catch(e) {}
+catch(e) {} 
 function initjQuery(callback) {
 	var script = document.createElement( "script" )
 	script.type = "text/javascript";
