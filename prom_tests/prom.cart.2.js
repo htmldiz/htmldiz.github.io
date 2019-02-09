@@ -82,7 +82,7 @@ function readyjQueryinit(){
 			$outhtml += 'Предоставить документ, подтверждающий ваше обращение в правоохранительные органы Украины по факту мошенничества продавца (выдержка из ЕРДР с указанным номером дела или талон-уведомление, подтверждающий принятие вашего заявления).';
 			$outhtml += '</p>';
 			$outhtml += '</div>';
-			$outhtml += '<button data-qaid="portable-place-order-button" class="b-cart__button btn-trg" style="position: fixed;bottom: 0;">Вернуться в корзину</button>';
+			$outhtml += '<button data-qaid="portable-place-order-button" class="b-cart__button btn-trg" style="position: fixed;bottom: 0;left: 0;">Вернуться в корзину</button>';
 			$outhtml += '</div>';
 			$outhtml += '</div>';
 			$('#container .b-cart').append($outhtml);
