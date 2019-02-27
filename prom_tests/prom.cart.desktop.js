@@ -34,11 +34,8 @@ function readyjQueryinit(){
 			$('.infoout-cart').remove();
 		});
 		setInterval(function(){
-				if($('[data-qaid="portable-shoping-cart-block"] .info-pr-m').length < 1){
-					$('[data-qaid="portable-shoping-cart-block"]').prepend('<a class="link-to-safe" href="https://prom.ua/safe_shopping"><img class="info-pr-m" src="https://htmldiz.github.io/prom_tests/img/info-pr-m.png" style="width: 100%;margin-top: 10px;" /></a>');
-				}
 				if($('.qa-shoping-cart-list .x-title .info-pr-m').length < 1){
-					$('.qa-shoping-cart-list .x-title').prepend('<a class="link-to-safe" href="https://prom.ua/safe_shopping"><img class="info-pr-m" src="https://htmldiz.github.io/prom_tests/img/info-pr-m.png" style="width: 100%;margin-top: 10px;" /></a>');
+					$('.qa-shoping-cart-list .x-title').prepend('<a class="link-to-safe" href="https://prom.ua/safe_shopping"><img class="info-pr-m" src="https://htmldiz.github.io/prom_tests/img/info-pr-d.png" style="width: 100%;" /></a>');
 				}
 			},10);
 	 //  	if(location.pathname == '/safe_shopping'){
@@ -93,6 +90,5 @@ function readyjQueryinit(){
 			// event.preventDefault();
 		});
   })
-  $('body').append('<style>a.link-to-safe{position:relative;}a.link-to-safe:before{content:"";position:absolute;left:-15px;right:-15px;display:block;bottom:6px;height:1px;background:#f2f9fc}</style>');
-}
+  $('body').append('<style>a.link-to-safe{position:relative;display: inline-block;float: right;width: 445px;margin-top: -5px;margin-right:60px;}</style>');
 }
