@@ -31,16 +31,22 @@ function readyjQueryinit(){
   $(window).ready(function(){
 		$('body').on('click','.btn-trg',function(){
 			// $('[data-qaid="shopping_cart"]').click();
-			$('.infoout-cart').remove();
+			// $('.infoout-cart').remove();
+
+			$(".qa-shoping-cart-list").show();
+			$(".x-overlay__dialog.x-cart-overlay .for_cart_popup.x-ss-page").hide();
 		});
 		setInterval(function(){
 				if($('.qa-shoping-cart-list .x-title .info-pr-m').length < 1){
 					$('.qa-shoping-cart-list .x-title').prepend('<a class="link-to-safe" href="https://prom.ua/safe_shopping"><img class="info-pr-m" src="https://htmldiz.github.io/prom_tests/img/info-pr-d.png" style="width: 100%;" /></a>');
 				}
+
 			},10);
 	 //  	if(location.pathname == '/safe_shopping'){
 	 //  		$('.b-safe-shop').append('<button data-qaid="portable-place-order-button" class="b-cart__button btn-trg" style="position: fixed;bottom: 0;">Оформить заказ</button>');
 		// }
+
+
 		$('body').on('click', '.link-to-safe', function(event) {
 			window.dataLayer = window.dataLayer || [];
 			dataLayer.push({
@@ -48,47 +54,14 @@ function readyjQueryinit(){
 				'gtm-cro-event-category': 'Exp: Added banner about purchase protection',
 				'gtm-cro-event-action': 'Clicked Purchase Protection button'
 			});
-			$outhtml  = '<div class="infoout-cart">';
-			$outhtml += '<div class="b-cart__header js-stop-scroll qa-cart-header" style="position: fixed;z-index:199999999999;">';
-			$outhtml += '<div class="js-stop-scroll qa-cart-header-back">';
-			$outhtml += '</div>';
-			$outhtml += '<span class="b-cart__header-text">Программа защиты покупателей</span>';
-			$outhtml += '</div>';
-			$outhtml += '<div data-qaid="portable-shoping-cart-block" style="z-index:199999999999;padding-bottom:20px;" class="b-cart__body qa-shoping-cart-list js-has-scroll" id="js-cart-product-list">';
-			$outhtml += '<div class="b-safe-shop__head">';
-			$outhtml += '<i>';
-			$outhtml += '<img class="b-safe-shop__icon" src="/image/portal/portable/protection-hc23f033e90bcd1495e077f4cc2e9e3de7.png" alt="">';
-			$outhtml += '</i>';
-			$outhtml += '<h1>';
-			$outhtml += 'Программа защиты покупателей';
-			$outhtml += '</h1>';
-			$outhtml += '</div>';
-			$outhtml += '<div class="b-safe-shop__text">';
-			$outhtml += '<p class="b-safe-shop__paragraph">';
-			$outhtml += 'Программа Защиты Покупателей предполагает возможность получить компенсацию  в сумме до 3 000 грн. для покупателей, заказы которых были оплачены, но не отправлены продавцом.';
-			$outhtml += '</p>';
-			$outhtml += '<h1 class="b-safe-shop__head">';
-			$outhtml += 'Обязательные условия участия';
-			$outhtml += '</h1>';
-			$outhtml += '<p class="b-safe-shop__paragraph">';
-			$outhtml += 'Корректно оформить все позиции заказа через корзину на Prom.ua и предоставить Службе Контроля Качества номер этого заказа.';
-			$outhtml += '<br>';
-			$outhtml += '(Номер заказа вы получаете в письме-подтверждении после оформления заказа, а также он указан в кабинете покупателя).';
-			$outhtml += '</p>';
-			$outhtml += '<p class="b-safe-shop__paragraph">';
-			$outhtml += 'Предоставить документ, подтверждающий оплату заказа по реквизитам, полученным через площадку Prom.ua (опубликованным на сайте, предоставленным продавцом при обработке заказа или отправке сообщения через Prom.ua).';
-			$outhtml += '</p>';
-			$outhtml += '<p class="b-safe-shop__paragraph">';
-			$outhtml += 'Предоставить документ, подтверждающий ваше обращение в правоохранительные органы Украины по факту мошенничества продавца (выдержка из ЕРДР с указанным номером дела или талон-уведомление, подтверждающий принятие вашего заявления).';
-			$outhtml += '</p>';
-			$outhtml += '</div>';
-			$outhtml += '<button data-qaid="portable-place-order-button" class="b-cart__button btn-trg" style="position: fixed;bottom: 0;left: 0;">Вернуться в корзину</button>';
-			$outhtml += '</div>';
-			$outhtml += '</div>';
-			$('.b-cart').append($outhtml);
+			$('.x-overlay__dialog.x-cart-overlay').append('<div class="for_cart_popup x-ss-page"> <div class="x-ss-page__content"> <h1 class="x-ss-page__title"> Программа защиты покупателей</h1> <table class="x-ss-page__table"> <tbody><tr> <td class="x-ss-page__cell x-ss-page__cell_va_middle"> <img src="https://uaprom-static.c.prom.st/image/portal/content_pages/safe_shopping/defence-hc8f785ac239441fa46a8fba532188b1a6.svg" class="x-ss-page__img" alt="defence"> </td><td class="x-ss-page__cell x-ss-page__cell_va_middle"> <p> Программа Защиты Покупателей предполагает возможность получить компенсацию в сумме до 3 000 грн. для покупателей, заказы которых были оплачены, но не отправлены продавцом. </p></td></tr></tbody></table> </div><div class="x-ss-page__line"></div><div class="x-ss-page__content"> <h2 class="x-title x-title_ta_center x-title_mb_30 x-title_lh_1"> Для получения компенсации нужно выполнить три условия: </h2> <table class="x-ss-page__table x-ss-page__table_layout_fixed"> <tbody><tr> <td class="x-ss-page__cell x-ss-page__cell_align_center"> <img src="https://uaprom-static.c.prom.st/image/portal/content_pages/safe_shopping/cart-hc340f0d52bbacafc5b83de14cd64390b9.svg" class="x-ss-page__img x-ss-page__img_type_small" alt="cart"> </td><td class="x-ss-page__cell x-ss-page__cell_align_center"> <img src="https://uaprom-static.c.prom.st/image/portal/content_pages/safe_shopping/opl-hc1089eb35bb73c22cda17e48edc6be740.svg" class="x-ss-page__img x-ss-page__img_type_small" alt="cart"> </td><td class="x-ss-page__cell x-ss-page__cell_align_center"> <img src="https://uaprom-static.c.prom.st/image/portal/content_pages/safe_shopping/police-hc90e4947821a0e35d57d48b2fd86e335a.svg" class="x-ss-page__img x-ss-page__img_type_small" alt="cart"> </td></tr><tr> <td class="x-ss-page__cell"> <p> Корректно оформить все позиции заказа через корзину на Prom.ua и предоставить Службе Контроля Качества номер этого заказа. </p><br><p> Номер заказа вы получаете в письме-подтверждении после оформления заказа, а также он указан в кабинете покупателя. </p><div class="x-ss-page__link" id="link-safety-advice"> Рекомендации </div></td><td class="x-ss-page__cell"> <p> Предоставить документ, подтверждающий оплату заказа по реквизитам, полученным через площадку Prom.ua (опубликованным на сайте, предоставленным продавцом при обработке заказа или отправке сообщения через Prom.ua). </p></td><td class="x-ss-page__cell"> <p> Предоставить документ, подтверждающий ваше обращение в правоохранительные органы Украины по факту мошенничества продавца (выдержка из ЕРДР с указанным номером дела или талон-уведомление, подтверждающий принятие вашего заявления). </p><div class="x-ss-page__link" id="link-contact-authorities"> Процедура обращения </div></td></tr></tbody></table> </div><div class="x-ss-page__line"></div><div class="x-gradient-block x-gradient-block_size_large"> <div class="x-gradient-block__content x-gradient-block__content_size_large"> <div class="x-title x-title_ta_center x-title_mb_30 x-title_lh_1"> Когда покупатель не сможет воспользоваться Программой Защиты Покупателей? </div><ul class="x-ss-page__list"> <li class="x-ss-page__list-item"> Сделка на портале Prom.ua была оформлена не через корзину; </li><li class="x-ss-page__list-item"> Реквизиты для оплаты заказа получены вне системы Prom.ua. Например через sms сообщение, личную почту, в телефонном режиме или другие каналы общения; </li><li class="x-ss-page__list-item"> Товар заказан с помощью <a href="https://prom.ua/no_risk_purchase_rules#customer"> Покупки без риска</a>; </li><li class="x-ss-page__list-item"> Товар доставлен, но не соответствует заказу или товар оказался ненадлежащего качества (в таком случае обмен или возврат товара осуществляется в соответствии с Законом Украины "О защите прав потребителей"); </li><li class="x-ss-page__list-item"> Место отправки или место получения товара находится за пределами Украины; </li><li class="x-ss-page__list-item"> С момента оформления заказа прошло более 90 календарных дней; </li><li class="x-ss-page__list-item"> Товар не был доставлен или был повреждён по вине службы доставки (обратитесь в отделение перевозчика для уточнения процедуры компенсации); </li><li class="x-ss-page__list-item"> На момент обращения покупатель уже получил компенсацию по сделке от продавца или платежной системы; </li><li class="x-ss-page__list-item"> Заказана услуга. </li></ul> <p class="x-ss-page__grey-text"> *Обращение на выплату компенсации могут подавать только лица, данные которых указаны в заказе. Заявки от третьих лиц не рассматриваются. </p></div></div><button data-qaid="portable-place-order-button" class="b-cart__button btn-trg b-cart__button btn-trg x-button x-button_theme_dark-blue x-button_width_full x-button_size_l">Вернуться в корзину</button></div>');
+
+			$(".x-overlay__dialog.x-cart-overlay .for_cart_popup x-ss-page").show();
+			$(".qa-shoping-cart-list").hide();
 			return false;
 			// event.preventDefault();
 		});
   })
-  $('body').append('<style>a.link-to-safe{position:relative;display: inline-block;float: right;width: 445px;margin-top: -5px;margin-right:60px;}</style>');
+  $('body').append('<style>a.link-to-safe{position:relative;display: inline-block;float: right;width: 445px;margin-top: -5px;margin-right:60px;}.x-ss-page__line:after{left: -30px;right: -30px;}.x-ss-page{padding-right: 0px;padding-left: 0px;}.for_cart_popup .b-cart__button.btn-trg{display: block;-webkit-box-sizing: border-box;box-sizing: border-box;margin: auto;padding: 11px;width: 100%;border: 0;border-radius: 3px;background-color: #51499d;color: #fff;text-align: center;font-weight: 700;font-size: 14px;cursor: pointer;-webkit-appearance: none;max-width: 400px;margin-top: 60px;}.for_cart_popup .x-gradient-block {background: none;}</style>');
+  $('head').append('<link rel="stylesheet" href="https://uaprom-static.c.prom.st/css/portal_content_pages-hcd75db33f336d1821d9b289d6b1144bdf.css" type="text/css" media="all">');
 }
