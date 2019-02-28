@@ -30,7 +30,12 @@ if (!window.jQuery) {
 function readyjQueryinit(){
   $(window).ready(function(){
 		$('body').on('click','.btn-trg',function(){
-			// $('[data-qaid="shopping_cart"]').click();
+			window.dataLayer = window.dataLayer || [];
+				dataLayer.push({
+				'event': 'gtm-cro-event',
+				'gtm-cro-event-category': 'cro-experiment-protect',
+				'gtm-cro-event-action': 'back to cart click'
+			});
 			$('.infoout-cart').remove();
 		});
 		setInterval(function(){
@@ -43,11 +48,8 @@ function readyjQueryinit(){
 		// }
 		$('body').on('click', '.link-to-safe', function(event) {
 			window.dataLayer = window.dataLayer || [];
-			dataLayer.push({
-				'event': 'gtm-cro-event',
-				'gtm-cro-event-category': 'Exp: Added banner about purchase protection',
-				'gtm-cro-event-action': 'Clicked Purchase Protection button'
-			});
+			ga('send', 'event', 'cro-experiment-protect', 'purchase protection banner click');
+			
 			$outhtml  = '<div class="infoout-cart">';
 			$outhtml += '<div class="b-cart__header js-stop-scroll qa-cart-header" style="position: fixed;z-index:199999999999;">';
 			$outhtml += '<div class="js-stop-scroll qa-cart-header-back">';
