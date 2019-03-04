@@ -29,6 +29,7 @@ if (!window.jQuery) {
 } 
 function readyjQueryinit(){
   $(window).ready(function(){
+  		console.log('GTM Loaded');
 		function telephoneCheck(str) {
 		  var isphone = /^\+?[0-9\-\+]{9,16}$/.test(str);
 			console.log(isphone);
@@ -84,24 +85,39 @@ function readyjQueryinit(){
   				$('[data-activeitem="'+tabname+'"]').addClass('active');
   			}
   		}
-  		if($('#shoppingCartMountPoint').length>0){
-	  		$('body').on('click', '[data-activeitem]', function(event) {
-	  			var activeitem = $(this).attr('data-activeitem');
-	  			switch_tab(activeitem);
-	  			return false;
-	  		});
-	  		$('#shoppingCartMountPoint [data-qaid="client_info"] .x-order-form-row [data-qaid="client_email"]').parent().addClass('client_email-row');
-			$('#shoppingCartMountPoint [data-qaid="client_info"] .x-order-form-row [data-qaid="client_phone"]').parent().addClass('client_phone-row');
-  			$('#shoppingCartMountPoint [data-qaid="client_info"] .x-order-form').prepend('<div class="form-top-links"><a class="active link-tab" href="#" data-activeitem="clientinfo">Шаг 1:<strong>Контакты</strong></a> <a class="link-tab" data-activeitem="delivery" href="#">Шаг 2: <strong>Доставка и оплата</strong></a></div>');
-  			$('#shoppingCartMountPoint [data-qaid="client_info"] .x-order-prepare__total').before('<div class="x-order-form-row"><span class="x-button x-button_width_full x-button_theme_purple nextstep"><span class="x-button__text qa-test-create-order">Выбрать способ доставки ></span></span></div>');
-  			switch_tab('clientinfo');
-  			$('body').on('click', '.nextstep', function(event) {
-  				var is_validate = validateemailadnphone();
-  				if(is_validate === true){
-  					switch_tab('delivery');
-  				}
-  				return false;
-  			});
+  		window.displaycartpage = false;
+  		setTimeout(function(){
+  			check_isready();
+  		},10);
+  		function check_isready(){
+	  		if($('#shoppingCartMountPoint [data-qaid="client_info"]').length > 0){
+		  		$('body').on('click', '[data-activeitem]', function(event) {
+		  			var activeitem = $(this).attr('data-activeitem');
+		  			switch_tab(activeitem);
+		  			return false;
+		  		});
+		  		$('#shoppingCartMountPoint [data-qaid="client_info"] .x-order-form-row [data-qaid="client_email"]').parent().addClass('client_email-row');
+				$('#shoppingCartMountPoint [data-qaid="client_info"] .x-order-form-row [data-qaid="client_phone"]').parent().addClass('client_phone-row');
+	  			if($('#shoppingCartMountPoint [data-qaid="client_info"] .x-order-form .form-top-links').length < 1){
+	  				$('#shoppingCartMountPoint [data-qaid="client_info"] .x-order-form').prepend('<div class="form-top-links"><a class="active link-tab" href="#" data-activeitem="clientinfo">Шаг 1:<strong>Контакты</strong></a> <a class="link-tab" data-activeitem="delivery" href="#">Шаг 2: <strong>Доставка и оплата</strong></a></div>');
+	  				$('#shoppingCartMountPoint [data-qaid="client_info"] .x-order-prepare__total').before('<div class="x-order-form-row"><span class="x-button x-button_width_full x-button_theme_purple nextstep"><span class="x-button__text qa-test-create-order">Выбрать способ доставки</span></span></div>');
+	  			}
+	  			switch_tab('clientinfo');
+	  			$('body').on('click', '.nextstep', function(event) {
+	  				var is_validate = validateemailadnphone();
+	  				if(is_validate === true){
+	  					switch_tab('delivery');
+	  				}
+	  				return false;
+	  			});
+	  			window.displaycartpage = true;
+	  			
+	  		}
+	  		if(window.displaycartpage === false){
+		  		setTimeout(function(){
+		  			check_isready();
+		  		},10);
+	  		}
   		}
   })
 } 
