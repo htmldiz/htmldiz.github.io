@@ -1,7 +1,7 @@
 try {
     hj('trigger', 'exp-checkout');
 } 
-catch(e) {} 
+catch(e) {}
 function initjQuery(callback) {
 	var script = document.createElement( "script" )
 	script.type = "text/javascript";
@@ -29,6 +29,79 @@ if (!window.jQuery) {
 } 
 function readyjQueryinit(){
   $(window).ready(function(){
-
+		function telephoneCheck(str) {
+		  var isphone = /^\+?[0-9\-\+]{9,16}$/.test(str);
+			console.log(isphone);
+		  return isphone;
+		}
+  		function validateemailadnphone(){
+  			var ret = true;
+	  		$('#shoppingCartMountPoint [data-qaid="client_info"] .x-input__validation').remove();
+  			var phone_number = $('#shoppingCartMountPoint [data-qaid="client_info"] .x-order-form-row [data-qaid="client_phone"] input').val();
+  			if(phone_number == '' || phone_number == '+380'){
+  				is_phone = true;
+  				$('#shoppingCartMountPoint [data-qaid="client_info"] .x-order-form-row [data-qaid="client_phone"]').append('<div class="x-input__validation" data-qaid="required_field">Это обязательное поле.</div>');
+  				ret      = false;
+  			}else{
+	  			var is_phone = telephoneCheck(phone_number);
+  			}
+  			if(!is_phone){
+  				$('#shoppingCartMountPoint [data-qaid="client_info"] .x-order-form-row [data-qaid="client_phone"]').append('<div class="x-input__validation" data-qaid="required_field">Номер может содержать только цифры, +, -, (, ) и содержать от 9 до 16 цифр</div>');
+  				ret = false;
+  			}
+  			return ret;
+  		}
+  		function switch_tab(tabname){
+  			var canbeactivate = false;
+  			switch (tabname) {
+  				case 'clientinfo':
+  					$('#shoppingCartMountPoint [data-qaid="client_info"] .x-order-form-row').css('display','none');
+					$('#shoppingCartMountPoint [data-qaid="client_info"] .x-order-form__accept').css('display','none');
+					$('#shoppingCartMountPoint [data-qaid="client_info"] .x-order-form__agreement').css('display','none');
+  					$('#shoppingCartMountPoint [data-qaid="client_info"] .x-order-prepare__total').css('display','none');
+		  			$('#shoppingCartMountPoint [data-qaid="client_info"] .x-order-form-row [data-qaid="client_email"]').parent().attr('style','');
+		  			$('#shoppingCartMountPoint [data-qaid="client_info"] .x-order-form-row [data-qaid="client_phone"]').parent().attr('style','');
+		  			$('#shoppingCartMountPoint [data-qaid="client_info"] .x-order-form-row .nextstep').parent().attr('style','');
+		  			canbeactivate = true;
+  					break;
+  				default:
+	  				var validateep = validateemailadnphone();
+	  				if(validateep == true){
+	  					$('#shoppingCartMountPoint [data-qaid="client_info"] [data-activeitem="clientinfo"]').addClass('valid');
+	  					$('#shoppingCartMountPoint [data-qaid="client_info"] .x-order-form-row').attr('style','');
+	  					$('#shoppingCartMountPoint [data-qaid="client_info"] .x-order-prepare__total').attr('style','');
+	  					$('#shoppingCartMountPoint [data-qaid="client_info"] .x-order-form__agreement').attr('style','');
+						$('#shoppingCartMountPoint [data-qaid="client_info"] .x-order-form__accept').attr('style','');
+	  					$('#shoppingCartMountPoint [data-qaid="client_info"] .x-order-form-row .nextstep').parent().css('display','none');
+			  			$('#shoppingCartMountPoint [data-qaid="client_info"] .x-order-form-row [data-qaid="client_email"]').parent().css('display','none');
+			  			$('#shoppingCartMountPoint [data-qaid="client_info"] .x-order-form-row [data-qaid="client_phone"]').parent().css('display','none');
+			  			canbeactivate = true;
+		  			}
+  					break;
+  			}
+  			if(canbeactivate == true){
+  				$('[data-activeitem=""]').removeClass('active');
+  				$('[data-activeitem="'+tabname+'"]').addClass('active');
+  			}
+  		}
+  		if($('#shoppingCartMountPoint').length>0){
+	  		$('body').on('click', '[data-activeitem]', function(event) {
+	  			var activeitem = $(this).attr('data-activeitem');
+	  			switch_tab(activeitem);
+	  			return false;
+	  		});
+	  		$('#shoppingCartMountPoint [data-qaid="client_info"] .x-order-form-row [data-qaid="client_email"]').parent().addClass('client_email-row');
+			$('#shoppingCartMountPoint [data-qaid="client_info"] .x-order-form-row [data-qaid="client_phone"]').parent().addClass('client_phone-row');
+  			$('#shoppingCartMountPoint [data-qaid="client_info"] .x-order-form').prepend('<div class="form-top-links"><a class="active link-tab" href="#" data-activeitem="clientinfo">Шаг 1:<strong>Контакты</strong></a> <a class="link-tab" data-activeitem="delivery" href="#">Шаг 2: <strong>Доставка и оплата</strong></a></div>');
+  			$('#shoppingCartMountPoint [data-qaid="client_info"] .x-order-prepare__total').before('<div class="x-order-form-row"><span class="x-button x-button_width_full x-button_theme_purple nextstep"><span class="x-button__text qa-test-create-order">Выбрать способ доставки ></span></span></div>');
+  			switch_tab('clientinfo');
+  			$('body').on('click', '.nextstep', function(event) {
+  				var is_validate = validateemailadnphone();
+  				if(is_validate === true){
+  					switch_tab('delivery');
+  				}
+  				return false;
+  			});
+  		}
   })
 }
