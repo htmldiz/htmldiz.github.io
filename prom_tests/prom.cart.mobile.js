@@ -48,7 +48,7 @@ function readyjQueryinit(){
 		// }
 		$('body').on('click', '.link-to-safe', function(event) {
 			window.dataLayer = window.dataLayer || [];
-			ga('send', 'event', 'cro-experiment-protect', 'purchase protection banner click');
+			gaUA('main.send', 'event', 'cro-experiment-protect', 'purchase protection banner click');
 			
 			$outhtml  = '<div class="infoout-cart">';
 			$outhtml += '<div class="b-cart__header js-stop-scroll qa-cart-header" style="position: fixed;z-index:199999999999;">';
