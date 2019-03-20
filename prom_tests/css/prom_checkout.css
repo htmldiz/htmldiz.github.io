@@ -1,3 +1,26 @@
 .form-top-links {
 	max-width: 500px;
+	display: flex;
+	border: 1px solid #c7ced1;
+	background-color: #f4f6fc;
+}
+.form-top-links:first-child .active {
+    background-image: url("https://htmldiz.github.io/prom_tests/img/first_step_bg.png");
+}
+.form-top-links:last-child .active {
+    background-image: url("https://htmldiz.github.io/prom_tests/img/second_step_bg.png");
+}
+.link-tab {
+	margin: -1px;
+	color: #333333;
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 20px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 17px 50px;
+}
+.link-tab:hover {
+	color: inherit;
+	text-decoration: none;
 }

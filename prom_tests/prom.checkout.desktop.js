@@ -28,6 +28,7 @@ if (!window.jQuery) {
 	readyjQueryinit();
 } 
 function readyjQueryinit(){
+  $("head").append("<link href='https://htmldiz.github.io/prom_tests/css/prom_checkout.css' type='text/css' rel='stylesheet' />")
   $(window).ready(function(){
   		console.log('GTM Loaded');
 		function telephoneCheck(str) {
@@ -120,4 +121,4 @@ function readyjQueryinit(){
 	  		}
   		}
   })
-} 
+}
