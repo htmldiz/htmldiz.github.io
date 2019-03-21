@@ -5,7 +5,7 @@
 	background-color: #f4f6fc;
     box-sizing: border-box;
 }
-.form-top-links .link-tab:nth-child(2).active {
+.form-top-links .link-tab:nth-child(1).active {
     background-image: url("https://htmldiz.github.io/prom_tests/img/first_step_bg.png");
     margin-right: -10px;
 }
