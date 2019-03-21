@@ -3,22 +3,27 @@
 	display: flex;
 	border: 1px solid #c7ced1;
 	background-color: #f4f6fc;
+    box-sizing: border-box;
 }
-.form-top-links:first-child .active {
+.form-top-links .link-tab:nth-child(2).active {
     background-image: url("https://htmldiz.github.io/prom_tests/img/first_step_bg.png");
+    margin-right: -10px;
 }
-.form-top-links:last-child .active {
+.form-top-links .link-tab:nth-child(2).active {
     background-image: url("https://htmldiz.github.io/prom_tests/img/second_step_bg.png");
+    margin-left: -10px;
 }
 .link-tab {
 	margin: -1px;
 	color: #333333;
-	font-size: 15px;
+	font-size: 13px;
 	font-weight: 400;
 	line-height: 20px;
     background-repeat: no-repeat;
-    background-size: contain;
-    padding: 17px 50px;
+    background-size: 100% 100%;
+    padding: 15px 40px;
+    flex: 0 0 calc(50% + 10px);
+    box-sizing: border-box;
 }
 .link-tab:hover {
 	color: inherit;
