@@ -11,7 +11,7 @@
 }
 .form-top-links .link-tab:nth-child(2).active {
     background-image: url("https://htmldiz.github.io/prom_tests/img/second_step_bg.png");
-    margin-left: -10px;
+    margin-left: -8px;
 }
 .link-tab {
 	margin: -1px;
@@ -21,11 +21,14 @@
 	line-height: 20px;
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    padding: 15px 40px;
+    padding: 15px 30px 15px 50px;
     flex: 0 0 calc(50% + 10px);
     box-sizing: border-box;
 }
 .link-tab:hover {
 	color: inherit;
 	text-decoration: none;
+}
+.x-order-form-row__label {
+	margin-top: 30px;
 }
