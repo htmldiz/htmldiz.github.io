@@ -32,6 +32,7 @@
     background-size: 100% 100%;
     padding: 15px 30px 15px 50px;
     flex: 0 0 calc(50% + 10px);
+    min-width: calc(50% + 10px);
     box-sizing: border-box;
     position: relative;
 }
