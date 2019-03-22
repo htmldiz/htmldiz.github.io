@@ -81,8 +81,8 @@ function readyjQueryinit(){
 		  			}
   					break;
   			}
-  			$('[data-activeitem]').removeClass('active');
   			if(canbeactivate == true){
+  				$('[data-activeitem]').removeClass('active');
   				$('[data-activeitem="'+tabname+'"]').addClass('active');
   			}
   		}
