@@ -66,7 +66,7 @@ function readyjQueryinit(){
 				'gtm-cro-event-action': 'payment option field click'
 			});
   		})
-  		$('.qa-test-deliveryinfo [data-qaid="delivery_option"]').click(function() {
+  		$('[data-qaid="delivery_option"] [class*="dropdown__selected"]').click(function() {
   			console.log("delivery option field click")
 			window.dataLayer = window.dataLayer || [];
 			dataLayer.push({
@@ -75,7 +75,7 @@ function readyjQueryinit(){
 				'gtm-cro-event-action': 'delivery option field click'
 			});
   		})
-  		$('[name="firstName"]').focus(function() {
+  		$('body').on('focus', '[name="firstName"]', function(event) {
   			console.log("first name field focus")
 			window.dataLayer = window.dataLayer || [];
 			dataLayer.push({
@@ -84,7 +84,7 @@ function readyjQueryinit(){
 				'gtm-cro-event-action': 'first name field focus'
 			});
   		})
-  		$('[name="lastName"]').focus(function() {
+  		$('body').on('focus', '[name="lastName"]', function(event) {
   			console.log("last name field focus")
 			window.dataLayer = window.dataLayer || [];
 			dataLayer.push({
@@ -93,7 +93,7 @@ function readyjQueryinit(){
 				'gtm-cro-event-action': 'last name field focus'
 			});
   		})
-  		$('[name="secondName"]').focus(function() {
+  		$('body').on('focus', '[name="secondName"]', function(event) {
   			console.log("second name field focus")
 			window.dataLayer = window.dataLayer || [];
 			dataLayer.push({
@@ -102,7 +102,7 @@ function readyjQueryinit(){
 				'gtm-cro-event-action': 'second name field focus'
 			});
   		})
-  		$('[data-qaid="delivery-type-dd"] [class*="dropdown__selected"]').click(function() {
+  		$('body').on('click', '[data-qaid="delivery-type-dd"] [class*="dropdown__selected"]', function(event) {
   			console.log("delivery type field click")
 			window.dataLayer = window.dataLayer || [];
 			dataLayer.push({
@@ -111,7 +111,7 @@ function readyjQueryinit(){
 				'gtm-cro-event-action': 'delivery type field click'
 			});
   		})
-  		$('[data-qaid="city-dd"] [class*="dropdown__selected"]').click(function() {
+  		$('body').on('click', '[data-qaid="city-dd"] [class*="dropdown__selected"]', function(event) {
   			console.log("ity field click")
 			window.dataLayer = window.dataLayer || [];
 			dataLayer.push({
@@ -120,7 +120,7 @@ function readyjQueryinit(){
 				'gtm-cro-event-action': 'city field click'
 			});
   		})
-  		$('[data-qaid="warehouse-dd"] [class*="dropdown__selected"]').click(function() {
+  		$('body').on('click', '[data-qaid="warehouse-dd"] [class*="dropdown__selected"]', function(event) {
   			console.log("warehouse field click")
 			window.dataLayer = window.dataLayer || [];
 			dataLayer.push({
@@ -129,7 +129,7 @@ function readyjQueryinit(){
 				'gtm-cro-event-action': 'warehouse field click'
 			});
   		})
-  		$('[data-qaid="notes_input"]').focus(function() {
+  		$('body').on('focus', '[data-qaid="notes_input"]', function(event) {
   			console.log("comments field focus")
 			window.dataLayer = window.dataLayer || [];
 			dataLayer.push({
@@ -139,7 +139,7 @@ function readyjQueryinit(){
 			});
   		})
 
-  		$('[data-qaid="create_order_btn"]').click(function() {
+  		$('body').on('click', '[data-qaid="create_order_btn"]', function(event) {
   			console.log("create order button click")
 			window.dataLayer = window.dataLayer || [];
 			dataLayer.push({
