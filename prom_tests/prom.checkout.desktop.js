@@ -1,6 +1,5 @@
-// @modify 2019-03-22 16:43
 try {
-    hj('trigger', 'exp-checkout');
+    hj('trigger', 'cro-experiment-2stepscheckout');
 } 
 catch(e) {}
 function initjQuery(callback) {
@@ -31,7 +30,125 @@ if (!window.jQuery) {
 function readyjQueryinit(){
   $("head").append("<link href='https://htmldiz.github.io/prom_tests/css/prom_checkout.css' type='text/css' rel='stylesheet' />")
   $(window).ready(function(){
-  		console.log('GTM Loaded');
+  		$(".x-input__field.qa-test-email").focus(function() {
+  			console.log("email field focus")
+			window.dataLayer = window.dataLayer || [];
+			dataLayer.push({
+				'event': 'gtm-cro-event',
+				'gtm-cro-event-category': 'cro-experiment-2stepscheckout',
+				'gtm-cro-event-action': 'email field focus'
+			});
+  		})
+  		$(".x-input__field.qa-test-phone").focus(function() {
+  			console.log("phone field focus")
+			window.dataLayer = window.dataLayer || [];
+			dataLayer.push({
+				'event': 'gtm-cro-event',
+				'gtm-cro-event-category': 'cro-experiment-2stepscheckout',
+				'gtm-cro-event-action': 'phone field focus'
+			});
+  		})
+		$('body').on('click', '.nextstep', function(event) {
+			console.log("proceed to shipping button click")
+			window.dataLayer = window.dataLayer || [];
+			dataLayer.push({
+				'event': 'gtm-cro-event',
+				'gtm-cro-event-category': 'cro-experiment-2stepscheckout',
+				'gtm-cro-event-action': 'proceed to shipping button click'
+			});
+		});
+  		$(".x-order-form-row__field_pos_relative .x-drop-down__value").click(function() {
+  			console.log("payment option field click")
+			window.dataLayer = window.dataLayer || [];
+			dataLayer.push({
+				'event': 'gtm-cro-event',
+				'gtm-cro-event-category': 'cro-experiment-2stepscheckout',
+				'gtm-cro-event-action': 'payment option field click'
+			});
+  		})
+  		$('[data-qaid="delivery_option"] [class*="dropdown__selected"]').click(function() {
+  			console.log("delivery option field click")
+			window.dataLayer = window.dataLayer || [];
+			dataLayer.push({
+				'event': 'gtm-cro-event',
+				'gtm-cro-event-category': 'cro-experiment-2stepscheckout',
+				'gtm-cro-event-action': 'delivery option field click'
+			});
+  		})
+  		$('body').on('focus', '[name="firstName"]', function(event) {
+  			console.log("first name field focus")
+			window.dataLayer = window.dataLayer || [];
+			dataLayer.push({
+				'event': 'gtm-cro-event',
+				'gtm-cro-event-category': 'cro-experiment-2stepscheckout',
+				'gtm-cro-event-action': 'first name field focus'
+			});
+  		})
+  		$('body').on('focus', '[name="lastName"]', function(event) {
+  			console.log("last name field focus")
+			window.dataLayer = window.dataLayer || [];
+			dataLayer.push({
+				'event': 'gtm-cro-event',
+				'gtm-cro-event-category': 'cro-experiment-2stepscheckout',
+				'gtm-cro-event-action': 'last name field focus'
+			});
+  		})
+  		$('body').on('focus', '[name="secondName"]', function(event) {
+  			console.log("second name field focus")
+			window.dataLayer = window.dataLayer || [];
+			dataLayer.push({
+				'event': 'gtm-cro-event',
+				'gtm-cro-event-category': 'cro-experiment-2stepscheckout',
+				'gtm-cro-event-action': 'second name field focus'
+			});
+  		})
+  		$('body').on('click', '[data-qaid="delivery-type-dd"] [class*="dropdown__selected"]', function(event) {
+  			console.log("delivery type field click")
+			window.dataLayer = window.dataLayer || [];
+			dataLayer.push({
+				'event': 'gtm-cro-event',
+				'gtm-cro-event-category': 'cro-experiment-2stepscheckout',
+				'gtm-cro-event-action': 'delivery type field click'
+			});
+  		})
+  		$('body').on('click', '[data-qaid="city-dd"] [class*="dropdown__selected"]', function(event) {
+  			console.log("ity field click")
+			window.dataLayer = window.dataLayer || [];
+			dataLayer.push({
+				'event': 'gtm-cro-event',
+				'gtm-cro-event-category': 'cro-experiment-2stepscheckout',
+				'gtm-cro-event-action': 'city field click'
+			});
+  		})
+  		$('body').on('click', '[data-qaid="warehouse-dd"] [class*="dropdown__selected"]', function(event) {
+  			console.log("warehouse field click")
+			window.dataLayer = window.dataLayer || [];
+			dataLayer.push({
+				'event': 'gtm-cro-event',
+				'gtm-cro-event-category': 'cro-experiment-2stepscheckout',
+				'gtm-cro-event-action': 'warehouse field click'
+			});
+  		})
+  		$('body').on('focus', '[data-qaid="notes_input"]', function(event) {
+  			console.log("comments field focus")
+			window.dataLayer = window.dataLayer || [];
+			dataLayer.push({
+				'event': 'gtm-cro-event',
+				'gtm-cro-event-category': 'cro-experiment-2stepscheckout',
+				'gtm-cro-event-action': 'comments field focus'
+			});
+  		})
+
+  		$('body').on('click', '[data-qaid="create_order_btn"]', function(event) {
+  			console.log("create order button click")
+			window.dataLayer = window.dataLayer || [];
+			dataLayer.push({
+				'event': 'gtm-cro-event',
+				'gtm-cro-event-category': 'cro-experiment-2stepscheckout',
+				'gtm-cro-event-action': 'create order button click'
+			});
+  		})
+
 		function telephoneCheck(str) {
 		  var isphone = /^\+?[0-9\-\+]{9,16}$/.test(str);
 			console.log(isphone);
