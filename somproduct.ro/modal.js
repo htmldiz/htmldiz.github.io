@@ -6,6 +6,10 @@ jQuery(function($) {
 				$('body').find('[action="https://www.somproduct.ro/checkout/cart/couponPost"] button').attr('onclick','');
 				$('body').find('#coupon_code').attr('id','');
 				$('body').find('#remove-coupon').attr('id','');
+				if($('body').find('#discount-coupon-form .messages').length>1){
+					$('body').find('#discount-coupon-form .messages:eq(0)').remove();
+				}
+				$('body').find('#discount-coupon-form .messages-cupons').html('');
 				$('body').find('#discount-coupon-form').prepend('<ul class="messages-cupons">'+datamessages+'</ul>');
 				$('body').find('#discount-coupon-form').before('<div class="show-hide-form-coupon"><a class="show-hide-form-coupon-link" href="#">Got coupon?</a></div>');
 				$('body').find('#discount-coupon-form').attr('id','').addClass('discount-coupon-ajax');
@@ -25,7 +29,7 @@ jQuery(function($) {
 			}
 	}
 	$('body').on('click', '.show-hide-form-coupon-link', function(event) {
-		$('body').addClass('d-none');
+		$('body').find('.show-hide-form-coupon').addClass('d-none');
 		$('body').find('[action="https://www.somproduct.ro/checkout/cart/couponPost"]').toggleClass('active');
 		return false;
 	});
@@ -51,7 +55,8 @@ jQuery(function($) {
 					dataType: 'html',
 				})
 				.done(function(datacome) {
-					reloadtotalAjaxmodal(datacome,$(data).find('.messages').html());
+					reloadAjaxmodal(data);
+					// reloadtotalAjaxmodal(datacome,$(data).find('.messages').html());
 				});
 				console.log('add');
 			}
@@ -59,7 +64,7 @@ jQuery(function($) {
 		
 		return false;
 	});
-	$('body').append('<style>#discount-coupon-form,.modal-context{display:none !important;}.modal-context.cotentmodal{display:block !important;}</style>');
+	$('body').append('<style>#discount-coupon-form,.modal-context{display:none !important;}.modal-context.cotentmodal{display:block !important;}.modal-content .grid-12.cart-header{display: none;}</style>');
 	$(document).ajaxComplete(function(event, xhr, settings) {
 		if(settings.url == 'https://www.somproduct.ro/smp/cart/ajaxAdd'){
 			var interval = setInterval(function (){
@@ -144,7 +149,14 @@ jQuery(function($) {
 			data:serialize,
 		})
 		.done(function(data) {
-			reloadAjaxmodal(data);
+			$.ajax({
+				url: 'https://www.somproduct.ro/checkout/cart',
+				type: 'GET',
+				dataType: 'html',
+			})
+			.done(function(data) {
+				reloadAjaxmodal(data);
+			});
 		})
 		.always(function() {
 			console.log("complete");
