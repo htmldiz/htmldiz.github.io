@@ -3,6 +3,7 @@ jQuery(function($) {
 		$('#id_comments').html('TEST ORDER DO NOT PROCESS');
 	}
 	function clearmodalIds(datamessages = ""){
+
 				$('body').find('[action="https://www.somproduct.ro/checkout/cart/couponPost"] button').attr('onclick','');
 				$('body').find('#coupon_code').attr('id','');
 				$('body').find('#remove-coupon').attr('id','');
@@ -14,6 +15,7 @@ jQuery(function($) {
 				$('body').find('#discount-coupon-form').before('<div class="show-hide-form-coupon"><a class="show-hide-form-coupon-link" href="#">Got coupon?</a></div>');
 				$('body').find('#discount-coupon-form').before('<ul class="messages-cupons">'+datamessages+'</ul>');
 				$('body').find('#discount-coupon-form').attr('id','').addClass('discount-coupon-ajax');
+				$('body').find('.contain-sticky').css('display','block');
 	}
 	function reloadtotalAjaxmodal(data,datamessages){
 		var html = $(data).find('.row.bottom-cart-container').html();
@@ -77,6 +79,7 @@ jQuery(function($) {
 				.done(function(datacome) {
 					reloadAjaxmodal(datacome);
 					reloadAjaxdiscount(datacome);
+					if($('html').hasClass('modal-on')){$('body').find('.page').css('display','none');}
 				});
 				console.log('add');
 			}
@@ -98,16 +101,21 @@ jQuery(function($) {
 					})
 					.done(function(data) {
 						reloadAjaxmodal(data);
+						if($('html').hasClass('modal-on')){$('body').find('.page').css('display','none');}
 					});
 				}
 			});
 		}
 	});
-	$('body').on('click', '.modal-context.cotentmodal.rand [data-modal-control="close"]', function(event) {
+	$('body').on('click', '.modal-context.cotentmodal [data-modal-control="close"]', function(event) {
 		$('.modal-context.cotentmodal.rand').remove();
+		$('html').removeClass('modal-on');
+		$('body').find('.page').attr('style','');
+		$('body').find('.contain-sticky').css('display','none');
 	});
 	var htmlmodal = '<div class="modal-context rand" role="dialog" style="">  <div class="modal-container" data-modal-control="container" role="region" style="width: 960px;">    <div class="modal-title-container"><div class="modal-title h1" data-modal-control="title" role="heading">Produs adăugat în coș</div></div>    <button class="modal-close" data-modal-control="close"></button>    <div class="modal-content" data-modal-control="content"></div>  </div></div>';
 	$('a[href="https://www.somproduct.ro/checkout/cart"]').click(function(event) {
+		$('html').addClass('modal-on');
 		$('body').append(htmlmodal);
 		$.ajax({
 			url: 'https://www.somproduct.ro/checkout/cart',
@@ -116,6 +124,7 @@ jQuery(function($) {
 		})
 		.done(function(data) {
 			reloadAjaxmodal(data);
+			if($('html').hasClass('modal-on')){$('body').find('.page').css('display','none');}
 		});
 		return false;
 	});
@@ -159,6 +168,7 @@ jQuery(function($) {
 			})
 			.done(function(data) {
 				reloadAjaxmodal(data);
+				if($('html').hasClass('modal-on')){$('body').find('.page').css('display','none');}
 			});
 		});
 		return false;
@@ -195,6 +205,7 @@ jQuery(function($) {
 				})
 				.done(function(data) {
 					reloadAjaxmodal(data);
+					if($('html').hasClass('modal-on')){$('body').find('.page').css('display','none');}
 				});
 			})
 			.always(function() {
