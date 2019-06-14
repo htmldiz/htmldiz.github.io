@@ -136,6 +136,12 @@ jQuery(function($) {
 	$('body').on('click', '.btn-remove', function(event) {
 		var href = $(this).attr('href');
 		$(this).closest('.cart-item').remove();
+		if($('body').find('.modal-context.cotentmodal').find('[data-modal-control="content"]').find('.cart-item').length > 2){
+			$('body').find('.modal-context.cotentmodal').find('.btn.btn-orange.bottom-button').wrap('<div class="contain-sticky"></div>');
+			$('body').find('.modal-context.cotentmodal').addClass('with-sticky');
+		}else{
+			$('body').find('.modal-context.cotentmodal').removeClass('with-sticky');
+		}
 		$.ajax({
 			url      : href,
 			type     : 'GET',
