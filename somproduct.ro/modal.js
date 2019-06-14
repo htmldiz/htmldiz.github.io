@@ -25,7 +25,7 @@ jQuery(function($) {
 				$('body').find('.modal-context').addClass('cotentmodal');
 				var html = $(data).find('.cart [action="https://www.somproduct.ro/checkout/cart/updatePost"]').closest('.cart').html();
 				$('body').find('.modal-context.cotentmodal').find('[data-modal-control="content"]').html(html);
-				if($('body').find('.modal-context.cotentmodal').find('[data-modal-control="content"]').find('.cart-item').length > 2){
+				if($('body').find('.modal-context.cotentmodal').find('[data-modal-control="content"]').find('.cart-item').length > 1){
 					$('body').find('.modal-context.cotentmodal').find('.btn.btn-orange.bottom-button').wrap('<div class="contain-sticky"></div>');
 					$('body').find('.modal-context.cotentmodal').addClass('with-sticky');
 				}else{
@@ -136,7 +136,7 @@ jQuery(function($) {
 	$('body').on('click', '.btn-remove', function(event) {
 		var href = $(this).attr('href');
 		$(this).closest('.cart-item').remove();
-		if($('body').find('.modal-context.cotentmodal').find('[data-modal-control="content"]').find('.cart-item').length > 2){
+		if($('body').find('.modal-context.cotentmodal').find('[data-modal-control="content"]').find('.cart-item').length > 1){
 			$('body').find('.modal-context.cotentmodal').find('.btn.btn-orange.bottom-button').wrap('<div class="contain-sticky"></div>');
 			$('body').find('.modal-context.cotentmodal').addClass('with-sticky');
 		}else{
