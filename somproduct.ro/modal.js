@@ -2,8 +2,11 @@ jQuery(function($) {
 	if(location.pathname == '/plaseaza-comanda'){
 		$('#id_comments').html('TEST ORDER DO NOT PROCESS');
 	}
+	setInterval(
+		function(){
+			if($('html').hasClass('modal-on') && $('.modal-context.cotentmodal').length != 0){$('body').find('.page').css('display','none');}else{$('body').find('.page').attr('style','');}
+		},10);
 	function clearmodalIds(datamessages = ""){
-
 				$('body').find('[action="https://www.somproduct.ro/checkout/cart/couponPost"] button').attr('onclick','');
 				$('body').find('#coupon_code').attr('id','');
 				$('body').find('#remove-coupon').attr('id','');
