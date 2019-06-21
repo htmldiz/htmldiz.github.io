@@ -85,11 +85,11 @@ jQuery(function($) {
 			data: serialize,
 		})
 		.done(function(data) {
-			// if($(data).find('.messages-cupons').length>0){
-			// 	var html = $(data).find('.messages').html();
-			// 	$('body').find('.messages-cupons').html('');
-			// 	$('body').find('.messages-cupons').append(html);
-			// }
+			if($(data).find('.messages').length>0){
+				var html = $(data).find('.messages').html();
+				$('body').find('.messages-cupons').html('');
+				$('body').find('.messages-cupons').append(html);
+			}
 			if($(data).find('.success-msg').length > 0){
 				$.ajax({
 					url: 'https://www.somproduct.ro/checkout/cart',
@@ -157,7 +157,8 @@ jQuery(function($) {
 		});
 		return false;
 	});
-	// $('body').on('click', '.spinner-item.left', function(event) {
+	$('body').on('click', '.spinner-item.left', function(event) {
+		// $(this).parent().find('.input-text.qty').trigger('change');
 	// 	var val2 = $(this).closest('.qty-wrapper').find('input').attr('value');
 	// 	val2 = Number(val2);
 	// 	val2--;
@@ -174,8 +175,8 @@ jQuery(function($) {
 	// 	}
 	// 	$(this).closest('.qty-wrapper').find('input').val(val2);
 	// 	$(this).closest('.qty-wrapper').find('input').attr('value',val2);
-	// 	$(this).closest('.qty-wrapper').find('input').trigger('change');
-	// });
+	$(this).closest('.qty-wrapper').find('input').trigger('change');
+	});
 	$('body').on('click', '.btn-remove', function(event) {
 		var href = $(this).attr('href');
 		$(this).closest('.cart-item').remove();
@@ -199,18 +200,18 @@ jQuery(function($) {
 		});
 		return false;
 	});
-	// $('body').on('click', '.spinner-item.right', function(event) {
+	$('body').on('click', '.spinner-item.right', function(event) {
 	// 	var val1 = $(this).closest('.qty-wrapper').find('input').attr('value');
 	// 	val1 = Number(val1);
 	// 	val1++;
 	// 	$(this).closest('.qty-wrapper').find('input').val(val1);
 	// 	$(this).closest('.qty-wrapper').find('input').attr('value',val1);
-	// 	$(this).closest('.qty-wrapper').find('input').trigger('change');
+		$(this).closest('.qty-wrapper').find('input').trigger('change');
 	// 	var val3 = $('.cart.cart-dropdown-toggle .mobile').html();
 	// 		val3 = Number(val3);
 	// 		val3++;
 	// 		$('.cart.cart-dropdown-toggle .mobile').html(val3);
-	// });
+	});
 	$('body').on('change', '[action="https://www.somproduct.ro/checkout/cart/updatePost"] input', function(event) {
 		if(typeof window.timerout != 'undefined'){
 			clearTimeout(window.timerout);
