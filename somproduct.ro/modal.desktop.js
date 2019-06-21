@@ -14,11 +14,10 @@ jQuery(function($) {
 				$('body').find('[action="https://www.somproduct.ro/checkout/cart/couponPost"] button').attr('onclick','');
 				$('body').find('#coupon_code').attr('id','');
 				$('body').find('#remove-coupon').attr('id','');
-				if($('body').find('#discount-coupon-form .messages').length>1){
-					$('body').find('#discount-coupon-form .messages:eq(0)').remove();
+				if($('body').find('#discount-coupon-form .messages-cupons').length>1){
+					$('body').find('#discount-coupon-form .messages-cupons:eq(0)').remove();
 				}
-				
-				$('body').find('#discount-coupon-form .messages-cupons').html('');
+				$('body').find('.messages-cupons').html('');
 				$('body').find('#discount-coupon-form').before('<div class="show-hide-form-coupon"><a class="show-hide-form-coupon-link" href="#">Got coupon?</a></div>');
 				$('body').find('#discount-coupon-form').before('<ul class="messages-cupons">'+datamessages+'</ul>');
 				$('body').find('#discount-coupon-form').attr('id','').addClass('discount-coupon-ajax');
@@ -66,7 +65,7 @@ jQuery(function($) {
 	});
 	$('body').on('click', '.show-hide-form-coupon-link', function(event) {
 		$('body').find('.show-hide-form-coupon').addClass('d-none');
-		$('body').find('[action="https://www.somproduct.ro/checkout/cart/couponPost"]').toggleClass('active');
+		$('body').find('[action="https://www.somproduct.ro/checkout/cart/couponPost"]').addClass('active');
 		return false;
 	});
 	function start_load(){
@@ -86,10 +85,11 @@ jQuery(function($) {
 			data: serialize,
 		})
 		.done(function(data) {
-			if($(data).find('.messages').length>0){
-					var html = $(data).find('.messages').html();
-					$('body').find('.messages-cupons').append(html);
-			}
+			// if($(data).find('.messages-cupons').length>0){
+			// 	var html = $(data).find('.messages').html();
+			// 	$('body').find('.messages-cupons').html('');
+			// 	$('body').find('.messages-cupons').append(html);
+			// }
 			if($(data).find('.success-msg').length > 0){
 				$.ajax({
 					url: 'https://www.somproduct.ro/checkout/cart',
@@ -99,11 +99,13 @@ jQuery(function($) {
 				.done(function(datacome) {
 					reloadAjaxmodal(datacome);
 					reloadAjaxdiscount(datacome);
-					end_load();
+					
 					// if($('html').hasClass('modal-on')){$('body').find('.page').css('display','none');}
 				});
 				console.log('add');
 			}
+		}).always(function() {
+			end_load();
 		});
 		
 		return false;
@@ -123,8 +125,9 @@ jQuery(function($) {
 					})
 					.done(function(data) {
 						reloadAjaxmodal(data);
-						end_load();
 						// if($('html').hasClass('modal-on')){$('body').find('.page').css('display','none');}
+					}).always(function() {
+						end_load();
 					});
 				}
 			});
@@ -148,30 +151,31 @@ jQuery(function($) {
 		})
 		.done(function(data) {
 			reloadAjaxmodal(data);
-			end_load();
 			// if($('html').hasClass('modal-on')){$('body').find('.page').css('display','none');}
+		}).always(function() {
+			end_load();
 		});
 		return false;
 	});
-	$('body').on('click', '.spinner-item.left', function(event) {
-		val2 = $(this).closest('.qty-wrapper').find('input').attr('value');
-		val2 = Number(val2);
-		val2--;
-		if(val2 < 0){
-			val2 = 0;
-		}else{
-			var val3 = $('.cart.cart-dropdown-toggle .mobile').html();
-			val3 = Number(val3);
-			val3--;
-			if(val3 <= 0){
-				val3 = "";
-			}
-			$('.cart.cart-dropdown-toggle .mobile').html(val3);
-		}
-		$(this).closest('.qty-wrapper').find('input').val(val2);
-		$(this).closest('.qty-wrapper').find('input').attr('value',val2);
-		$(this).closest('.qty-wrapper').find('input').trigger('change');
-	});
+	// $('body').on('click', '.spinner-item.left', function(event) {
+	// 	var val2 = $(this).closest('.qty-wrapper').find('input').attr('value');
+	// 	val2 = Number(val2);
+	// 	val2--;
+	// 	if(val2 < 0){
+	// 		val2 = 0;
+	// 	}else{
+	// 		var val3 = $('.cart.cart-dropdown-toggle .mobile').html();
+	// 		val3 = Number(val3);
+	// 		val3--;
+	// 		if(val3 <= 0){
+	// 			val3 = "";
+	// 		}
+	// 		$('.cart.cart-dropdown-toggle .mobile').html(val3);
+	// 	}
+	// 	$(this).closest('.qty-wrapper').find('input').val(val2);
+	// 	$(this).closest('.qty-wrapper').find('input').attr('value',val2);
+	// 	$(this).closest('.qty-wrapper').find('input').trigger('change');
+	// });
 	$('body').on('click', '.btn-remove', function(event) {
 		var href = $(this).attr('href');
 		$(this).closest('.cart-item').remove();
@@ -188,24 +192,25 @@ jQuery(function($) {
 			})
 			.done(function(data) {
 				reloadAjaxmodal(data);
-				end_load();
 				// if($('html').hasClass('modal-on')){$('body').find('.page').css('display','none');}
+			}).always(function() {
+				end_load();
 			});
 		});
 		return false;
 	});
-	$('body').on('click', '.spinner-item.right', function(event) {
-		var val1 = $(this).closest('.qty-wrapper').find('input').attr('value');
-		val1 = Number(val1);
-		val1++;
-		$(this).closest('.qty-wrapper').find('input').val(val1);
-		$(this).closest('.qty-wrapper').find('input').attr('value',val1);
-		$(this).closest('.qty-wrapper').find('input').trigger('change');
-		var val3 = $('.cart.cart-dropdown-toggle .mobile').html();
-			val3 = Number(val3);
-			val3++;
-			$('.cart.cart-dropdown-toggle .mobile').html(val3);
-	});
+	// $('body').on('click', '.spinner-item.right', function(event) {
+	// 	var val1 = $(this).closest('.qty-wrapper').find('input').attr('value');
+	// 	val1 = Number(val1);
+	// 	val1++;
+	// 	$(this).closest('.qty-wrapper').find('input').val(val1);
+	// 	$(this).closest('.qty-wrapper').find('input').attr('value',val1);
+	// 	$(this).closest('.qty-wrapper').find('input').trigger('change');
+	// 	var val3 = $('.cart.cart-dropdown-toggle .mobile').html();
+	// 		val3 = Number(val3);
+	// 		val3++;
+	// 		$('.cart.cart-dropdown-toggle .mobile').html(val3);
+	// });
 	$('body').on('change', '[action="https://www.somproduct.ro/checkout/cart/updatePost"] input', function(event) {
 		if(typeof window.timerout != 'undefined'){
 			clearTimeout(window.timerout);
@@ -227,8 +232,9 @@ jQuery(function($) {
 				})
 				.done(function(data) {
 					reloadAjaxmodal(data);
-					end_load();
 					// if($('html').hasClass('modal-on')){$('body').find('.page').css('display','none');}
+				}).always(function() {
+					end_load();
 				});
 			})
 			.always(function() {
