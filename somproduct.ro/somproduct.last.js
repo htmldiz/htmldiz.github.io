@@ -128,9 +128,12 @@ jQuery(function($) {
                 $('body').append('<div class="modal-context rand cotentmodal cotentmodal-dialog" role="dialog" style="z-index: 999999999999;"><div class="modal-container" data-modal-control="container" role="region" style="width: 570px;"><button class="modal-close" data-modal-control="close"></button><div class="modal-title-container"><div class="modal-title h1" data-modal-control="title" role="heading">Produsele neachitate din cosul tau au o cerere foarte ridicata. Mai sunt doar cateva bucati disponibile in stoc.<a class="title-btn" href="https://www.somproduct.ro/plaseaza-comanda">Finalizeaza comanda!</a></div></div><div class="modal-content" data-modal-control="content"><div class="form-place"></div><div class="row bottom-cart-container"><div class="info-box">Nu putem garanta disponibilitatea acestor produse daca parasesti site-ul!</div><a href="https://www.somproduct.ro/plaseaza-comanda" class="link-complite-cart">Finalizeaza comanda!</a></div><span class="payment-methods">Modalităţi de plată</span></div></div></div>');
            }
            $('.modal-context.rand.cotentmodal.cotentmodal-dialog .modal-container .modal-content .form-place').html('');
-           reload_modal();
-           // clone.appendTo('.modal-context.rand.cotentmodal.cotentmodal-dialog .modal-container .modal-content .form-place');
-           // clone = "";
+           if(clone == ""){
+            reload_modal();
+           }else{
+            clone.appendTo('.modal-context.rand.cotentmodal.cotentmodal-dialog .modal-container .modal-content .form-place');
+            clone = "";
+        }
        }
     });
     $('body').on('click', '.row.bottom-cart-container .link-complite-cart, .title-btn', function(event) {
