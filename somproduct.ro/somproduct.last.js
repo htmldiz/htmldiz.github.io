@@ -1,3 +1,4 @@
+console.log('script is come');
 function getC(cname) {
     var name = cname + "=";
     var decodedCookie = decodeURIComponent(document.cookie);
@@ -79,7 +80,7 @@ jQuery(function($) {
             case (settings.url.search(new RegExp('https://www.somproduct.ro/smp/cart/removeAjax','g')) > -1):
                 var _popupcandisplay = getC('popupcandisplay');
                 if(_popupcandisplay == 'true'){
-                	reload_modal();
+                    reload_modal();
                 }
                 // console.log('popup can display!');
                 break;
