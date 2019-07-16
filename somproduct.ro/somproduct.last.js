@@ -90,6 +90,12 @@ jQuery(function($) {
             tabs_num = 0;
         }
         setC('tabs',tabs_num);
+        var popup_is_display = getC('popup_is_display');
+        var popupcandisplay  = getC('popupcandisplay');
+        if(tabs_num < 1 && popup_is_display == 'true'){
+			setC('popup_is_display' ,'',0);
+			setC('popupcandisplay' ,'',0);
+        }
     });
     reload_modal();
     $('body').on('click','.modal-context.cotentmodal.cotentmodal-dialog, .modal-context.cotentmodal.cotentmodal-dialog .modal-close',function(event) {
