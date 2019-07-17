@@ -198,7 +198,7 @@ jQuery(function($) {
     });
     reload_modal();
     $('body').on('click','.modal-context.cotentmodal.cotentmodal-dialog, .modal-context.cotentmodal.cotentmodal-dialog .modal-close',function(event) {
-        $(this).remove();
+        $('.modal-context.cotentmodal.cotentmodal-dialog').remove();
     });
     $('body').on('click','.modal-context.cotentmodal.cotentmodal-dialog .modal-container',function(event) {
         return false;
