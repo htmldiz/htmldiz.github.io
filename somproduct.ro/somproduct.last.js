@@ -179,12 +179,12 @@ jQuery(function($) {
     });
     }
     window.popupcandisplay = false;
+    window.dont_show_on_this_page = false;
     $(document).ajaxComplete(function(event, xhr, settings) {
         // console.log( settings.url );
-        switch (true) {
-            case settings.url == "https://www.somproduct.ro/smp/cart/ajaxAdd":
-                setC('popupcandisplay', 'true');
-            break;
+        if (settings.url == "https://www.somproduct.ro/smp/cart/ajaxAdd"){
+            window.dont_show_on_this_page = true;
+            setC('popupcandisplay', 'true');
         }
         switch (true) {
             case settings.url == "https://www.somproduct.ro/smp/cart/ajaxAdd":
@@ -222,7 +222,7 @@ jQuery(function($) {
         setC('tabs',tabs_num);
         var popup_is_display = getC('popup_is_display');
         var popupcandisplay  = getC('popupcandisplay');
-        if(tabs_num < 1 && popup_is_display == 'true'){
+        if(tabs_num < 1 && popup_is_display == 'true' && window.dont_show_on_this_page == false){
             setC('popup_is_display' ,'',0);
             setC('popupcandisplay' ,'',0);
         }
@@ -259,7 +259,7 @@ jQuery(function($) {
         tabs                 = Number(tabs);
         var _popupcandisplay = getC('popupcandisplay');
         // loading_start();
-        if(popup_is_display != 'true' && _popupcandisplay == 'true' && tabs < 2 ){
+        if(popup_is_display != 'true' && _popupcandisplay == 'true' && tabs < 2  && window.dont_show_on_this_page == false){
             $('body').find('.modal-context').remove();
             if($('body').find('.modal-context.rand.cotentmodal.cotentmodal-dialog').length < 1){
                 setC('popup_is_display', 'true');
