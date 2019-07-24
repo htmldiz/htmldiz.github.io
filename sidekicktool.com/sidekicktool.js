@@ -54,7 +54,7 @@ function readyjQueryinit(){
 		function location_contain(name){
 			return location.pathname.search(name) != -1;
 		}
-		$('body').on('click', '.product-form__cart-submit', function(event) {
+		$('body').on('click', '#fixed_div.bottom_page.sticky,.cbb-also-bought-add-to-cart-button, .product-form__cart-submit', function(event) {
 			setC('useradd_producttocart','true');
 			event.preventDefault();
 		});
