@@ -29,7 +29,7 @@ jQuery(function($) {
 			hj('trigger', 'exit_intent_popup');
 		} 
 		catch(e) {}
-		console.log('%c hj come', 'background: #e7624b; color: #ffffff','');
+		console.log('%c hj run', 'background: #e7624b; color: #ffffff','');
     }
     function get_data_item(name){
         var cart_items = getC('cart_items');
@@ -189,7 +189,7 @@ jQuery(function($) {
                     hj('trigger', 'exit_intent_popup');
                 } 
                 catch(e) {}
-                console.log('%c hj come', 'background: #e7624b; color: #ffffff','');
+                console.log('%c hj run', 'background: #e7624b; color: #ffffff','');
             }
         }
         switch (true) {
