@@ -254,6 +254,14 @@ jQuery(function($) {
     });
     get_tabsnum();
     $(document).mouseleave(function(event) {
+        var _popupcandisplay = getC('popupcandisplay');
+        if(_popupcandisplay == 'true'){
+            try {
+                hj('trigger', 'exit_intent_popup');
+            } 
+            catch(e) {}
+            console.log('%c hj come', 'background: #e7624b; color: #ffffff','');
+        }
         var popup_is_display = getC('popup_is_display');
         var tabs             = get_tabsnum();
         tabs                 = Number(tabs);
