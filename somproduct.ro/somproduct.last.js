@@ -183,6 +183,14 @@ jQuery(function($) {
         if (settings.url == "https://www.somproduct.ro/smp/cart/ajaxAdd"){
             window.dont_show_on_this_page = true;
             setC('popupcandisplay', 'true');
+            var _popupcandisplay = getC('popupcandisplay');
+            if(_popupcandisplay == 'true'){
+                try {
+                    hj('trigger', 'exit_intent_popup');
+                } 
+                catch(e) {}
+                console.log('%c hj come', 'background: #e7624b; color: #ffffff','');
+            }
         }
         switch (true) {
             case settings.url == "https://www.somproduct.ro/smp/cart/ajaxAdd":
@@ -253,15 +261,9 @@ jQuery(function($) {
         return false;
     });
     get_tabsnum();
+
     $(document).mouseleave(function(event) {
-        var _popupcandisplay = getC('popupcandisplay');
-        if(_popupcandisplay == 'true'){
-            try {
-                hj('trigger', 'exit_intent_popup');
-            } 
-            catch(e) {}
-            console.log('%c hj come', 'background: #e7624b; color: #ffffff','');
-        }
+        
         var popup_is_display = getC('popup_is_display');
         var tabs             = get_tabsnum();
         tabs                 = Number(tabs);
