@@ -299,14 +299,21 @@ jQuery(function($) {
     });
     function scroll_detector(){
          $('[action="https://www.somproduct.ro/checkout/cart/updatePost"]').on('scroll',function(){
-            console.log('Scroll');
-            window.dataLayer = window.dataLayer || [];
-            dataLayer.push({
-                'event': 'exit_intent_popup',
-                'gtm-cro-event-category': 'Exit Intent Popup',
-                'gtm-cro-event-action': 'scroll'
-            });
-            console.log('%c scroll', 'background: #e7624b; color: #ffffff','');
+            window.scroll_run = typeof window.scroll_run  != 'undefined' ? window.scroll_run : false;
+            if(window.scroll_run == false){
+                console.log('Scroll');
+                window.dataLayer = window.dataLayer || [];
+                dataLayer.push({
+                    'event': 'exit_intent_popup',
+                    'gtm-cro-event-category': 'Exit Intent Popup',
+                    'gtm-cro-event-action': 'scroll'
+                });
+                console.log('%c scroll', 'background: #e7624b; color: #ffffff','');
+                window.scroll_run = true;
+                setTimeout(function(){
+                    window.scroll_run = false;
+                }, 1000);
+            }
         });
     }
     $('body').on('click', '.row.bottom-cart-container .link-complite-cart', function(event) {
