@@ -1728,7 +1728,6 @@ Keep your personal diary neatly organized
 </span>
 </div>
 </div>
-<div id="collection-10" class="applicationslist-grid">
 <div class="all-apps-item js-all-apps-item applicationslist-grid-application" data-id="344" data-collections="lifestyle">
 <img src="https://imgix.setapp.com/app/344/2191/icon-1566016194-5d5782c2be362.png?auto=format&amp;ixlib=php-2.3.0&amp;q=75&amp;w=160" alt="Movist Pro" class="all-apps-item__icon">
 <div class="all-apps-item__body">
@@ -1798,8 +1797,6 @@ Trigger alarm and protect your Mac from theft
 </div>
 </div>
 </div>
-</div>
-
 </div>
 </div>
 </div>
