@@ -50,7 +50,6 @@ If your download didn't start automatically,<br>
 </div>
 </div>
 <div class="col-7">
-
 <h2 class="apps-title">«Setapp is like a Netflix for apps» MacObserver</h2>
 <div class="apps-subtitle">
 <div class="application-item">
