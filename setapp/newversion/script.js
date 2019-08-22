@@ -1843,6 +1843,7 @@ htmlcode += '';
           		var lead = $('.successful-registration-from-app-landing__app-description .lead').text();
           		$('.apps-subtitle').find('.application-item img').attr('src',src);
           		$('.contentin-logo .istat-img img').attr('src',src);
+          		$('.apps-subtitle').find('.all-apps-item__name').attr(h4);
           		$('.apps-subtitle').find('.application-item img').attr('alt',h4);
           		$('.apps-subtitle').find('.all-apps-item__description').html(lead); 
           	} 
