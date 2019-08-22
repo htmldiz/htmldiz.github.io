@@ -24,5 +24,5 @@ if (!window.jQuery) {
 	readyjQueryinit();
 }
 function readyjQueryinit(){
-	
+
 }
