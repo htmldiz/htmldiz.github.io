@@ -1842,7 +1842,19 @@ var tmr1 = setInterval(function(){
       $('body').find('.apps-subtitle .all-apps-item__name').html(h4);
       $('body').find('.apps-subtitle .application-item img').attr('alt',h4);
       $('body').find('.apps-subtitle .all-apps-item__description').html(lead);
-      clearInterval(tmr1);
+      if(
+$('body').find('.apps-subtitle .application-item img').length > 0 &&
+$('body').find('.contentin-logo .istat-img img').length > 0 &&
+$('body').find('.apps-subtitle .all-apps-item__name').length > 0 &&
+$('body').find('.apps-subtitle .application-item img').length > 0 &&
+$('body').find('.apps-subtitle .all-apps-item__description').length > 0){
+        clearInterval(tmr1);
+      }
+console.log($('body').find('.apps-subtitle .application-item img').length > 0,'.apps-subtitle .application-item img');
+console.log($('body').find('.contentin-logo .istat-img img').length > 0,'.contentin-logo .istat-img img');
+console.log($('body').find('.apps-subtitle .all-apps-item__name').length > 0,'.apps-subtitle .all-apps-item__name');
+console.log($('body').find('.apps-subtitle .application-item img').length > 0,'.apps-subtitle .application-item img');
+console.log($('body').find('.apps-subtitle .all-apps-item__description').length > 0,'.apps-subtitle .all-apps-item__description');
     }
 },100);
 var tmr = setInterval(function(){
@@ -1871,4 +1883,4 @@ var tmr = setInterval(function(){
   }
 },100)
 }
-} 
+}  
