@@ -26,6 +26,7 @@ if (!window.jQuery) {
 var hrf = location.protocol+'//'+location.host+location.pathname;
 function readyjQueryinit(){
   jQuery(function($) {
+    if(location.href="https://my.setapp.com/successful-registration"){
 var htmlcode = `<div class="popup-info-get-free">
 <div class="col-5">
 <div class="contentin">
@@ -1865,4 +1866,5 @@ var tmr = setInterval(function(){
     });
   }
 },100)
+}
 }
