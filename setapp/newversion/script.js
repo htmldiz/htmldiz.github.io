@@ -1834,7 +1834,7 @@ $('body').on('click', '[data-scrollto-element]', function(event) {
 });
 var tmr1 = setInterval(function(){
     if($('.successful-registration').length > 0 && $('body').find('.contentin-logo .istat-img img').length > 0){
-      var src  = $('.successful-registration .successful-registration-from-app-landing__app-description .successful-registration-from-app-landing__app-icon').attr('src');
+      var src  = $('body').find('.successful-registration .successful-registration-from-app-landing__app-description .successful-registration-from-app-landing__app-icon').attr('src');
       var h4   = $('.successful-registration-from-app-landing__app-description .h4').text();
       var lead = $('.successful-registration-from-app-landing__app-description .lead').text();
       $('body').find('.apps-subtitle .application-item img').attr('src',src);
