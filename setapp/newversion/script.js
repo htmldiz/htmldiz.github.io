@@ -55,11 +55,11 @@ If your download didn't start automatically,<br>
 <h2 class="apps-title">«Setapp is like a Netflix for apps» MacObserver</h2>
 <div class="apps-subtitle">
 <div class="application-item">
-<img src="https://store-setapp-com.imgix.net/app/144/1253/icon-1532085894-5b51c686bc693.png?ixlib=php-2.1.0&amp;q=75&amp;w=160" alt="iStat Menus">
+<img src="" alt="">
 <div class="description-applicationslist">
-<div class="all-apps-item__name">iStat Menus</div>
+<div class="all-apps-item__name"></div>
 <div class="all-apps-item__description">
-Monitor your Mac's health and system
+
 </div>
 </div>
 </div>
