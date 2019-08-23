@@ -25,7 +25,7 @@ if (!window.jQuery) {
 }
 var hrf = location.protocol+'//'+location.host+location.pathname;
 function readyjQueryinit(){
-  if(location.href="https://my.setapp.com/successful-registration"){
+  if(location.href=="https://my.setapp.com/successful-registration"){
   jQuery(function($) {
 
 var htmlcode = `<div class="popup-info-get-free">
