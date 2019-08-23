@@ -37,7 +37,7 @@ var htmlcode = `<div class="popup-info-get-free">
 <a href="#" class="logo-img"><img src="https://htmldiz.github.io/setapp/newversion/logo.png" alt=""></a>
 <span class="arrow"></span>
 <a href="#" class="istat-img">
-<img src="https://store-setapp-com.imgix.net/app/144/1253/icon-1532085894-5b51c686bc693.png?ixlib=php-2.1.0&amp;q=75&amp;w=160" alt="iStat Menus">
+<img src="" alt="">
 </a>
 </div>
 <div class="contentin-description">
