@@ -37,7 +37,7 @@ var htmlcode = `<div class="popup-info-get-free">
 <a href="#" class="logo-img"><img src="https://htmldiz.github.io/setapp/newversion/logo.png" alt=""></a>
 <span class="arrow"></span>
 <a href="#" class="istat-img">
-<img src="" alt="">
+<img src="" alt=""> 
 </a>
 </div>
 <div class="contentin-description">
