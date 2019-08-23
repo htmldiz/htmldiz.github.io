@@ -1833,7 +1833,6 @@ $('body').on('click', '[data-scrollto-element]', function(event) {
     event.preventDefault();
 });
 var tmr1 = setInterval(function(){
-    if($('.successful-registration').length > 0 && $('body').find('.contentin-logo .istat-img img').length > 0){
       var src  = $('body').find('.successful-registration .successful-registration-from-app-landing__app-description .successful-registration-from-app-landing__app-icon').attr('src');
       var h4   = $('.successful-registration-from-app-landing__app-description .h4').text();
       var lead = $('.successful-registration-from-app-landing__app-description .lead').text();
@@ -1842,18 +1841,6 @@ var tmr1 = setInterval(function(){
       $('body').find('.apps-subtitle .all-apps-item__name').html(h4);
       $('body').find('.apps-subtitle .application-item img').attr('alt',h4);
       $('body').find('.apps-subtitle .all-apps-item__description').html(lead);
-      if(
-$('body').find('.apps-subtitle .application-item img').length > 0 &&
-$('body').find('.contentin-logo .istat-img img').length > 0 &&
-$('body').find('.apps-subtitle .all-apps-item__name').length > 0 &&
-$('body').find('.apps-subtitle .application-item img').length > 0 &&
-$('body').find('.apps-subtitle .all-apps-item__description').length > 0){
-        clearInterval(tmr1);
-      }
-console.log(src);
-console.log(h4);
-console.log(lead);
-    }
 },100);
 var tmr = setInterval(function(){
   if($('html').find('.all-apps-item').length > 0){
