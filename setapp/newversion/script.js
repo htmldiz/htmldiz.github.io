@@ -1853,11 +1853,6 @@ $('body').find('.apps-subtitle .all-apps-item__description').length > 0){
 console.log(src);
 console.log(h4);
 console.log(lead);
-console.log($('body').find('.apps-subtitle .application-item img').length > 0,'.apps-subtitle .application-item img');
-console.log($('body').find('.contentin-logo .istat-img img').length > 0,'.contentin-logo .istat-img img');
-console.log($('body').find('.apps-subtitle .all-apps-item__name').length > 0,'.apps-subtitle .all-apps-item__name');
-console.log($('body').find('.apps-subtitle .application-item img').length > 0,'.apps-subtitle .application-item img');
-console.log($('body').find('.apps-subtitle .all-apps-item__description').length > 0,'.apps-subtitle .all-apps-item__description');
     }
 },100);
 var tmr = setInterval(function(){
