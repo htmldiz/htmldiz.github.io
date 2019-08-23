@@ -59,7 +59,6 @@ If your download didn't start automatically,<br>
 <div class="description-applicationslist">
 <div class="all-apps-item__name"></div>
 <div class="all-apps-item__description">
-
 </div>
 </div>
 </div>
