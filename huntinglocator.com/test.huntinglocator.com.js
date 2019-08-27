@@ -1,7 +1,7 @@
 $('#clean-code-studio .container .single-column').closest('.container').removeClass('container').addClass('col-content').wrap('<div class="container container-wraper"><div class="row row-with-bnr"></div></div>');
 $('body').append('<div class="sticky-title"><span>Can’t find a lease?</span> <a href="#">Let us find for you <img src="https://htmldiz.github.io/huntinglocator.com/arrow-2.png" /></a></div>');
 $('body').on('click', '.sticky-title', function(event) {
-
+	$('body').find('.col-bnr').addClass('display-mob');
 	event.preventDefault();
 });
 $('body').find('#clean-code-studio .col-content').after('<div class="col-bnr"><div class="image-place-bnr"><img src="https://htmldiz.github.io/huntinglocator.com/image.png" /><div class="title-info">Can’t find a Lease?<br/>Let us do it for you.</div><ul><li>Tell us what your looking for in a short quiz</li><li>We will deliver you multiple lease options that match your needs</li></ul><a href="https://huntinglocator.com/hunting-survey">Find a lease for me</a><div class="foot-text">Only $199 - Money Back Guarantee</div></div></div>');
@@ -163,6 +163,11 @@ var styles = `<style>
 	font-size: 16px;
 	font-weight: 700;
 }
+@media(max-width:992px) and (max-height:567px){
+	.image-place-bnr a{
+		margin-top: 36px;
+	}
+}
 @media(max-width:992px){
 	.image-place-bnr img{
     	width: 100%;
@@ -178,6 +183,10 @@ var styles = `<style>
 	    width: 100%;
 	    max-width: unset;
 	    z-index:9;
+	    display:none;
+	}
+	#clean-code-studio .col-bnr.display-mob{
+		display:block;
 	}
 	.sticky-title{
 		display:block;
