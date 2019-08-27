@@ -1,5 +1,5 @@
 $('#clean-code-studio .container .single-column').closest('.container').removeClass('container').addClass('col-content').wrap('<div class="container container-wraper"><div class="row row-with-bnr"></div></div>');
-$('body').find('#clean-code-studio .col-content').after('<div class="col-bnr"><div class="image-place-bnr"><img src="https://htmldiz.github.io/huntinglocator.com/image.png" /><div class="title">Can’t find a Lease?<br/>Let us do it for you.</div><ul><li>Tell us what your looking for in a short quiz</li><li>We will deliver you multiple lease options that match your needs</li></ul><a href="https://huntinglocator.com/hunting-survey">Find a lease for me</a><div class="foot-text">Only $199 - Money Back Guarantee</div></div></div>');
+$('body').find('#clean-code-studio .col-content').after('<div class="col-bnr"><div class="image-place-bnr"><img src="https://htmldiz.github.io/huntinglocator.com/image.png" /><div class="title-info">Can’t find a Lease?<br/>Let us do it for you.</div><ul><li>Tell us what your looking for in a short quiz</li><li>We will deliver you multiple lease options that match your needs</li></ul><a href="https://huntinglocator.com/hunting-survey">Find a lease for me</a><div class="foot-text">Only $199 - Money Back Guarantee</div></div></div>');
 var styles = `<style> 
 #clean-code-studio .row-with-bnr{
 	display: -webkit-box;
@@ -35,7 +35,92 @@ var styles = `<style>
 	-ms-flex-pack: justify;
 	justify-content: space-between;
 }
+.image-place-bnr {
+    margin-top: 18px;
+}
 
+.title-info {
+    font-family: Oswald,Arial,sans-serif;
+    font-size: 33px;
+    font-weight: 400;
+    letter-spacing: -0.89px;
+    line-height: 43px;
+    text-align: center;
+}
+
+.image-place-bnr{
+    position:relative;
+}
+.image-place-bnr img {
+    position: absolute;
+    z-index: 1;
+}
+
+.image-place-bnr .title-info {
+    position:relative;
+    z-index:2;
+    padding:45px 23px;
+    color:#ffffff;
+}
+
+.image-place-bnr ul {
+    position:relative;
+    z-index:2;
+    text-align:center;
+    list-style:none;
+    padding:0;
+    margin:0;
+
+}
+.image-place-bnr li + li:after,
+.image-place-bnr li + li:before{
+    content:"";
+    display:block;
+    width:3px;
+    height:15px;
+    position:absolute;
+    top:-30px;
+    background-color:#ffffff;
+    transform: rotate(40deg);
+    left:calc(50% + 4px);
+}
+.image-place-bnr li + li:after{
+    transform: rotate(-40deg);
+    left:calc(50% - 4px);
+}
+.image-place-bnr li + li{
+    position:relative;
+    margin-top:45px;
+}
+.image-place-bnr li {
+    color:#fff;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    max-width:224px;
+    padding:24px;
+    border-radius: 4px;
+    border: 2px solid #f77d0f;
+    background-color: #000000;
+}
+
+.image-place-bnr a {
+    z-index:2;
+    position:relative;
+    display:flex;
+    margin-left:auto;
+    margin-right:auto;
+    align-items:center;
+    justify-content:center;
+    margin-top:86px;
+    width: 224px;
+    height: 48px;
+    box-shadow: 0 4px 9px rgba(0, 0, 0, 0.23);
+    border-radius: 4px;
+    background-color: #f77d0f;
+    color:#ffffff;
+    text-align:center;
+}
 @media(min-width:1200px){
 	.container {
 	    max-width: 1300px;
@@ -47,6 +132,7 @@ var styles = `<style>
 		flex: 0 0 auto;
 	}
 }
+
 </style>`;
 styles = styles += '';
 $('body').after(styles);
