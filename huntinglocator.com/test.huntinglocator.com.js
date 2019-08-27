@@ -1,4 +1,5 @@
 $('#clean-code-studio .container .single-column').closest('.container').removeClass('container').addClass('col-content').wrap('<div class="container container-wraper"><div class="row row-with-bnr"></div></div>');
+$('body').append('<div class="sticky-title"><span>Can’t find a lease?</span> <a href="">Let us find for you <img src="https://htmldiz.github.io/huntinglocator.com/arrow-2.png" /></a></div>');
 $('body').find('#clean-code-studio .col-content').after('<div class="col-bnr"><div class="image-place-bnr"><img src="https://htmldiz.github.io/huntinglocator.com/image.png" /><div class="title-info">Can’t find a Lease?<br/>Let us do it for you.</div><ul><li>Tell us what your looking for in a short quiz</li><li>We will deliver you multiple lease options that match your needs</li></ul><a href="https://huntinglocator.com/hunting-survey">Find a lease for me</a><div class="foot-text">Only $199 - Money Back Guarantee</div></div></div>');
 var styles = `<style> 
 #clean-code-studio .row-with-bnr{
@@ -73,11 +74,12 @@ var styles = `<style>
 }
 .image-place-bnr .foot-text{
 	color: #ffffff;
-	font-family: Lato;
-	font-size: 15px;
-	font-weight: 700;
-	line-height: 17px;
-	text-align:center; 
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+    text-align: center;
+    margin-top: 11px;
 }
 .image-place-bnr .title-info {
     padding:45px 23px;
@@ -135,8 +137,23 @@ var styles = `<style>
     box-shadow: 0 4px 9px rgba(0, 0, 0, 0.23);
     border-radius: 4px;
     background-color: #f77d0f;
-    color:#ffffff;
-    text-align:center;
+    color: #ffffff;
+    text-align: center;
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 700;
+}
+@media(min-width:992px) and (max-width:1024px){
+	.listings .listings-details .listings-properties{
+    	margin-bottom: 50px;
+    	width: 100%;
+	}
+	.listings .listings-details .listings-description{
+		width: 100%;
+	}
+}
+@media(max-width:992px){
+
 }
 @media(min-width:1200px){
 	.container {
