@@ -3,4 +3,4 @@ git add *
 git commit -m "update"
 git pull
 git push
-msg %username% Git commit!
+mshta "javascript:alert('Git commit!');"
