@@ -185,6 +185,8 @@ var styles = `<style>
 		top: 15px;
 		right: 15px;
 		background: unset;
+		margin: 0;
+		z-index: 999;
 	}
 	.image-place-bnr .close-image-bnr:before, .image-place-bnr .close-image-bnr:after {
 	    content: "";
