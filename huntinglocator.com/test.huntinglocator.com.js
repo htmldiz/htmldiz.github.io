@@ -1,5 +1,9 @@
 $('#clean-code-studio .container .single-column').closest('.container').removeClass('container').addClass('col-content').wrap('<div class="container container-wraper"><div class="row row-with-bnr"></div></div>');
-$('body').append('<div class="sticky-title"><span>Can’t find a lease?</span> <a href="">Let us find for you <img src="https://htmldiz.github.io/huntinglocator.com/arrow-2.png" /></a></div>');
+$('body').append('<div class="sticky-title"><span>Can’t find a lease?</span> <a href="#">Let us find for you <img src="https://htmldiz.github.io/huntinglocator.com/arrow-2.png" /></a></div>');
+$('body').on('click', '.sticky-title', function(event) {
+
+	event.preventDefault();
+});
 $('body').find('#clean-code-studio .col-content').after('<div class="col-bnr"><div class="image-place-bnr"><img src="https://htmldiz.github.io/huntinglocator.com/image.png" /><div class="title-info">Can’t find a Lease?<br/>Let us do it for you.</div><ul><li>Tell us what your looking for in a short quiz</li><li>We will deliver you multiple lease options that match your needs</li></ul><a href="https://huntinglocator.com/hunting-survey">Find a lease for me</a><div class="foot-text">Only $199 - Money Back Guarantee</div></div></div>');
 var styles = `<style> 
 #clean-code-studio .row-with-bnr{
@@ -160,8 +164,24 @@ var styles = `<style>
 	font-weight: 700;
 }
 @media(max-width:992px){
+	.image-place-bnr img{
+    	width: 100%;
+	}
+	.image-place-bnr{
+		margin-top: 0;
+	}
+	#clean-code-studio .col-bnr{
+	    position: fixed;
+	    top: 0;
+	    left: 0;
+	    right: 0;
+	    width: 100%;
+	    max-width: unset;
+	    z-index:9;
+	}
 	.sticky-title{
 		display:block;
+		text-align: center;
 		position:fixed;
 		left: 0;
 		top: 0;
