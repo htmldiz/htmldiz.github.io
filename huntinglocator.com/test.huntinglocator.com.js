@@ -77,7 +77,7 @@ var styles = `<style>
 	font-size: 15px;
 	font-weight: 700;
 	line-height: 17px;
-	text-align:center;
+	text-align:center; 
 }
 .image-place-bnr .title-info {
     padding:45px 23px;
