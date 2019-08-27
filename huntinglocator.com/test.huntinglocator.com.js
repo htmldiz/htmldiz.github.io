@@ -184,7 +184,7 @@ var styles = `<style>
 		position: absolute;
 		top: 15px;
 		right: 15px;
-	}
+	} 
 	.image-place-bnr .close-image-bnr:before, .image-place-bnr .close-image-bnr:after {
 		content: "";
 		display: block;
