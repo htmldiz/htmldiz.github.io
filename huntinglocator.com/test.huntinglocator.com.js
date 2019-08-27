@@ -187,7 +187,7 @@ var styles = `<style>
 	}
 	#clean-code-studio .col-bnr.display-mob{
 		display:block;
-	} 
+	}
 	.sticky-title{
 		display:block;
 		text-align: center;
