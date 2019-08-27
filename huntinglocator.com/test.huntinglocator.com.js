@@ -168,7 +168,7 @@ var styles = `<style>
     	width: 100%;
 	}
 	.image-place-bnr{
-		margin-top: 0;
+		margin-top: 0; 
 	}
 	#clean-code-studio .col-bnr{
 	    position: fixed;
