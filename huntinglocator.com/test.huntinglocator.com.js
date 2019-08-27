@@ -163,7 +163,7 @@ var styles = `<style>
 	font-size: 16px;
 	font-weight: 700;
 }
-@media(max-width:992px) and (max-height:567px){
+@media(max-width:992px) and (max-height:568px){
 	.image-place-bnr a{
 		margin-top: 36px;
 	}
