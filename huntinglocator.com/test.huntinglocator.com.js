@@ -2,9 +2,13 @@ $('#clean-code-studio .container .single-column').closest('.container').removeCl
 $('body').append('<div class="sticky-title"><span>Can’t find a lease?</span> <a href="#">Let us find for you <img src="https://htmldiz.github.io/huntinglocator.com/arrow-2.png" /></a></div>');
 $('body').on('click', '.sticky-title', function(event) {
 	$('body').find('.col-bnr').addClass('display-mob');
-	event.preventDefault();
+	return false;
 });
-$('body').find('#clean-code-studio .col-content').after('<div class="col-bnr"><div class="image-place-bnr"><img src="https://htmldiz.github.io/huntinglocator.com/image.png" /><div class="title-info">Can’t find a Lease?<br/>Let us do it for you.</div><ul><li>Tell us what your looking for in a short quiz</li><li>We will deliver you multiple lease options that match your needs</li></ul><a href="https://huntinglocator.com/hunting-survey">Find a lease for me</a><div class="foot-text">Only $199 - Money Back Guarantee</div></div></div>');
+$('body').on('click', '.close-image-bnr', function(event) {
+	$('body').find('.col-bnr').removeClass('display-mob');
+	return false;
+});
+$('body').find('#clean-code-studio .col-content').after('<div class="col-bnr"><div class="image-place-bnr"><a href="#" class="close-image-bnr"></a><img src="https://htmldiz.github.io/huntinglocator.com/image.png" /><div class="title-info">Can’t find a Lease?<br/>Let us do it for you.</div><ul><li>Tell us what your looking for in a short quiz</li><li>We will deliver you multiple lease options that match your needs</li></ul><a href="https://huntinglocator.com/hunting-survey">Find a lease for me</a><div class="foot-text">Only $199 - Money Back Guarantee</div></div></div>');
 var styles = `<style> 
 #clean-code-studio .row-with-bnr{
 	display: -webkit-box;
@@ -39,121 +43,122 @@ var styles = `<style>
 	justify-content: space-between;
 }
 .image-place-bnr {
-    margin-top: 18px;
+	margin-top: 18px;
 }
 
 .title-info {
-    font-family: Oswald,Arial,sans-serif;
-    font-size: 33px;
-    font-weight: 400;
-    letter-spacing: -0.89px;
-    line-height: 43px;
-    text-align: center;
+	font-family: Oswald,Arial,sans-serif;
+	font-size: 33px;
+	font-weight: 400;
+	letter-spacing: -0.89px;
+	line-height: 43px;
+	text-align: center;
 }
 
 
 .image-place-bnr a:after {
-    content: "";
-    display: inline-block;
-    width: 10px;
-    height: 9px;
-    background-image: url(https://htmldiz.github.io/huntinglocator.com/arrow.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-left: 10px;
+	content: "";
+	display: inline-block;
+	width: 10px;
+	height: 9px;
+	background-image: url(https://htmldiz.github.io/huntinglocator.com/arrow.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	margin-left: 10px;
 }
 .image-place-bnr img {
-    position: absolute;
-    z-index: 1;
+	position: absolute;
+	z-index: 1;
 }
 .image-place-bnr a,
 .image-place-bnr ul,
 .image-place-bnr .foot-text,
 .image-place-bnr,
 .image-place-bnr .title-info {
-    position:relative;
-    z-index:2;
+	position:relative;
+	z-index:2;
 }
 .image-place-bnr .foot-text{
 	color: #ffffff;
-    font-family: Lato;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 17px;
-    text-align: center;
-    margin-top: 11px;
+	font-family: Lato;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 17px;
+	text-align: center;
+	margin-top: 11px;
 }
 .image-place-bnr .title-info {
-    padding:45px 23px;
-    color:#ffffff;
+	padding:45px 23px;
+	color:#ffffff;
 }
 
 .image-place-bnr ul {
-    text-align:center;
-    list-style:none;
-    padding:0;
-    margin:0;
+	text-align:center;
+	list-style:none;
+	padding:0;
+	margin:0;
 
 }
 .image-place-bnr li + li:after,
 .image-place-bnr li + li:before{
-    content:"";
-    display:block;
-    width:3px;
-    height:15px; 
-    position:absolute;
-    top:-30px;
-    background-color:#ffffff;
-    transform: rotate(40deg);
-    left:calc(50% + 4px);
+	content:"";
+	display:block;
+	width:3px;
+	height:15px; 
+	position:absolute;
+	top:-30px;
+	background-color:#ffffff;
+	transform: rotate(40deg);
+	left:calc(50% + 4px);
 }
 .image-place-bnr li + li:after{
-    transform: rotate(-40deg);
-    left:calc(50% - 4px);
+	transform: rotate(-40deg);
+	left:calc(50% - 4px);
 }
 .image-place-bnr li + li{
-    position:relative;
-    margin-top:45px;
+	position:relative;
+	margin-top:45px;
 }
 .image-place-bnr li {
-    color:#fff;
-    display:block;
-    margin-left:auto;
-    margin-right:auto;
-    max-width:224px;
-    padding:24px;
-    border-radius: 4px;
-    border: 2px solid #f77d0f;
-    background-color: #000000;
+	color:#fff;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	max-width:224px;
+	padding:24px;
+	border-radius: 4px;
+	border: 2px solid #f77d0f;
+	background-color: #000000;
 }
 
 .image-place-bnr a {
-    display:flex;
-    margin-left:auto;
-    margin-right:auto;
-    align-items:center;
-    justify-content:center;
-    margin-top:86px;
-    width: 224px;
-    height: 48px;
-    box-shadow: 0 4px 9px rgba(0, 0, 0, 0.23);
-    border-radius: 4px;
-    background-color: #f77d0f;
-    color: #ffffff;
-    text-align: center;
-    font-family: Lato;
-    font-size: 16px;
-    font-weight: 700;
+	display:flex;
+	margin-left:auto;
+	margin-right:auto;
+	align-items:center;
+	justify-content:center;
+	margin-top:86px;
+	width: 224px;
+	height: 48px;
+	box-shadow: 0 4px 9px rgba(0, 0, 0, 0.23);
+	border-radius: 4px;
+	background-color: #f77d0f;
+	color: #ffffff;
+	text-align: center;
+	font-family: Lato;
+	font-size: 16px;
+	font-weight: 700;
 }
 @media(min-width:992px) and (max-width:1024px){
 	.listings .listings-details .listings-properties{
-    	margin-bottom: 50px;
-    	width: 100%;
+		margin-bottom: 50px;
+		width: 100%;
 	}
 	.listings .listings-details .listings-description{
 		width: 100%;
 	}
 }
+.image-place-bnr .close-image-bnr,
 .sticky-title{
 	display:none;
 } 
@@ -170,20 +175,40 @@ var styles = `<style>
 }
 @media(max-width:992px){
 	.image-place-bnr img{
-    	width: 100%;
+		width: 100%;
+	}
+	.image-place-bnr .close-image-bnr{
+		display: block;
+		width: 45px;
+		height: 45px;
+		position: absolute;
+		top: 15px;
+		right: 15px;
+	}
+	.image-place-bnr .close-image-bnr:before, .image-place-bnr .close-image-bnr:after {
+		content: "";
+		display: block;
+		position: absolute;
+		width: 2px;
+		height: 25px;
+		background-color: #f77d0f;
+		-webkit-transform: rotate(45deg);
+		transform: rotate(45deg);
+		left: 22px;
+		top: 9px;
 	}
 	.image-place-bnr{
 		margin-top: 0; 
 	}
 	#clean-code-studio .col-bnr{
-	    position: fixed;
-	    top: 0;
-	    left: 0;
-	    right: 0;
-	    width: 100%;
-	    max-width: unset;
-	    z-index:9;
-	    display:none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		max-width: unset;
+		z-index:9;
+		display:none;
 	}
 	#clean-code-studio .col-bnr.display-mob{
 		display:block;
@@ -215,8 +240,8 @@ var styles = `<style>
 }
 @media(min-width:1200px){
 	.container {
-	    max-width: 1300px;
-	    width: 1300px;
+		max-width: 1300px;
+		width: 1300px;
 	}
 	#listings div.featured-listings ul li{
 		width: unset;
