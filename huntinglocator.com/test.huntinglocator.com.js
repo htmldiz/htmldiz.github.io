@@ -172,7 +172,7 @@ var styles = `<style>
 	.image-place-bnr a{
 		margin-top: 36px;
 	}
-}
+}   
 @media(max-width:992px){
 	.image-place-bnr img{
 		width: 100%;
@@ -184,18 +184,22 @@ var styles = `<style>
 		position: absolute;
 		top: 15px;
 		right: 15px;
+		background: unset;
 	}
 	.image-place-bnr .close-image-bnr:before, .image-place-bnr .close-image-bnr:after {
-		content: "";
-		display: block;
-		position: absolute;
-		width: 2px;
-		height: 25px;
-		background-color: #f77d0f;
-		-webkit-transform: rotate(45deg);
-		transform: rotate(45deg);
-		left: 22px;
-		top: 9px;
+	    content: "";
+	    display: block;
+	    position: absolute;
+	    width: 2px;
+	    height: 25px;
+	    background: #f77d0f;
+	    -webkit-transform: rotate(45deg);
+	    transform: rotate(45deg);
+	    left: 22px;
+	    margin: 0px;
+	}
+	.image-place-bnr .close-image-bnr:after {
+	    transform: rotate(-45deg);
 	}
 	.image-place-bnr{
 		margin-top: 0; 
@@ -253,3 +257,4 @@ var styles = `<style>
 </style>`;
 styles = styles += '';
 $('body').after(styles);
+// test
