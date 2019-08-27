@@ -48,24 +48,43 @@ var styles = `<style>
     text-align: center;
 }
 
-.image-place-bnr{
-    position:relative;
+
+.image-place-bnr a:after {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 9px;
+    background-image: url(https://htmldiz.github.io/huntinglocator.com/arrow.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 10px;
 }
 .image-place-bnr img {
     position: absolute;
     z-index: 1;
 }
-
+.image-place-bnr a,
+.image-place-bnr ul,
+.image-place-bnr .foot-text,
+.image-place-bnr,
 .image-place-bnr .title-info {
     position:relative;
     z-index:2;
+}
+.image-place-bnr .foot-text{
+	color: #ffffff;
+	font-family: Lato;
+	font-size: 15px;
+	font-weight: 700;
+	line-height: 17px;
+	text-align:center;
+}
+.image-place-bnr .title-info {
     padding:45px 23px;
     color:#ffffff;
 }
 
 .image-place-bnr ul {
-    position:relative;
-    z-index:2;
     text-align:center;
     list-style:none;
     padding:0;
@@ -105,8 +124,6 @@ var styles = `<style>
 }
 
 .image-place-bnr a {
-    z-index:2;
-    position:relative;
     display:flex;
     margin-left:auto;
     margin-right:auto;
