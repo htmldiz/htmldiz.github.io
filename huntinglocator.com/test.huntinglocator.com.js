@@ -152,7 +152,7 @@ var styles = `<style>
 }
 .sticky-title{
 	display:none;
-}
+} 
 .sticky-title a{
 	color: #ff912e;
 	font-family: Lato;
