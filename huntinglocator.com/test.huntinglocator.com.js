@@ -77,7 +77,7 @@ var styles = `<style>
     content:"";
     display:block;
     width:3px;
-    height:15px;
+    height:15px; 
     position:absolute;
     top:-30px;
     background-color:#ffffff;
