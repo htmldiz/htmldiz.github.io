@@ -1,4 +1,25 @@
 if($('#listings').length > 0){
+	var element_work_with = $('.col-bnr');
+	var top_start         = element_work_with.offset().top;
+	var outerHeight_start = $('.col-bnr').outerHeight() + 50;
+	$(document).scroll(function(){
+		if($('body').outerWidth() > 992){
+			if($(window).scrollTop() > top_start){
+				if(-(top_start - $(window).scrollTop())+outerHeight_start <= $('body').find('.row-with-bnr').outerHeight()){
+					element_work_with.css('margin-top',-(top_start - $(window).scrollTop()));
+				}else{
+					element_work_with.css('margin-top',$('body').find('.row-with-bnr').outerHeight() - outerHeight_start);
+				}
+				if($(window).scrollTop() < element_work_with.offset().top){
+					element_work_with.css('margin-top',-(top_start - $(window).scrollTop()));
+				}
+			}else{
+				element_work_with.attr('style','');
+			}
+		}else{
+			element_work_with.attr('style','');
+		}
+	});
 	$('#clean-code-studio .container .single-column').closest('.container').removeClass('container').addClass('col-content').wrap('<div class="container container-wraper"><div class="row row-with-bnr"></div></div>');
 	$('body').append('<div class="sticky-title"><span>Want us to find a lease for you?</span> <a href="#">Let us find for you <img src="https://htmldiz.github.io/huntinglocator.com/arrow-2.png" /></a></div>');
 	$('body').on('click', '.sticky-title', function(event) {
@@ -9,7 +30,7 @@ if($('#listings').length > 0){
 		$('body').find('.col-bnr').removeClass('display-mob');
 		return false;
 	});
-	$('body').find('#clean-code-studio .col-content').after('<div class="col-bnr"><div class="image-place-bnr"><a href="#" class="close-image-bnr"></a><img src="https://htmldiz.github.io/huntinglocator.com/image.png" /><div class="title-info">Want us to find a lease for you?<br/>Let us do it for you.</div><ul><li>Tell us what you’re looking for in a short quiz</li><li>We will deliver you multiple lease options that match your needs</li></ul><a href="https://huntinglocator.com/hunting-survey">Find a lease for me</a><div class="foot-text">Only $199 - Money Back Guarantee</div></div></div>');
+	$('body').find('#clean-code-studio .col-content').after('<div class="col-bnr"><div class="image-place-bnr"><a href="#" class="close-image-bnr"></a><img src="https://htmldiz.github.io/huntinglocator.com/image.png" /><div class="title-info">Want us to find a lease for you?</div><ul><li>Tell us what you’re looking for in a short quiz</li><li>We will deliver you multiple lease options that match your needs</li></ul><a href="https://huntinglocator.com/hunting-survey">Find a lease for me</a><div class="foot-text">Only $199 - Money Back Guarantee</div></div></div>');
 	var styles = `<style> 
 	#clean-code-studio .row-with-bnr{
 		display: -webkit-box;
@@ -159,7 +180,7 @@ if($('#listings').length > 0){
 	.sticky-title a{
 		color: #ff912e;
 		font-family: Lato;
-		font-size: 16px;
+		font-size: 12px;
 		font-weight: 700;
 	}
 	@media(max-width:992px) and (max-height:568px){
@@ -226,10 +247,10 @@ if($('#listings').length > 0){
 			left: 0;
 			top: 0;
 			right: 0;
-			padding:8px 14px;
+			padding:5px 14px;
 			color: #ffffff;
 			font-family: Lato;
-			font-size: 16px;
+			font-size: 12px;
 			font-weight: 700;
 			box-shadow: 0 4px 9px rgba(0, 0, 0, 0.23);
 			border: 3px solid #f77d0f;
