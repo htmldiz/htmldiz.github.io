@@ -281,4 +281,3 @@ if($('#listings').length > 0){
 		}
 	});
 }
-// test
