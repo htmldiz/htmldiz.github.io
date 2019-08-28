@@ -1,6 +1,6 @@
 if($('#listings').length > 0){
 	$('#clean-code-studio .container .single-column').closest('.container').removeClass('container').addClass('col-content').wrap('<div class="container container-wraper"><div class="row row-with-bnr"></div></div>');
-	$('body').append('<div class="sticky-title"><span>Can’t find a lease?</span> <a href="#">Let us find for you <img src="https://htmldiz.github.io/huntinglocator.com/arrow-2.png" /></a></div>');
+	$('body').append('<div class="sticky-title"><span>Want us to find a lease for you?</span> <a href="#">Let us find for you <img src="https://htmldiz.github.io/huntinglocator.com/arrow-2.png" /></a></div>');
 	$('body').on('click', '.sticky-title', function(event) {
 		$('body').find('.col-bnr').addClass('display-mob');
 		return false;
@@ -9,7 +9,7 @@ if($('#listings').length > 0){
 		$('body').find('.col-bnr').removeClass('display-mob');
 		return false;
 	});
-	$('body').find('#clean-code-studio .col-content').after('<div class="col-bnr"><div class="image-place-bnr"><a href="#" class="close-image-bnr"></a><img src="https://htmldiz.github.io/huntinglocator.com/image.png" /><div class="title-info">Can’t find a Lease?<br/>Let us do it for you.</div><ul><li>Tell us what your looking for in a short quiz</li><li>We will deliver you multiple lease options that match your needs</li></ul><a href="https://huntinglocator.com/hunting-survey">Find a lease for me</a><div class="foot-text">Only $199 - Money Back Guarantee</div></div></div>');
+	$('body').find('#clean-code-studio .col-content').after('<div class="col-bnr"><div class="image-place-bnr"><a href="#" class="close-image-bnr"></a><img src="https://htmldiz.github.io/huntinglocator.com/image.png" /><div class="title-info">Want us to find a lease for you?<br/>Let us do it for you.</div><ul><li>Tell us what you’re looking for in a short quiz</li><li>We will deliver you multiple lease options that match your needs</li></ul><a href="https://huntinglocator.com/hunting-survey">Find a lease for me</a><div class="foot-text">Only $199 - Money Back Guarantee</div></div></div>');
 	var styles = `<style> 
 	#clean-code-studio .row-with-bnr{
 		display: -webkit-box;
@@ -27,7 +27,6 @@ if($('#listings').length > 0){
 		flex: 0 0 293px;
 		max-width: 293px;
 	}
-
 	#clean-code-studio .col-content{
 		padding-left: 15px;
 		padding-right: 15px;
@@ -46,7 +45,6 @@ if($('#listings').length > 0){
 	.image-place-bnr {
 		margin-top: 18px;
 	}
-
 	.title-info {
 		font-family: Oswald,Arial,sans-serif;
 		font-size: 33px;
@@ -55,8 +53,6 @@ if($('#listings').length > 0){
 		line-height: 43px;
 		text-align: center;
 	}
-
-
 	.image-place-bnr a:after {
 		content: "";
 		display: inline-block;
@@ -92,13 +88,11 @@ if($('#listings').length > 0){
 		padding:45px 23px;
 		color:#ffffff;
 	}
-
 	.image-place-bnr ul {
 		text-align:center;
 		list-style:none;
 		padding:0;
 		margin:0;
-
 	}
 	.image-place-bnr li + li:after,
 	.image-place-bnr li + li:before{
@@ -131,7 +125,6 @@ if($('#listings').length > 0){
 		border: 2px solid #f77d0f;
 		background-color: #000000;
 	}
-
 	.image-place-bnr a {
 		display:flex;
 		margin-left:auto;
@@ -243,12 +236,12 @@ if($('#listings').length > 0){
 			background-color: #000000;
 		}
 	}
-	@media(min-width:992px){
+	@media(min-width:993px){
 		#clean-code-studio .col-content{
-			-webkit-flex: 0 0 calc(100% - 293px);
-			-ms-flex: 0 0 calc(100% - 293px);
-			flex: 0 0 calc(100% - 293px);
-			max-width: calc(100% - 293px);
+			-webkit-flex: 0 0 calc(100% - 300px);
+			-ms-flex: 0 0 calc(100% - 300px);
+			flex: 0 0 calc(100% - 300px);
+			max-width: calc(100% - 300px);
 		}
 	}
 	@media(min-width:1330px){
