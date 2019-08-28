@@ -1,25 +1,5 @@
 if($('#listings').length > 0){
-	var element_work_with = $('.col-bnr');
-	var top_start         = element_work_with.offset().top;
-	var outerHeight_start = $('.col-bnr').outerHeight() + 50;
-	$(document).scroll(function(){
-		if($('body').outerWidth() > 992){
-			if($(window).scrollTop() > top_start){
-				if(-(top_start - $(window).scrollTop())+outerHeight_start <= $('body').find('.row-with-bnr').outerHeight()){
-					element_work_with.css('margin-top',-(top_start - $(window).scrollTop()));
-				}else{
-					element_work_with.css('margin-top',$('body').find('.row-with-bnr').outerHeight() - outerHeight_start);
-				}
-				if($(window).scrollTop() < element_work_with.offset().top){
-					element_work_with.css('margin-top',-(top_start - $(window).scrollTop()));
-				}
-			}else{
-				element_work_with.attr('style','');
-			}
-		}else{
-			element_work_with.attr('style','');
-		}
-	});
+
 	$('#clean-code-studio .container .single-column').closest('.container').removeClass('container').addClass('col-content').wrap('<div class="container container-wraper"><div class="row row-with-bnr"></div></div>');
 	$('body').append('<div class="sticky-title"><span>Want us to find a lease for you?</span> <a href="#">Let us find for you <img src="https://htmldiz.github.io/huntinglocator.com/arrow-2.png" /></a></div>');
 	$('body').on('click', '.sticky-title', function(event) {
@@ -279,4 +259,26 @@ if($('#listings').length > 0){
 	</style>`;
 	styles = styles += '';
 	$('body').after(styles);
+	var element_work_with = $('body').find('.col-bnr');
+	var top_start         = element_work_with.offset().top;
+	var outerHeight_start = $('body').find('.col-bnr').outerHeight() + 50;
+	$(document).scroll(function(){
+		if($('body').outerWidth() > 992){
+			if($(window).scrollTop() > top_start){
+				if(-(top_start - $(window).scrollTop())+outerHeight_start <= $('body').find('.row-with-bnr').outerHeight()){
+					element_work_with.css('margin-top',-(top_start - $(window).scrollTop()));
+				}else{
+					element_work_with.css('margin-top',$('body').find('.row-with-bnr').outerHeight() - outerHeight_start);
+				}
+				if($(window).scrollTop() < element_work_with.offset().top){
+					element_work_with.css('margin-top',-(top_start - $(window).scrollTop()));
+				}
+			}else{
+				element_work_with.attr('style','');
+			}
+		}else{
+			element_work_with.attr('style','');
+		}
+	});
 }
+// test
