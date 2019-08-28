@@ -258,9 +258,7 @@ if($('#listings').length > 0){
 			flex: 0 0 auto;
 		}
 	}
-
 	</style>`;
 	styles = styles += '';
 	$('body').after(styles);
 }
-// test
