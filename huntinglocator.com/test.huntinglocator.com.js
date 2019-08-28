@@ -206,7 +206,9 @@ if($('#listings').length > 0){
 		    transform: rotate(-45deg);
 		}
 		.image-place-bnr{
-			margin-top: 0; 
+			margin-top: 0;
+			min-height: 100%;
+			overflow: hidden;
 		}
 		#clean-code-studio .col-bnr{
 			position: fixed;
@@ -215,6 +217,8 @@ if($('#listings').length > 0){
 			right: 0;
 			width: 100%;
 			max-width: unset;
+			height: unset;
+			bottom: 0;
 			z-index:9;
 			display:none;
 			overflow: auto;
