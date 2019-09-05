@@ -50,14 +50,16 @@ if(jQuery('.blog-sidebar').length){
 	$html += '</div>';
 	var first_position = jQuery('body').find('.fixed-share-bar').offset().top;
 	jQuery('.blog-sidebar').append($html);
-	setInterval(function(){
+	jQuery(window).scroll(function(){
+	// setInterval(function(){
 		if(jQuery(window).scrollTop() > first_position){
 			var styl = jQuery('body').find('.fixed-share-bar').attr('style');
 			jQuery('body').find('.fixed-share-bar-banner').attr('style',styl);
 		}else{
 			jQuery('body').find('.fixed-share-bar-banner').attr('style','');
 		}
-	}, 1);
+	});
+	// }, 1);
 }
 jQuery('body').on('click','.get_free_mcta',function(){
 	window.dataLayer = window.dataLayer || [];
@@ -118,6 +120,7 @@ if(jQuery('.recipeInstructions').length){
 	  -moz-user-select: none;
 	  -ms-user-select: none;
 	  user-select: none;
+	  min-height:250px;
 	}
 	#makeBlock{
 		position: relative;
@@ -147,6 +150,7 @@ if(jQuery('.recipeInstructions').length){
 		text-decoration:underline;
 		text-align: center;
 		margin-top:9px;
+		margin-bottom: 0;
 	}
 	.links-makeBlock a:first-child{
 		display:block;
