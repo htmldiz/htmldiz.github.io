@@ -49,7 +49,6 @@ if(jQuery('.blog-sidebar').length){
 }
 if(jQuery('#makeBlock').length){
 	$html = '<div class="makeBlock-blur">';
-	$html = '<svg id="svg-filter" style="display:none;"><filter id="svg-blur"><feGaussianBlur in="SourceGraphic" stdDeviation="4"></feGaussianBlur></filter></svg>';
 	$html += `<div class="makeBinfos">
 		<p>Unlock this meal along with hundreds of smart meal plans and never stress about, “What’s for dinner?” again</p>
 		<div class="links-makeBlock">
@@ -89,6 +88,9 @@ if(jQuery('.recipeInstructions').length){
 	}
 	#makeBlock{
 		position: relative;
+	}
+	.makeBinfos{
+		
 	}
 	.makeBinfos p{
 		text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
