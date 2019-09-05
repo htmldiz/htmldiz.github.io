@@ -1,3 +1,10 @@
+hj('trigger', 'lure_to_free_trial_from_articles');
+window.dataLayer = window.dataLayer || [];
+dataLayer.push({
+	'event': 'CRO_experiment',
+	'eventCategory': 'Lure Users to Free Trial from Articles',
+	'eventAction': 'loaded'
+});
 function initjQuery(callback) {
 	var script = document.createElement( "script" )
 	script.type = "text/javascript";
@@ -37,22 +44,45 @@ if(jQuery('.blog-sidebar').length){
 		$html += '<li>Say bye to dinnertime stress while cooking healthier</li>';
 	$html += '</ul>';
 		$html += '<div class="links">';
-			$html += '<a href="https://mealplans.cooksmarts.com/trial_subscription/new?b">Try meal plans for FREE</a>';
+			$html += '<a href="https://mealplans.cooksmarts.com/trial_subscription/new?b" class="get_meal_mcta">Try meal plans for FREE</a>';
 			$html += '<a href="https://www.cooksmarts.com/weekly-meal-planner/join/?utm_source=public-recipe&utm_medium=link&utm_campaign=post-steps-cta">Learn more</a>';
 		$html += '</div>';
 	$html += '</div>';
-	setInterval(function(){
-		var styl = jQuery('body').find('.fixed-share-bar').attr('style');
-		jQuery('body').find('.fixed-share-bar-banner').attr('style',styl);
-	}, 1);
+	var first_position = jQuery('body').find('.fixed-share-bar').offset().top;
 	jQuery('.blog-sidebar').append($html);
+	setInterval(function(){
+		if(jQuery(window).scrollTop() > first_position){
+			var styl = jQuery('body').find('.fixed-share-bar').attr('style');
+			jQuery('body').find('.fixed-share-bar-banner').attr('style',styl);
+		}else{
+			jQuery('body').find('.fixed-share-bar-banner').attr('style','');
+		}
+	}, 1);
 }
+$('body').on('click','.get_free_mcta',function(){
+	window.dataLayer = window.dataLayer || [];
+	dataLayer.push({
+		'event': 'CRO_experiment',
+		'eventCategory': 'Lure Users to Free Trial from Articles',
+		'eventAction': 'click',
+		'eventLabel': 'Get 1 Free Month'
+	});
+});
+$('body').on('click','.get_meal_mcta',function(){
+	window.dataLayer = window.dataLayer || [];
+	dataLayer.push({
+		'event': 'CRO_experiment',
+		'eventCategory': 'Lure Users to Free Trial from Articles',
+		'eventAction': 'click',
+		'eventLabel': 'Try Meal Plans for Free'
+	});
+});
 if(jQuery('#makeBlock').length){
 	$html = '<div class="makeBlock-blur">';
 	$html += `<div class="makeBinfos">
 		<p>Unlock this meal along with hundreds of smart meal plans and never stress about, “What’s for dinner?” again</p>
 		<div class="links-makeBlock">
-			<a href="https://mealplans.cooksmarts.com/trial_subscription/new?b">get 1 free month</a>
+			<a class="get_free_mcta" href="https://mealplans.cooksmarts.com/trial_subscription/new?b">get 1 free month</a>
 			<a href="https://www.cooksmarts.com/weekly-meal-planner/join/?utm_source=public-recipe&utm_medium=link&utm_campaign=post-steps-cta">Learn more</a>
 		</div>
 	</div>`;
@@ -64,7 +94,7 @@ if(jQuery('.recipeInstructions').length){
 	$html += `<div class="makeBinfos">
 		<p>Unlock this meal along with hundreds of smart meal plans and never stress about, “What’s for dinner?” again</p>
 		<div class="links-makeBlock">
-			<a href="https://mealplans.cooksmarts.com/trial_subscription/new?a=&utm_campaign=post-steps-cta&utm_medium=link&utm_source=public-recipe">get 1 free month</a>
+			<a class="get_free_mcta" href="https://mealplans.cooksmarts.com/trial_subscription/new?b">get 1 free month</a>
 			<a href="https://www.cooksmarts.com/weekly-meal-planner/join/?utm_source=public-recipe&utm_medium=link&utm_campaign=post-steps-cta">Learn more</a>
 		</div>
 	</div>`;
@@ -77,6 +107,9 @@ if(jQuery('.recipeInstructions').length){
 	styles += `
 	.fixed-share-bar.is_stuck{
 		position:static !important;
+	}
+	.blog-sidebar [style*="vertical-align: baseline"] {
+		display: none !important;
 	}
 	.recipeInstructions ol.last,
 	#makeBlock ol{
@@ -231,6 +264,7 @@ background-repeat: no-repeat;
 background-position: 0 100%;
 overflow: hidden;
 position: relative;
+background-color: #fff;
 }
 .fixed-share-bar-banner:after{
 background: linear-gradient(to bottom, rgba(255, 255, 255, .9) 40%, rgba(255, 255, 255, 0) 100%);
