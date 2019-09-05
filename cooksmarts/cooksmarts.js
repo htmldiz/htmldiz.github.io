@@ -90,7 +90,7 @@ if(jQuery('.recipeInstructions').length){
 		position: relative;
 	}
 	.makeBinfos{
-		
+
 	}
 	.makeBinfos p{
 		text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
@@ -138,12 +138,11 @@ if(jQuery('.recipeInstructions').length){
 	    display: block;
 	}
 	.makeBlock-blur {
-		height: 209px;
 		background-color: rgba(112, 113, 112, 0.6);
 		width: 100%;
 		position: absolute;
 		bottom: 0;
-		padding: 34px 23px;
+		padding: 22px 23px;
 	}
 	.fixed-share-bar-banner{
 border: 2px solid #dbdbdb;
