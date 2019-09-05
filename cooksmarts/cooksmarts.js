@@ -59,7 +59,7 @@ if(jQuery('.blog-sidebar').length){
 		}
 	}, 1);
 }
-$('body').on('click','.get_free_mcta',function(){
+jQuery('body').on('click','.get_free_mcta',function(){
 	window.dataLayer = window.dataLayer || [];
 	dataLayer.push({
 		'event': 'CRO_experiment',
@@ -68,7 +68,7 @@ $('body').on('click','.get_free_mcta',function(){
 		'eventLabel': 'Get 1 Free Month'
 	});
 });
-$('body').on('click','.get_meal_mcta',function(){
+jQuery('body').on('click','.get_meal_mcta',function(){
 	window.dataLayer = window.dataLayer || [];
 	dataLayer.push({
 		'event': 'CRO_experiment',
