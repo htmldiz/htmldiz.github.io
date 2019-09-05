@@ -143,7 +143,7 @@ if(jQuery('.recipeInstructions').length){
 		width: 100%;
 		position: absolute;
 		bottom: 0;
-		padding: 15px 23px;
+		padding: 34px 23px;
 	}
 	.fixed-share-bar-banner{
 border: 2px solid #dbdbdb;
