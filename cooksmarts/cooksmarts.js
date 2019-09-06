@@ -128,6 +128,9 @@ if(jQuery('.recipeInstructions').length){
 	.makeBinfos{
 
 	}
+	.page__container.recipe .recipe__preview.mt-5{
+		display: none !important;
+	}
 	.makeBinfos p{
 		text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
 		color: #ffffff;
@@ -279,6 +282,36 @@ left: 0;
 position: absolute;
 bottom: 0;
 width: 100%;
+}
+@media (max-height: 850px) {
+	.fixed-share-bar-banner {
+		padding: 15px 10px;
+		margin: 15px 0 0;
+	}
+	.fixed-share-bar-banner h3 {
+		font-size: 20px;
+		margin: 0 auto 5px;
+	}
+	.fixed-share-bar-banner h4 {
+	    font-size: 16px;
+	    margin: 0 auto 5px;
+	}
+	.fixed-share-bar-banner img {
+    	max-width: 140px;
+    }
+    .fixed-share-bar-banner ul {
+    	margin: 15px 0 54px 22px;
+    }
+    .fixed-share-bar-banner li {
+        font-size: 16px;
+    	line-height: 1.4;
+    }
+    .fixed-share-bar-banner .links a {
+		font-size: 16px;
+    }
+    .fixed-share-bar-banner .links a:first-child {
+    	padding: 13px 20px;
+    }
 }
 	`;
 	styles    += "</style>";
