@@ -45,7 +45,7 @@ if(jQuery('.blog-sidebar').length){
 	$html += '</ul>';
 		$html += '<div class="links">';
 			$html += '<a href="https://mealplans.cooksmarts.com/trial_subscription/new?b" class="get_meal_mcta">Try meal plans for FREE</a>';
-			$html += '<a href="https://www.cooksmarts.com/weekly-meal-planner/join/?utm_source=public-recipe&utm_medium=link&utm_campaign=post-steps-cta">Learn more</a>';
+			// $html += '<a href="https://www.cooksmarts.com/weekly-meal-planner/join/?utm_source=public-recipe&utm_medium=link&utm_campaign=post-steps-cta">Learn more</a>';
 		$html += '</div>';
 	$html += '</div>';
 	var first_position = jQuery('body').find('.fixed-share-bar').offset().top;
@@ -80,12 +80,12 @@ jQuery('body').on('click','.get_meal_mcta',function(){
 	});
 });
 if(jQuery('#makeBlock').length){
+	// <a href="https://www.cooksmarts.com/weekly-meal-planner/join/?utm_source=public-recipe&utm_medium=link&utm_campaign=post-steps-cta">Learn more</a>
 	$html = '<div class="makeBlock-blur">';
 	$html += `<div class="makeBinfos">
 		<p>Unlock this meal along with hundreds of smart meal plans and never stress about, “What’s for dinner?” again</p>
 		<div class="links-makeBlock">
 			<a class="get_free_mcta" href="https://mealplans.cooksmarts.com/trial_subscription/new?b">get 1 free month</a>
-			<a href="https://www.cooksmarts.com/weekly-meal-planner/join/?utm_source=public-recipe&utm_medium=link&utm_campaign=post-steps-cta">Learn more</a>
 		</div>
 	</div>`;
 	$html += '</div>';
@@ -97,7 +97,6 @@ if(jQuery('.recipeInstructions').length){
 		<p>Unlock this meal along with hundreds of smart meal plans and never stress about, “What’s for dinner?” again</p>
 		<div class="links-makeBlock">
 			<a class="get_free_mcta" href="https://mealplans.cooksmarts.com/trial_subscription/new?b">get 1 free month</a>
-			<a href="https://www.cooksmarts.com/weekly-meal-planner/join/?utm_source=public-recipe&utm_medium=link&utm_campaign=post-steps-cta">Learn more</a>
 		</div>
 	</div>`;
 	$html += '</div>';
