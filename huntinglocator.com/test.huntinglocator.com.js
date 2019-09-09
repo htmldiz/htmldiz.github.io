@@ -1,8 +1,20 @@
+window.dataLayer = window.dataLayer || [];
+dataLayer.push({
+	'event': 'CRO_experiment',
+	'eventCategory': 'Find a lease for me',
+	'eventAction': 'loaded'
+});
 if($('#listings').length > 0){
-
 	$('#clean-code-studio .container .single-column').closest('.container').removeClass('container').addClass('col-content').wrap('<div class="container container-wraper"><div class="row row-with-bnr"></div></div>');
 	$('body').append('<div class="sticky-title"><span>Want us to find a lease for you?</span> <a href="#">Let us find for you <img src="https://htmldiz.github.io/huntinglocator.com/arrow-2.png" /></a></div>');
 	$('body').on('click', '.sticky-title', function(event) {
+		window.dataLayer = window.dataLayer || [];
+		dataLayer.push({
+			'event': 'CRO_experiment',
+			'eventCategory': 'Find a lease for me',
+			'eventAction': 'click',
+			'eventLabel': 'Want us to find a lease for you?'
+		});
 		$('body').find('.col-bnr').addClass('display-mob');
 		return false;
 	});
@@ -10,7 +22,16 @@ if($('#listings').length > 0){
 		$('body').find('.col-bnr').removeClass('display-mob');
 		return false;
 	});
-	$('body').find('#clean-code-studio .col-content').after('<div class="col-bnr"><div class="image-place-bnr"><a href="#" class="close-image-bnr"></a><img src="https://htmldiz.github.io/huntinglocator.com/image.png" /><div class="title-info">Want us to find a lease for you?</div><ul><li>Tell us what you’re looking for in a short quiz</li><li>We will deliver you multiple lease options that match your needs</li></ul><a href="https://huntinglocator.com/hunting-survey">Find a lease for me</a><div class="foot-text">Only $199 - Money Back Guarantee</div></div></div>');
+	$('body').on('click', '.find-a-lease-for-me', function(event) {
+		window.dataLayer = window.dataLayer || [];
+		dataLayer.push({
+			'event': 'CRO_experiment',
+			'eventCategory': 'Find a lease for me',
+			'eventAction': 'click',
+			'eventLabel': 'Find a lease for me'
+		});
+	});
+	$('body').find('#clean-code-studio .col-content').after('<div class="col-bnr"><div class="image-place-bnr"><a href="#" class="close-image-bnr"></a><img src="https://htmldiz.github.io/huntinglocator.com/image.png" /><div class="title-info">Want us to find a lease for you?</div><ul><li>Tell us what you’re looking for in a short quiz</li><li>We will deliver you multiple lease options that match your needs</li></ul><a href="https://huntinglocator.com/hunting-survey" class="find-a-lease-for-me">Find a lease for me</a><div class="foot-text">Only $199 - Money Back Guarantee</div></div></div>');
 	var styles = `<style> 
 	#clean-code-studio .row-with-bnr{
 		display: -webkit-box;
