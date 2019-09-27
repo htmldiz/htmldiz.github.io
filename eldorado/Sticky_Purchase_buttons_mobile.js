@@ -25,6 +25,7 @@ if (!window.jQuery) {
   readyjQueryinit();
 }
 
+
 function readyjQueryinit(){
   window.dataLayer = window.dataLayer || [];
     dataLayer.push({
