@@ -112,6 +112,10 @@ function readyjQueryinit(){
       .wrap_sticky_btn .to-cart-button {
         width: 50%;
       }
+      .wrap_sticky_btn .buy-button,
+      .wrap_sticky_btn .buy_credit_btn {
+        cursor: pointer;
+      }
       .wrap_sticky_btn.one_buy_btn div {
         width: 100%;
       }
