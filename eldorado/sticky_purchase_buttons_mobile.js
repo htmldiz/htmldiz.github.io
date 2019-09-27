@@ -24,7 +24,7 @@ if (!window.jQuery) {
 }else{
   readyjQueryinit();
 }
-
+  
 
 function readyjQueryinit(){
   window.dataLayer = window.dataLayer || [];
@@ -78,6 +78,7 @@ function readyjQueryinit(){
       });
       $(".product-buy-container .button .buy-button-placeholder>div").click();
       $(".wrap_sticky_btn .buy-button").replaceWith('<div class="to-cart-button valign-wrapper"><span>В корзине</span></div>')
+      alert("Click")
     })
 
     $(document).on( "click", ".wrap_sticky_btn .buy_credit_btn", function() {
