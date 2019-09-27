@@ -89,8 +89,8 @@ function readyjQueryinit(){
         'eventAction': 'click',
         'eventLabel': 'Buy on credit'
       });
-      $(".product-buy-container .credit-information .content-information .button").click();
-      $(".wrap_sticky_btn .buy-button").replaceWith('<a href="#" class="to-cart-button valign-wrapper"><span>В корзине</span></a>')
+      $(".product-buy-container .credit-information .button").click();
+      // $(".wrap_sticky_btn .buy-button").replaceWith('<a href="#" class="to-cart-button valign-wrapper"><span>В корзине</span></a>')
       event.preventDefault();
     })
 
