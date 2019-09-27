@@ -53,22 +53,24 @@ function readyjQueryinit(){
 
 
     if ($(".product-buy-container .credit-information").length>0) {
-      $('body').after('<div class="wrap_sticky_btn buy-button-placeholder"><div class="buy-button">Купить</div><div class="buy_credit_btn">Купить в кредит</div></div>');
+      $('body').after('<div class="wrap_sticky_btn buy-button-placeholder"><a href="#" class="buy-button">Купить</a><a href="#" class="buy_credit_btn">Купить в кредит</a></div>');
     } else {
-      $('body').after('<div class="wrap_sticky_btn buy-button-placeholder one_buy_btn"><div class="buy-button">Купить</div></div>');
+      $('body').after('<div class="wrap_sticky_btn buy-button-placeholder one_buy_btn"><a href="#" class="buy-button">Купить</a></div>');
     }
 
 
     setInterval(function(){ 
       if ($(".product-buy-container .buy-button-placeholder .to-cart-button").length>0) {
-        $(".wrap_sticky_btn .buy-button").replaceWith('<div class="to-cart-button valign-wrapper"><span>В корзине</span></div>')
+        $(".wrap_sticky_btn .buy-button").replaceWith('<a href="#" class="to-cart-button valign-wrapper"><span>В корзине</span></a>')
       } else {
-        $(".wrap_sticky_btn .to-cart-button").replaceWith('<div class="buy-button">Купить</div>')
+        $(".wrap_sticky_btn .to-cart-button").replaceWith('<a href="#" class="buy-button">Купить</a>')
       }
     }, 200);
 
 
-    $(document).on( "click", ".wrap_sticky_btn div:first-child", function() {
+    $(document).on( "click", ".wrap_sticky_btn div:first-child", function(event) {
+      alert("Click22")
+      event.preventDefault();
       window.dataLayer = window.dataLayer || [];
         dataLayer.push({
         'event': 'autoEvent',
@@ -77,11 +79,12 @@ function readyjQueryinit(){
         'eventLabel': 'Buy'
       });
       $(".product-buy-container .button .buy-button-placeholder>div").click();
-      $(".wrap_sticky_btn .buy-button").replaceWith('<div class="to-cart-button valign-wrapper"><span>В корзине</span></div>')
-      alert("Click")
+      $(".wrap_sticky_btn .buy-button").replaceWith('<a href="#" class="to-cart-button valign-wrapper"><span>В корзине</span></a>')
     })
 
-    $(document).on( "click", ".wrap_sticky_btn .buy_credit_btn", function() {
+    $(document).on( "click", ".wrap_sticky_btn .buy_credit_btn", function(event) {
+      alert("Click333")
+      event.preventDefault();
       window.dataLayer = window.dataLayer || [];
         dataLayer.push({
         'event': 'autoEvent',
@@ -93,7 +96,8 @@ function readyjQueryinit(){
       $(".wrap_sticky_btn .buy-button").replaceWith('<div class="to-cart-button valign-wrapper"><span>В корзине</span></div>')
     })
 
-    $(document).on( "click", ".product-buy-container .button .buy-button-placeholder>div", function() {
+    $(document).on( "click", ".product-buy-container .button .buy-button-placeholder>div", function(event) {
+      event.preventDefault();
       $(".wrap_sticky_btn .buy-button").replaceWith('<div class="to-cart-button valign-wrapper"><span>В корзине</span></div>')
     });
 
