@@ -35,6 +35,7 @@ function readyjQueryinit(){
   });
   $(window).ready(function(){
 
+    $('body').after('<div class="wrap_sticky_btn buy-button-placeholder one_buy_btn"><a href="#" class="buy-button">Купить</a></div>');
 
     $(document).on( "click", ".wrap_sticky_btn a:first-child", function(event) {
       $(".wrap_sticky_btn a:first-child").css("background-color", "blue")
@@ -56,7 +57,7 @@ function readyjQueryinit(){
     var styles = `<style> 
       .wrap_sticky_btn {
         position: fixed;
-        bottom: -50px;
+        bottom: 0;
         transition: bottom .2s;
         right: 0;
         left: 0;
