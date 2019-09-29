@@ -34,41 +34,10 @@ function readyjQueryinit(){
     'eventAction': 'loaded'
   });
   $(window).ready(function(){
-    var positionForSticky = $(".product-right-part.product-information-part .product-additional-actions").position().top
-    var positionWindows = $(window).scrollTop()
-    if (positionWindows>positionForSticky) {
-      $(".wrap_sticky_btn").css({"bottom": "0", "transition": "bottom .2s"})
-    } else {
-      $(".wrap_sticky_btn").css({"bottom": "-50px", "transition": "bottom .2s"})
-    }
-
-    $(window).scroll(function() {
-      var positionWindows = $(window).scrollTop()
-      if (positionWindows>positionForSticky) {
-        $(".wrap_sticky_btn").css({"bottom": "0", "transition": "bottom .2s"})
-      } else {
-        $(".wrap_sticky_btn").css({"bottom": "-50px", "transition": "bottom .2s"})
-      }
-    })
-
-
-    if ($(".product-buy-container .credit-information").length>0) {
-      $('body').after('<div class="wrap_sticky_btn buy-button-placeholder"><a href="#" class="buy-button">Купить</a><a href="#" class="buy_credit_btn">Купить в кредит</a></div>');
-    } else {
-      $('body').after('<div class="wrap_sticky_btn buy-button-placeholder one_buy_btn"><a href="#" class="buy-button">Купить</a></div>');
-    }
-
-
-    setInterval(function(){ 
-      if ($(".product-buy-container .buy-button-placeholder .to-cart-button").length>0) {
-        $(".wrap_sticky_btn .buy-button").replaceWith('<a href="#" class="to-cart-button valign-wrapper"><span>В корзине</span></a>')
-      } else {
-        $(".wrap_sticky_btn .to-cart-button").replaceWith('<a href="#" class="buy-button">Купить</a>')
-      }
-    }, 200);
 
 
     $(document).on( "click", ".wrap_sticky_btn a:first-child", function(event) {
+      $(".wrap_sticky_btn a:first-child").css("background-color", "blue")
       window.dataLayer = window.dataLayer || [];
         dataLayer.push({
         'event': 'autoEvent',
@@ -76,28 +45,12 @@ function readyjQueryinit(){
         'eventAction': 'click',
         'eventLabel': 'Buy'
       });
+
       $(".product-buy-container .button .buy-button-placeholder>div").click();
       $(".wrap_sticky_btn .buy-button").replaceWith('<a href="#" class="to-cart-button valign-wrapper"><span>В корзине</span></a>')
       event.preventDefault();
+      alert("Alert")
     })
-
-    $(document).on( "click", ".wrap_sticky_btn .buy_credit_btn", function(event) {
-      window.dataLayer = window.dataLayer || [];
-        dataLayer.push({
-        'event': 'autoEvent',
-        'eventCategory': 'Exp - Sticky Purchase Buttons',
-        'eventAction': 'click',
-        'eventLabel': 'Buy on credit'
-      });
-      $(".product-buy-container .credit-information .button").click();
-      // $(".wrap_sticky_btn .buy-button").replaceWith('<a href="#" class="to-cart-button valign-wrapper"><span>В корзине</span></a>')
-      event.preventDefault();
-    })
-
-    $(document).on( "click", ".product-buy-container .button .buy-button-placeholder>div", function(event) {
-      $(".wrap_sticky_btn .buy-button").replaceWith('<a href="#" class="to-cart-button valign-wrapper"><span>В корзине</span></a>')
-      event.preventDefault();
-    });
 
 
     var styles = `<style> 
