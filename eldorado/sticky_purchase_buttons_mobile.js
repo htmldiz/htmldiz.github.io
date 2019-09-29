@@ -47,7 +47,7 @@ function readyjQueryinit(){
         'eventLabel': 'Buy'
       });
 
-      $(this).click();
+      // $(this).click();
       $(".product-buy-container .button .buy-button-placeholder>div").click();
       $(".wrap_sticky_btn .buy-button").replaceWith('<a href="#" class="to-cart-button valign-wrapper"><span>В корзине</span></a>')
       event.preventDefault();
