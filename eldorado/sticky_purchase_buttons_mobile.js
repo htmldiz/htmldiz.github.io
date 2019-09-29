@@ -37,7 +37,7 @@ function readyjQueryinit(){
 
     $('body').after('<div class="wrap_sticky_btn buy-button-placeholder one_buy_btn"><a href="#" class="buy-button">Купить</a></div>');
 
-    $(document).on( "click", ".wrap_sticky_btn a:first-child", function(event) {
+    $(document).on( "touchstart click", ".wrap_sticky_btn a:first-child", function(event) {
       $(".wrap_sticky_btn a:first-child").css("background-color", "blue")
       window.dataLayer = window.dataLayer || [];
         dataLayer.push({
