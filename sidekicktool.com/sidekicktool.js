@@ -138,7 +138,7 @@ function readyjQueryinit(){
 			location.href = 'https://sidekicktool.com/checkout';
 		});
 		$('body').on('click', '#buy-now1, .product-form__cart-submit', function(event) {
-			setC( 'product_in_cart_url'   , location.pathname , 0 );
+			setC( 'product_in_cart_url'   , location.pathname);
 		});
 		function checkfordisplaypopup(){
 			var useradd_producttocart = getC( 'useradd_producttocart' );
