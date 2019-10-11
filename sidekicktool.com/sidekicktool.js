@@ -71,7 +71,7 @@ function readyjQueryinit(){
 		function render_popup(form){
 			$outhtml  = '<div class="fixed-box-modal">';
 			$outhtml += '<div class="fixed-box-modal-content">';
-			$outhtml += '<div class="modal-box-top">Unpaid products in your cart are in high demand. We can"t guarantee their avaiability if you leave the site.<button class="modal-close" data-modal-control="close"></button></div>';
+			$outhtml += '<div class="modal-box-top">Unpaid products in your cart are in high demand. We can"t guarantee their availability if you leave the site.<button class="modal-close" data-modal-control="close"></button></div>';
 			$outhtml += '<form action="modal-popup-fx">';
 			$outhtml += '</form>';
 			$outhtml += '<div class="modal-box-bottom">Get 10% off if you complete your order now</div>';
@@ -137,7 +137,7 @@ function readyjQueryinit(){
 		$('body').on('click', '.fixed-box-modal-content a[href="https://sidekicktool.com/checkout"]', function(event) {
 			location.href = 'https://sidekicktool.com/checkout';
 		});
-		$('body').on('click', '#buy-now1, .product-form__cart-submit', function(event) {
+		$('body').on('click', '#buy-now1, .product-form__cart-submit', function() {
 			setC( 'product_in_cart_url'   , location.pathname  );
 		});
 		function checkfordisplaypopup(){
