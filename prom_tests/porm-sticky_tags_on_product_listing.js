@@ -81,11 +81,13 @@ function readyjQueryinit(){
 			$(".promoFilters__root--1Vc6E").after('<span class="ab-slider-arrow right-arrow"><svg class="horizontalSlideContent__controlIcon--5mfgs" viewBox="0 0 64 64"><use xlink:href="#right2"></use></svg></span>')
 			$('.x-header__search-row.js-header').find('.ab-slider-arrow.left-arrow').css('display','none');
 			setInterval(function(){
+				var all_width = 0;
 				$('.x-header__search-row.js-header .promoFilters__root--1Vc6E').find('li').each(function(index, el) {
 					all_width = all_width + $(el).outerWidth()+13;
 				});
 				var realAll_width = all_width - 26;
-				if(realAll_width < $('.x-header__search-row.js-header .promoFilters__root--1Vc6E').outerWidth()){
+				console.log(realAll_width);
+				if(realAll_width <= $('.x-header__search-row.js-header .promoFilters__root--1Vc6E').outerWidth()){
 					$('.x-header__search-row.js-header').find('.ab-slider-arrow.left-arrow').css('display','none');
 					$('.x-header__search-row.js-header').find('.ab-slider-arrow.right-arrow').css('display','none');
 					$('.x-header__search-row.js-header .promoFilters__root--1Vc6E ul').css('transform','unset');
