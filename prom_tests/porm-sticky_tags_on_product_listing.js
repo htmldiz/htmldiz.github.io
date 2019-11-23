@@ -106,7 +106,7 @@ function readyjQueryinit(){
 							$('.x-header__search-row.js-header').find('.ab-slider-arrow.left-arrow').attr('style','');
 							$('.x-header__search-row.js-header').find('.ab-slider-arrow.right-arrow').attr('style','');
 					}
-				}
+				} 
 			}, 300) 
 			var widthSlider = $('.x-header__container').outerWidth()
 			var widthSliderElem = $('.x-header__search-row.js-header .promoFilters__root--1Vc6E .promoFilters__list--2qiSG').outerWidth()
