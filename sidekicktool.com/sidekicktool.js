@@ -71,7 +71,7 @@ function readyjQueryinit(){
 		function render_popup(form){
 			$outhtml  = '<div class="fixed-box-modal">';
 			$outhtml += '<div class="fixed-box-modal-content">';
-			$outhtml += '<div class="modal-box-top">Unpaid products in your cart are in high demand. We can"t guarantee their avaiability if you leave the site.<button class="modal-close" data-modal-control="close"></button></div>';
+			$outhtml += '<div class="modal-box-top">Unpaid products in your cart are in high demand. We can"t guarantee their availability if you leave the site.<button class="modal-close" data-modal-control="close"></button></div>';
 			$outhtml += '<form action="modal-popup-fx">';
 			$outhtml += '</form>';
 			$outhtml += '<div class="modal-box-bottom">Get 10% off if you complete your order now</div>';
@@ -118,6 +118,7 @@ function readyjQueryinit(){
 					setC( 'visitcheckout'         , '' , 0 );
 					setC( 'trylivecart'           , '' , 0 );
 					setC( 'visitcart'             , '' , 0 );
+					setC( 'product_in_cart_url'   , '' , 0 );
 					$('body').find('.fixed-box-modal').addClass('show');
 				// }
 			// ,10000);
@@ -136,6 +137,9 @@ function readyjQueryinit(){
 		$('body').on('click', '.fixed-box-modal-content a[href="https://sidekicktool.com/checkout"]', function(event) {
 			location.href = 'https://sidekicktool.com/checkout';
 		});
+		$('body').on('click', '#buy-now1, .product-form__cart-submit', function() {
+			setC( 'product_in_cart_url'   , location.pathname  );
+		});
 		function checkfordisplaypopup(){
 			var useradd_producttocart = getC( 'useradd_producttocart' );
 			var trylivecart           = getC( 'trylivecart' );
@@ -148,14 +152,15 @@ function readyjQueryinit(){
 				setC('visitcart','true');
 			}
 			var visitcheckouts        = getC('visitcheckout');
+			var product_in_cart_url   = getC('product_in_cart_url');
 			var visitcart             = getC('visitcart');
 			console.log('checkouts', checkouts);
 			console.log('cart', cart);
 			if(!empty(useradd_producttocart) && !empty(trylivecart) ){
-				if( visitcart && !cart && !checkouts ){
+				if( visitcart && !cart && !checkouts && location.pathname != product_in_cart_url){
 					get_cart();
 				}
-				if( visitcart && cart && !empty(visitcheckouts)){
+				if( visitcart && cart && !empty(visitcheckouts) && location.pathname != product_in_cart_url){
 					get_cart();
 				}
 			}
