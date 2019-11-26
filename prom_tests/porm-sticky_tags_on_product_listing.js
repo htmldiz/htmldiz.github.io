@@ -174,9 +174,10 @@ function readyjQueryinit(){
 				border-radius: 100px;
 				box-shadow: none;
 				color: #06060680;
+				border: 1px solid #E4E7EC;
 			}
 			.ab-test-slider .promoFilter__content--t_x1a.promoFilter__contentStateSelected--1Ur4o {
-				border: 1px solid #E4E7EC;
+				border-color: #F4BF2C;
 				color: rgb(51, 51, 51);
 			}
 			.x-header__search-row.js-header .ab-test-slider {
