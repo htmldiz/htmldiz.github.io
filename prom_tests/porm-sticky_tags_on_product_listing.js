@@ -157,9 +157,6 @@ function readyjQueryinit(){
 			.x-header__search-row.js-header .promoFilters__root--1Vc6E .promoFilter__root--2p4V4:first-child {
 				margin-left: 0;
 			}
-			.x-header__search-row.js-header .promoFilters__root--1Vc6E .promoFilter__content--t_x1a {
-				color: rgb(51, 51, 51);
-			}
 			.x-header__search-row.js-header {
 				flex-wrap: wrap;
 			}
@@ -173,14 +170,14 @@ function readyjQueryinit(){
 				display: none;
 			}
 			.ab-test-slider .promoFilter__content--t_x1a {
-				opacity: 0.25;
 				height: 30px;
 				border-radius: 100px;
 				box-shadow: none;
+				color: #06060680;
 			}
 			.ab-test-slider .promoFilter__content--t_x1a.promoFilter__contentStateSelected--1Ur4o {
-				border-color: #F4BF2C;
-				opacity: 1;
+				border: 1px solid #E4E7EC;
+				color: rgb(51, 51, 51);
 			}
 			.x-header__search-row.js-header .ab-test-slider {
 				position: relative;
