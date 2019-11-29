@@ -173,6 +173,10 @@ function readyjQueryinit(){
 				height: 30px;
 				border-radius: 100px;
 				color: #333;
+				border-color: #f5c002;
+			}
+			.ab-test-slider .promoFilter__content--t_x1a:hover {
+				background-color: #f6f8fd;
 			}
 			.x-header__search-row.js-header .ab-test-slider {
 				position: relative;
