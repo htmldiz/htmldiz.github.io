@@ -167,18 +167,12 @@ function readyjQueryinit(){
 				width: calc(100vw - 17px);
 			}
 			.ab-test-slider .promoFilter__close--Y0BNJ {
-				display: none;
+				top: -6px;
 			}
 			.ab-test-slider .promoFilter__content--t_x1a {
 				height: 30px;
 				border-radius: 100px;
-				box-shadow: none;
-				color: #06060680;
-				border: 1px solid #E4E7EC;
-			}
-			.ab-test-slider .promoFilter__content--t_x1a.promoFilter__contentStateSelected--1Ur4o {
-				border-color: #F4BF2C;
-				color: rgb(51, 51, 51);
+				color: #333;
 			}
 			.x-header__search-row.js-header .ab-test-slider {
 				position: relative;
