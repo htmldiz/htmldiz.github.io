@@ -1,3 +1,7 @@
+try {
+    hj('trigger', 'prom_sticky_tags');
+}
+catch(e) {}
 function initjQuery(callback) {
 	var script = document.createElement( "script" )
 	script.type = "text/javascript";
