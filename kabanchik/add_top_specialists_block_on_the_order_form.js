@@ -246,7 +246,7 @@ styles += `
 	position: relative;
 }
 .kb-task-create>* {
-    width: calc(100% - 305px);
+    width: calc(100% - 350px);
 }
 .kb-task-create__item_state_passed-step {
 	width: 100%;
@@ -261,7 +261,7 @@ styles += `
 	width: 100%;
 }
 .wrap_ab_block {
-	width: 274px;
+	width: 320px;
 	position: absolute;
 	height: 100%;
 	left: calc(100% - 13px);
