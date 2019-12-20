@@ -329,7 +329,7 @@ styles += `
     font-size: 8px;
 }
 .b-button_width_full .b-button__text {
-	font-size: 11px;
+	font-size: 13px;
 }
 .b-button_width_full {
 	height: 32px;
