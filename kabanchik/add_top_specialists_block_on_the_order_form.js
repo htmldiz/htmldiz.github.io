@@ -253,7 +253,7 @@ styles += `
 }
 .title_ab_block {
     font-weight: bold;
-    font-size: 14px;
+    font-size: 16px;
     padding-bottom: 22px;
     text-align: center;
 }
