@@ -2704,12 +2704,25 @@ styles += `
 .kb-reviews-stats_type_listing-performer .kb-reviews-stats__item:first-child {
 	padding-left: 0;
 }
+.kb-task-create-payment__item_type_payment-description {
+	padding-left: 10px;
+}
+.kb-task-create-payment .kb-task-create-payment__section:first-child {
+    display: flex;
+}
 @media(max-width: 1199px) {
 	.kb-form {
 		width: auto;
 	}
 	.kb-task-create-payment__section {
 		flex-wrap: wrap;
+	}
+	.kb-task-create-payment__item {
+		flex: 0 0 100%;
+	}
+	.kb-task-create-payment__item_type_cost-description
+	    flex: 0 0 50%;
+	    padding-top: 20px;
 	}
 	.kb-task-create-payment__estimated-cost {
 		margin-top: 20px;
