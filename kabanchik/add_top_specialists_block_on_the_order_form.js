@@ -2723,6 +2723,7 @@ styles += `
 	.kb-task-create-payment__item_type_cost-description {
 	    flex: 0 0 50%;
 	    padding-top: 20px;
+	    margin-left: 0;
 	}
 	.kb-task-create-payment__estimated-cost {
 		margin-top: 20px;
@@ -2742,6 +2743,10 @@ styles += `
 	}
 	.kb-task-create-contacts__column {
 		display: block;
+	}
+	.kb-task-create-contacts__column:not(.kb-task-create-contacts__form_type_registration) {
+		margin-left: 180px;
+		text-align: left;
 	}
 }
 `;
