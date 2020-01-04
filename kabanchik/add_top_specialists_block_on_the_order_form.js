@@ -2720,7 +2720,7 @@ styles += `
 	.kb-task-create-payment__item {
 		flex: 0 0 100%;
 	}
-	.kb-task-create-payment__item_type_cost-description
+	.kb-task-create-payment__item_type_cost-description {
 	    flex: 0 0 50%;
 	    padding-top: 20px;
 	}
