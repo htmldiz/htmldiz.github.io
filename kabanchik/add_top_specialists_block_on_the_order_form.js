@@ -2724,6 +2724,9 @@ styles += `
 	    flex: 0 0 50%;
 	    padding-top: 20px;
 	}
+
+
+	
 	.kb-task-create-payment__estimated-cost {
 		margin-top: 20px;
 		width: 100%;
