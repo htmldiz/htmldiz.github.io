@@ -2724,12 +2724,8 @@ styles += `
 	    flex: 0 0 50%;
 	    padding-top: 20px;
 	}
-
-
-	
 	.kb-task-create-payment__estimated-cost {
 		margin-top: 20px;
-		width: 100%;
 	}
 	.kb-estimated-cost {
     	width: 100%!important;
