@@ -2737,6 +2737,12 @@ styles += `
 		width: 360px;
 		padding-left: 0;
 	}
+	.kb-task-create-contacts {
+		display: block;
+	}
+	.kb-task-create-contacts__column {
+		display: block;
+	}
 }
 `;
 styles    += "</style>";
