@@ -2710,6 +2710,14 @@ styles += `
 .kb-task-create-payment .kb-task-create-payment__section:first-child {
     display: flex;
 }
+.kb-task-create-payment__attributes-section:first-child .kb-task-create-payment__label {
+	padding-bottom: 15px;
+}
+@media only screen and (min-width: 1200px) {
+	.kb-task-create-payment__item_type_publish-description {
+		padding: 10px 10px 30px 10px;
+	}
+}
 @media(max-width: 1199px) {
 	.kb-form {
 		width: auto;
