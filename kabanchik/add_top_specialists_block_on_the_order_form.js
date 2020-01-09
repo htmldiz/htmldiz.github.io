@@ -2710,8 +2710,12 @@ styles += `
 .kb-task-create-payment .kb-task-create-payment__section:first-child {
     display: flex;
 }
+.kb-task-create-payment__attributes-section_type_mt-35 .kb-task-create-payment__label,
 .kb-task-create-payment__attributes-section:first-child .kb-task-create-payment__label {
 	padding-bottom: 15px;
+}
+.kb-task-create-payment__attributes-section {
+	margin-top: -5px;
 }
 @media only screen and (min-width: 1200px) {
 	.kb-task-create-payment__item_type_publish-description {
