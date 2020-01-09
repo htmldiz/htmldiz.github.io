@@ -2714,6 +2714,9 @@ styles += `
 .kb-task-create-payment__attributes-section:first-child .kb-task-create-payment__label {
 	padding-bottom: 15px;
 }
+.kb-task-create-payment__attributes-section_type_mt-35 {
+	margin-top: 35px !important;
+}
 .kb-task-create-payment__attributes-section {
 	margin-top: -5px;
 }
