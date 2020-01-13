@@ -31,7 +31,7 @@ if (!window.jQuery) {
 function readyjQueryinit(){
   $(window).ready(function(){
 // Сантехник
-if(window.location == "https://kabanchik.ua/task/create/cid/1121") {
+if(window.location == "https://kabanchik.ua/task/create/cid/1121" || window.location == "https://kabanchik.ua/task/create/cid/222" || window.location == "https://kabanchik.ua/task/create/cid/206" || window.location == "https://kabanchik.ua/task/create/cid/223" || window.location == "https://kabanchik.ua/task/create/cid/211" || window.location == "https://kabanchik.ua/task/create/cid/208" || window.location == "https://kabanchik.ua/task/create/cid/219" || window.location == "https://kabanchik.ua/task/create/cid/207" || window.location == "https://kabanchik.ua/task/create/cid/214" || window.location == "https://kabanchik.ua/task/create/cid/220" || window.location == "https://kabanchik.ua/task/create/cid/1128" || window.location == "https://kabanchik.ua/task/create/cid/212" || window.location == "https://kabanchik.ua/task/create/cid/891" || window.location == "https://kabanchik.ua/task/create/cid/209" || window.location == "https://kabanchik.ua/task/create/cid/221" || window.location == "https://kabanchik.ua/task/create/cid/215" || window.location == "https://kabanchik.ua/task/create/cid/210" || window.location == "https://kabanchik.ua/task/create/cid/213" || window.location == "https://kabanchik.ua/task/create/cid/205" || window.location == "https://kabanchik.ua/task/create/cid/818" ) {
 	$outhtml  = '<div class="wrap_ab_block">';
 	$outhtml += '<h3 class="title_ab_block">Топ-специалисты в этой категории:</h3>';
 
@@ -391,7 +391,7 @@ if(window.location == "https://kabanchik.ua/task/create/cid/1121") {
 }
 
 // Электрик
-if(window.location == "https://kabanchik.ua/task/create/cid/224") {
+if(window.location == "https://kabanchik.ua/task/create/cid/224" || window.location == "https://kabanchik.ua/task/create/cid/233" || window.location == "https://kabanchik.ua/task/create/cid/235" || window.location == "https://kabanchik.ua/task/create/cid/228" || window.location == "https://kabanchik.ua/task/create/cid/1122" || window.location == "https://kabanchik.ua/task/create/cid/226" || window.location == "https://kabanchik.ua/task/create/cid/230" || window.location == "https://kabanchik.ua/task/create/cid/231" || window.location == "https://kabanchik.ua/task/create/cid/234" || window.location == "https://kabanchik.ua/task/create/cid/236" || window.location == "https://kabanchik.ua/task/create/cid/229" || window.location == "https://kabanchik.ua/task/create/cid/232" || window.location == "https://kabanchik.ua/task/create/cid/227" || window.location == "https://kabanchik.ua/task/create/cid/225" || window.location == "https://kabanchik.ua/task/create/cid/819") {
 	$outhtml  = '<div class="wrap_ab_block">';
 	$outhtml += '<h3 class="title_ab_block">Топ-специалисты в этой категории:</h3>';
 
@@ -750,7 +750,7 @@ if(window.location == "https://kabanchik.ua/task/create/cid/224") {
 }
 
 //Ремонт квартир
-if(window.location == "https://kabanchik.ua/task/create/cid/157") {
+if(window.location == "https://kabanchik.ua/task/create/cid/157" || window.location == "https://kabanchik.ua/task/create/cid/333" || window.location == "https://kabanchik.ua/task/create/cid/978" || window.location == "https://kabanchik.ua/task/create/cid/334" || window.location == "https://kabanchik.ua/task/create/cid/834") {
 	$outhtml  = '<div class="wrap_ab_block">';
 	$outhtml += '<h3 class="title_ab_block">Топ-специалисты в этой категории:</h3>';
 
@@ -1107,7 +1107,7 @@ if(window.location == "https://kabanchik.ua/task/create/cid/157") {
 }
 
 //Укладка плитки
-if(window.location == "https://kabanchik.ua/task/create/cid/894") {
+if(window.location == "https://kabanchik.ua/task/create/cid/894" || window.location == "https://kabanchik.ua/task/create/cid/331" || window.location == "https://kabanchik.ua/task/create/cid/330" || window.location == "https://kabanchik.ua/task/create/cid/329" || window.location == "https://kabanchik.ua/task/create/cid/332" || window.location == "https://kabanchik.ua/task/create/cid/328" || window.location == "https://kabanchik.ua/task/create/cid/832") {
 	$outhtml  = '<div class="wrap_ab_block">';
 	$outhtml += '<h3 class="title_ab_block">Топ-специалисты в этой категории:</h3>';
 
@@ -1468,7 +1468,7 @@ if(window.location == "https://kabanchik.ua/task/create/cid/894") {
 }
 
 //Штукатурные работы
-if(window.location == "https://kabanchik.ua/task/create/cid/282") {
+if(window.location == "https://kabanchik.ua/task/create/cid/282" || window.location == "https://kabanchik.ua/task/create/cid/286" || window.location == "https://kabanchik.ua/task/create/cid/283" || window.location == "https://kabanchik.ua/task/create/cid/1194" || window.location == "https://kabanchik.ua/task/create/cid/285" || window.location == "https://kabanchik.ua/task/create/cid/284" || window.location == "https://kabanchik.ua/task/create/cid/827") {
 	$outhtml  = '<div class="wrap_ab_block">';
 	$outhtml += '<h3 class="title_ab_block">Топ-специалисты в этой категории:</h3>';
 
@@ -2183,7 +2183,7 @@ if(window.location == "https://kabanchik.ua/task/create/cid/18") {
 }
 
 // Ремонт бытовой техники на дому
-if(window.location == "https://kabanchik.ua/task/create/cid/464") {
+if(window.location == "https://kabanchik.ua/task/create/cid/464" || window.location == "https://kabanchik.ua/task/create/cid/463" || window.location == "https://kabanchik.ua/task/create/cid/466" || window.location == "https://kabanchik.ua/task/create/cid/469" || window.location == "https://kabanchik.ua/task/create/cid/467" || window.location == "https://kabanchik.ua/task/create/cid/475" || window.location == "https://kabanchik.ua/task/create/cid/477" || window.location == "https://kabanchik.ua/task/create/cid/468" || window.location == "https://kabanchik.ua/task/create/cid/476" || window.location == "https://kabanchik.ua/task/create/cid/474" || window.location == "https://kabanchik.ua/task/create/cid/471" || window.location == "https://kabanchik.ua/task/create/cid/470" || window.location == "https://kabanchik.ua/task/create/cid/1138" || window.location == "https://kabanchik.ua/task/create/cid/1129" || window.location == "https://kabanchik.ua/task/create/cid/465" || window.location == "https://kabanchik.ua/task/create/cid/1223" || window.location == "https://kabanchik.ua/task/create/cid/473" || window.location == "https://kabanchik.ua/task/create/cid/478" || window.location == "https://kabanchik.ua/task/create/cid/472" || window.location == "https://kabanchik.ua/task/create/cid/846") {
 	$outhtml  = '<div class="wrap_ab_block">';
 	$outhtml += '<h3 class="title_ab_block">Топ-специалисты в этой категории:</h3>';
 	$outhtml += '<div class="item_ab_block">';
