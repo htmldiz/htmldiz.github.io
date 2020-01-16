@@ -1,5 +1,5 @@
 try {
-    hj('trigger', 'tags_product_listing');
+    hj('trigger', 'top_specialists');
 } 
 catch(e) {}
 
@@ -30,6 +30,12 @@ if (!window.jQuery) {
 }
 function readyjQueryinit(){
   $(window).ready(function(){
+  	window.dataLayer = window.dataLayer || [];
+		dataLayer.push({
+		'event': 'event-to-ga',
+		'eventCategory': 'Exp - Top Specialists',
+		'eventAction': 'loaded'
+	});
 // Сантехник
 if(window.location == "https://kabanchik.ua/task/create/cid/1121" || window.location == "https://kabanchik.ua/task/create/cid/222" || window.location == "https://kabanchik.ua/task/create/cid/206" || window.location == "https://kabanchik.ua/task/create/cid/223" || window.location == "https://kabanchik.ua/task/create/cid/211" || window.location == "https://kabanchik.ua/task/create/cid/208" || window.location == "https://kabanchik.ua/task/create/cid/219" || window.location == "https://kabanchik.ua/task/create/cid/207" || window.location == "https://kabanchik.ua/task/create/cid/214" || window.location == "https://kabanchik.ua/task/create/cid/220" || window.location == "https://kabanchik.ua/task/create/cid/1128" || window.location == "https://kabanchik.ua/task/create/cid/212" || window.location == "https://kabanchik.ua/task/create/cid/891" || window.location == "https://kabanchik.ua/task/create/cid/209" || window.location == "https://kabanchik.ua/task/create/cid/221" || window.location == "https://kabanchik.ua/task/create/cid/215" || window.location == "https://kabanchik.ua/task/create/cid/210" || window.location == "https://kabanchik.ua/task/create/cid/213" || window.location == "https://kabanchik.ua/task/create/cid/205" || window.location == "https://kabanchik.ua/task/create/cid/818" ) {
 	$outhtml  = '<div class="wrap_ab_block">';
@@ -2297,6 +2303,43 @@ if(window.location == "https://kabanchik.ua/task/create/cid/464" || window.locat
 				console.log(heightAbBlock)
 				$(".wrap_ab_block").css("height",heightAbBlock)
 			}, 30);
+			
+			$(document).on( "click", ".kb-top-performer__assign-button .b-button.b-button_width_full ", function(event) {
+				window.dataLayer = window.dataLayer || [];
+				dataLayer.push({
+				'event': 'event-to-ga',
+				'eventCategory': 'Exp - Top Specialists',
+				'eventAction': 'click',
+				'eventLabel': 'Предложить работу'
+				});
+			})
+			$(document).on( "click", ".kb-top-performer__user .kb-reviews-stats__item a ", function(event) {
+				window.dataLayer = window.dataLayer || [];
+				dataLayer.push({
+				'event': 'event-to-ga',
+				'eventCategory': 'Exp - Top Specialists',
+				'eventAction': 'click',
+				'eventLabel': 'Отзывы специалиста'
+				});
+			})
+			$(document).on( "click", ".kb-top-performer__user .kb-top-performer__name ", function(event) {
+				window.dataLayer = window.dataLayer || [];
+				dataLayer.push({
+				'event': 'event-to-ga',
+				'eventCategory': 'Exp - Top Specialists',
+				'eventAction': 'click',
+				'eventLabel': 'Имя специалиста'
+				});
+			})
+			$(document).on( "click", ".ab_show_all", function(event) {
+				window.dataLayer = window.dataLayer || [];
+				dataLayer.push({
+				'event': 'event-to-ga',
+				'eventCategory': 'Exp - Top Specialists',
+				'eventAction': 'click',
+				'eventLabel': 'Показать еще'
+				});
+			})
 
 
 var styles = "<style>";
