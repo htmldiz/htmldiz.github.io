@@ -61,7 +61,12 @@ function readyjQueryinit(){
 	$(".b-mobile-bar.b-mobile-bar-redesign").prepend('<div class="prev-step h-dflex h-increase-click-size h-pointer"><svg stroke-width="0" class="arrow-left" style="width: 24px; height: 24px; max-width: 24px; max-height: 24px; fill: rgb(255, 255, 255); stroke: inherit;"><use xlink:href="#arrow-left"></use></svg></div>')
 	$("#tab-home-outlined path, #tab-favorite-outlined path, #tab-message-outlined path, #tab-profile-outlined path").attr("fill","#fff")
 
-	$(".b-similar-listing .b-advert__description-title").html('<h3 data-v-aa828f8c="" class="b-advert__description-title h-mt-0">Similar adverts from other sellers</h3>');
+	var tmr = setInterval(function(){
+		if($('html').find('.b-similar-listing .b-advert__description-title').length > 0){
+			clearInterval(tmr);
+				$(".b-similar-listing .b-advert__description-title").html('<h3 data-v-aa828f8c="" class="b-advert__description-title h-mt-0">Similar adverts from other sellers</h3>');
+		}
+	}, 100);
 
 	$(".b-mobile-bar.b-mobile-bar-redesign").css("display","none")
 	var lastScrollTop = 0;
