@@ -45,18 +45,23 @@ function readyjQueryinit(){
 	$outhtml  += '</div>';
 	$('body').append($outhtml);
 
-	$(".wrap_show_number").click(function(){
-		$(".b-show-contact-content").click()
+	// $(".wrap_show_number").click(function(){
+	// 	$(".b-show-contact-content").click()
 		setInterval(function(){
-			var number = $(".b-advert-card .b-buttons-wrapper a.qa-show-contact .b-button__text").text();
-			$(".text_show_number").html('<a href="tel:'+number+'">'+number+'</a>');
-		}, 300);
-	})
+			if ($.isNumeric($(".b-advert-card .b-buttons-wrapper a.qa-show-contact .b-button__text").text())) {
+				var number = $(".b-advert-card .b-buttons-wrapper a.qa-show-contact .b-button__text").text();
+				$(".text_show_number").html('<a href="tel:'+number+'">'+number+'</a>');
+
+			}
+		}, 100);
+	// })
 	$(".prev-step").click(function(){
 		$(".h-dflex.h-increase-click-size.h-pointer").click()
 	})
 	$(".b-mobile-bar.b-mobile-bar-redesign").prepend('<div class="prev-step h-dflex h-increase-click-size h-pointer"><svg stroke-width="0" class="arrow-left" style="width: 24px; height: 24px; max-width: 24px; max-height: 24px; fill: rgb(255, 255, 255); stroke: inherit;"><use xlink:href="#arrow-left"></use></svg></div>')
 	$("#tab-home-outlined path, #tab-favorite-outlined path, #tab-message-outlined path, #tab-profile-outlined path").attr("fill","#fff")
+
+	$(".b-similar-listing .b-advert__description-title").html('<h3 data-v-aa828f8c="" class="b-advert__description-title h-mt-0">Similar adverts from other sellers</h3>');
 
 	$(".b-mobile-bar.b-mobile-bar-redesign").css("display","none")
 	var lastScrollTop = 0;
@@ -72,6 +77,9 @@ function readyjQueryinit(){
 
 var styles = "<style>";
 styles += `
+.b-similar-listing .b-advert__description-title {
+    font-weight: bold;
+}
 .b-app-header {
     position: static;
 	margin-bottom: -56px;
