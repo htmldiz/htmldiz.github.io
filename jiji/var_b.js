@@ -73,11 +73,19 @@ function readyjQueryinit(){
 	$(window).scroll(function(event){
 	   var st = $(this).scrollTop();
 	   if (st > lastScrollTop){
-			$(".b-mobile-bar.b-mobile-bar-redesign").css("display","flex")       
+			// $(".b-mobile-bar.b-mobile-bar-redesign").css("display","flex")
 	   } else {
 	      // upscroll code
 	   }
 	   lastScrollTop = st;
+	   var offset = $(".b-similar-listing").offset()
+	   var offsetTop = offset.top-$(window).height()
+	   if (offsetTop < st){
+			$(".bottom_show_number").css("bottom","-70px")
+	   }
+	   else{
+			$(".bottom_show_number").css("bottom","0")
+	   }
 	});
 
 var styles = "<style>";
@@ -129,6 +137,7 @@ styles += `
 	background-color: #fff;
 	z-index: 9;
 	padding: 12px 8px;
+	transition: bottom .4s;
 }
 .wrap_show_number {
 	display: flex;
